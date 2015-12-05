@@ -4,9 +4,18 @@ The blog of MD Insider's Tech Team and friends.
 
 ### Contributing
 
-This blog is powered by Github Pages and Jekyll. To create a new post, please create a new branch for your post, and **markdown** file in `_posts` of your branch. Once you're happy with your post, please submit a pull request for review.
+To create a new post, clone this repository, then create a new branch for your post.
 
-Use http://dillinger.io/ to format your posts in Markdown.
+Then run:
+```code
+rake post title="My blog post title"
+```
+
+Then navigate to the created file (in _posts/)
+
+Insert markdown after the metadata. Use http://dillinger.io/ to format your posts in Markdown.
+
+Create a pull request to submit your blog post and that's it.
 
 ### License
 
