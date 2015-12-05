@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Responsive Gilt.com: The Full-Screen Modal</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2014/07/09/responsive-gilt-com-the-full-screen-modal">Responsive Gilt.com: The Full-Screen Modal</a></h1>
+  
+  <header>
+    
+    <time>09 July 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span>In making Gilt.com responsive to the mobile device, the Special Ops team identified several responsive patterns that we relied upon to “responsivize” our site layout. Identifying these patterns early on helped us to more confidently make subsequent responsive-related decisions. For our fourth responsive-related blog post, I would like to share how we discovered and implemented one of our favorite design patterns that we identified: the full-screen modal.</span></p>
+<p><span>The Gilt iPhone app was the primary source of responsive design inspiration for our team. One of our iPhone app’s strongest design elements is its full-screen view for filtering, which differs greatly from the filtering layout on Gilt.com where filtering exists as a set of dropdowns on the sale page and a sticky sidebar on the search page.</span><span id="docs-internal-guid-51027906-1b7d-bdd2-3af9-64b93b898ac7"><br/><span></span></span></p>
+<p><span><span>The app’s filtering:</span></span></p>
+<p><span id="docs-internal-guid-51027906-1bcb-1959-f93e-78a58dbf03e2"><span><img alt="image.png" height="357px;" src="https://lh5.googleusercontent.com/aVZoTBlr0KssajTxQGfz4DFs-X4LCszuv671KOpGiLudSfDC-kizLoOyX9QRPzTP4MwlXfiMIE2yHr_eWsvSGlUgz_lM_UmnD3C2vBH1DqYImN4unGuyIi2ryyOWRwJPZg" width="238px;"/></span></span></p>
+<p><span id="docs-internal-guid-51027906-1b7e-42dc-19f9-dc61376efe78"><span>Gilt.com’s filtering:</span></span></p>
+<p><span id="docs-internal-guid-51027906-1bcb-37b3-56c6-0048302b7a68"><span><img alt="Screen Shot 2014-07-08 at 5.08.21 PM.png" height="347px;" src="https://lh6.googleusercontent.com/Jz2UIBq0MMsH7gE5qWx4tvobn7PniZ_foxl_IV52FkCqU-U_gHKqJbTiF13FumZgT3nIb1nZetknVs81-fsAsy7am5iPDSLyllKIKuMHp7PvLyQwAqAIlXzZjd0qGgvIGA" width="350px;"/></span></span></p>
+<p><span>The full Gilt site’s filtering style fits well on both PC and tablet-sized screens, but is too large for mobile devices. This is one of the reasons our current mobile site (m.gilt.com) does not give users the filtering feature. With this in mind, our team emulated the Gilt iPhone app’s design by creating a full-screen view for filtering on mobile-sized screens. This pattern uses almost exclusively CSS (we use <a href="http://lesscss.org/" target="_blank">less.js</a>) and therefore doesn’t add significant size to the pages’ payload.</span></p>
+<p><span>Full-screen modal was simple to implement, so we decided to apply it in other places on the site&ndash;for example, in a product’s size chart. </span><a href="http://jsbin.com/dizor/6" target="_blank"><span>Here’s a JS Bin</span></a><span> that demonstrates our implementation.</span></p>
+<p><span>On narrow screens (a mobile device in landscape, for example) and tiny screens (a mobile device in portrait):</span></p>
+<ul><li><span> <span id="docs-internal-guid-51027906-1b7f-4ee1-fb7c-69b57d86b3af"><span>Set the content’s wrapper element to</span></span></span></li>
+</ul><pre><code>position: fixed
+display: none</code></pre>
+<p><span><span id="docs-internal-guid-51027906-1b80-7b5b-7655-53c1dc641f32"><span>          by default, and set it to fit the entire screen</span></span></span></p>
+<ul><li><span>Add a call to action that’s visible only on narrow and tiny screens, and that, when clicked/touched, adds the class ‘content-open’ to either the content’s parent or to the content itself</span></li>
+<li><span>Add CSS to display the content when the ‘content-open’ class is added</span></li>
+<li><span>Add a no-scroll class to the body when the button is clicked that sets the whole page to</span></li>
+</ul><pre><code>position: fixed</code></pre>
+<p><span><span id="docs-internal-guid-51027906-1b81-8e60-61b2-5da3bccb002e"><span>           this prevents the body from scrolling behind the open modal</span></span></span></p>
+<ul><li><span>Add a button/action in the open content modal which closes the content and returns the user to the full page</span></li>
+</ul><p><span id="docs-internal-guid-51027906-1b82-00b5-4a77-16f256e475b1"><span>Special Ops believes that the best mobile user experiences permit users to focus on a page’s core content without being distracted by other features. With the full-screen modal, we abstracted away all the complexity of the filtering into a separate user experience and gave the abstracted feature the full-screen ‘real estate’ it deserves. Everything the user sees&ndash;a product, a list of products, etc.&ndash;is built around this simplified experience. Now that this pattern is well understood, we plan on continuing to use it in our future responsive design efforts.</span></span></p>
+<p><span><span id="docs-internal-guid-51027906-1b82-12c5-09bb-852d5ef3c399"><span><img alt="Screen Shot 2014-07-06 at 11.07.35 AM.png" height="399px;" src="https://lh6.googleusercontent.com/bRDDdgnCZAXp0ZQB7XFIC8lA7rPHe26eoNx95sYgzEMAUUGp2vqsjOjmpV2izCtccUe0kV8yzWPxJeDwWUeK5fV97kGA5AJET2Liho6Z127yBF3IALhjUS8rrMemz3jHMA" width="233px;"/></span></span></span></p>
+<p><span id="docs-internal-guid-51027906-1b82-2984-9705-987b770db60b"><span><img alt="Screen Shot 2014-07-06 at 11.07.45 AM.png" height="409px;" src="https://lh5.googleusercontent.com/j-UodeYjLoO4TOtp5NegbMbYn2ojLQIeBEucbHjlNur2IbNozu39svRYC-tVSeSEgqmXdOwvQIdLQ3GAbvX9cKv2IoNQLPCXkRk_RtBDDrlBEsfTXKfmmx5pRsh3uk38AA" width="231px;"/></span></span></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#responsive design-ref">responsive design <span>7</span></a>
+      
+    <a href="/tags.html#Kyle Dorman-ref">Kyle Dorman <span>6</span></a>
+      
+    <a href="/tags.html#Gilt.com-ref">Gilt.com <span>1</span></a>
+      
+    <a href="/tags.html#Gilt iPhone app-ref">Gilt iPhone app <span>2</span></a>
+      
+    <a href="/tags.html#full-screen modal-ref">full-screen modal <span>1</span></a>
+      
+    <a href="/tags.html#filtering-ref">filtering <span>1</span></a>
+      
+    <a href="/tags.html#CSS-ref">CSS <span>12</span></a>
+      
+    <a href="/tags.html#Less.js-ref">Less.js <span>1</span></a>
+      
+    <a href="/tags.html#responsive design series-ref">responsive design series <span>4</span></a>
+      
+    <a href="/tags.html#Special Operations-ref">Special Operations <span>10</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

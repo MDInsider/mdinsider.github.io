@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Mobile Web How-To: Inspect Elements On Android's Internet Browser</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2013/05/03/mobile-web-how-to-inspect-elements-on-androids">Mobile Web How-To: Inspect Elements On Android's Internet Browser</a></h1>
+  
+  <header>
+    
+    <time>03 May 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>I&rsquo;m building Gilt&rsquo;s new Android app and a good portion of the website is an Android WebView. As you may or may not know, this WebView uses the default Android Internet Browser to render webpages. You probably know this app best by its logo in the lower right hand corner of this screenshot:</p>
+<p><img alt="image" src="http://media.tumblr.com/d0cc9227c0849764b6b8351a71ed0d36/tumblr_inline_mm8jrq83x71qz4rgp.png"/></p>
+<p>When you use Google Chrome on the Android device, inspection is very straightforward &ndash; I&rsquo;ll cover this in a later post. But for Android Internet Browser, there is not to my knowledge a good way to inspect and manipulate the DOM.</p>
+<p>I needed to inspect the DOM because I inherited a JavaScript file that allows us to mimic scrolling events on mobile devices via webpages. The scrolling library works as expected in all other browsers on all other devices. So, I needed to better understand what was happening in the Android Internet Browser.</p>
+<p>The tool that bridged my device to an inspector tool is Adobe Inspect. To get going, you have to install 3 components:</p>
+<p>1. Adobe Inspect on your computer: <a href="http://html.adobe.com/edge/inspect/" target="_blank">http://html.adobe.com/edge/inspect/</a></p>
+<p>2. Google Chrome Extension Adobe Inspect: <a href="https://chrome.google.com/webstore/detail/adobe-edge-inspect/ijoeapleklopieoejahbpdnhkjjgddem?hl=en" target="_blank">https://chrome.google.com/webstore/detail/adobe-edge-inspect/ijoeapleklopieoejahbpdnhkjjgddem?hl=en</a></p>
+<p>3. Google Play Store Adobe Inspect: <a href="https://play.google.com/store/apps/details?id=com.adobe.shadow.android&amp;hl=en" target="_blank">https://play.google.com/store/apps/details?id=com.adobe.shadow.android&amp;hl=en</a></p>
+<p>Once you have installed everything, connect your Android device to your computer and make sure you&rsquo;re on the same WiFi. On your Android Device, open Adobe Inspect and click the plus sign in the upper-right hand corner to get to this screen:</p>
+<p><img alt="image" src="http://media.tumblr.com/fda48c40beb23751e754a6a79b6f1357/tumblr_inline_mm8ljthmcp1qz4rgp.png"/></p>
+<p>Get your ip address from your computer and enter it in Adobe Inspect on your Android Device. If you skip ahead, you can find your ip address on your computer by opening Google Chrome and clicking on the Adobe Inspect icon in the nav bar &ndash; you&rsquo;ll see it there as well. After you input your ip address into the Android device, you&rsquo;ll receive this screen:</p>
+<p><img alt="image" src="http://media.tumblr.com/6b90065e6ea6f656fb9e8d1d18734e22/tumblr_inline_mm8llt9jO51qz4rgp.png"/></p>
+
+<p>Now, open Google Chrome and open the URL of your choice with the Adobe Inspect extension enabled. In the upper right hand corner, you&rsquo;ll see the Adobe Inspect icon with a green plus sign.</p>
+<p><img alt="image" src="http://media.tumblr.com/aa1372ef8231b5f58784b5035421e7a8/tumblr_inline_mm8lpbX2vy1qz4rgp.png"/></p>
+
+<p>Click on this icon to reveal a menu that displays your computer, your IP address, and your device name.</p>
+<p><img alt="image" src="http://media.tumblr.com/57239b254253b27bb109ee528ed63171/tumblr_inline_mm8luaEiSV1qz4rgp.png"/></p>
+<p>Enter the Passcode you received from your Android device.</p>
+<p><img alt="image" src="http://media.tumblr.com/1a009ea0d879f7c7b5e086da92607ee1/tumblr_inline_mm8lvkMD7f1qz4rgp.png"/></p>
+<p>Now that you&rsquo;re connected, click on this button next to your device name:</p>
+<p><img alt="image" src="http://media.tumblr.com/d4667cb55c1de520e089e5c775ea4d3a/tumblr_inline_mm8ly7S3uv1qz4rgp.png"/></p>
+<p>Then, a new window should open that looks like this:</p>
+<p><img alt="image" src="http://media.tumblr.com/f3c0b20192397b9135c399bcf50099b7/tumblr_inline_mm8lyzVzQI1qz4rgp.png"/></p>
+<p>You can see that this is a standard Google Chrome inspector with the name of your device and the url that is currently being inspected. Click on this link and then click on Elements.</p>
+<p><img alt="image" src="http://media.tumblr.com/5a66d0cfaa9799e150c3983c879995be/tumblr_inline_mm8m17w50P1qz4rgp.png"/></p>
+<p>Here, you have a standard inspection workflow similar to what you would use for the full screen experience. You can use the console and other features in a more limited manner to what you would use on the full screen experience. And, Adobe Inspect will highlight what DOM elements are being inspected on the device:</p>
+<p><img alt="image" src="http://media.tumblr.com/ecabef28d465f9f7f66acaada3f2b71e/tumblr_inline_mm8m4mPBq21qz4rgp.png"/></p>
+
+<p>There is much more you can do but, hopefully, you&rsquo;re now set up to debug the Android Internet Browser (not that you needed to debug anything in the first place).</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#android-ref">android <span>3</span></a>
+      
+    <a href="/tags.html#frontend-ref">frontend <span>11</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#gilt mobile-ref">gilt mobile <span>4</span></a>
+      
+    <a href="/tags.html#WebView-ref">WebView <span>1</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    <a href="/tags.html#Adobe Inspect-ref">Adobe Inspect <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

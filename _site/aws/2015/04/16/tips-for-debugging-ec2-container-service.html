@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Tips for Debugging EC2 Container Service</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/aws/2015/04/16/tips-for-debugging-ec2-container-service">Tips for Debugging EC2 Container Service</a></h1>
+  
+  <header>
+    
+    <cite><a href="/authors.html#Scott Thompson-ref">Scott Thompson</a></cite>
+    
+    <time>16 April 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#AWS-ref">AWS</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>Last week, Amazon made their <a href="http://aws.amazon.com/ecs" target="_blank">Elastic Container Service</a> generally available and also released a web UI to make it easier to create tasks. This service was exciting for our personalization team as we wanted to leverage ECS to simplify deployment of our jobs and have better control over failures.<br/></p><p><b></b></p><p>Getting started with ECS is easy but requires your full attention because there are a lot of important details (did you remember to set the correct IAM roles for your container instances?). If you haven’t done so already, make sure you go through the <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html" target="_blank">Getting Started documentation</a>.</p><p>Once you’re ready to run your task what to do if something fails or doesn’t go as planned? Here are some of our experiences debugging ECS tasks.</p><h2>Start with a simple application</h2><p>In our case we created a Scala main method with very few dependencies. A sleep method is sufficient to simulate a job running and should provide enough time to see our container running.<br/></p><figure data-orig-width="298" data-orig-height="81"><img src="https://40.media.tumblr.com/79d194eba676f73f0eb93559dd84484e/tumblr_inline_nmwny6vMRY1sjs9t1_540.png" alt="image" data-orig-width="298" data-orig-height="81"/></figure><h2><br/></h2><h2>Make sure your cluster has at least one container instance</h2><p><b></b></p><p>Your ECS cluster requires at least one container instance to run your container. You can check the web console to make sure there is at least one running.</p><figure data-orig-width="1130" data-orig-height="230" class="tmblr-full"><img src="https://40.media.tumblr.com/906b5806efef5d749370cdd7c171f436/tumblr_inline_nmwnxhRQI61sjs9t1_540.png" alt="image" data-orig-width="1130" data-orig-height="230"/></figure><p>If you don’t see your instances here make sure you’ve followed the <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html" target="_blank">Container Instance documentation</a>. In particular that you launched an instance with the <b>correct ECS AMI</b>, that you have attached the <b>correct IAM role</b> and that you have <b>pointed your instance to your cluster</b>.<br/></p><p><br/></p><h2>Inspect the ECS logs</h2><p><b></b></p><p>Once your container instance is attached to your cluster there will be an ecs-agent running on the machine. (note: the ecs-agent is open source and on <a href="https://github.com/aws/amazon-ecs-agent" target="_blank">github</a> so you may be able to find help on the ‘issues’ page if needed ). The ecs-agent emits logs that can help you debug. You will need to ssh to the container instance and inspect the ecs-agent log:</p><p><b>/var/log/ecs/ecs-agent.log</b></p><p>For example, when inspecting this log it can be useful to know that the agent has pulled your docker image:</p><p><i>t=2015-04-14T15:46:53+0000 lvl=dbug msg=&ldquo;Pulling image&rdquo; module=TaskEngine image=&lt;my-registry.my-domain&gt;.com/&lt;my-image&gt;:latest status=&ldquo;Pulling dependent layers&rdquo;</i></p><p><i><br/></i></p><h2>Make sure the container instance installed your docker image</h2><p>You can check to make sure the ecs-agent successfully downloaded your docker image. ssh to your container instance and run <b>docker images</b>. Your docker image should appear in this list.</p><figure data-orig-width="1999" data-orig-height="179" class="tmblr-full"><img src="https://40.media.tumblr.com/166cf3a403ed251a125f111a3ee42f5a/tumblr_inline_nmwo2asTgX1sjs9t1_540.png" alt="image" data-orig-width="1999" data-orig-height="179"/></figure><p>If you don’t see your image check the ecs-agent logs and make sure your container instance is able to contact your docker registry by curling the registry and printing out the available tags:<br/></p><p>curl &rsquo;<a href="https://docker-registry.gilt.com/v1/repositories/cerebro/svc-cerebro-job/tags" target="_blank">https://&lt;my-registry.my-domain&gt;.com/v1/repositories/&lt;my-image&gt;/tags</a>&rsquo;</p><h2><br/></h2><h2>Manually start your docker image</h2><p>Checking to see if your image can be run from the command line is a great way to make sure the image can be run on the container instance. This also gives you an opportunity to inspect the application logs. For example,</p><p><b>docker run -it docker-registry.gilt.com/cerebro/svc-cerebro-job:latest bin/cerebro_ngram_job.sh production</b></p><p><b><br/></b></p><h2>Check for failed container processes</h2><p>If your container can be run from the command line but is still not being run automatically through ECS Run Task then it’s likely you have something wrong in your ECS Task Definition. Check for failed container processes and inspect their container configuration. </p><p>To check for failed containers run <b>docker ps -a</b>.</p><p>Once you have the Container ID you can inspect the docker configuration. If you see an exit code other than 0 there may be an issue with your container configuration. </p><p><b>docker inspect &lt;containerId&gt;</b></p><p>For example, I noticed an exit code of 127 which indicates a bad command. This led me to fix a bug in the task definition CMD field that requires commands to be passed in json array format.</p><p>Finally, you can inspect the application log of the container.</p><p><b>docker logs &lt;containerId&gt;</b><br/></p><p>For reference, here is a working task definition:</p><figure data-orig-width="1080" data-orig-height="586" class="tmblr-full"><img src="https://40.media.tumblr.com/3d9d3e703c573258e186924460146e79/tumblr_inline_nmwo1lwajJ1sjs9t1_540.png" alt="image" data-orig-width="1080" data-orig-height="586"/></figure>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#ecs-ref">ecs <span>1</span></a>
+      
+    <a href="/tags.html#Docker-ref">Docker <span>20</span></a>
+      
+    <a href="/tags.html#elastic container service-ref">elastic container service <span>1</span></a>
+      
+    <a href="/tags.html#Amazon Web Services-ref">Amazon Web Services <span>3</span></a>
+      
+    <a href="/tags.html#aws-ref">aws <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

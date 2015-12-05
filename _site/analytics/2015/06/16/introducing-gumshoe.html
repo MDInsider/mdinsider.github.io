@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Introducing Gumshoe</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/analytics/2015/06/16/introducing-gumshoe">Introducing Gumshoe</a></h1>
+  
+  <header>
+    
+    <cite><a href="/authors.html#Andrew Powell-ref">Andrew Powell</a></cite>
+    
+    <time>16 June 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#analytics-ref">analytics</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>An analytics and event tracking sleuth.</p>
+
+<p>In late 2014 Gilt received word that a core feature of Google Analytics (henceforth known as GA) would be removed in the next iteration of the platform. The ability to redirect collected data and events to a secondary endpoint had grown critical to our the analization of user behavior, patterns, and effectiveness of our user experience, as well as sales forecasting and predictive modeling. Our two most viable options for retaining this ability were to implement another tracking platform from a different vendor or create and implement our own, tailored to our specific needs.</p>
+
+<h1><a href="https://github.com/gilt/Gumshoe" target="_blank"><strong><a href="https://github.com/gilt/Gumshoe" target="_blank">https://github.com/gilt/Gumshoe</a></strong></a></h1>
+
+<p>After taking a hard look at the heavy hitters of the analytics platform sphere it was decided that we&rsquo;d take the divergent route and roll our own analytics and event tracking library. We won&rsquo;t go into detail on why we passed on big players like Snowplow, Omniture, CoreMetrics, et al. Rather, we&rsquo;ll focus on Gumshoe and its merits.</p>
+
+<h2>What Did We Need?</h2>
+
+<p>To anyone in development, marketing, or data sciences on the web, our list of needs will sound quite familiar.</p>
+
+<p>First and foremost we required parity with GA&rsquo;s base page data. The industry has come to be reliant and has standardized on the kind of data that GA collects for various reporting, including vital year-over-year reporting. So no shockers there.</p>
+
+<p>As performance-minded developers we also had a low page footprint in mind.</p>
+
+<p>We desperately needed organized event names and data. One major shortcoming of GA was the lack of enforcement of any kind of standard in event naming and data. Arbitrary event names and varying event data formats produced migraines the size of Mount Fuji for our Data Scientists. It wasn&rsquo;t uncommon to have the same target event with several different names, in different applications, with different data in different delimited formats.</p>
+
+<p>Related to the variance in event data, we were looking for a high degree of data integrity and confidence.</p>
+
+<p>And last but not least, a low delivery failure or miss rate for the data collection.</p>
+
+<h2>Rolling Our Own</h2>
+
+<p>Events are events are events. In Gumshoe, everything is an event. There&rsquo;s no disambiguation between page views, virtual page views, or custom user events. Everything is an event, and it&rsquo;s a core tenant of Gumshoe.</p>
+
+<p>Right off the bat, parity with GA was key. We started by breaking down the data that GA collected from each page view, and moved forward from there. A basic Gumshoe event consists of the following:</p>
+
+<pre><code>pageData
+eventName
+eventData
+</code></pre>
+
+<p><strong><code>pageData</code></strong> consists of the GA parity data.<br/><strong><code>eventName</code></strong> is self-explanatory; the name of the event we&rsquo;re passing.<br/><strong><code>eventData</code></strong> is custom data passed by the consumer which should be associated with an event.</p>
+
+<p>Wunderbar! We had the recipe for sending a page view event. But how do we set this up so that others can easily send these events to where ever they&rsquo;d like? Enter the transport.</p>
+
+<p>Transports are the mechanism(s) by which consumers instruct Gumshoe on how it should send the data for each event. One can configure Gumshoe to send to multiple transports, or a single transport, it&rsquo;s your choice. A brief example from the repository:</p>
+
+<pre><code>(function (root) {
+
+  var gumshoe = root.gumshoe;
+
+  gumshoe.transport({
+
+    name: 'example-transport',
+
+    send: function (data) {
+      console.log('Gumshoe: Test Transport: Sending...');
+      console.log(data);
+    },
+
+    map: function (data) {
+      return {
+        customData: {
+          someData: true
+        },
+        ipAddress: '192.168.1.1'
+      };
+    }
+
+  });
+
+})(this);
+</code></pre>
+
+<p>The <code>send</code> method is responsible for actually sending the data. Gumshoe bundles the <a href="https://github.com/gilt/reqwest" target="_blank">https://github.com/gilt/reqwest</a> library, which any transports can freely use. At Gilt we use reqwest.js to send the data to our backend event stack, which we&rsquo;ll cover in subsequent blog posts.</p>
+
+<p>The <code>map</code> method allows consumers to extend the data which Gumshoe is sending through the transport. At Gilt we use this method to attach a <code>giltData</code> object that is sent along side <code>pageData</code> and contains vital Gilt-specific data for every single event that we send.</p>
+
+<h2>Using Gumshoe</h2>
+
+<p>Once you&rsquo;ve got Gumshoe included on your page and you&rsquo;ve specified a transport, you&rsquo;ll need to initialize the library. It&rsquo;s as simple as specifying the transport:</p>
+
+<pre><code>// tell gumshoe to use our transport  
+window.gumshoe({ transport: 'example-transport' });  
+</code></pre>
+
+<p>And sending an event:</p>
+
+<pre><code>window.gumshoe.send('page.view', {});  
+</code></pre>
+
+<h2>What&rsquo;s Next</h2>
+
+<p>In forthcoming posts we&rsquo;ll be talking more about the other goals we listed, specifically how we internally solved event organization, event naming standardization, data integrity, and the remainder of the stack that takes over once Gumshoe has delivered the payload.</p>
+
+<p>We&rsquo;ve been using Gumshoe on gilt.com for some time now, and have been running constant parity comparisons against GA and we&rsquo;re very happy with the results thus far. However, we&rsquo;d be bonkers to claim that Gumshoe is perfect. We&rsquo;ve tailored Gumshoe to be extensible but so far it&rsquo;s only been targeted for use at Gilt. We&rsquo;d love feedback from the community at large. And if you feel you might be able to use Gumshoe, but find it lacking, we&rsquo;d love to talk about how it can be improved.</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gumshoe-ref">gumshoe <span>1</span></a>
+      
+    <a href="/tags.html#google analytics-ref">google analytics <span>1</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#events-ref">events <span>26</span></a>
+      
+    <a href="/tags.html#event tracking-ref">event tracking <span>1</span></a>
+      
+    <a href="/tags.html#andrew powell-ref">andrew powell <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

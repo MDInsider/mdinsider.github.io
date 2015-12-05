@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/08/readwrite-profiles-gilt-and-our-insane-traffic">ReadWrite Profiles Gilt and Our "Insane" Traffic Spikes</a></h1>
+  
+  <header>
+    
+    <time>08 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/142ea8c8d730e4be4d3b3b283056c9d9/tumblr_inline_n59eruykVh1s17bu5.jpg"/></p>
+<p>The popular tech blog ReadWrite published a Q&amp;A today with Gilt VP Architecture Eric Bowman in which Eric discusses our love of Scala and the Typesafe platform, our passion for open-source software, and the exciting technical challenges created by our super-intense, daily traffic spikes. A taster:</p>
+<blockquote>
+<p><strong>RW</strong>: <em>From a technical perspective, what makes Gilt unique? Why does Scala matter?</em></p>
+<p><strong>EB</strong>: One of our key uniqueness factors is our flash-sales model, which produces some very exciting technical challenges. Every day we experience intense traffic spikes at noon US Eastern Time as the day’s batch of new sales go live. Our members rush to view all the different products, and on most days, our traffic increases by 100 times in just a few seconds. So we have to build systems that can support these sudden bursts of activity. </p>
+<p>Our solution has been to develop a distributed architecture based upon hundreds of microservices built in Scala. </p>
+<p><strong>RW</strong>: <em>Why microservices?</em></p>
+<p><strong>EB</strong>: Microservices make sense for Gilt in a number of ways. Gilt started out as a monolithic Rails application, but as we grew quickly we soon found out that this model wasn’t well suited for handling our traffic spikes very effectively. A monolithic architecture makes it challenging to identify who owns what code, and introduces complex dependencies. It also tends to lengthen test cycles and can have unexpected performance impacts.</p>
+<p>With micro-services, we can maintain isolation between unrelated services and that keeps our development process as friction-free as possible and reduces complexity. It also enables us to establish team ownership of end-to-end quality, which not only makes us all more accountable but also contributes to developer happiness&ndash;our engineers know they can have an impact and see the results of their work more readily.</p>
+</blockquote>
+<p>Read the <a href="http://readwrite.com/2014/05/08/gilt-eric-bowman-interview-scala-rails-jvm-reactive-platform#awesm=~oDGcqGjjy9hoY8" target="_blank">full interview here</a>!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Eric Bowman-ref">Eric Bowman <span>13</span></a>
+      
+    <a href="/tags.html#ReadWrite-ref">ReadWrite <span>1</span></a>
+      
+    <a href="/tags.html#press-ref">press <span>3</span></a>
+      
+    <a href="/tags.html#Matt Asay-ref">Matt Asay <span>1</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#insane traffic spike-ref">insane traffic spike <span>1</span></a>
+      
+    <a href="/tags.html#sbt-ref">sbt <span>10</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    <a href="/tags.html#PostgreSQL-ref">PostgreSQL <span>11</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/07/gilt-helps-to-judge-columbias-annual-venture">Gilt Helps to Judge Columbia's Annual Venture Competition</a></h1>
+  
+  <header>
+    
+    <time>07 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/07195522fa1bbf7d502725d2cb472510/tumblr_inline_n5853oX1In1s17bu5.png"/></p>
+<p>What do safe sanitation, home neutrophil-level testing, and production management software have in common? They&rsquo;re all ideas driving the winning projects of the 2014 <a href="http://www.engineering.columbia.edu/columbia-venture-competition" target="_blank">Columbia Venture Competition</a>! Launched in 2009 by Columbia University's Fu Foundation School of Engineering and Applied Science, the Competition drew 62 applications from current Columbia students and recent alumni this year. Six projects made the final round, judged by a team of NYC business leaders that included Gilt Chief Information Officer <a href="http://tech.gilt.com/search/steve+jacobs" target="_blank">Steve Jacobs</a> (who received his PhD in Electrical Engineering from Columbia).</p>
+<p>This year&rsquo;s top prize of $25,000 went to <a href="http://toiletsforpeople.com/" target="_blank">Toilets for People</a>, who have developed a composting toilet aimed at creating clean sanitation for more than three million people within the next decade. The second and third place winners were <a href="http://www.phddevices.com/" target="_blank">PhD Devices</a>, who created an affordable, portable <a href="http://en.wikipedia.org/wiki/Neutrophil_granulocyte" target="_blank">neutrophil</a>-level counter; and <a href="http://www.gameplancloud.com/construction-software/index" target="_blank">GamePlan</a>, a construction management startup.</p>
+<p>&ldquo;It was so cool to see such a passionate group of people trying to change the world in such diverse ways,&rdquo; Steve says of his experience judging the competition. Congrats to the winners! </p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Columbia University-ref">Columbia University <span>4</span></a>
+      
+    <a href="/tags.html#Steve Jacobs-ref">Steve Jacobs <span>11</span></a>
+      
+    <a href="/tags.html#Columbia Venture Competition-ref">Columbia Venture Competition <span>1</span></a>
+      
+    <a href="/tags.html#Fu Foundation School of Engineering and Applied Science-ref">Fu Foundation School of Engineering and Applied Science <span>1</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#Toilets for People-ref">Toilets for People <span>1</span></a>
+      
+    <a href="/tags.html#PhD Devices-ref">PhD Devices <span>1</span></a>
+      
+    <a href="/tags.html#GamePlan-ref">GamePlan <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/07/gilt-lunchtime-tech-talk-parse">Gilt Lunchtime Tech Talk: Parse</a></h1>
+  
+  <header>
+    
+    <time>07 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img height="597" src="https://31.media.tumblr.com/cc005a4afec0deb9ef3ca90e7a84bd10/tumblr_inline_n57pe1z5EO1s17bu5.jpg" width="800"/></p>
+
+<p>Yesterday Gilt&rsquo;s tech team had the pleasure of welcoming Parse Developer Advocate <a href="https://twitter.com/beardigsit" target="_blank">Bear Douglas</a> to 2 Park to give a lunchtime presentation on the Parse platform. Bear visited us by way of an invite from Gilt software engineers Yoni Goldberg and Ryan Caloras, who caught her fantastic presentation at last week&rsquo;s f<a href="https://fbf8.com/" target="_blank">8 Developer Conference</a> and asked her to present for our team. Bear&rsquo;s passing through NYC this week for <a href="http://techcrunch.com/events/disrupt-ny-2014/event-home/" target="_blank">TechCrunch&rsquo;s Disrupt</a>, so the timing couldn&rsquo;t have been better!</p>
+<p>If you are not familiar with Parse, it is an easy-to-use cloud platform that simplifies the back-end implementation of mobile apps; <a href="https://parse.com/" target="_blank">go here</a> to learn more about it. Thanks to Bear for educating us in person yesterday!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#tech talks-ref">tech talks <span>7</span></a>
+      
+    <a href="/tags.html#Parse-ref">Parse <span>1</span></a>
+      
+    <a href="/tags.html#Bear Douglas-ref">Bear Douglas <span>1</span></a>
+      
+    <a href="/tags.html#Yoni Goldberg-ref">Yoni Goldberg <span>14</span></a>
+      
+    <a href="/tags.html#Ryan Caloras-ref">Ryan Caloras <span>6</span></a>
+      
+    <a href="/tags.html#mobile apps-ref">mobile apps <span>5</span></a>
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#F8 Developer Conference-ref">F8 Developer Conference <span>1</span></a>
+      
+    <a href="/tags.html#f8-ref">f8 <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/07/metro-ny-covers-gilts-free-tech-courses">Metro NY Covers Gilt's Free Tech Courses</a></h1>
+  
+  <header>
+    
+    <time>07 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Thanks to Metro NY reporter Andrea Park for featuring Gilt&rsquo;s <a href="http://tech.gilt.com/search/free+classes" target="_blank">free tech courses</a> in an <a href="http://www.metro.us/newyork/lifestyle/tech/2014/05/05/learn-code-free-new-york/" target="_blank">article</a> about where to learn programming for free in New York City. And speaking of free courses: Have you applied for our <a href="http://tech.gilt.com/2014/05/01/our-next-free-gilt-tech-course-angularjs-on-may-22" target="_blank">upcoming AngularJS class</a> yet?</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Metro NY-ref">Metro NY <span>1</span></a>
+      
+    <a href="/tags.html#New York City-ref">New York City <span>4</span></a>
+      
+    <a href="/tags.html#Andrea Park-ref">Andrea Park <span>1</span></a>
+      
+    <a href="/tags.html#media-ref">media <span>12</span></a>
+      
+    <a href="/tags.html#press-ref">press <span>3</span></a>
+      
+    <a href="/tags.html#free tech courses-ref">free tech courses <span>22</span></a>
+      
+    <a href="/tags.html#free classes-ref">free classes <span>30</span></a>
+      
+    <a href="/tags.html#AngularJS-ref">AngularJS <span>5</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/06/welcome-kevin-oriordan">Welcome Kevin O'Riordan!</a></h1>
+  
+  <header>
+    
+    <time>06 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/21ad749aec62b4132e5cb1f54adb7c54/tumblr_inline_n55vc8jjr11s17bu5.jpg"/></p>
+
+<p>Gilt is excited to welcome Kevin O'Riordan to our tech team! Based in Dublin, Kevin is a software engineer and joins our push team. Before arriving at Gilt, he spent more than three years developing software (more specifically, behavioral targeting software) to support online advertising campaigns. A native of Cork, he studied at University College Cork.</p>
+<p>In his free time, Kevin enjoys hill running, mountain biking, adventure racing and skiing. We&rsquo;re glad to have him on board!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Kevin O'Riordan-ref">Kevin O'Riordan <span>1</span></a>
+      
+    <a href="/tags.html#push team-ref">push team <span>1</span></a>
+      
+    <a href="/tags.html#people-ref">people <span>40</span></a>
+      
+    <a href="/tags.html#hiring-ref">hiring <span>30</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#engineering-ref">engineering <span>12</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/05/gilt-presents-at-empirejs">Gilt Presents at EmpireJS</a></h1>
+  
+  <header>
+    
+    <time>05 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/64ac79b575c3da4c773f43fe2b57341a/tumblr_inline_n543yjS96Z1s17bu5.png" width="800"/></p>
+<p>The <a href="http://2014.empirejs.org/" target="_blank">EmpireJS conference</a> is officially underway, and Gilt is honored to be a part of it! Gilt Lead Software Engineer/in-house UI Architecture guru <a href="http://tech.gilt.com/search/eric+shepherd" target="_blank">Eric Shepherd</a> speaks at 4:10 PM today (May 5) on &ldquo;Gadgets for Holistic Web Detection.&rdquo; Gilt engineers Nathan Stilwell, <a href="http://tech.gilt.com/search/kevan+davis" target="_blank">Kevan Davis</a>, Nabila Yusaf and Andrew Powell are also attending the conference, which takes place over two days at Location05.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#EmpireJS-ref">EmpireJS <span>3</span></a>
+      
+    <a href="/tags.html#Eric Shepherd-ref">Eric Shepherd <span>12</span></a>
+      
+    <a href="/tags.html#front-end engineering-ref">front-end engineering <span>11</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    <a href="/tags.html#tech-ref">tech <span>20</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#Location05-ref">Location05 <span>2</span></a>
+      
+    <a href="/tags.html#Nathan Stilwell-ref">Nathan Stilwell <span>7</span></a>
+      
+    <a href="/tags.html#Nabila Yusaf-ref">Nabila Yusaf <span>3</span></a>
+      
+    <a href="/tags.html#Kevan Davis-ref">Kevan Davis <span>5</span></a>
+      
+    <a href="/tags.html#Andrew Powell-ref">Andrew Powell <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/02/welcome-myron-miller">Welcome Myron Miller!</a></h1>
+  
+  <header>
+    
+    <time>02 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/965438d238367b57e012f385b4d3d6c2/tumblr_inline_n4yi8r5bFa1s17bu5.jpg" width="800"/></p>
+
+<p>Daffodils and tulips aren&rsquo;t the only things growing this spring&ndash;so is the Gilt <a href="http://tech.gilt.com/2014/04/09/welcome-fidan-kasra" target="_blank">Program</a> Management <a href="http://tech.gilt.com/2014/04/08/welcome-justin-vitale" target="_blank">Office</a>! Our latest addition to the PMO is Myron Miller, who will work with our Business Operations team as <span>Senior Program Manager. Myron comes to Gilt with more than 13 years of multi-disciplinary project management experience, including media advertising and health insurance.<br/></span></p>
+<p>Born in Connecticut, Myron moved to Manhattan in 2007 and has never looked back. In his spare time, he can be found hanging out with friends, at the theater or philharmonic enjoying a show, or traveling. So if you&rsquo;d ever like to chat about Program Management, Dickens, Sondheim, or Tokyo he&rsquo;s your guy!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    <a href="/tags.html#Program Management Office-ref">Program Management Office <span>4</span></a>
+      
+    <a href="/tags.html#Myron Miller-ref">Myron Miller <span>3</span></a>
+      
+    <a href="/tags.html#people-ref">people <span>40</span></a>
+      
+    <a href="/tags.html#hiring-ref">hiring <span>30</span></a>
+      
+    <a href="/tags.html#program management-ref">program management <span>11</span></a>
+      
+    <a href="/tags.html#welcome-ref">welcome <span>6</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/01/gilt-goes-to-xo-group">Gilt Goes to XO Group</a></h1>
+  
+  <header>
+    
+    <time>01 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><strong><img alt="image" height="300" src="https://31.media.tumblr.com/438b93c02977044544e24b3938acd528/tumblr_inline_n4ypw53LCt1s17bu5.jpg" width="800"/></strong></p>
+<p><em>Here&rsquo;s a shot of Gilt Co-Founder and CTO <a href="http://tech.gilt.com/search/michael+bryzek" target="_blank">Michael Bryzek</a> presenting a lunchtime talk at XO Group, the media company behind The Knot, The Nest and other properties. Michael shared some of the lessons learned from scaling Gilt with XO&rsquo;s staff. Thanks to Julia Schulhof for organizing this event!<br/></em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#XO Group-ref">XO Group <span>1</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#Julia Schulhof-ref">Julia Schulhof <span>1</span></a>
+      
+    <a href="/tags.html#presentations-ref">presentations <span>42</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/01/gilt-techs-first-game-night-was-a-blast">Gilt Tech's First Game Night Was a Blast!</a></h1>
+  
+  <header>
+    
+    <time>01 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Last week Gilt&rsquo;s tech team in New York City organized our first-ever game night! Headed up by Team Teaminess&ndash;our internal working group of #gilttech cultural evangelists&ndash;game night included 10 different games as well as health foods (tacos, pizza) and drinks (beer, seltzer water). Here are some photos of the fun!</p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/9369c9aa1745e0b0e7a4fd737e976af1/tumblr_inline_n4wri9gEm51s17bu5.jpg" width="800"/></p>
+<p><em>This Taboo game went on for hours &hellip;</em></p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/9efbf27fe623cd0faf1e71d5bf0a844a/tumblr_inline_n4wrj1vWFj1s17bu5.jpg" width="800"/></p>
+
+<p><em>Gilt Lead Software Engineer <a href="http://tech.gilt.com/search/yoni+goldberg" target="_blank">Yoni Goldberg</a> ponders his next move. BTW, that&rsquo;s a game of <a href="http://en.wikipedia.org/wiki/Bughouse_chess" target="_blank">Bughouse</a>, a chess variant. &ldquo;I learned it from <a href="https://twitter.com/nottombrown" target="_blank">Tom Brown</a>, the CTO of Grouper, who was my roommate at school,&rdquo; Yoni says.</em></p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/5d8d083978e19a15481d301094918608/tumblr_inline_n4wrqpTBlQ1s17bu5.jpg" width="800"/></p>
+<p><em>Gilt City completely dominated this card game. So did that giant pan of chips (almost!)</em></p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/2f1dc73feb012460a20bde0efbebd93d/tumblr_inline_n4wru6Qfrn1s17bu5.jpg" width="800"/></p>
+<p><em>We offered a variety of pongs, including beer pong &hellip;</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/6d1ab5649dfd3d5c8007b70f29e97c2d/tumblr_inline_n4wrupB9PY1s17bu5.jpg" width="800"/></em></p>
+<p><em>&hellip; and ping pong!</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/ec766d6f53c2dfd703c5c8e34dc4979c/tumblr_inline_n4wrx1cKPL1s17bu5.jpg" width="800"/></em></p>
+<p><em>Nirvana and Monopoly: two classic tastes</em></p>
+<p>Go Team Teaminess!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#tech team-ref">tech team <span>1</span></a>
+      
+    <a href="/tags.html#Bughouse-ref">Bughouse <span>1</span></a>
+      
+    <a href="/tags.html#Yoni Goldberg-ref">Yoni Goldberg <span>14</span></a>
+      
+    <a href="/tags.html#game night-ref">game night <span>1</span></a>
+      
+    <a href="/tags.html#Gilt Tech Game Night-ref">Gilt Tech Game Night <span>1</span></a>
+      
+    <a href="/tags.html#fun-ref">fun <span>6</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#Team Teaminess-ref">Team Teaminess <span>1</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#Gilt City-ref">Gilt City <span>6</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/05/01/our-next-free-gilt-tech-course-angularjs-on-may">Our Next Free Gilt Tech Course: AngularJS on May 22</a></h1>
+  
+  <header>
+    
+    <time>01 May 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/167e29995c0d0e3bf2f2d1b2a48c4681/tumblr_inline_n4wjmfRmwI1s17bu5.png"/></p>
+<p>Open-source, powerful and easy to use, <a href="https://angularjs.org/" target="_blank">AngularJS</a> is an amazingly useful tool for developing web applications. We thought we&rsquo;d learn more about it, and so we&rsquo;ve invited Angular expert <a href="https://twitter.com/superchris" target="_blank">Chris Nelson</a> of <a href="http://gaslight.co/" target="_blank"><span class="il">Gaslight</span></a> to lead our next <a href="http://tech.gilt.com/search/free+classes" target="_blank">free tech course</a>! On Thursday, May 22, Chris will teach us the essentials of working with Angular. In this fast-paced, full-day session, we’ll cover:</p>
+<ul><li>Test-driven Angular (unit and end-to-end)</li>
+<li>Controllers and scopes</li>
+<li>Using and writing filters</li>
+<li>Client-side routing</li>
+<li>Forms and validation</li>
+<li>Organizing your code with modules</li>
+<li>Dependency injection with services and factories</li>
+<li>Using and writing directives</li>
+<li>Talking to the server with <code>$http</code> and friends</li>
+</ul><p><strong>When:</strong> <span><span>Thursday, May 22, 2014 from 9:30 AM to 5:30 PM</span></span><br/><strong>Where:</strong> Gilt&rsquo;s Manhattan offices<br/><strong>Cost:</strong> FREE (includes breakfast and lunch)<br/><strong>Who:</strong> Gilt technologists, maybe you?</p>
+<p><strong>Prerequisites: </strong>This course is appropriate for experienced front-end engineers. You should be familiar with JavaScript and jQuery or some other, similar DOM manipulation library</p>
+<p><strong>About the instructor</strong>:</p>
+<p>Chris Nelson is a software developer who hails from the fair city of Cincinnati, Ohio. Though originally a violin performance major, he has been developing web applications for about 15 years and is passionate about finding better ways to do so. He&rsquo;s spoken at most of the major Ruby and Java conferences and helped found Gaslightas a place for people to enjoy building amazing things together.He also regularly teaches classes around the country in Ruby, JavaScript, and AngularJS.</p>
+<p>Fill out the form below to submit your contact info. (<em>You must be age 18 or older to attend</em>.) Please <strong>note that submitting this form does not guarantee you a seat</strong>—but we’ll do our best. We’ll also keep your contact info on file to let you know about future classes!</p>
+<p><strong>REGISTRATION IS NOW CLOSED. But go ahead and sign up for <a href="http://tech.gilt.com/2014/05/09/our-next-free-class-at-gilt-cartodb-on-june-4" target="_blank">our next class</a>!</strong></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#free classes-ref">free classes <span>30</span></a>
+      
+    <a href="/tags.html#free tech classes-ref">free tech classes <span>29</span></a>
+      
+    <a href="/tags.html#AngularJS-ref">AngularJS <span>5</span></a>
+      
+    <a href="/tags.html#Gaslight-ref">Gaslight <span>2</span></a>
+      
+    <a href="/tags.html#tech ed-ref">tech ed <span>4</span></a>
+      
+    <a href="/tags.html#free courses-ref">free courses <span>30</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/23/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 24 of 64</span>
+  
+    <a href="/posts/25/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

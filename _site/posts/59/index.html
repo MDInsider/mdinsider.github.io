@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/05/04/friday-fun-with-gilt-games">Friday Fun with Gilt Games</a></h1>
+  
+  <header>
+    
+    <time>04 May 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>The <a href="http://dev.gilt.com" target="_blank">Gilt Public API</a> is a great tool for developing new ways for people to shop quickly, efficiently, or on new platforms. But developers using the API are also finding unexpected things to do with Gilt data— they&rsquo;re using it to make games.</p>
+
+<p>So in the spirit of Friday, why not spend a few minutes playing with a couple of games that have been built on top of the Public API?</p>
+
+<p><img src="http://media.tumblr.com/tumblr_m3g9rli1kS1qzuc2n.png" alt=""/></p>
+
+<p><strong><a href="http://spanmess.com/lab/memory" target="_blank">Gilt Memory</a></strong> was built by <a href="http://spanmess.com/" target="_blank">Karl Norling</a>, a developer here at Gilt. See how quickly you can find the matching pairs of products, then challenge your friends to beat your score!</p>
+
+<p><img src="http://media.tumblr.com/tumblr_m3g9rwPSBf1qzuc2n.png" alt=""/></p>
+
+<p><strong><a href="http://tpir.nodejitsu.com/" target="_blank">The Price is Right on Gilt</a></strong> was built overnight at the NYC Powered by MongoDB Hackathon last weekend. This live multiplayer game lets you and up to 3 other friends play a price-guessing game to see who knows Gilt&rsquo;s products the best. Developer <a href="http://yufeiliu.com" target="_blank">Yufei Liu</a> built the project using Node.js and MongoDB.</p>
+
+<p>Happy Friday, everyone!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#public api-ref">public api <span>4</span></a>
+      
+    <a href="/tags.html#api-ref">api <span>7</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#games-ref">games <span>2</span></a>
+      
+    <a href="/tags.html#html5-ref">html5 <span>1</span></a>
+      
+    <a href="/tags.html#node.js-ref">node.js <span>1</span></a>
+      
+    <a href="/tags.html#tgif-ref">tgif <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/04/28/the-5th-floor">The 5th Floor</a></h1>
+  
+  <header>
+    
+    <time>28 April 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Gilt Tech have been enjoying their new space on the 5th floor of <a href="http://maps.google.com/maps?q=2+Park+Ave,+New+York,+NY&amp;hl=en&amp;ll=40.745761,-73.981816&amp;spn=0.007958,0.012896&amp;sll=40.746246,-73.982455&amp;layer=c&amp;cbp=13,296.9,,0,0&amp;cbll=40.746114,-73.982116&amp;hnear=2+Park+Ave,+New+York,+10016&amp;t=m&amp;z=17&amp;panoid=y9YY1CrX5ju6wVrnIxU9PQ" target="_blank">2 Park Avenue, NYC</a>.</p>
+<p><object height="360" width="480"><param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fgilttech%2Fsets%2F72157629555731418%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fgilttech%2Fsets%2F72157629555731418%2F&amp;set_id=72157629555731418&amp;jump_to="><param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=109615"><param name="allowFullScreen" value="true"></object></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/04/20/gilt-tech-nyc-powered-by-mongodb-hackathon">Gilt Tech @ NYC Powered By MongoDB Hackathon</a></h1>
+  
+  <header>
+    
+    <time>20 April 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="http://media.tumblr.com/tumblr_m2sbc9vYkQ1qzuc2n.png" alt=""/></p>
+
+<p>What&rsquo;s better than spending 24 hours in Manhattan hacking on sweet projects using MongoDB and the Gilt API? Doing it while supporting HackNY, a New York City organization that promotes innovation and entrepreneurship among the city&rsquo;s up-and-coming students and hackers. And that&rsquo;s exactly what you can do next weekend, April 27-28, at <a href="http://www.10gen.com/events/NYC-MongoDB-Hackathon" target="_blank">10gen&rsquo;s MongoDB Hackathon</a>. A lot of great people, and great companies, are going to be there, and we&rsquo;re excited to see you come down and make the next cool project. On Saturday night an esteemed panel of judges will choose winning projects and award all manner of prizes, including iPads, Xbox 360s, and more.</p>
+
+<p>We&rsquo;ll be at the event to share how to get started with the Public API and answer any questions you may have, give you ideas on what you could build, and maybe give you a sneak peek into what we&rsquo;re working on for the future of the API, so come find us!</p>
+
+<p>For questions about the event, you can send a tweet to <a href="http://www.twitter.com/MongoDB" target="_blank">@MongoDB</a>. For questions about the API, get in touch <a href="http://www.twitter.com/gilttech" target="_blank">@GiltTech</a> or send an email to <a href="mailto:api@gilt.com" target="_blank">api@gilt.com</a>!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#mongodb-ref">mongodb <span>2</span></a>
+      
+    <a href="/tags.html#hackathon-ref">hackathon <span>7</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#public api-ref">public api <span>4</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#nyctech-ref">nyctech <span>2</span></a>
+      
+    <a href="/tags.html#hackny-ref">hackny <span>1</span></a>
+      
+    <a href="/tags.html#api-ref">api <span>7</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/04/16/the-pmo-right-work-right-time-right-people">The PMO: Right Work, Right Time, Right People</a></h1>
+  
+  <header>
+    
+    <time>16 April 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span id="internal-source-marker_0.1910140162775763">You might be surprised to learn that Gilt Tech has a Program Management Organization (aka &ldquo;The PMO&rdquo;).</span><br/><span></span><br/><span>Why do I think you might be surprised?  Well, the role of project management in traditional organizations has typically been one associated with paperwork and process (</span><a href="http://en.wikipedia.org/wiki/Office_space" target="_blank"><span>We need to talk about your TPS reports&hellip;</span></a><span>).  It has also been associated with hindering rapid development and slowing things down.  These negative connotations are behind the reasons why many people struggle with the idea of having a PMO or a project manager on a team.</span><br/><span></span><br/><span>We strive to change this.  We believe every organization and team should invest in project management if you want to work smarter and spend more time on what really matters.  Here’s some reasons why&hellip;</span><br/><span></span><br/><span>One of the many tenets we are taught in our training is the “</span><a href="http://www.verasage.com/index.php/Community/the_triangle_of_truth" target="_blank"><span>Triangle of Truth</span></a><span>”.  The project manager’s key function is historically described as making sure a project meets its objectives, is on time and on budget.</span><img height="300px;" src="https://lh3.googleusercontent.com/thIT1SEv1LAAgfgKn8pD56JMlNbbHuBgHUaJhdc5zZNkCIVAkupXFn7v063__8uXPUr3onXr8uWXzxXKis5jlfMg6yt_fk1HJ9Dbt4eq2F-WgwocoHA" width="404px;"/><br/><span>What happens more often than not is that a project manager is so focused on driving to deadline, they lose sight of the big picture.  I have often heard project managers and others describe their job as “my responsibility is to make sure we hit our schedule no matter what” &ndash; and this is dangerous thinking.  Our function is so much bigger than maintaining a list of tickets on schedule.</span><br/><span></span><br/><span>The project manager’s responsibility is to make sure we are doing the </span><em>right</em><span> work at the </span><em>right</em><span> time and with the </span><em>right</em> <span>people.  Let’s break this down a bit.</span><br/><span></span><br/><strong><span><em><br/>Right</em><span> Work</span></span></strong><br/><span>A good project manager doesn’t simply take orders and execute on them.  We have the authority to ensure we are working on what will bring the biggest contribution to the organization, and constantly question and re-evaluate this based on a combination of hard data, an understanding of the business we are working in, and good intuition.</span></p>
+<ul><li><span>Is this the most important thing we could be doing right now?  If it isn’t, how can we bring the right people together to negotiate and agree to the right work?</span></li>
+<li><span>How will this work both positively and negatively impact others?</span></li>
+<li><span>Is the work defined enough that we feel confident in its execution?  What is the Minimum Viable Product?  Is the work actionable?</span></li>
+<li><span>What does the data tell us and what decisions need to be made based on this data?</span></li>
+</ul><p><span></span><br/><strong><span><em>Right</em><span> Time</span></span></strong><br/><span>A good project manager needs to have an understanding of both internal and external factors behind the schedule, and make decisions based on a deeper understanding of what is driving the timeline, maximize efficiency, and take the initiative to make adjustments along the way.</span></p>
+<ul><li><span>What are the market conditions like?  What are our competitors doing? Is it the right time to be launching this kind of product?</span></li>
+<li><span>Are we managing time appropriately?  Is the team focused and if not, what can we do to eliminate the noise?</span></li>
+<li><span>Are we working in the most efficient way?  What changes to our current process need to be made to maximize our efficiency?</span></li>
+<li><span>Are there deadlines that are fixed due to events such as press releases, end of quarter, or financial reporting needs?</span></li>
+</ul><p><span></span><br/><strong><span><em>Right </em><span>People</span></span></strong><br/><span>A good project manager is also a people manager.  Yes, I’m adjusting the “Cost” part of the triangle to represent people &ndash; because people’s time = money.  A good project manager knows that a primary function is to alleviate any roadblocks that get in the way of your team focusing on the most important work, even if this means picking up the slack yourself.  We are also responsible for team building, encouraging growth and learning, and are often the public face or “go-to person” on the team.</span></p>
+<ul><li><span>Do you have the right people on the team to accomplish your mission?  If not, what can you do to get the people you need?</span></li>
+<li><span>Are the right communication methods in place so that all of the people involved in the project have a clear understanding of what is happening?  Do all of the people outside of the project have access to information?</span></li>
+<li><span>Do all these people really need to be at this meeting?  What can we do to eliminate unnecessary meetings for people so they can focus?</span></li>
+<li><span>Is the team happy, engaged, and enjoying their work?  What can we do or change to maximize happiness and productivity?</span></li>
+</ul><p><span></span><br/><span>As you can see, there’s a lot more to project management than managing the schedule, taking notes and executing orders.  Project managers oversee the end-to-end execution of a project, making sure we are doing the right work at the right time and with the right people.  We are experts in efficiency, negotiation, communication, strategy and big picture thinking with the ability to break the big things down into actionable chunks.  We not only get things done &ndash; we get the right things done in the best way possible.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    <a href="/tags.html#project management-ref">project management <span>4</span></a>
+      
+    <a href="/tags.html#program management-ref">program management <span>11</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/leadership/2012/03/14/lessons-in-ratatouille">Lessons in Ratatouille</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Heather Fleming-ref">Heather Fleming</a></cite>
+    
+    <time>14 March 2012</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#Leadership-ref">Leadership</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p><span id="internal-source-marker_0.0906337329228355">I have a son who is obsessed with Pixar movies, so I have seen &ldquo;Ratatouille&rdquo; about 100 times. It wasn&rsquo;t until recently however, that I started to draw parallels between the movie&rsquo;s lessons and lessons in organizational culture.</span><br/><span></span><br/><em><span>Lesson One: &ldquo;Anyone Can Cook&rdquo;</span></em><br/><span>The core vision statement of Gusteau, the original chef who built his restaurant into an empire and what inspired a rat to pursue his dream to become a cook. There is debate around this vision within the movie &ndash; just because anyone can cook it doesn&rsquo;t mean they should. Some</span><span> people are better at this than others, and not every creation is going to make the menu. The point is that the vision is simple, aspirational, and inspiring.</span><br/><span></span><br/><em><span>Lesson Two: A gift is not enough &ndash; you need a passion. And mentors.</span></em><br/><span>Remy the rat has a gift for being able to smell whatever ingredients are in something. He could have easily resigned to the comfortable position of poison checker for his rat clan. But he was soon bored &ndash; he wanted to create something. To add to this world instead of taking</span><span> from it. You have people in our organization with gifts.  You have people with passion. You need to mentor these people (as imaginary Gusteau and Colette did for Remy) so they are able to express their passion creatively.</span><br/><span></span><br/><em><span>Lesson Three: Complacency = &ldquo;Follow the Recipe&rdquo;</span></em><br/><span>With Gusteau dead, the new leaders at the restaurant have instructed the team to simply &ldquo;follow the recipe&rdquo;. Gusteau was paid to create &ndash; they are paid to follow what Gusteau already did and not improvise. Seems pretty logical &ndash; just keep doing what you know works and you continue on the same trajectory. Except the customers are getting bored. They want to know what does the chef have that is new. Organizations are in danger of falling into &ldquo;follow the recipe&rdquo; complacency where talented people are not willing to rock the boat due to fear of</span><span> something or because they feel defeated, or simply restricted from making their own improvisations.</span><br/><span></span><br/><em><span>Lesson Four:  Frozen Foods might make you a lot of money, but at what cost to morale?</span></em><br/><span>The new chef in charge is highly focused on making more money in the fastest, easiest way possible. In the movie, it is by expanding Gusteau&rsquo;s recipes into a pre-packaged, frozen-foods line. Will it bring in revenue? Yes. Is anyone inspired?  No. The team feels like what they are doing is sacrificing the quality of their work, and killing the passion in their hearts that drives them to create every day.  In fact, there is a point in the movie where this plan is disbanded and the team rallies around a bonfire of the frozen foods and marketing materials and toasts to a new era of getting back to making real food for real people.</span><br/><span></span><br/><em><span>Lesson Five: &ldquo;You are the boss. Inspire them.&rdquo;</span></em><br/><span></span><span>In the movie the team is about to face their toughest food critic who can make or break their restaurant. Linguini asks Colette &ldquo;What should I do?&rdquo;. She replies, &ldquo;You are the boss. Inspire them.&rdquo; I’m sure you all have teams of people who report to you, who look to you for guidance, mentorship, and they take their cues from what you do and what you say. It is your responsibility to inspire them, to ignite the passion that made them want to work there to begin with. If you don&rsquo;t believe it &ndash; if you don&rsquo;t feel it yourself you can&rsquo;t expect them to believe and feel it too.</span><br/><span></span><br/><em><span>Lesson Six:  Give the customers something new by iterating on what already is.</span></em><br/><span>The best dishes were iterations on existing recipes, not completely new ideas. How can you improve and innovate in simple ways to get some quick wins with measurable impact?  What can you do in the short term that is actionable and achievable but still innovative?</span><br/><span></span><br/><em><span>Lesson Seven:  Take off the toke and give your tiny chef the credit.</span></em><br/><span>Remy grows continuously frustrated because he never receives recognition or credit for his work. (He spends most of the movie hiding under the toke of Linguini, telling him what to do.) Every company needs to do more in this area. A lot of work goes on behind the scenes that many people don&rsquo;t see (and then they start to question the value of it). Bring more of this to the forefront. Thank people more, publicly recognize them, call them out for even the small things. Foster a culture of &ldquo;I have your back.&rdquo;. Remy is a rat &ndash; you can imagine what happened when people found out he was the cook behind all the innovation in the kitchen. Recognize people for taking initiative and have their back regardless if the outcome is good or bad.</span><br/><span></span><br/><em><span>Lesson Eight:  Connect with people on an emotional level.</span></em><br/><span>This goes for both your employees and the customers you have. At the end of the movie there is this wonderful scene when the big bad critic guy tastes the dish of ratatouille prepared for him and he flashes back to an emotional moment where he is a boy being comforted by his mother after having gotten hurt falling off his bike. The food connected with him emotionally. Your products can do this too. You can do this with your staff. Listen, empathize, connect, guide, inspire.</span><br/><span></span><br/><span>If anything, I hope you go watch the movie. :-)</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#leadership-ref">leadership <span>5</span></a>
+      
+    <a href="/tags.html#program management-ref">program management <span>11</span></a>
+      
+    <a href="/tags.html#project management-ref">project management <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/03/07/summerqamp-introducing-qa-as-a-career-opportunity">SummerQAmp: introducing QA as a career opportunity</a></h1>
+  
+  <header>
+    
+    <time>07 March 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>The tech team at Gilt is excited to launch <strong>SummerQAmp</strong> (summer-kamp) with Bon Jovi, the White House, GroupMe and Onswipe.  This is a great initiative that is launching as a part of the White House&rsquo;s Summer Jobs+ program to introduce Quality Assurance as a career path to youth in the U.S.</p>
+<p><img align="middle" height="238" src="http://blog.onswipe.com/wp-content/uploads/2012/03/summer_qamp_logo.png" width="500"/></p>
+<p><strong>QA @ Gilt</strong></p>
+<p>Our Quality Assurance team is made up of individuals that are programmers with Computer Science degrees to others that started out in our Customer Support team without a technology degree.</p>
+<p>We love to automate tests but we also understand the value of manual testing.  One thing that is common among the team members is that they are passionate about what they do and know the products they are testing better than anyone.  We also work with a great offshore team and they are led by our QA team in the U.S.  We see the value of outsourcing as a way to extend our business hours, not to replace jobs in the U.S.  There is nothing better than having an engineers and testers working side-by-side.</p>
+
+<p><strong>Our SummerQAmp Goal</strong></p>
+<p>By helping launch this program and participating in it, we hope to teach the values of Quality Assurance and demonstrate that it can be a career or a gateway to other areas within technology.  Although, we really hope their passion for breaking things will keep them wanting to test.</p>
+<p>We also hope with this program that we can give people that may not know how to get started or the have financial means to get started in technology a chance to gain exposure to the skills necessary to be successful in a technology career.</p>
+<p>Get involved by signing your company up at http://www.summerqamp.org.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#SummerQAmp-ref">SummerQAmp <span>1</span></a>
+      
+    <a href="/tags.html#Quality Assurance-ref">Quality Assurance <span>1</span></a>
+      
+    <a href="/tags.html#QA-ref">QA <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/03/01/public-api-language-bindings-round-2">Public API Language Bindings, Round 2</a></h1>
+  
+  <header>
+    
+    <time>01 March 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>There&rsquo;s been even more work done getting the Gilt API wrapped up in language bindings over the past two weeks and I&rsquo;m here to present the newest to you in case any of them tickle your fancy.</p>
+
+<p><em><a href="https://github.com/nopolabs/gilt_api_php" target="_blank">gilt_api_php</a></em> is a PHP client written by Gilt Tech member <a href="https://github.com/nopolabs" target="_blank">Dan Revel</a>. This library has tests and a demo app to get you started on downloading and featuring sales and products in no time.</p>
+
+<p><em><a href="https://github.com/nitindhar7/gilt-java" target="_blank">Gilt-Java</a></em>, by Gilt Tech&rsquo;s very own <a href="https://github.com/nitindhar7" target="_blank">Nitin Dhar</a>, is of course a Java library for the Public API. Nitin is working on some Android compatibility so mobile app developers don&rsquo;t need to remain glued to our iOS bindings!</p>
+
+<p><em><a href="https://github.com/aellerton/gilt-python" target="_blank">gilt-python</a></em> is a brand new Python library brewed here at Gilt by engineer <a href="https://github.com/aellerton" target="_blank">Andrew Ellerton</a>. If you&rsquo;re working in Python, give it a try and see how you like it!</p>
+
+<p>We&rsquo;re hard at work on compiling a permanent directory of client libraries like the ones we&rsquo;ve featured on this blog and some of the applications people have built already. <a href="mailto:api@gilt.com" target="_blank">Email us</a> soon if you have something you want to see included!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#api-ref">api <span>7</span></a>
+      
+    <a href="/tags.html#python-ref">python <span>2</span></a>
+      
+    <a href="/tags.html#java-ref">java <span>1</span></a>
+      
+    <a href="/tags.html#php-ref">php <span>1</span></a>
+      
+    <a href="/tags.html#sdk-ref">sdk <span>2</span></a>
+      
+    <a href="/tags.html#client libraries-ref">client libraries <span>2</span></a>
+      
+    <a href="/tags.html#language bindings-ref">language bindings <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/02/23/affiliate-marketing-program-open-to-developers">Affiliate Marketing Program Open to Developers</a></h1>
+  
+  <header>
+    
+    <time>23 February 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>It&rsquo;s been great to hear from developers over the past two weeks about their plans for the Gilt Public API, and we can only imagine what&rsquo;s in the works out there that we haven&rsquo;t heard about yet! Meanwhile, back at Gilt HQ, we&rsquo;re hard at work on adding more to the API— more data and more ways of accessing what you want in the easiest way possible.</p>
+
+<p>In the meantime, though, I&rsquo;m happy to announce that we&rsquo;ve finally got everything in place to enable you to participate in the affiliate marketing program. By enrolling in this program and adding a single parameter to all the requests you pass in, you can earn a competitive 6% commission on all sales from referred customers. When you consider that the luxury items on Gilt lead to <em>average</em> total order values of $150, that adds up pretty quickly.</p>
+
+
+
+<p></p><center> <img src="http://media.tumblr.com/tumblr_lzuxtzHgLn1qzuc2n.gif" alt=""/></center>
+
+<p>All the information you need to get started has been added to the <a href="https://dev.gilt.com" target="_blank">Gilt Developer Portal</a>; the technical information is on the <a href="https://dev.gilt.com/page/gilt-public-apis" target="_blank">main documentation page</a> and information about how to sign up for the affiliate program is available on <a href="https://dev.gilt.com/faq/general-information" target="_blank">our FAQ</a>. What are you waiting for?</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#api-ref">api <span>7</span></a>
+      
+    <a href="/tags.html#public api-ref">public api <span>4</span></a>
+      
+    <a href="/tags.html#commission-ref">commission <span>1</span></a>
+      
+    <a href="/tags.html#affiliates-ref">affiliates <span>1</span></a>
+      
+    <a href="/tags.html#affiliate marketing-ref">affiliate marketing <span>1</span></a>
+      
+    <a href="/tags.html#retail-ref">retail <span>2</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/02/15/first-public-api-language-bindings-available-now">First Public API Language Bindings Available Now!</a></h1>
+  
+  <header>
+    
+    <time>15 February 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>7 days ago, we launched our Public API and the accompanying <a href="https://dev.gilt.com" target="_blank">Developer Portal</a>. We&rsquo;ve received a lot of great feedback, updated the Portal a bit to better give you the information you need, and talked to a lot of developers with some really neat ideas for ways to use the API. Now&rsquo;s a great time to get started on your own application!</p>
+
+<p>Today I&rsquo;m here to share some of the hard work that people have been doing, both here at Gilt and in the developer community at large, to make the API more accessible to developers of specific languages. We now have the first API language bindings available for Javascript, Ruby, Objective-C, Scala, and Python!</p>
+
+<p>There&rsquo;s more to come; I&rsquo;ll make sure to update here when we have support for more languages or other libraries that might tickle your fancy. Until then, this should be enough to get you started, right?</p>
+
+<h3>Javascript</h3>
+
+<p>Developed by <a href="http://www.chrisyz.com" target="_blank">Chris Young-Zawada</a> here at Gilt, <a href="https://github.com/gilt/gilt-js-sdk" target="_blank">these Javascript language bindings</a> are available as a jQuery-based implementation, so all you have to do is drop in a recent version of jQuery and this .js file and you&rsquo;re off to the races!</p>
+
+<h3>Ruby</h3>
+
+<p><code>gem install kin</code> is all you need to get started with using the Gilt API in Ruby. Developer <a href="https://github.com/vivekbhagwat" target="_blank">Vivek Bhagwat</a> put together <a href="https://github.com/vivekbhagwat/kin" target="_blank">this rubygem</a> to let Ruby developers worldwide have access to Gilt&rsquo;s great flash sales in their applications. Thanks, Vivek!</p>
+
+<h3>Objective-C</h3>
+
+<p>iOS development is kind of a big deal right now, and what better way to dip your toes in the water or extend the reach of your mobile app empire than to use this <a href="https://github.com/gilt/gilt-ios-sdk" target="_blank">Gilt API iOS client library</a> to integrate Gilt sales data into an app for iPhone, iPod Touch and/or iPad? (That&rsquo;s a rhetorical question. This is the ultimate way to do those things.) The SDK was put together by a crack team of Gilt mobile developers: <a href="https://github.com/louoso" target="_blank">Louis Vera</a> and <a href="http://bklynco.de" target="_blank">Adam Kaplan</a>.</p>
+
+<h3>Scala</h3>
+
+<p>Recently among my friends and, it seems, in the developer community at large, what started as a whisper (&ldquo;Scala is pretty sweet&rdquo;) has turned into a roar (&ldquo;DEPLOY ALL THE SCALA&rdquo;). If you&rsquo;re one of the converts, I&rsquo;m happy to tell you that developers <a href="https://github.com/mnn2104" target="_blank">Moses Nakamura</a> and <a href="https://github.com/vivekbhagwat" target="_blank">Vivek Bhagwat</a> have prepared a fully-tested, simple to use library called <a href="https://github.com/mnn2104/Aurum" target="_blank">Aurum</a> that give you access to the Gilt API. Moses and Vivek win the prize for being the first client library developed outside of Gilt— it was up and ready for use fewer than 48 hours after the launch of the API!</p>
+
+<h3>Python</h3>
+
+<p>Not content to rest after that, <a href="https://github.com/mnn2104" target="_blank">Moses</a> put together <a href="https://github.com/mnn2104/PyGilt" target="_blank">a simple Python wrapper</a> for the Gilt API as well. It&rsquo;s currently the slimmest of the client libraries highlighted here today, clocking in at just over 100 lines of code, but supports digging through all of the sales and product information that you need to explore our curated sales and do all kinds of fun stuff with them. Good luck, Pythonistas!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#api-ref">api <span>7</span></a>
+      
+    <a href="/tags.html#ruby-ref">ruby <span>1</span></a>
+      
+    <a href="/tags.html#scala-ref">scala <span>11</span></a>
+      
+    <a href="/tags.html#javascript-ref">javascript <span>9</span></a>
+      
+    <a href="/tags.html#python-ref">python <span>2</span></a>
+      
+    <a href="/tags.html#objective-c-ref">objective-c <span>1</span></a>
+      
+    <a href="/tags.html#ios-ref">ios <span>5</span></a>
+      
+    <a href="/tags.html#sdk-ref">sdk <span>2</span></a>
+      
+    <a href="/tags.html#client libraries-ref">client libraries <span>2</span></a>
+      
+    <a href="/tags.html#language bindings-ref">language bindings <span>2</span></a>
+      
+    <a href="/tags.html#jquery-ref">jquery <span>2</span></a>
+      
+    <a href="/tags.html#rubygem-ref">rubygem <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/02/13/managers-become-the-flywheel">Managers! Become the Flywheel.</a></h1>
+  
+  <header>
+    
+    <time>13 February 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Arguably, the job of an engineering manager is to hire and sculpt a development team that is not only highly productive, but also precisely resourced for immediate business priorities.</p>
+<p>Easier said than done. Businesses are highly erratic organisms. Especially start-ups. From week to week our business environment changes and company priorities evolve accordingly. In response to this, so does the position of senior management on the best way to adapt.</p>
+<p>Senior managers flourish in these rough seas, happily charting new courses as new storms brew.</p>
+<p>Development teams don’t fare as well when deprived of continuity. Reorganizing teams and re-prioritizing efforts at the first sign of trouble is problematic for a few reasons:</p>
+<p>Engineers can’t be thought of as fungible resources that can easily skip between teams. Optimal team dynamics form slowly. Interactions take a while to mature and processes need time to be adapted to the specific needs of the team.</p>
+<p>Great products don’t happen overnight either. They typically result from several iterations by stable teams. The first incarnation of any effort is almost always sub-par. This is as it should be.  As Reid Hoffman said: <em>“If you&rsquo;re not embarrassed by your first product release, you&rsquo;ve released too late”</em>. The real magic happens after the first or second iteration when the team really starts understanding what the problem is and has acquired the domain knowledge and built the tools to attack it.</p>
+<p><img src="http://johnandcailin.com/files/images/flywheel_illustration2.blog.png"/></p>
+<h2>So how should you get the most of out your team in an unstable environment?</h2>
+<p><strong>Balance the team:</strong> When the ratio between engineering team size to the rest of the company is too small, you create the capacity to generate many more ideas than can possibly be implemented, or even discussed fully. This results in endless distractions and prioritization sessions, and reduces critical focus on the work currently being done.</p>
+<p>There are a few models for creating balance. One is to simply drive everything from the tech team, for example <a href="http://zachholman.com/posts/scaling-github-employees" target="_blank">GitHub has zero managers</a> and developers are 100% responsible for the product direction. This isn’t an option for most companies, but creating a engineering team that is appropriately resourced for the overall organization is.</p>
+<p><strong>Maintain Focus:</strong> Create a North Star for engineering teams by creating, communicating and repeating a strategy for your company and product. Define KPIs to track progress against the strategy. Stay focused on these KPIs for at least a quarter before iterating the strategy.</p>
+<p><strong>Limit Distractions:</strong> A colleague recently reminded me of a great quote from <a href="http://en.wikipedia.org/wiki/The_Mythical_Man-Month" target="_blank">The Mythical Man Month</a>: <em>“the best engineering manager I ever saw served often as a giant flywheel, his inertia damping the fluctuations that came from the market and management people”</em>.</p>
+<p>Be the flywheel and keep your team focused on your strategy. Limit non-essential or off-track meetings and help cross functional teams focus and work tightly on active initiatives. Project rooms allowing face-to-face communication and tight teamwork can be extremely effective.</p>
+<p><strong>Empower and Encourage Ownership:</strong> Encourage teams to take complete, long-term ownership of initiatives and the artifacts (code) that they produce. Adopt tools that help reinforce ownership while maintaining flexibility (we use Gerrit at Gilt). Defend the team from the inevitable onslaught of requests to “re-prioritize” their current work that reduce ownership and focus.</p>
+<p>Doing this isn’t easy, but as a managers our responsibility, perhaps our biggest responsibility is to make sure we have a strategy, to repeat it until people are tired hearing it and to do everything we can to maintain appropriate inertia around it.</p>
+<p>Quinn.</p>
+<p><em>Follow Gilt&rsquo;s awesome tech team on twitter <a href="https://twitter.com/gilttech" target="_blank">@gilttech</a> and read about our new API at <a href="http://dev.gilt.com" target="_blank">http://dev.gilt.com</a></em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/58/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 59 of 64</span>
+  
+    <a href="/posts/60/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

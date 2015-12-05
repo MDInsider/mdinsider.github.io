@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/05/08/mobile-web-how-to-development-environment-toolkit">Mobile Web How-To: Development Environment Toolkit</a></h1>
+  
+  <header>
+    
+    <time>08 May 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>While working on Gilt Mobile Web, these are our development tools of choice to get the job done:</p>
+<p><strong>Browsers &amp; Emulators</strong></p>
+<p>Android emulator: <a href="http://developer.android.com/sdk/index.html" target="_blank">http://developer.android.com/sdk/index.html</a></p>
+<p>XCode iOS Simulator: <a href="https://developer.apple.com/devcenter/ios/index.action" target="_blank">https://developer.apple.com/devcenter/ios/index.action</a></p>
+<p>Chrome Canary + mobile settings: <a href="https://www.google.com/intl/en/chrome/browser/canary.html" target="_blank">https://www.google.com/intl/en/chrome/browser/canary.html</a></p>
+<p><strong>Page Speeds</strong></p>
+<p>HTTP proxy/monitor and bandwidth throttler: <a href="http://www.charlesproxy.com/" target="_blank">http://www.charlesproxy.com/</a></p>
+<p>PageSpeed Insights: <a href="https://developers.google.com/speed/docs/insights/using_chrome" target="_blank">https://developers.google.com/speed/docs/insights/using_chrome</a></p>
+<p><strong>Device Testing</strong></p>
+<p>User agent strings: <a href="http://youruseragent.info/commonua.en.htm" target="_blank">http://youruseragent.info/commonua.en.htm</a></p>
+<p>Feature compatibility checks: <a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a></p>
+<p>Android debug bridge for inspecting your Android device: <a href="http://developer.android.com/tools/help/adb.html" target="_blank">http://developer.android.com/tools/help/adb.html</a></p>
+<p>Adobe inspect for inspecting Android Browser: <a href="http://html.adobe.com/edge/inspect/" target="_blank">http://html.adobe.com/edge/inspect/</a></p>
+<p>iOS 4.2.1 to 6.1 iPods and iPhones</p>
+<p>Android 2.1 to 4.2 phones and tablets</p>
+<p><strong>Usability Testing</strong></p>
+<p>Reflector: <a href="http://www.reflectorapp.com/" target="_blank">http://www.reflectorapp.com/</a></p>
+<p><strong>So, what tools do you use?</strong></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#Chrome Canary-ref">Chrome Canary <span>1</span></a>
+      
+    <a href="/tags.html#device testing-ref">device testing <span>1</span></a>
+      
+    <a href="/tags.html#tools-ref">tools <span>5</span></a>
+      
+    <a href="/tags.html#Android-ref">Android <span>10</span></a>
+      
+    <a href="/tags.html#usability testing-ref">usability testing <span>1</span></a>
+      
+    <a href="/tags.html#Reflector-ref">Reflector <span>1</span></a>
+      
+    <a href="/tags.html#XCode-ref">XCode <span>1</span></a>
+      
+    <a href="/tags.html#iOS-ref">iOS <span>22</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/05/07/mobile-web-how-to-proxy-local-environment-to">Mobile Web How To: Proxy Local Environment To Devices</a></h1>
+  
+  <header>
+    
+    <time>07 May 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>When you develop a front end experience for the full screen, the feedback loop between code and test is relatively fast. You code. You refresh your browser. Repeat. When you develop a front end experience for mobile devices, this can become a little cumbersome because the feedback loop can sometimes feel much slower. There are emulators for your machine and browser sizing/user-agent strategies that you can employ to make your development process more efficient. But in the end, you&rsquo;re going to want to test on your devices.</p>
+<p>In this post, I&rsquo;ll explain how you can proxy your local development (localhost) to both your Android and iOS devices. When you do this, you&rsquo;ll be able to code, refresh, repeat a lot faster and more efficiently.</p>
+<p><strong>Charles Proxy</strong></p>
+<p>To get started, you need a strategy to manage your HTTP proxy. I use and recommend using Charles Proxy (<a href="http://www.charlesproxy.com/" target="_blank">http://www.charlesproxy.com/</a>) but there are certainly other alternatives. Charles Proxy is very powerful but I won&rsquo;t be going into much detail about it here. Instead, we want to set up a port that we can HTTP proxy to.</p>
+<p>If you click on PROXY, then PROXY SETTINGS, you&rsquo;ll see a menu where you can enter in a port that you would like to proxy to. I&rsquo;ve chosen 8888.</p>
+<p><img alt="image" src="http://media.tumblr.com/f14ba4e1da5ef53b2e7b1892c4866bad/tumblr_inline_mmg6oyxbAu1qz4rgp.png"/></p>
+
+<p>Charles Proxy is going to look for incoming connections on this port. When you connect iOS or Android to this port, you will see that Charles Proxy will ask you to allow or deny this connection attempt:</p>
+<p><img alt="image" src="http://media.tumblr.com/d11e4560a6fc9c4310532610183684ff/tumblr_inline_mmg6qt8tD01qz4rgp.png"/></p>
+
+<p>Now, let&rsquo;s connect our devices.</p>
+<p><strong>iOS</strong></p>
+<p><strong><br/></strong>In iOS, navigate to your WiFi menu and then tap into your connected WiFi. At the bottom of this screen, tap on MANUAL under HTTP Proxy. Where you see computer_ip_address_here, enter your computer&rsquo;s ip address and where you see 8888, enter the port that you set up on Charles Proxy.</p>
+<p><img alt="image" src="http://media.tumblr.com/a6bf4a34721657bb998671b661675709/tumblr_inline_mmg6t2fEiX1qz4rgp.png"/></p>
+
+<p><strong><br/></strong>That&rsquo;s about it. On your device, open localhost:1234 or whatever in a browser and then Charles Proxy will ask you to allow or deny. You can now start coding on your machine and refreshing on your iOS device. You&rsquo;re done.</p>
+<p><strong>Android</strong></p>
+<p><strong><br/></strong>On Android, tap SETTINGS and then Wi-Fi. Next, tap and hold on the WiFi network that you are currently connected to. On the following menu, tap on MODIFY NETWORK CONFIG.</p>
+<p><img alt="image" src="http://media.tumblr.com/0d5b31fc2f2e18adfee99654ef567501/tumblr_inline_mmg76bKA8Z1qz4rgp.png"/></p>
+<p>You next see a menu to manage your network config. Scroll to the bottom of this modal and tap on SHOW ADVANCED OPTIONS.</p>
+<p><img alt="image" src="http://media.tumblr.com/916800fbdfb2c180b8341c9b8a435e8d/tumblr_inline_mmg77lvWnt1qz4rgp.png"/></p>
+<p>In the menu options that appear, you will see configuration settings similar to those found in iOS. Where you see computer_ip_address_here, enter your computer&rsquo;s ip address. Where you see 8888, select the port you set up with Charles Proxy.</p>
+<p><img alt="image" src="http://media.tumblr.com/38c9d740003a5f162c946657f6d1e525/tumblr_inline_mmg79j8KqQ1qz4rgp.png"/></p>
+
+<p>And, that&rsquo;s about it. On your device, open localhost:1234 or whatever in a browser and then Charles Proxy will ask you to allow or deny. You can now start coding on your machine and refreshing on your iOS device. You&rsquo;re done.</p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#ios-ref">ios <span>5</span></a>
+      
+    <a href="/tags.html#android-ref">android <span>3</span></a>
+      
+    <a href="/tags.html#Charles proxy-ref">Charles proxy <span>1</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#localhost-ref">localhost <span>1</span></a>
+      
+    <a href="/tags.html#computer_ip_address_here-ref">computer_ip_address_here <span>1</span></a>
+      
+    <a href="/tags.html#MODIFY NETWORK CONFIG-ref">MODIFY NETWORK CONFIG <span>1</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/05/07/today-in-pictures">today in pictures</a></h1>
+  
+  <header>
+    
+    <time>07 May 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_mmg5p1hDu61qgexq2o1_r1_1280.png"/><br/><img src="/tumblr_files/tumblr_mmg5p1hDu61qgexq2o2_1280.jpg"/><br/><img src="/tumblr_files/tumblr_mmg5p1hDu61qgexq2o3_1280.jpg"/><br/><br/><p>Today in Pictures</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#work culture-ref">work culture <span>20</span></a>
+      
+    <a href="/tags.html#narwhal-ref">narwhal <span>1</span></a>
+      
+    <a href="/tags.html#photos-ref">photos <span>7</span></a>
+      
+    <a href="/tags.html#Ninjas-ref">Ninjas <span>6</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/05/06/mobile-web-how-to-detect-samsung-s4-device-on">Mobile Web How-To: Detect Samsung S4 Device On Your Mac</a></h1>
+  
+  <header>
+    
+    <time>06 May 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>This hasn&rsquo;t been very well documented on the Internet just yet so I thought I&rsquo;d share how you need to connect your Samsung S4 device to a Mac. When you connect this device to your Mac, it (most likely at the time of this writing) will not be recognized.</p>
+<p><img alt="image" src="http://media.tumblr.com/181ffa62ffadcf95569ce1557c2471f0/tumblr_inline_mmdxa08cCQ1qz4rgp.png"/></p>
+
+<p>To have your Mac detect your Samsung S4, you have to do some magic on your device. Click on into SETTINGS and then click on ABOUT DEVICE. If you scroll to the bottom, you will see a line entitled BUILD NUMBER.</p>
+<p>Tap on the build number 7 times. I&rsquo;m not kidding.</p>
+<p><img alt="image" src="http://media.tumblr.com/02609a8044f2cf7848e3d27be931f1c4/tumblr_inline_mmdxmslipY1qz4rgp.png"/></p>
+
+<p><img alt="image" src="http://media.tumblr.com/a27facf5becec4828ce2b678cc9cbe6a/tumblr_inline_mmdxn96RIR1qz4rgp.png"/></p>
+
+<p>When you are now &ldquo;a developer,&rdquo; you&rsquo;ll see a new menu option in SETTINGS -&gt; MORE entitled DEVELOPER OPTIONS. In this option, you need to check USB DEBUGGING.</p>
+<p><img alt="image" src="http://media.tumblr.com/29203580db74edc77379b38c2daf78ca/tumblr_inline_mmdxq7ygZG1qz4rgp.png"/></p>
+
+<p>Then when you next connect your device to your computer, you&rsquo;ll see your device:</p>
+<p><img alt="image" src="http://media.tumblr.com/38fbee74fba0936b071d5a077e3048cb/tumblr_inline_mmdxraGJUm1qz4rgp.png"/></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#android-ref">android <span>3</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#Samsung S4-ref">Samsung S4 <span>1</span></a>
+      
+    <a href="/tags.html#USB DEBUGGING-ref">USB DEBUGGING <span>1</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/05/03/mobile-web-how-to-inspect-elements-on-androids">Mobile Web How-To: Inspect Elements On Android's Internet Browser</a></h1>
+  
+  <header>
+    
+    <time>03 May 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>I&rsquo;m building Gilt&rsquo;s new Android app and a good portion of the website is an Android WebView. As you may or may not know, this WebView uses the default Android Internet Browser to render webpages. You probably know this app best by its logo in the lower right hand corner of this screenshot:</p>
+<p><img alt="image" src="http://media.tumblr.com/d0cc9227c0849764b6b8351a71ed0d36/tumblr_inline_mm8jrq83x71qz4rgp.png"/></p>
+<p>When you use Google Chrome on the Android device, inspection is very straightforward &ndash; I&rsquo;ll cover this in a later post. But for Android Internet Browser, there is not to my knowledge a good way to inspect and manipulate the DOM.</p>
+<p>I needed to inspect the DOM because I inherited a JavaScript file that allows us to mimic scrolling events on mobile devices via webpages. The scrolling library works as expected in all other browsers on all other devices. So, I needed to better understand what was happening in the Android Internet Browser.</p>
+<p>The tool that bridged my device to an inspector tool is Adobe Inspect. To get going, you have to install 3 components:</p>
+<p>1. Adobe Inspect on your computer: <a href="http://html.adobe.com/edge/inspect/" target="_blank">http://html.adobe.com/edge/inspect/</a></p>
+<p>2. Google Chrome Extension Adobe Inspect: <a href="https://chrome.google.com/webstore/detail/adobe-edge-inspect/ijoeapleklopieoejahbpdnhkjjgddem?hl=en" target="_blank">https://chrome.google.com/webstore/detail/adobe-edge-inspect/ijoeapleklopieoejahbpdnhkjjgddem?hl=en</a></p>
+<p>3. Google Play Store Adobe Inspect: <a href="https://play.google.com/store/apps/details?id=com.adobe.shadow.android&amp;hl=en" target="_blank">https://play.google.com/store/apps/details?id=com.adobe.shadow.android&amp;hl=en</a></p>
+<p>Once you have installed everything, connect your Android device to your computer and make sure you&rsquo;re on the same WiFi. On your Android Device, open Adobe Inspect and click the plus sign in the upper-right hand corner to get to this screen:</p>
+<p><img alt="image" src="http://media.tumblr.com/fda48c40beb23751e754a6a79b6f1357/tumblr_inline_mm8ljthmcp1qz4rgp.png"/></p>
+<p>Get your ip address from your computer and enter it in Adobe Inspect on your Android Device. If you skip ahead, you can find your ip address on your computer by opening Google Chrome and clicking on the Adobe Inspect icon in the nav bar &ndash; you&rsquo;ll see it there as well. After you input your ip address into the Android device, you&rsquo;ll receive this screen:</p>
+<p><img alt="image" src="http://media.tumblr.com/6b90065e6ea6f656fb9e8d1d18734e22/tumblr_inline_mm8llt9jO51qz4rgp.png"/></p>
+
+<p>Now, open Google Chrome and open the URL of your choice with the Adobe Inspect extension enabled. In the upper right hand corner, you&rsquo;ll see the Adobe Inspect icon with a green plus sign.</p>
+<p><img alt="image" src="http://media.tumblr.com/aa1372ef8231b5f58784b5035421e7a8/tumblr_inline_mm8lpbX2vy1qz4rgp.png"/></p>
+
+<p>Click on this icon to reveal a menu that displays your computer, your IP address, and your device name.</p>
+<p><img alt="image" src="http://media.tumblr.com/57239b254253b27bb109ee528ed63171/tumblr_inline_mm8luaEiSV1qz4rgp.png"/></p>
+<p>Enter the Passcode you received from your Android device.</p>
+<p><img alt="image" src="http://media.tumblr.com/1a009ea0d879f7c7b5e086da92607ee1/tumblr_inline_mm8lvkMD7f1qz4rgp.png"/></p>
+<p>Now that you&rsquo;re connected, click on this button next to your device name:</p>
+<p><img alt="image" src="http://media.tumblr.com/d4667cb55c1de520e089e5c775ea4d3a/tumblr_inline_mm8ly7S3uv1qz4rgp.png"/></p>
+<p>Then, a new window should open that looks like this:</p>
+<p><img alt="image" src="http://media.tumblr.com/f3c0b20192397b9135c399bcf50099b7/tumblr_inline_mm8lyzVzQI1qz4rgp.png"/></p>
+<p>You can see that this is a standard Google Chrome inspector with the name of your device and the url that is currently being inspected. Click on this link and then click on Elements.</p>
+<p><img alt="image" src="http://media.tumblr.com/5a66d0cfaa9799e150c3983c879995be/tumblr_inline_mm8m17w50P1qz4rgp.png"/></p>
+<p>Here, you have a standard inspection workflow similar to what you would use for the full screen experience. You can use the console and other features in a more limited manner to what you would use on the full screen experience. And, Adobe Inspect will highlight what DOM elements are being inspected on the device:</p>
+<p><img alt="image" src="http://media.tumblr.com/ecabef28d465f9f7f66acaada3f2b71e/tumblr_inline_mm8m4mPBq21qz4rgp.png"/></p>
+
+<p>There is much more you can do but, hopefully, you&rsquo;re now set up to debug the Android Internet Browser (not that you needed to debug anything in the first place).</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#android-ref">android <span>3</span></a>
+      
+    <a href="/tags.html#frontend-ref">frontend <span>11</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#gilt mobile-ref">gilt mobile <span>4</span></a>
+      
+    <a href="/tags.html#WebView-ref">WebView <span>1</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    <a href="/tags.html#Adobe Inspect-ref">Adobe Inspect <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/05/01/offsite">Offsite</a></h1>
+  
+  <header>
+    
+    <time>01 May 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><a href="http://www.flickr.com/photos/brianballantine/sets/72157633331150961/" target="_blank"><img alt="image" src="http://media.tumblr.com/ef93dfbb0803b5eb06f5725af088ae5d/tumblr_inline_mm4fj0ACON1qz4rgp.png"/></a></p>
+<p>A few of us took some time to get to know each other a little better, hug trees and talk shop.</p>
+<p><img alt="image" src="http://media.tumblr.com/c478342b4553733397ef3a04611e10f6/tumblr_inline_mm4fndwqkS1qz4rgp.png"/></p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/04/30/ade-trenaman-erlang-distributed-systems-and">ade trenaman erlang distributed systems and</a></h1>
+  
+  <header>
+    
+    <time>30 April 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_mm3fyaxKdB1rcx1n4o1_1280.jpg"/><br/><p><a class="tumblr_blog" href="http://ade-trenaman.tumblr.com/post/49317601193/erlang-distributed-systems-and-sierra-nevada-pale" target="_blank">ade-trenaman</a>:</p>
+<blockquote>
+<p><strong>Erlang, Distributed Systems and Sierra Nevada Pale Ale</strong></p>
+<p>Found this photo on my phone - a real moment in time at Gilt New York! Steve Vinoski, who worked with Gregor and I back in the days of the seminal Irish tech startup IONA Technologies, came to Gilt one cold February night to give a talk on how Riak is implemented in Erlang - it’s a great talk, and a super introduction to Erlang. From left to right: Eric Bowman, Steve Vinoski, Gregor Heine, me, and Mike Bryzek. Too. Much. Fun. </p>
+</blockquote>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/04/25/ade-trenaman-why-java-8-doesnt-rock-my-scala">Ade Trenaman: Why Java 8 doesn't rock my Scala</a></h1>
+  
+  <header>
+    
+    <time>25 April 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <a href="http://ade-trenaman.tumblr.com/post/48851882212/why-java-8-doesnt-rock-my-scala">Ade Trenaman: Why Java 8 doesn't rock my Scala</a><br/><p><a class="tumblr_blog" href="http://ade-trenaman.tumblr.com/post/48851882212/why-java-8-doesnt-rock-my-scala" target="_blank">ade-trenaman</a>:</p>
+<blockquote>
+<p>I was looking through an <a href="http://www.techempower.com/blog/2013/03/26/everything-about-java-8" target="_blank">article</a> on Java 8, . We’re using Scala heavily at Gilt and I was toying with the heretical notion that Java 8 might create a compelling reason to go back to Java. Sacrilige! I am of course biased in this matter as I’ve really enjoyed the last two years of Scala coding at&hellip;</p>
+</blockquote>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/04/24/gilt-mobile-web-nav-redesigned">Gilt Mobile Web Nav Redesigned</a></h1>
+  
+  <header>
+    
+    <time>24 April 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Hello!</p>
+<p>Yesterday (April 23, 2013), I sent to production the third phase of the Gilt Mobile Web (m.gilt.com) redesign. In this phase, I updated the primary and secondary nav on the mobile web so that there is (hopefully!) a much better user experience. And like the first and second phase of the redesign, the goal with the m.gilt.com nav redesign was to incorporate learnings taken from the Gilt iPhone App experience.</p>
+<p>Here are some before and after screenshots:</p>
+<p><img alt="image" src="http://media.tumblr.com/976905bac6ac6a5d142e45b942819ac0/tumblr_inline_mlrjyms9bu1qz4rgp.png"/></p>
+
+<p>On the Sales Listing Page, you&rsquo;ll see that I moved the stores menu from above the primary nav to below it. This gives the overall navigation a hierarchy that was not present earlier. You&rsquo;ll also notice that the nav feels less busy because the buttons in the primary nav are more concise.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/34a037b2b4200f1fba2f746ccec20a0f/tumblr_inline_mlrjyt6yLU1qz4rgp.png"/></p>
+
+<p>In the Product Listing Page, you&rsquo;ll see that the back button was changed and that the title of the sale occupies the secondary nav. This allows the user to easily know in which store she is. In the future, the secondary nav on the product listing page will disappear as the user scrolls down.</p>
+<p><img alt="image" src="http://media.tumblr.com/bf131ff891c61b1b5b22811d7ab39890/tumblr_inline_mlrjyya0wP1qz4rgp.png"/></p>
+
+<p>On the Product Detail Page, I tightened the primary nav a little more and there is still no secondary nav.</p>
+<p><img alt="image" src="http://media.tumblr.com/39e215f47fd3c0f5f3f477bea322ff9f/tumblr_inline_mlrjz37A671qz4rgp.png"/></p>
+<p><img alt="image" src="http://media.tumblr.com/bcda513cf7f8a709757751a130ad8312/tumblr_inline_mlrjz7aNPL1qz4rgp.png"/></p>
+<p>On the checkout page, I changed the styling of the Cart and Submit button. The colors now match the style that persists throughout the entire Gilt Mobile Web experience. And, the lock is gone. Our site is still secure regardless whether the lock is there or not.</p>
+<p>Let me know what you think!</p>
+<p>Greg</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilt-mobile-web-ref">gilt-mobile-web <span>1</span></a>
+      
+    <a href="/tags.html#ux-ref">ux <span>3</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#redesign-ref">redesign <span>1</span></a>
+      
+    <a href="/tags.html#m.gilt.com-ref">m.gilt.com <span>1</span></a>
+      
+    <a href="/tags.html#app-ref">app <span>3</span></a>
+      
+    <a href="/tags.html#navigation-ref">navigation <span>2</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/04/18/up-and-running-with-play2">up and running with play2</a></h1>
+  
+  <header>
+    
+    <time>18 April 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_mlgshlEV5H1qgexq2o1_1280.jpg"/><br/><h1>Up &amp; Running with Play 2</h1>
+
+<p>Last night, Gilt hosted the second <a href="http://www.meetup.com/Play-NYC/" target="_blank">Play NYC</a> meetup, after nearly a year since the first. This meetup was dedicated to introducing people to the Play Framework.</p>
+
+<p>I gave a presentation that briefly touched on the reasons why Gilt chose the Play Framework for some of its recent projects and then jumped right into code. Over the course of the talk, I walked through constructing a Play app with Scala connecting to <a href="https://dev.gilt.com/" target="_blank">Gilt&rsquo;s API</a>. Starting with some functional tests, we covered:</p>
+
+<ul><li>routing, </li>
+<li>controllers, </li>
+<li>Play Actions, </li>
+<li>making a request to a web service,</li>
+<li>Play&rsquo;s configuration</li>
+<li><a href="http://docs.scala-lang.org/overviews/core/futures.html" target="_blank">Futures</a> and asynchronous behavior, </li>
+<li>unmarshaling JSON,</li>
+<li><a href="http://www.playframework.com/documentation/2.1.1/ScalaTemplates" target="_blank">Play&rsquo;s templating language</a>,</li>
+<li>compiling Assets,</li>
+</ul><p>And finally, and most importantly, deploying our application to production (with Heroku). Along the way we touched on some tenets of functional programming<sup id="fnref:p48301645551-1"><a href="#fn:p48301645551-1" rel="footnote" target="_blank">1</a></sup> and Scala&rsquo;s powerful <code>for</code> comprehensions.  We covered a lot of ground and in the end only ended up with one route: listing active sales by store.</p>
+
+<p>The slides for the talk are available <a href="https://speakerdeck.com/mwunsch/play2-up-and-running" target="_blank">on SpeakerDeck</a>, the application built is <a href="http://play-gilt.herokuapp.com/women" target="_blank">currently running in production</a>, and the application code is <a href="https://github.com/play-nyc/play-gilt" target="_blank">available on GitHub</a> for anyone to fork and experiment on.</p>
+
+<p>I had a blast. Our next meetup isn&rsquo;t scheduled yet, but we definitely won&rsquo;t allow such a long delay between meetups again. <a href="http://www.meetup.com/Play-NYC/" target="_blank">Join the group</a> to be the first to hear about upcoming events. Thank you to everybody who came out. I am looking forward to the next one.</p>
+
+<p>&ndash; Mark</p>
+
+<div class="footnotes">
+<hr><ol><li id="fn:p48301645551-1">
+<p><a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)" target="_blank">&ldquo;What&rsquo;s a monad?&rdquo;</a> <a href="#fnref:p48301645551-1" rev="footnote" target="_blank">↩</a></p>
+</li>
+
+</ol></div>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#PlayFramework-ref">PlayFramework <span>4</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#heroku-ref">heroku <span>1</span></a>
+      
+    <a href="/tags.html#λ-ref">λ <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/53/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 54 of 64</span>
+  
+    <a href="/posts/55/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

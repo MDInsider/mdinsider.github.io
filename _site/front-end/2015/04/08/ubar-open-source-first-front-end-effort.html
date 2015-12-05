@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / UBAR: Open-Source-First Front End Effort</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/front-end/2015/04/08/ubar-open-source-first-front-end-effort">UBAR: Open-Source-First Front End Effort</a></h1>
+  
+  <header>
+    
+    <cite><a href="/authors.html#Gregory Mazurek-ref">Gregory Mazurek</a></cite>
+    
+    <time>08 April 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#front-end-ref">front-end</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>At Gilt, our open-source contributions generally come in the form of tools that we use internally that we think have value to the rest of the tech community. But like most other companies, we have internal systems that are very specific to Gilt. This makes open-source contributions tricky because our potential projects and tools are so tightly coupled to our systems. We wanted to bridge this gap and decided to do so through a tiny front end initiative we called Open Source First.<b><br/></b></p><p>For example, our front end architecture consists of over 100 requirejs modules that are bundled and served by an in-house legacy build system that is as tightly coupled as a ball of rubber bands. And, our internal requirements make it necessary that we wrap requirejs which means we oftentimes aren’t using off-the-shelf versions of each module. These modules depend on each other in ways that would make spiders jealous. It works. It’s stable. And once the learning curve is conquered, we defend its design while sipping our orange Kool-Aid. But, it makes open-sourcing any of these individual modules just about impossible.</p><p>The Special Operations team (Kyle Dorman, Jose Sanchez, Archana Kumar, and myself) set out to create a pattern by which we could open-source modules that could be used by the greater tech community without sacrificing any characteristics of the module had it been developed internally. We used a project that we had just finished called OAFE (Open App From Email) as the basis of this experiment. OAFE is one of those mobile-web user experiences you see that asks “if you’d like to install the app.” Internally, we have a lot of discourse about whether this is a good experience for our users or not. As a result, our implementation of OAFE is a little complex. It tries to be the best experience for people who want to be redirected and people who want to stay on the mobile web. OAFE was a perfect candidate for an open source project because it needed to be implemented on two completely separate code basis (Gilt and Gilt City).</p><p>We created <a href="http://code.gilt.com/ubar" target="_blank">UBAR</a> (Unidirectional Browser App Resolver) as an <a href="https://github.com/gilt/ubar" target="_blank">open-source</a> first module that behaved as OAFE. Our goal was to write a front-end module that could be easily consumed both by our current system and externally. We did so without sacrificing any internal requirements or features. Are we expecting that other people are going to use UBAR on their websites? Frankly, no. So, why go through this exercise of creating open-source modules? This is where the learnings happened that ultimately forced us to think better and harder about our work.</p><h2><b>5 Key Learnings</b></h2><ol><li><b>PRIDE</b> Your code being publicly available instills a sense of pride. This is our work. This what we are capable of doing. This is how we do it. We want it to be great because we want others in the tech industry to appreciate it. As a result, we are quick to make fixes to bugs and quick to make improvements to make it feel better. Since it’s something we want to be proud of, we all felt an energy of wanting it to be great. It has been a great team-building exercise.</li><li><b>GIVING BACK</b> We shared our creative process for implementing an open-source module so that we could inspire others to do the same. For so long, we have taken from the front-end community without giving back substantially. This is our attempt to give back, just a little. It feels good.</li><li><b>CODE LEGACY</b> Regardless what happens with the feature, the engineers on the team have a really cool sense of pride for their work. The hard part about working on websites is that features are pulled down as frequently as they’re put up. This is our way of giving some legacy to the code.</li><li><b>WORKFLOW</b> In the chance someone wants to use our open-source module, they can contribute to it. This allows input on our work from sources that we don’t necessarily interact with on a daily basis. One of our team members left the company during the development of the feature but since it was open-source, she was able to continue tracking its progress.</li><li><b>BETTER ARCHITECTURE</b> Open-source first completely reshaped the way we thought about architecting this module, for the better. We did not want to remove any characteristics or attributes of the module from the open-source project. We wanted to <a href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food" target="_blank">eat our own dogfood</a>. As a result, we thought a lot about how this module could be consumed by systems that were not our own. We created a patterns for how external users could easily implement tracking analytics, template rendering, deep-link requirements, and design. Through these abstractions, our code is easier to read and less tightly coupled than other comparable modules that we created.<br/></li></ol><p>Gilt was fully supportive of this effort largely due to the culture set forth by our technical leadership. And, that really moves us to our last point: this made us really excited about our work. It made us bond well as a team. It made us feel like we were making positive contributions to Gilt, to ourselves, to each other, and to the tech community. It felt like good technical culture.</p><p>And since we created patterns and frameworks, it’s a technical culture that we can share both internally and externally. Going forward, we’re going to try to open-source everything, first.</p><p>To view UBAR’s source code, please <a href="https://github.com/gilt/ubar" target="_blank">click here</a>.</p><p>To read more about UBAR and to see it on a mobile device, please <a href="http://code.gilt.com/ubar/" target="_blank">click here</a>.</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#opensource-ref">opensource <span>9</span></a>
+      
+    <a href="/tags.html#frontend-ref">frontend <span>11</span></a>
+      
+    <a href="/tags.html#architecture-ref">architecture <span>9</span></a>
+      
+    <a href="/tags.html#happiness-ref">happiness <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Responsive Gilt.com Retrospective</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2014/07/01/responsive-gilt-com-retrospective">Responsive Gilt.com Retrospective</a></h1>
+  
+  <header>
+    
+    <time>01 July 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/5df1c1425d52818e7faeefd64655f6bc/tumblr_inline_n81n6pUEb91rjy8d3.jpg" width="800"/></p>
+<p><span>Gilt’s <a href="http://tech.gilt.com/search/special+operations" target="_blank">Special Operations Team</a> recently spent five weeks creating a legacy <a href="http://playframework.com/" target="_blank">Play</a> app that’s responsive to the mobile device for both portrait and landscape orientations. After our team finished our work, we got together to recap what we’d done. We also decided to share with you what we learned while converting Gilt’s desktop experience into a beautiful responsive mobile experience that seemed natively designed. In this post&ndash;the first in a series of five&ndash;I’d like to share how we organized a successful retrospective meeting. </span></p>
+<p><span>As a small team, the three of us who belong to Special Ops (which handles end-to-end projects that don’t fit under the umbrella of other product-driven teams) are always very aware of what our teammates are working on, so we didn’t need to sit in a room to talk about that. Instead, we wanted to talk about some of the higher-level topics that surfaced while we were working in the weeds. To prepare, each of us spent half an hour writing on individual sticky notes the reasoning behind our choices. We then brought our personalized notes to the meeting, which had three goals:</span></p>
+<ol><li>
+<p><span>List all the things that we thought we did awesomely.</span></p>
+</li>
+<li>
+<p><span>List all the things that we want to do and don’t want to do in our next project, so we can heighten awesomeness levels even more. </span></p>
+</li>
+<li><span>Give high-fives.</span></li>
+</ol><p><span>We rated our achievements and shortcomings in eight buckets:</span></p>
+<ul><li>
+<p><span>internal teamwork</span></p>
+</li>
+<li>
+<p><span>external teamwork</span></p>
+</li>
+<li>
+<p><span>efficiency</span></p>
+</li>
+<li>
+<p><span>knowledge</span></p>
+</li>
+<li>
+<p><span>development workflow</span></p>
+</li>
+<li>
+<p><span>testing workflow</span></p>
+</li>
+<li>
+<p><span>general feeling about code quality</span></p>
+</li>
+<li><span>evangelism (getting people outside our team involved and including them in our work)</span></li>
+</ul><p><span>We arranged these buckets as points along a Y axis (aka “the category axis”), and used the X axis (aka “the awesomeness axis”) to measure our feelings of how well we did. For each of the eight buckets, each team member placed a sticky note with their initials somewhere on the X axis between a :( (at the far left end of the spectrum) and a :) (at the far right).</span></p>
+<p><span></span><img alt="image" height="597" src="https://31.media.tumblr.com/6994e2ecef1d0f5c0a2a8f70a98eff45/tumblr_inline_n81n5y4BW21rjy8d3.jpg" width="800"/></p>
+<p><span>Then each of us explained why we placed our initials along the awesome-ness axis with concrete examples and explanations. At the end of the hour, our whiteboard was filled with sticky notes that neatly plotted out our satisfaction and dissatisfaction with various aspects of our work.</span></p>
+<p><span>Our team retrospective was very important for us because, even though we work closely together, each of us gained valuable insights into the primary motivators, goals and concerns&ndash;be it better tooling, better development workflow, better testing processes, or better communication. In software engineering, the work never ends. But by holding a retrospective, we were able to look back at what we did in order to try to continuously improve as engineers.</span></p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/5b10d11d51014a7551b38a5be239ca05/tumblr_inline_n81n7fyd9t1rjy8d3.jpg" width="800"/></p>
+<p>Tune in tomorrow for &ldquo;Inline vs Block Media Queries&rdquo;!</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Special Operations-ref">Special Operations <span>10</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    <a href="/tags.html#responsive design-ref">responsive design <span>7</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#meetings-ref">meetings <span>1</span></a>
+      
+    <a href="/tags.html#teamwork-ref">teamwork <span>1</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#Greg Mazurek-ref">Greg Mazurek <span>3</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#responsive design series-ref">responsive design series <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

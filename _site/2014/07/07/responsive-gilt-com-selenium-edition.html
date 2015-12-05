@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Responsive Gilt.com: Selenium Edition!</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2014/07/07/responsive-gilt-com-selenium-edition">Responsive Gilt.com: Selenium Edition!</a></h1>
+  
+  <header>
+    
+    <time>07 July 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span>In <a href="http://tech.gilt.com/2014/07/02/responsive-gilt-com-block-vs-in-selector-media" target="_blank">our last blog post</a> on responsive design at Gilt, my colleague Greg Mazurek explained why we use in-selector CSS media-queries instead of blocks. The impetus for choosing this pattern was to make our code less brittle to future development. Today I’ll talk about how we’re applying the same principle to our testing practices.</span></p>
+<p><span>We’ve thought a lot about how we can design our code to minimize&ndash;even prevent&ndash;unexpected adverse changes made during future development cycles. The Gilt engineering team uses automated testing for all of our apps, but in transitioning to a responsive design environment many of these tests have become inapplicable because page elements have been shifted, hidden, altered, or added. </span><span>Furthermore,</span><span> if a developer makes a change to a CSS property for a tablet experience, she needs to know whether this change might adversely affect the mobile web experience. A modified class name, a JavaScript side-effect, or a CSS specificity change are three possible negative consequences of such a change. </span></p>
+<p>To deal with this potential problem, the Special Ops team has been writing Selenium-automated tests for responsive pages&ndash;more specifically, for each browser responsive breakpoint. (If you are unfamiliar with Selenium, it is a web testing framework that allows you to automate your web application within the browser. Its robust API interacts with your website the way a user would, and can handle automating most scenarios.) First, we have a browser resize itself to the breakpoint we want to test&ndash;for example, iPhones in portrait view fall under a maximum width of 479px, while in landscape its a minimum width of 480px, and a maximum width of 767px. With Selenium, via the web driver object, this is very easy to achieve.</p>
+<p><span>Here is a small snippet of what that code might look like:</span></p>
+<pre><code>def resizeWindow(width: Int, height: Int)(implicit webDriver: WebDriver) = {
+  webDriver.manage().window().setSize(new org.openqa.selenium.Dimension(width, height))
+}
+</code>
+</pre>
+<p><span>This reusable piece of code is what you&rsquo;ll want to execute before the start of each test. Execute it </span><span>before</span><span>, not </span><span>after</span><span>, the initial page load, to ensure your site responds as it natively would at those breakpoints (rather than scaling your site down&ndash;which could cause inconsistencies with the view). Executing the code before the initial page load will also help you to ensure the automation doesn’t start before the browser has fully scaled down.</span></p>
+<h3>Example</h3>
+<p><span>To help you ensure that a page responds correctly to the appropriate viewport of the screen or device, here is a very basic test. It uses Selenium with ScalaTest and a dash of jQuery (there are many ways to test, but this is my preferred way):</span></p>
+<pre><code>describe("When resizing the browser to 479px and navigating to product listing page") {
+  it("should fit all the elements within the 479px limit") {
+    val expectedPageWidth = 479
+    resizeWindow(width = expectedPageWidth, height = 800)
+ 
+    webDriver.navigate().to("http://www.gilt.com/sale/men")
+ 
+    // Using scrollWidth instead of width(), to get the true width of the html container
+    val actualPageWidth = webDriver.asInstanceOf[JavascriptExecutor]
+      .executeScript("return $('html')[0].scrollWidth;").asInstanceOf[Long]
+ 
+    actualPageWidth.toInt should be &lt;= expectedPageWidth
+  }
+}
+</code>
+</pre>
+<p><span>(Note: Your page should not be scrollable to the right.)</span></p>
+<p><span>That’s all there is to it. If you have no other test, at least this one will ensure your site is still responsive. But we highly recommend adding more specific tests that target the functionality of the site.</span></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Jose Sanchez-ref">Jose Sanchez <span>3</span></a>
+      
+    <a href="/tags.html#responsive design-ref">responsive design <span>7</span></a>
+      
+    <a href="/tags.html#CSS-ref">CSS <span>12</span></a>
+      
+    <a href="/tags.html#CSS3-ref">CSS3 <span>1</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    <a href="/tags.html#Selenium-ref">Selenium <span>5</span></a>
+      
+    <a href="/tags.html#testing-ref">testing <span>5</span></a>
+      
+    <a href="/tags.html#Special Operations-ref">Special Operations <span>10</span></a>
+      
+    <a href="/tags.html#ScalaTest-ref">ScalaTest <span>4</span></a>
+      
+    <a href="/tags.html#jQuery-ref">jQuery <span>1</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#responsive design series-ref">responsive design series <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

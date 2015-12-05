@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Optimistic Type-casting in Objective-C</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2011/05/04/optimistic-type-casting-in-objective-c">Optimistic Type-casting in Objective-C</a></h1>
+  
+  <header>
+    
+    <time>04 May 2011</time>
+    
+  </header>
+
+  <div class="content">
+    <p>As developers, we often find ourselves dealing with some variant of this scenario: we&rsquo;re iterating through a collection containing mixed object types, and we&rsquo;re only interested in objects of a certain type.</p>
+<p>For example, let&rsquo;s say we&rsquo;ve got an <code>NSArray</code> representing desks in a classroom. Each array element corresponds to a specific physical desk, which may or may not be assigned to a student at any given time. If a desk is assigned to a student, the array element will contain an <code>NSString</code> instance whose value is the name of the student assigned to that desk. If a desk is unoccupied, the array will contain a pointer to <code>NSNull</code> instead.</p>
+<p>In Objective-C, the code for performing such a task usually looks something like:</p>
+<pre>//
+// assume the variable 'desks' points to a pre-existing NSArray
+//
+Class stringClass = [NSString class];
+NSUInteger deskCount = desks.count;
+for (NSUInteger i=0; i&lt;deskCount; i++) {
+	id obj = [desks objectAtIndex:i];
+	if ([obj isKindOfClass:stringClass]) {
+		NSString* studentName = (NSString*) obj;
+	
+		NSLog(@"%@ is assigned to desk %u (of %u)", studentName, (i+1), deskCount);
+		
+		// perform other operations with the student's name
+	}
+}
+</pre>
+<p>Using a technique I call &ldquo;optimistic type-casting,&rdquo; we can make the code a little bit tidier.</p>
+<p>Optimistic type-casting relies on the fact that in C-based languages (unlike, say, Java), it is possible to assign a typed pointer variable so that it points to a value of a completely different type. If that&rsquo;s a little unclear, it means in Objective-C, we can do stuff like this:</p>
+<pre>NSString* myName = (NSString*) [NSNumber numberWithInt:-1];</pre>
+<p>Here, we&rsquo;ve assigned <code>myName</code>, which is declared as a pointer to an <code>NSString</code> instance, so that it <em>actually</em> contains a pointer to an <code>NSNumber</code> instance.</p>
+<p>Not only will the code above compile without warning, but as long as we only call methods on <code>myName</code> that are implemented by both <code>NSNumber</code> <em>and</em> <code>NSString</code>, the code will execute without crashing, and the compiler will remain silent. Calling <code>[myName doubleValue]</code> works just fine.</p>
+<p>This allows us to take the sample code above and eliminate the line containing the <code>studentName = (NSString*) obj</code> cast. We optimistically assume that the object we&rsquo;ve been handed is of the exact type we want.</p>
+<p>So, when we retrieve the array value by calling <code>[desks objectAtIndex:i]</code>, we immediately assign it to an <code>NSString*</code> variable instead of putting the value into, say, the type-neutral <code>id</code> object pointer. <em>Then</em> we actually check the object&rsquo;s type to ensure we&rsquo;ve got what we want:</p>
+<pre>Class stringClass = [NSString class];
+NSUInteger deskCount = desks.count;
+for (NSUInteger i=0; i&lt;deskCount; i++) {
+	NSString* studentName = [desks objectAtIndex:i];	// no cast needed for type-neutral 'id' return value
+	if ([studentName isKindOfClass:stringClass]) {
+		NSLog(@"%@ is assigned to desk %u (of %u)", studentName, (i+1), deskCount);
+		
+		// perform other operations with the student's name
+	}
+}
+</pre>
+<p>Doing this saves a line of code, making the signal stand out from the noise a little more. And depending on how the compiler decides to optimize that portion of the code, it may possibly reduce the code&rsquo;s stack footprint by <code>sizeof(NSString*)</code>.</p>
+<p>It&rsquo;s not a big optimization, and even if it were implemented across a large codebase, it probably wouldn&rsquo;t make a perceptible difference performance-wise.</p>
+<p>But I use it because it&rsquo;s a little bit less text for my brain to parse through as I&rsquo;m reading my code. I also like being able to describe a coding style as &ldquo;optimistic,&rdquo; even if a more apt description of the technique would be <em>Trust, but Verify</em>.</p>
+<p><strong>Evan Coyne Maloney</strong><br/> Senior Software Engineer, Mobile Team<br/> Gilt Groupe</p>
+<hr><p><strong>Protip:</strong> While the example above allowed me to illustrate optimistic type-casting, it deliberately ignores a more efficient way of handling the particular problem described. In the example above, if we know that our array will never contain anything other than <code>NSString</code>s and <code>NSNull</code>s, we can rely on the fact that <code>NSNull</code> is a singleton and avoid the overhead of the <code>[obj isKindOfClass:stringClass]</code> call altogether.</p>
+<p>Instead, all we need to do is compare the pointer of the object returned by the collection against the pointer of the singleton <code>NSNull</code> instance:</p>
+<pre>id nsNull = [NSNull null];
+NSUInteger deskCount = desks.count;
+for (NSUInteger i=0; i&lt;deskCount; i++) {
+	NSString* studentName = [desks objectAtIndex:i];
+	if (studentName != nsNull) {
+		NSLog(@"%@ is assigned to desk %u (of %u)", studentName, (i+1), deskCount);
+		
+		// perform other operations with the student's name
+	}
+}
+</pre>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Objective-C-ref">Objective-C <span>4</span></a>
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#gilt mobile-ref">gilt mobile <span>4</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#evan coyne maloney-ref">evan coyne maloney <span>1</span></a>
+      
+    <a href="/tags.html#type-casting-ref">type-casting <span>1</span></a>
+      
+    <a href="/tags.html#optimization-ref">optimization <span>2</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#protips-ref">protips <span>1</span></a>
+      
+    <a href="/tags.html#submission-ref">submission <span>9</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

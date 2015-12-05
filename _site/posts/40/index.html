@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/23/the-talks-from-last-weekends-pacific-northwest">The Talks From Last Weekend's Pacific Northwest Scala Conference</a></h1>
+  
+  <header>
+    
+    <time>23 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Over the weekend Portland, Ore. played host to the first-ever <a href="http://pnwscala.org/" target="_blank">Pacific Northwest Scala Conference</a>: two days of presentations, talks and open sessions. Sponsored in part by Gilt, and co-organized by Gilt Principal Software Engineer Kevin Scaldeferri, PNWScala featured an impressive roster of speakers from Twitter, Meetup, Typesafe, and other great companies. In addition to Saturday&rsquo;s full menu of prepared talks, Sunday featured ad hoc, unconference-style sessions for people to suggest and present on topics of their choice (cool idea!).</p>
+<p>&ldquo;The community support and enthusiasm were beyond anything I expected,&rdquo; says conference co-organizer <a href="https://twitter.com/tlockney" target="_blank">Thomas Lockney</a>. &ldquo;I'm particularly excited to see what we can put together next year now that we know there&rsquo;s more than sufficient interest in Scala in the Pacific Northwest.&rdquo; So are we!</p>
+<p>If you didn&rsquo;t get to attend PNWScala, here are the featured presentations, plus introductory notes written by the presenters. <em><strong>Click the images to view the full slide presentations</strong></em>.</p>
+<p><a href="https://twitter.com/extempore2" target="_blank"><strong>Paul Phillips</strong></a>, PNWScala keynote speaker and developer: &ldquo;<a href="https://www.slideshare.net/extempore/keynote-pnw-scala-2013" target="_blank">Keynote: We&rsquo;re Doing It All Wrong</a>&rdquo;:</p>
+<blockquote>
+<p>My conclusion after moving a million lines of code is that everything we do (plus or minus) is wrong. Henry Ford said &ldquo;If I had asked people what they wanted, they would have said faster horses.&rdquo; Our horses are now a billion times faster: our horses may well be the fastest in the galaxy. Are we too comfortable on our horses? Would we recognize better mounts if they came along, but didn&rsquo;t look like horses? Is the state of our profession one which warrants pride, shame, or despair? I will explore these questions with unwarranted optimism.</p>
+</blockquote>
+<p><iframe frameborder="0" height="355" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/27366252?rel=0" width="425"> </iframe></p>
+
+<p><a href="https://twitter.com/tixxit" target="_blank"><strong>Tom Switzer</strong></a>, &ldquo;<a href="http://pnwscala.org/talks/TomSwitzer-PNWScala.pdf" target="_blank">Spire by Example</a>&rdquo;:</p>
+<blockquote>
+<p>This talk will introduce Spire by solving a fairly simple optimization problem. We&rsquo;ll first prototype a machine learning algorithm, using Spire&rsquo;s type classes and operators to create generic, concise and readable code. With this in hand, we&rsquo;ll then explore possible solutions to some real problems that arise in our data using some of Spire&rsquo;s data types, like real numbers, polynomials and random distributions. The goal is not to get into the nitty gritty details of Spire, but rather to showcase how Spire can be used to create nice, flexible numeric code.</p>
+</blockquote>
+<p><a href="http://pnwscala.org/talks/TomSwitzer-PNWScala.pdf" target="_blank"><img alt="image" src="http://media.tumblr.com/c717bdff45b44cfb3b0805134903894a/tumblr_inline_mv4pdwmlH81s17bu5.png"/></a></p>
+
+<p><a href="https://twitter.com/stephenjudkins" target="_blank"><strong>Stephen Judkins</strong></a>, Portland-based Scala developer: <a href="http://stephenjudkins.github.io/pureimage-presentation/#/" target="_blank">Functional Raster Image Processing in Scala</a>:</p>
+<blockquote>
+<p>Most existing image processing libraries feature clumsy imperative interfaces to complicated mutable data structures. Here, we will show how raster graphics can be represented using simple functions and data structures and how a new library helps bridge the gap to real-world image formats. We&rsquo;ll see how operations on raster graphics can be made simpler, faster, more memory-efficient, and more composable compared to existing alternatives. We&rsquo;ll see both how common image processing tasks can be simple expressed, and examples of visually striking or fun effects that this framework makes easy.</p>
+</blockquote>
+<p><a href="http://stephenjudkins.github.io/pureimage-presentation/#/" target="_blank"><img alt="image" src="http://media.tumblr.com/1bdb7a8ac8a843bb4833b6bf3271a84d/tumblr_inline_mv2wtgpCVW1s17bu5.png"/></a></p>
+
+<p><a href="https://twitter.com/sritchie" target="_blank"><strong>Sam Ritchie</strong></a>, Clojure/Scala Developer at Twitter: &ldquo;<a href="http://pnwscala.org/talks/SamRitchie-PNWScalaTalk.pdf" target="_blank">Twitter: Taking Hadoop Realtime with Summingbird</a>&rdquo;:</p>
+<blockquote>
+<p>Twitter&rsquo;s Summingbird library allows developers and data scientists to build massive streaming MapReduce pipelines without worrying about the usual mess of systems issues that come with realtime systems at scale. This talk will discuss the development of Summingbird&rsquo;s hybrid Batch and Realtime operating mode, the power of clean, mathematical abstractions and the massive creative leverage that functional design constraints can give to a project.</p>
+<p>The talk will also discuss some of the applications for these technologies currently being used at Twitter.</p>
+</blockquote>
+<p><a href="http://pnwscala.org/talks/SamRitchie-PNWScalaTalk.pdf" target="_blank"><img alt="image" src="http://media.tumblr.com/ba7d5bf29ecd79804de5591e57b96577/tumblr_inline_mv2x50saS91s17bu5.png"/></a></p>
+
+<p><a href="https://twitter.com/rit" target="_blank"><strong>Brendan McAdams</strong></a>, Typesafe Professional Services: &ldquo;<a href="https://speakerdeck.com/bwmcadams/o-for-a-more-civilized-age" target="_blank">Network I/O for a More Civilized Age: The New Akka I/O</a>&rdquo;:</p>
+<blockquote>
+<p>Until recently, users seeking a way of doing Scalable I/O had two choices: NIO, which provides an esoteric interface requiring serious expertise and concurrency control, or Netty - which provides a rich and powerful layer above NIO. The downsides to Netty however include an extremely idiomatic Java API, and a series of separated threads and thread pools left out of the control of the user.</p>
+<p>There is, however, hope for the Scala user who abhors free range threading and wants a more Scala-sane interface to a network. Working with the Spray (<a href="http://spray.io" target="_blank">http://spray.io</a>), the Akka team (<a href="http://Akka.io" target="_blank">http://Akka.io</a> | <a href="http://letitcrash.com" target="_blank">http://letitcrash.com</a> ) has recently introduced a new, lightweight Non-blockimg network I/O interface built around Akka&rsquo;s core Actors.</p>
+<p>This talk will explore the benefits and power of this new Akka I/O layer, including a brief exploration of its benefits over the &ldquo;Old&rdquo; Akka IO. The presenter will introduce the ByteString &amp; it&rsquo;s powerful manipulation tools for network traffic, the Pipeline system for composed protocol decoding, and much more. Further insights will include a demonstration of Akka I/O&rsquo;s built in system for Backpressure — allowing true handling &amp; awareness of an overloaded network buffer, and compositing of Futures on top of the Actor API to emulate a more functional interface.</p>
+</blockquote>
+
+<p><a href="https://speakerdeck.com/bwmcadams/o-for-a-more-civilized-age" target="_blank"><img alt="image" src="http://media.tumblr.com/d4a7037dc1821c8e62ad99f44575dced/tumblr_inline_mv2xgoZlyN1s17bu5.png"/></a></p>
+
+<p><a href="https://twitter.com/cxlt" target="_blank"><strong>Clint Tseng</strong></a>, UX designer: &ldquo;<a href="https://rawgithub.com/clint-tseng/pnwscala/master/build/pnwscala.html" target="_blank">Scala for Javascript Kiddies; Javascript for Scala Nerds</a>&rdquo;:</p>
+<blockquote>
+<p>In this talk I describe how a quest to fulfill a government mandate for accessibility led to the development of a new interface framework based largely on Scala-like philosophies, and how one small monadic abstraction can change the entire face of a codebase. We will cover how Functional Reactive Programming can be usefully applied in a imperative-functional hybrid environment, and the upsides and downfalls of attempting to apply a very Scala-based mindset onto a fully dynamic language like Javascript. The work covered in this talk culminated in a framework called Janus (<a href="https://github.com/clint-tseng/janus" target="_blank">https://github.com/clint-tseng/janus</a>), and while very young, the implications and influences behind it are very strong, and very much derived from my time learning and building Scala code.</p>
+</blockquote>
+<p><a href="https://rawgithub.com/clint-tseng/pnwscala/master/build/pnwscala.html" target="_blank"><img alt="image" src="http://media.tumblr.com/7511df4badd45113085b249b80d8713f/tumblr_inline_mv4m9oNGZr1s17bu5.png"/></a></p>
+
+<p><a href="https://twitter.com/kelseyinnis" target="_blank"><strong>Kelsey Gilmore-Innis</strong></a>, Scala engineer at Reverb Technologies: &ldquo;Journey to the Heart of the For-Yield&rdquo;:</p>
+<blockquote>
+<p>Options and IOs and Iteratees, oh my! If you&rsquo;ve poked around at Scala you&rsquo;ve seen it&ndash;the ubiquitous for-comprehension sprinkled through idiomatic Scala code. As it turns out, what looks like a bit of syntactic sugar to ease prosaic list manipulation is actually a super powerful structure for abstracting away all kinds of common operations in a safe and maintainable way. It allows you to take full advantage of type safety and pushes the work of setting up boilerplate to the compiler. We&rsquo;ll break down exactly what&rsquo;s going on in a for-comprehension and explore some of the wild and wonderful structures that can be used within one. You&rsquo;ll leave with a deeper understanding of the real-world benefits of functional programming.</p>
+</blockquote>
+<p><iframe frameborder="0" height="355" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/27381545" width="425"> </iframe></p>
+<div></div>
+<p><a href="https://twitter.com/Evanfchan" target="_blank"><strong>Evan Chan</strong></a>, developer at Ooyala: Akka in Production: Our Story:</p>
+<blockquote>
+<p>Everyone in the Scala world is using or looking into using Akka for low-latency, scalable, distributed or concurrent systems. We want to share our story of developing and productionizing multiple Akka apps, including low-latency ingestion and real-time processing systems, and Spark-based applications.</p>
+<ul><li>When does one use actors vs futures?</li>
+<li>Why did we go with Logback instead of Akka&rsquo;s built-in logging?</li>
+<li>Can we use Akka with, or in place of, Storm?</li>
+<li>How did we set up instrumentation and monitoring in production?</li>
+<li>How does one use VisualVM to debug Akka apps in production?</li>
+<li>What happens if the mailbox gets full?</li>
+<li>What is our Akka stack like?</li>
+</ul><p>We will share best practices that we&rsquo;ve discovered when building Akka and Scala apps, pitfalls and things we&rsquo;d like to avoid, and a vision of where we would like to go for ideal Akka monitoring, instrumentation, and debugging facilities.</p>
+</blockquote>
+
+<p><iframe frameborder="0" height="355" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/27373330" width="425"> </iframe></p>
+<div></div>
+<div><strong>Erik Osheim</strong>, engineer at Meetup: &ldquo;<a href="http://plastic-idolatry.com/erik/pnwscala2013/#title" target="_blank">Inlining Anonymous Functions With Macros</a>&rdquo;:</div>
+<div>
+<blockquote>
+<p>The inlining problem (described by Cliff Click) is something that affects all functional languages on the JVM. The basic idea is that tight-loops dispatching to an anonymous function can defeat all of the JVMs optimization strategies. This creates a natural tension between writing the most concise code possible (DRY) and &ldquo;manually inlining&rdquo; boilerplate code for performance reasons.</p>
+<p>Macros give us one possible tool to solve this problem. This talk describes a strategy where we can use anonymous function literals to generate implementations at compile-time. This strategy has the potential to give us terse, high-level source code that compiles to fast bytecode. In this talk, we&rsquo;ll see some early efforts, as well as challenges.</p>
+</blockquote>
+</div>
+<div><a href="http://plastic-idolatry.com/erik/pnwscala2013/#title" target="_blank"><img alt="image" src="http://media.tumblr.com/9420f02214145f53547af464d08576c8/tumblr_inline_mv2xawqL9g1s17bu5.png"/></a>
+<p><a href="https://twitter.com/agentcoops" target="_blank"><strong>Charles Francis</strong></a>, Pellucid Analytics: &ldquo;<a href="http://pnwscala.org/talks/CharlesFrancis-ScalaAsStatisticalEnvironment.pdf" target="_blank">The State of Scala as a Platform for Statistical Computing</a>&rdquo;:</p>
+<blockquote>
+<p>I first started using Scala in the context of a mostly Python project visualizing and building models of a pretty massive textual dataset. My first frustration with the language was accordingly how much work it was just to parse a CSV file (don&rsquo;t even get me started on memory usage back in 2.6&hellip;)! Then, of course, there was an absolute absence of any idiomatic Scala libraries for statistical and numerical processing&mdash;one was left to the terrible inconsistencies of Java&rsquo;s numeric types. Of course the situation has improved in recent years as evidenced by very high quality libraries meant to aid this type of workflow like Saddle, Spire, Breeze, and Scala Notebook. While Scala has experienced quite a lot of success as a language for doing Hadoop-style data processing, in this talk I want to focus instead on the current state of the language as a general statistical platform&mdash;less big data than analysts working with in-memory datasets for high-performance analytics and visualization. I will focus on how libraries like the ones mentioned above work together (or don&rsquo;t) and how Scala competes with the dominant languages in this space, R and Python. I intend to illustrate a simple analytics workflow using these tools, showing what works well, problems one will come up against, and indicate some fruitful lines for future work and unification.</p>
+</blockquote>
+<p><a href="http://pnwscala.org/talks/CharlesFrancis-ScalaAsStatisticalEnvironment.pdf" target="_blank"><img alt="image" src="http://media.tumblr.com/26ef4e085f1bbb0bd8280b95188538b3/tumblr_inline_mv6fjyYgZM1s17bu5.png"/></a></p>
+
+</div>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#PNWScala-ref">PNWScala <span>2</span></a>
+      
+    <a href="/tags.html#Pacific Northwest Scala Conference-ref">Pacific Northwest Scala Conference <span>3</span></a>
+      
+    <a href="/tags.html#Evan Chan-ref">Evan Chan <span>1</span></a>
+      
+    <a href="/tags.html#Stephen Judkins-ref">Stephen Judkins <span>1</span></a>
+      
+    <a href="/tags.html#Brendan McAdams-ref">Brendan McAdams <span>1</span></a>
+      
+    <a href="/tags.html#Sam Ritchie-ref">Sam Ritchie <span>1</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#slideshow-ref">slideshow <span>20</span></a>
+      
+    <a href="/tags.html#Twitter-ref">Twitter <span>1</span></a>
+      
+    <a href="/tags.html#Hadoop-ref">Hadoop <span>6</span></a>
+      
+    <a href="/tags.html#Summingbird-ref">Summingbird <span>1</span></a>
+      
+    <a href="/tags.html#Erik Osheim-ref">Erik Osheim <span>1</span></a>
+      
+    <a href="/tags.html#Clint Tseng-ref">Clint Tseng <span>1</span></a>
+      
+    <a href="/tags.html#Kelsey Gilmore-Innis-ref">Kelsey Gilmore-Innis <span>1</span></a>
+      
+    <a href="/tags.html#Tom Switzer-ref">Tom Switzer <span>1</span></a>
+      
+    <a href="/tags.html#Thomas Lockney-ref">Thomas Lockney <span>1</span></a>
+      
+    <a href="/tags.html#Charles Francis-ref">Charles Francis <span>1</span></a>
+      
+    <a href="/tags.html#Paul Phillips-ref">Paul Phillips <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/22/apple-features-gilt-push-notifications-in-todays">Apple Features Gilt Push Notifications in Today's Safari Mavericks Launch</a></h1>
+  
+  <header>
+    
+    <time>22 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Earlier today, <span>Apple&rsquo;s Craig Federighi</span> presented a demo of Safari&rsquo;s new push notification system that featured the implementation we put together at <a href="http://www.gilt.com/sale/women" target="_blank">www.gilt.com/sale/women</a>. You can watch the special event online <a href="http://www.apple.com/apple-events/october-2013/" target="_blank">here</a> (catch the Gilt references at the 18:30 mark), or you can glance at the screenshots below.</p>
+<p><span>The <a href="http://appleinsider.com/articles/13/10/22/websites-activating-safari-push-notifications-ahead-of-os-x-mavericks-rollout" target="_blank">Mavericks operating system</a> will allow us to send members push notifications to their desktops/laptops on Safari. Like our iPhone/iPad push notifications, this is a great way for us to communicate time-sensitive information to our members about the moment sales start and wait list item availability. And with the iCloud Keychain functionality, members&rsquo; usernames, passwords and credit card info will be synched up across their devices and stored securely in iCloud for even faster and easier check-out than before.</span></p>
+<p>When you navigate to <a href="http://www.gilt.com/sale/women" target="_blank">www.gilt.com/sale/women</a> on Safari Mavericks, you will see a prompt at the top of the page that asks you if you&rsquo;d like to turn on push messaging:</p>
+<p><img alt="image" src="http://media.tumblr.com/7ce44a046be091bcd00a35789138e121/tumblr_inline_mv3be5L0ux1rjy8d3.png"/></p>
+<p><img alt="image" src="http://media.tumblr.com/f2e703f16dfdd54667fed825398a1dad/tumblr_inline_mv3bfigfem1rjy8d3.png"/></p>
+
+<p></p>
+
+<p></p>
+<p>After you subscribe, you&rsquo;ll receive messages from Gilt whenever we have something urgent to tell you. This is what Craig saw during his demo:</p>
+<p><img alt="image" src="http://media.tumblr.com/d856536a22d31a036fc42e7b384c279d/tumblr_inline_mv3b3vMRNP1rjy8d3.png"/></p>
+<p>If you click on the message, you will be taken to the relevant Gilt page:</p>
+<p><img alt="image" src="http://media.tumblr.com/4c7159903940296a2f3fb2d971cfff16/tumblr_inline_mv3bl7pi9G1rjy8d3.png"/></p>
+<p>And once you decide to buy that tent, Mavericks will sync your login information across all of your devices:</p>
+<p><img alt="image" src="http://media.tumblr.com/9ee49d822118d7d7b5590eb5a3e35bd8/tumblr_inline_mv3bmq68AN1rjy8d3.png"/></p>
+<p>And when you get to the checkout screen, Mavericks will also help you manage your credit card information:</p>
+<p><img alt="image" src="http://media.tumblr.com/97ff3915c3060ffc79037b409f4887a1/tumblr_inline_mv3bnuufmz1rjy8d3.png"/></p>
+<p>We&rsquo;d like to thank Apple for featuring Gilt during its demo, and all of the Gilt team members who helped get this ready for Apple&rsquo;s presentation. Although it&rsquo;s only been a few hours since the launch of this new feature, quite a few people have already signed up. And because Mavericks is now free (!), why not download it and sign up for our desktop push notifications!?</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Apple-ref">Apple <span>3</span></a>
+      
+    <a href="/tags.html#Mavericks-ref">Mavericks <span>1</span></a>
+      
+    <a href="/tags.html#Safari-ref">Safari <span>1</span></a>
+      
+    <a href="/tags.html#push notifications-ref">push notifications <span>4</span></a>
+      
+    <a href="/tags.html#Gilt mobile-ref">Gilt mobile <span>8</span></a>
+      
+    <a href="/tags.html#Safari Mavericks-ref">Safari Mavericks <span>1</span></a>
+      
+    <a href="/tags.html#Craig Federighi-ref">Craig Federighi <span>1</span></a>
+      
+    <a href="/tags.html#iCloud Keychain-ref">iCloud Keychain <span>1</span></a>
+      
+    <a href="/tags.html#OS X Mavericks-ref">OS X Mavericks <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/22/dublin-scala-users-group-meets-tonight">Dublin Scala Users Group Meets Tonight!</a></h1>
+  
+  <header>
+    
+    <time>22 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>If you&rsquo;re in Dublin this evening, stop by Engine Yard for the Dublin Scala Users Group monthly meetup. The fun begins at 7 PM; <strong><a href="http://www.meetup.com/Dublin-Scala-users-group/events/144306612/" target="_blank">RSVP here</a></strong>.</p>
+<p>Tonight&rsquo;s agenda:</p>
+<blockquote>
+<p><strong>&ldquo;Self-types in Scala&rdquo; by Gilt Principal Software Engineer Gregor Heine</strong> <br/> In this talk, <a href="https://twitter.com/greheine" target="_blank">Gregor Heine</a> will explain how to use self-types to assemble application components at compile time and examine the problems and risks involved in using self-types. He&rsquo;ll also discuss Scala-style dependency injection and show how self-types are a typesafe alternative to Spring and other DI frameworks. <br/><br/><strong>&ldquo;DSL Design in Scala&rdquo; by Workday Senior Software Engineer Iain Hull <br/></strong> Ian Hull will share <a href="http://iainhull.github.io/" target="_blank">his experiences</a> creating a lightweight Scala DSL for system-testing REST web services.</p>
+</blockquote>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Gregor Heine-ref">Gregor Heine <span>11</span></a>
+      
+    <a href="/tags.html#Iain Hull-ref">Iain Hull <span>1</span></a>
+      
+    <a href="/tags.html#Engine Yard-ref">Engine Yard <span>4</span></a>
+      
+    <a href="/tags.html#dependency injection-ref">dependency injection <span>1</span></a>
+      
+    <a href="/tags.html#Scala DSL-ref">Scala DSL <span>1</span></a>
+      
+    <a href="/tags.html#self-types-ref">self-types <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/21/gilts-knitting-ninjas">Gilt's Knitting Ninjas </a></h1>
+  
+  <header>
+    
+    <time>21 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Gilt&rsquo;s Ninja Team is known for making <a href="http://tech.gilt.com/post/64309453146/fancy-cars-and-fashion-stars-making-adaptive-product" target="_blank">beautiful things to look at</a>, so it isn&rsquo;t surprising that their ranks include several talented artisans. This winter the Ninjas are learning how to knit scarves, and they&rsquo;ve invited the rest of Gilt Tech to join them.</p>
+<p>Every Friday at 5 PM, from now until the snow falls, you&rsquo;ll find the Ninjas gathered in a conference room, wearing serene looks on their faces and transforming piles of luxurious yarn into warm and fuzzy accessories:</p>
+<p><img alt="image" src="http://media.tumblr.com/92f53e801334af121fc2644fc74f9116/tumblr_inline_mv15cothn81s17bu5.jpg"/></p>
+<p>Programming in Scala isn&rsquo;t the only useful skill we teach our interns, as Michael Vecchio (yellow tie) is discovering:</p>
+<p><img alt="image" src="http://media.tumblr.com/eca3e5b21159d5196093945b7942587e/tumblr_inline_mv15e3kDou1s17bu5.jpg"/></p>
+
+<p></p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#knitting-ref">knitting <span>1</span></a>
+      
+    <a href="/tags.html#handicrafts-ref">handicrafts <span>1</span></a>
+      
+    <a href="/tags.html#Ninjas-ref">Ninjas <span>6</span></a>
+      
+    <a href="/tags.html#work culture-ref">work culture <span>20</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/21/monthly-nyc-java-users-meetup-comes-to-gilt">Monthly NYC Java Users Meetup Comes to Gilt Tonight</a></h1>
+  
+  <header>
+    
+    <time>21 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="http://media.tumblr.com/e578b78b29d1e1aa5e39bf31df07dda0/tumblr_inline_mv1010edzf1s17bu5.jpg"/></p>
+<p>We&rsquo;re excited to host (for the first time!) the New York City Java Users Group&rsquo;s monthly meetup, which takes place tonight at 6:30 PM at our 2 Park Ave. office. In addition to a recap of JavaOne 2013 by NYC JUG co-organizer Timothy Fagan, tonight&rsquo;s event features a presentation on security by Bojan Simic from Contrast Security. To RSVP, just <strong><a href="http://www.meetup.com/nycjava/events/139368872/" target="_blank">click here</a></strong>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#New York City-ref">New York City <span>4</span></a>
+      
+    <a href="/tags.html#Java Users Group-ref">Java Users Group <span>1</span></a>
+      
+    <a href="/tags.html#Java-ref">Java <span>12</span></a>
+      
+    <a href="/tags.html#JavaOne-ref">JavaOne <span>2</span></a>
+      
+    <a href="/tags.html#Bojan Simic-ref">Bojan Simic <span>1</span></a>
+      
+    <a href="/tags.html#Contrast Security-ref">Contrast Security <span>1</span></a>
+      
+    <a href="/tags.html#meetups-ref">meetups <span>32</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/18/goblin-a-minimal-and-beautiful-testing-framework">Goblin: A Minimal and Beautiful Testing Framework for the Go Language</a></h1>
+  
+  <header>
+    
+    <time>18 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="http://media.tumblr.com/4682d40b70f9da0113a948f47e7c47f4/tumblr_inline_muvgzbZMDW1spue4h.jpg"/></p>
+<p>Inspired by the flexibility and simplicity of Node&rsquo;s Mocha, but frustrated by the rigorousness of the Go way of testing, my friend <a href="https://twitter.com/marcosnils" target="_blank"><span class="profile-field">Marcos Nils</span></a> and <a href="https://twitter.com/xetorthio" target="_blank">I</a> set out to create a new tool to write self-describing and comprehensive code. The result (and just in time for Halloween): <strong><a href="https://github.com/franela/goblin" target="_blank">Goblin</a></strong>.</p>
+<h2>What do I get with Goblin?</h2>
+<ul><li>Preserve the exact same syntax and behavior as Node.js&rsquo;s Mocha</li>
+<li>Nest as many <code>Describe</code> and <code>It</code> blocks as you want</li>
+<li>Use <code>Before</code>, <code>BeforeEach</code>, <code>After</code> and <code>AfterEach</code> for setup and teardown your tests</li>
+<li>No need to remember confusing parameters in <code>Describe</code> and <code>It</code> blocks</li>
+<li>Use a declarative and expressive language to write your tests</li>
+<li>Plug different assertion libraries (<a href="https://github.com/onsi/gomega" target="_blank">Gomega</a> supported so far)</li>
+<li>Skip your tests the same way as you would do in Mocha</li>
+<li>Two-line setup is all you need to get up and running</li>
+</ul><h2><a class="anchor" href="https://github.com/franela/goblin#how-do-i-use-it" id="how-do-i-use-it" name="how-do-i-use-it" target="_blank"></a>How do I use it?</h2>
+<p>Since <code>go test</code> is not currently extensive, you will have to hook Goblin to it. Just add a single test method in your test file, and all your goblin tests will be implemented inside this function.</p>
+<div class="highlight highlight-go">
+<pre><span class="kn">package</span> <span class="nx">foobar</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">"testing"</span>
+    <span class="p">.</span> <span class="s">"github.com/franela/goblin"</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">Test</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">g</span> <span class="o">:=</span> <span class="nx">Goblin</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">Describe</span><span class="p">(</span><span class="s">"Numbers"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should add two numbers "</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">g</span><span class="p">.</span><span class="nx">Assert</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should match equal numbers"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">g</span><span class="p">.</span><span class="nx">Assert</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should substract two numbers"</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre>
+</div>
+<p>Output will look something like this:</p>
+<p><a href="https://github.com/marcosnils/goblin/blob/master/goblin_output.png?raw=true" target="_blank"><img alt="" src="https://github.com/marcosnils/goblin/blob/master/goblin_output.png?raw=true"/></a></p>
+<p>Nice and easy, right?</p>
+<h2><a class="anchor" href="https://github.com/franela/goblin#how-do-i-use-it-with-gomega" id="how-do-i-use-it-with-gomega" name="how-do-i-use-it-with-gomega" target="_blank"></a>How do I use Goblin with Gomega?</h2>
+<p>Gomega is a nice assertion framework, but it doesn&rsquo;t provide a nice way to hook it to testing frameworks. It should just panic instead of requiring a fail function. There is an issue about that <a href="https://github.com/onsi/gomega/issues/5" target="_blank">here</a>. While this problem is being discussed and hopefully fixed, you can use Gomega with Goblin. How to do it:</p>
+<div class="highlight highlight-go">
+<pre><span class="kn">package</span> <span class="nx">foobar</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">"testing"</span>
+    <span class="p">.</span> <span class="s">"github.com/franela/goblin"</span>
+    <span class="p">.</span> <span class="s">"github.com/onsi/gomega"</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">Test</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">g</span> <span class="o">:=</span> <span class="nx">Goblin</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+
+    <span class="c1">//special hook for gomega</span>
+    <span class="nx">RegisterFailHandler</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">m</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">_</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span> <span class="nx">g</span><span class="p">.</span><span class="nx">Fail</span><span class="p">(</span><span class="nx">m</span><span class="p">)</span> <span class="p">})</span>
+
+    <span class="nx">g</span><span class="p">.</span><span class="nx">Describe</span><span class="p">(</span><span class="s">"lala"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"lslslslsls"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">Expect</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">To</span><span class="p">(</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+      <span class="p">})</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</pre>
+</div>
+<h2><a class="anchor" href="https://github.com/franela/goblin#todo" id="todo" name="todo" target="_blank"></a>What&rsquo;s next for Goblin?</h2>
+<p>Marcos and I will soon address the <a href="https://github.com/franela/goblin/issues" target="_blank">issues</a> still pending with Goblin. Meantime, feel free to contribute and send us your pull requests (with tests, please).</p>
+<p><em>Special thanks to <a href="https://github.com/leandroreox" target="_blank">Leandro Reox</a> (Leitan) for designing the Goblin logo.</em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Node.js-ref">Node.js <span>7</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#testing-ref">testing <span>5</span></a>
+      
+    <a href="/tags.html#frameworks-ref">frameworks <span>2</span></a>
+      
+    <a href="/tags.html#Gomega-ref">Gomega <span>1</span></a>
+      
+    <a href="/tags.html#goblin-ref">goblin <span>1</span></a>
+      
+    <a href="/tags.html#go-ref">go <span>1</span></a>
+      
+    <a href="/tags.html#golang-ref">golang <span>1</span></a>
+      
+    <a href="/tags.html#Jonathan Leibiusky-ref">Jonathan Leibiusky <span>12</span></a>
+      
+    <a href="/tags.html#Goblin-ref">Goblin <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/17/infiniti-cars-and-fashion-stars-making-adaptive">Infiniti Cars and Fashion Stars: Making Adaptive Product Pages at Gilt</a></h1>
+  
+  <header>
+    
+    <time>17 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>In December Gilt will sell two exclusive models of the Infiniti Q50, each designed by heavyweight fashion designers Zac Posen and Thom Browne. For <a href="http://techcrunch.com/2012/03/12/need-a-new-car-gilts-selling-a-2013-infiniti-jx-for-half-price-today/" target="_blank">past car sales</a> we’ve used our standard product detail page, which includes multiple views of the product on sale, a short product description, and a list of materials used to make the product. One challenge for us in building attractive car sales pages is that we have to include all of the terms and conditions copy. As the graphic below shows, posting a lengthy block of legalese does nothing to convey the excitement that a high-ticket, beautifully designed car ought to generate!</p>
+<p><img alt="image" src="http://media.tumblr.com/f6b49680cdfdcd01b54d3c7342b66b59/tumblr_inline_mus0vxt1JT1spq91n.jpg"/></p>
+<p>For the upcoming Infiniti sale, my team and I were responsible for developing a new type of product detail page that would showcase these one-of-a-kind cars. Not only that, we aimed to produce the first Gilt feature that reflected the brave new world of Mobile First: An initiative to optimize pages so that they work equally well on a phone, a tablet, or a laptop/desktop. The<span> end result had to fit our standard criteria for designing pages: It should be equally usable, functional, and visually appealing across devices.</span></p>
+<p>We also wanted to create a page that we could quickly duplicate and reconfigure for future product sales. Lastly, we wanted to make it possible for our in-house merchandising team to build these pages with full autonomy and limited tech support.</p>
+<p>Our solution: the <strong>Showcase Detail Page (SDP), </strong>which meets all of our  goals and displays the car in an exciting way.</p>
+<p><strong>Mobile First: Provide Multi-device support</strong></p>
+<p>Gilt currently serves mobile pages through <a href="http://m.gilt.com" target="_blank">http://m.gilt.com</a>, using a codebase that&rsquo;s different from our web codebase. In the past this separation allowed us to quickly serve minimalistic pages to our mobile users, but technological advancements and our push towards unification are making this less necessary. Because of the codebase separation, many new features seldom make it onto the mobile platform, and our mobile users are redirected to the full website version. We don&rsquo;t want our fastest-growing segment of users to miss out on the new experiences we create, or be forced to pinch and squeeze their way across the page.</p>
+<p>Enter SDP, which allows us to experiment with keeping the code in a single, centralized repository and serve and style it in various ways according to the user’s device type. Serving features from one location will make it easier to release features across devices. Additionally, the page will be formatted according to the user’s device, which will enhance our mobile customer’s site experience.</p>
+<p>In trendy tech lingo, the SDP page demonstrates more of an “adaptive” design rather than a “responsive” design because it changes content as well as formatting based on device. My team decided not to use media queries for the device-based formatting. Instead, we opted for server-side detection to serve slightly different templates and to place a master-class name to key off of for CSS. More specifically:</p>
+<ul><li>The server looks at the browser’s user agent string and uses regex to identify the device as being mobile, tablet or desktop by comparing it against a list of known devices.</li>
+<li>The server then places a ‘master’ class on the html element: size-mobile, size-tablet, size-desktop.  </li>
+</ul><p>We use LESS to create an organized and easy to understand stylesheet. For instance, the styles for one of the components, “showcase-title-component,&ldquo; has the following format:</p>
+<pre>//default
+.showcase-title {...}
+
+//mobile
+.mobile-showcase-title {...}
+
+//tablet
+.tablet-showcase-title {...}
+
+//desktop
+.desktop-showcase-title {...}
+
+// Use the master class to set styles according to device
+.size-mobile { .mobile-showcase-title; }
+.size-tablet { .tablet-showcase-title; }
+.size-desktop { .desktop-showcase-title; }</pre>
+<p><strong>Easy to duplicate and reconfigure</strong></p>
+<p>One of the benefits of our adaptive design is the flexibility it allows. For the Infiniti SDP, our team developed a page builder system devised of renderable &quot;components&rdquo; that can be served to an app. The components are slightly different for Mobile vs. Desktop to tailor the experience for both device types. Each component has an associated server-side Handlebars template, LESS file, and JavaScript file. The template is then delivered to the repo as a renderable to be outputted using yet another server-side Handlebars template. </p>
+<p>With this set-up, our merch team can use an admin tool to enter data, drag components that should be visible onto the SDP, and reorder the components according to device type.</p>
+<p><strong>Lessons:</strong></p>
+<ul><li>
+<p>We couldn’t possibly test for every device on the market, so we focused on most of the popular, modern devices.</p>
+</li>
+<li>
+<p>It is easy to diverge the mobile and desktop templates too much by over-tailoring them, so we kept the variations minimal and only implemented them when they made sense. For example, for mobile we removed the product image from the product component and instead added it to the photo gallery component to preserve screen real estate in a smart way.</p>
+</li>
+<li>Trade secret: sometimes you just have to fudge it. I bet you didn’t realize that on mobile, the Gilt header is just a screenshot of the actual Gilt mobile header! Another team is currently working on code to render the actual mobile header, but for now this works.</li>
+</ul><p>See the Infiniti Showcase Detail Page live in action (using all of your devices, of course) <strong><a href="http://www.gilt.com/infiniti" target="_blank">here</a></strong>. Sale starts on December 12, 2013 at noon!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Infiniti-ref">Infiniti <span>1</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#responsive web design-ref">responsive web design <span>5</span></a>
+      
+    <a href="/tags.html#adaptive design-ref">adaptive design <span>2</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    <a href="/tags.html#HTML-ref">HTML <span>8</span></a>
+      
+    <a href="/tags.html#CSS-ref">CSS <span>12</span></a>
+      
+    <a href="/tags.html#Infiniti Q50-ref">Infiniti Q50 <span>1</span></a>
+      
+    <a href="/tags.html#zac posen-ref">zac posen <span>1</span></a>
+      
+    <a href="/tags.html#thom browne-ref">thom browne <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/17/scala-days-2014-announced">Scala Days 2014 Announced!</a></h1>
+  
+  <header>
+    
+    <time>17 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="http://media.tumblr.com/9a899707d76a95a61d14476a9a62bda2/tumblr_inline_muth80VGPK1s17bu5.png"/></p>
+
+<p></p>
+<p>The friendly folks at Typesafe have just released the CFP for next year&rsquo;s <a href="http://scaladays.org/" target="_blank">Scala Days</a> conference, which takes place June 16-18 in Berlin. If you&rsquo;re a sophisticated Scalasmith with some keen insights on Typesafe platform technologies, consider submitting a proposal before the deadline date of Nov. 29. Meantime, derive some inspiration by revisiting Gilt VP Architecture Eric Bowman&rsquo;s Scala Days &lsquo;13 presentation on &ldquo;<a href="http://tech.gilt.com/2013/06/11/gilt-tech-presents-at-scala-days-slides" target="_blank">Scala &amp; Symmetry</a>&rdquo; (Gilt was a platinum sponsor of this year&rsquo;s conf, held in NYC).</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Scala Days-ref">Scala Days <span>3</span></a>
+      
+    <a href="/tags.html#Typesafe-ref">Typesafe <span>22</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#functional programming-ref">functional programming <span>12</span></a>
+      
+    <a href="/tags.html#Berlin-ref">Berlin <span>1</span></a>
+      
+    <a href="/tags.html#Germany-ref">Germany <span>1</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#Martin Odersky-ref">Martin Odersky <span>6</span></a>
+      
+    <a href="/tags.html#Eric Bowman-ref">Eric Bowman <span>13</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/15/gilt-featured-at-fordham-technology-summit-on">Gilt Featured at Fordham Technology Summit on 10/16</a></h1>
+  
+  <header>
+    
+    <time>15 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="http://media.tumblr.com/551efa7bd3880e184b150519e7afd646/tumblr_inline_mupv7jmAD61s17bu5.gif"/></p>
+
+<p>Gilt VP of Product Management &amp; User Experience Dominique Essig is one of the featured presenters at tomorrow&rsquo;s second annual <a href="http://www.fordhamcdt.org/events/the-2nd-annual-summit-on-technology-innovation-and-start-ups-in-the-bronx" target="_blank">Summit on Technology Innovation and Start Ups in the Bronx</a>, hosted by the Center for Digital Transformation, Urban Studies Program and Urban Law Center at Fordham University. Dom joins executives from Google, Siris Capital, Accenture and other companies and institutions at this half-day conference, which focuses on the opportunities and challenges of growing the Bronx as a technology hub. To attend (it&rsquo;s free), <a href="http://fordhambronxsummit2013.eventbrite.com/" target="_blank"><strong> just click here</strong></a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Dominique Essig-ref">Dominique Essig <span>13</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Bronx-ref">Bronx <span>1</span></a>
+      
+    <a href="/tags.html#Summit on Technology Innovation and Startups-ref">Summit on Technology Innovation and Startups <span>1</span></a>
+      
+    <a href="/tags.html#Center for Digital Transformation-ref">Center for Digital Transformation <span>1</span></a>
+      
+    <a href="/tags.html#Fordham University-ref">Fordham University <span>1</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#tech-ref">tech <span>20</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/11/today-in-hot-writing-utensils-the-gilt-pen">Today in Hot Writing Utensils: the Gilt Pen</a></h1>
+  
+  <header>
+    
+    <time>11 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="http://media.tumblr.com/ef43da4b0d21269c792f48444bb95a88/tumblr_inline_muipfiHHkj1s17bu5.jpg"/></p>
+<p>As someone who spends lots of time making the rounds in NYC&rsquo;s tech community, I meet lots of people who live squarely in the future. Programmers, product managers, UX designers, database administrators, pythons (well, Python<em>istas</em>), and other technologists who use complex, costly machines to develop exciting new ways for all of us to communicate better and faster. People who carry fancy, expensive iThings in their pockets, invent cutting-edge technologies, and sometimes even build their own hardware.</p>
+<p>And yet when I give them a Gilt pen, they seem just as impressed as if I had presented them with an iPhone made of (<a href="http://store.apple.com/us/buy-iphone/iphone5s" target="_blank">real</a>) gold. &ldquo;This pen is awesome,&rdquo; is a common response. &ldquo;Wow, slick pen,&rdquo; is another. They hold their new pen and turn it over and over in their hand, examining its matte finish and decidedly straightforward, simple design. It is as though they rediscover the beauty of the pen all over again.</p>
+<p>When I run into a past pen recipient, they frequently update me on how their pen is doing. &ldquo;Love that pen!&rdquo; they tell me enthusiastically, usually with a big smile. They say that it&rsquo;s become their go-to pen. Many people ask for another one in preparation for that inevitable day when their beloved Gilt pen runs out of ink. Others ask for a pen to give to their friend or spouse. They want to spread the magic&ndash;the magic of the Gilt pen.</p>
+<p>Do you own a Gilt pen? What have you written with it? Charts for mapping out your next big-data project? Statistical analyses? Rent checks? A love letter? Poems? Feel free to drop me a line at lapple at gilt dot com to share your stories.</p>
+<p><em>Photo by <a href="https://twitter.com/sambreed" target="_blank">@wookiehangover</a>, who tweets: &ldquo;Even <a class="twitter-atreply pretty-link" href="https://twitter.com/Gilt" target="_blank">@<strong>Gilt</strong></a>&rsquo;s pens make me feel under-dressed&rdquo;</em></p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#swag-ref">swag <span>3</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#pens-ref">pens <span>1</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#branding-ref">branding <span>2</span></a>
+      
+    <a href="/tags.html#random friday blog post-ref">random friday blog post <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/39/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 40 of 64</span>
+  
+    <a href="/posts/41/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

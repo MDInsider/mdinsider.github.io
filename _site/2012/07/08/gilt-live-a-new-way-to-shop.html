@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Gilt Live: A New Way to Shop</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2012/07/08/gilt-live-a-new-way-to-shop">Gilt Live: A New Way to Shop</a></h1>
+  
+  <header>
+    
+    <time>08 July 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p class="MsoNormal">Gilt Live is a new way to shop on Gilt.  It gives you the chance to see what our members are buying on Gilt - right now.  We are excited because it gives you a way to discover new products that you might never have seen.  And since it is updating in real-time you can see something sell out right before your eyes –- or not if you are quick enough to jump on it.</p>
+<p class="MsoNormal"><strong><img src="http://media.tumblr.com/tumblr_m6r4gqcMKy1rszxsm.png"/></strong></p>
+<p class="MsoNormal"><strong>The Technology</strong></p>
+<p class="MsoNormal">Gilt Live is Gilt’s first public facing application to use websockets. Why websockets?  The key component of Live is the ability to send real-time messages to our members. Websockets are the perfect candidate.</p>
+<p class="MsoNormal">Live is written in Scala on the <a href="http://www.playframework.org/" target="_blank">Play 2.0.1</a> framework and uses <a href="http://akka.io/" target="_blank">Akka</a> for thread management, a decision based on the the framework&rsquo;s scalability and websocket integration approach.</p>
+<p class="MsoNormal"><strong>What is Supported?</strong></p>
+<p class="MsoNormal">Websockets are only supported in Firefox 11+, Chrome 6.0+, Safari 5.0.1+ and Internet Explorer 10.0. This does exclude a set of users from the experience, and it is a drawback, but we feel the benefits outweigh the loss.</p>
+<p class="MsoNormal"><strong>The Client</strong></p>
+<p class="MsoNormal">The client uses the jQuery Isotope library to render the product messages in a multi-size, dynamic layout. In order to prevent an excessive number of products in the browser and save CPU resources on the client’s machine, the client removes the top unseen products from the DOM, a process we call “Chunking” – after our favorite character from Goonies.</p>
+<p class="MsoNormal"><strong>Load Balancing</strong></p>
+<p class="MsoNormal">Live uses the Zeus load balancer. Initial load testing allowed for only 500 concurrent connections, but after a few configuration tweaks, we have reached over 28K concurrent connections and counting!</p>
+<p class="MsoNormal"><strong>Inventory Updates</strong></p>
+<p class="MsoNormal">One of the coolest features of live is our inventory updates, made possible through the use of websockets. If there are 5 or fewer items left to buy, you’ll see a countdown flag on the product, and if you stay around, you’ll see the count drop from 5 units, to 4…to Sold out!</p>
+<p class="MsoNormal"><strong><img src="http://media.tumblr.com/tumblr_m6r4iyqtaE1rszxsm.png"/></strong></p>
+<p class="MsoNormal"><strong>Summary</strong></p>
+<p class="MsoNormal">We’ve learned new technologies, faced scalability challenges, and most importantly had fun through the development of Live. We are already forming ideas to take live to the next level and use websockets in other areas of the site.</p>
+<p class="MsoNormal">Thanks for reading, and let us know if you have any <a href="mailto:live@gilt.com" target="_blank">suggestions</a>!</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

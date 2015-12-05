@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Gilt's JavaScript Templating Architecture</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2011/02/15/gilt-template">Gilt's JavaScript Templating Architecture</a></h1>
+  
+  <header>
+    
+    <time>15 February 2011</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Templating is a powerful way of separating concerns on the front end. It’s a natural fit for Gilt’s platform, since much of our content comes to the front end from services that return JSON. Sometimes that JSON is rendered in JSPs with JSTL, but sometimes it’s better to render it with JavaScript.</p>
+
+<p>Until recently, most JavaScript HTML rendering involved messy string concatenation, lots of looping, and an unholy marriage of logic and content in the same file. However, new templating engines, such as <a href="https://github.com/wycats/handlebars.js" target="_blank">Handlebars</a>, allow multiple logic-less templates to be created for the same content, with clean, easy-to-read syntax. Compare:</p>
+
+<p>
+<script src="https://gist.github.com/826338.js" type="text/javascript"></script></p>
+
+<p>But which template engine to use? There are many currently vying for prominence. I didn’t want to hitch our wagon to any one engine, since many different pieces of Gilt code need to make templating calls and none of us knows the future, so I decided to create a middle-tier API that would accept any templating engine as a plugin. This is generally a good way to approach front end architecture, as it’s all too easy to scatter third-party dependencies throughout a large codebase, leading to difficult maintenance and requiring significant restructuring if the third-party code ever needs to be changed.</p>
+
+<p><strong>What It Is</strong></p>
+
+<p>There are three components in addition to the implementation code:</p>
+
+<ul><li><code>Gilt.Template</code>, which exposes <code>render()</code>, <code>register()</code>, <code>plugin.add()</code> and <code>plugin.get()</code> methods</li>
+<li>a template file saved using a directory and file naming convention</li>
+<li>the chosen rendering engine code</li>
+</ul><p><strong>How It Works</strong></p>
+
+<ol><li>Templates are stored in a <code>Gilt.Template</code> private cache, by a unique combination of name, engine, and version. Name is typically the type of feed or data that is being rendered, such as a wait list, a single product feed, or a cart. Version indicates which view of the data is required (“default” is the canonical view, and views can exist for third-party sites or other areas on the Gilt site such as a modal window or a specific page). Engine indicates which third-party rendering to use, with Handlebars as the default if none is specified.</li>
+<li>For flexibility, all rendering is asynchronous. The <code>render()</code> method does not actually write any markup; instead, it supplies the rendered markup to a passed callback function. This allows the template file or rendering engine to be lazy loaded at the time of invocation, rather than be already present on the page, and it recognizes that often the rendered template is needed for purposes other than writing immediately into an element on a page.</li>
+<li>Each template engine is an equal citizen, registered as a plugin with <code>Gilt.Template</code>. <a href="https://github.com/wycats/handlebars.js" target="_blank">Handlebars</a> and <a href="http://akdubya.github.com/dustjs/" target="_blank">Dust</a> are built-in, as we use both of them on the Gilt site; however, any additional template engine can be registered and used. Each plugin must provide a <code>render()</code> method, and optionally can provide a <code>register()</code> method (used, for example, in Dust compilation). When the implementation code calls <code>Gilt.Template.render()</code>, that method delegates to the plugin’s <code>render()</code> method.</li>
+<li>If the template is not available in <code>Gilt.Template</code>&rsquo;s cache, it triggers an asynchronous load of the template file, looking by a naming convention of <code>/templates/&lt;type&gt;/&lt;version&gt;.&lt;engine&gt;.js</code>. For example, a template that handles the default view of a wait list feed using Handlebars would be stored at <code>/templates/wait_list/default.handlebars.js</code>. This convention allows for multiple views of the same data feed. <code>Gilt.Template.render()</code> takes an optional argument for an ajax service to use, with jQuery used by default. This allows for the possibility of use with a different base library, since this is the only point of third-party dependency.</li>
+</ol><p><strong>How To Use</strong></p>
+
+<p>So, the three steps required to use the system are:</p>
+
+<ol><li>
+<p>Add a plugin using <code>Gilt.Template.plugin.add()</code> with the specific code required to interact with the chosen third-party templating engine. Handlebars support is built-in and, for reference, looks like this:</p>
+<p>
+<script src="https://gist.github.com/826350.js" type="text/javascript">// <![CDATA[
+
+// ]]></script></p>
+</li>
+<li>
+<p>Register a template with <code>Gilt.Template.register()</code>, indicating a unique combination of name, engine, and version. This could be done prior to calling <code>render()</code>; if not, <code>render()</code> will lazy load this template file, thereby calling <code>register()</code>:</p>
+<p>
+<script src="https://gist.github.com/826353.js" type="text/javascript">// <![CDATA[
+
+// ]]></script></p>
+</li>
+<li>
+<p>Call <code>Gilt.Template.render()</code>, passing it the unique name, engine, and version to render, along with a callback to be provided with HTML. The <code>render()</code> method will load the plugin and call <code>register()</code> first if the template is unavailable. The following code is probably in the callback of an ajax request function:</p>
+<p>
+<script src="https://gist.github.com/826355.js" type="text/javascript">// <![CDATA[
+
+// ]]></script></p>
+</li>
+</ol><p><strong>tl;dr;</strong></p>
+
+<p>In summary, <code>Gilt.Template</code>:</p>
+
+<ul><li>allows for template storage by engine, version and name;</li>
+<li>provides flexibility by providing rendered markup to a callback function;</li>
+<li>treats all templating engines equally; and</li>
+<li>speeds up page load by asynchronously loading template files.</li>
+</ul><p>Templates have helped us to separate our content data from its views on the site, and our middle-tier architecture has provided a consistent API and eliminated the need for third-party calls in the Gilt codebase.</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#frontend-ref">frontend <span>11</span></a>
+      
+    <a href="/tags.html#javascript-ref">javascript <span>9</span></a>
+      
+    <a href="/tags.html#templating-ref">templating <span>2</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Eric Shepherd-ref">Eric Shepherd <span>12</span></a>
+      
+    <a href="/tags.html#Handlebars-ref">Handlebars <span>4</span></a>
+      
+    <a href="/tags.html#Gilt.Template-ref">Gilt.Template <span>1</span></a>
+      
+    <a href="/tags.html#Dust-ref">Dust <span>1</span></a>
+      
+    <a href="/tags.html#architecture-ref">architecture <span>9</span></a>
+      
+    <a href="/tags.html#submission-ref">submission <span>9</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

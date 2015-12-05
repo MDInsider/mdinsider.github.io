@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/10/02/mongodb-performance-at-gilt">MongoDB performance at Gilt</a></h1>
+  
+  <header>
+    
+    <time>02 October 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Over the past several months several high traffic services have gone live at Gilt using MongoDB as a back end. MongoDB collections are a really good fit for many of our use cases. What we&rsquo;ve found is that when MongoDB is happy it runs fast and reliably; but there are a few things that can catch you out.</p>
+<p><strong>Throttle your writes/updates</strong><br/>MongoDB uses a global write lock. Only one process can write at a time, and while writing is happening, nothing can read (items will queue). A very high write load will make read operations very slow.</p>
+<p>If you need to do data migrations or batch jobs of any kind on your DB, you will need to ensure that the writes happen at a rate of &lt; 50 per second if not using SSD (you can go higher with SSDs). Usually, you&rsquo;ll need to implement some way of prioritizing real-time updates during this process.</p>
+<p>If you expect a high write load during normal operation, you need to think about sharding. Good capacity planning and loadtesting prior to going live are important.</p>
+<p><br/><strong>SSDs</strong><br/>MongoDB write performance is limited by disk performance, so if lots of writes are going to happen SSDs are a must.<br/><br/><strong>Load testing</strong><br/>While performance testing your service, make sure to use a write load as well as a read-only load, to simulate how your service will perform in production. <br/><br/><strong>Manage the length of field names</strong><br/>Mongo stores the field name as part of each record. If you pick very long names for your fields your data will be larger than it needs to be. MongoDB only performs well if it can keep working data in memory, so keep field names as short as is reasonable.<br/><br/><strong>Use indexes</strong><br/>For any substantial dataset, query performance will suck if you don’t use the right indexes (I have seen it make a difference of about 4 orders of magnitude in response time). <br/>More info here: <a href="http://www.mongodb.org/display/DOCS/Indexes" target="_blank">http://www.mongodb.org/display/DOCS/Indexes</a><br/>Indexed data doesn’t have to be unique, and compound indexes are supported.<br/><br/><strong>Use the _id field wisely</strong><br/>MongoDB requires this field and always creates an index on it, so if possible actually use it for something useful.<br/><br/><strong>Think about how your records will grow over time</strong><br/>If your record grows in size, MongoDB will have to move it. This is the most expensive thing you can do in MongoDB, because it means two writes, and then all indexes need to be updated as well (more writes). If your records are likely to grow it’s worth creating them with currently unused attributes in the documents (set to whitespace or similar). This means your updates won’t always lead to document moves. This needs to be balanced against unnecessary bloat in your document size, though. <br/><br/><strong>Don’t use ensureIndex in code</strong></p>
+<p>Building an index is a blocking operation for MongoDB, and it won’t service requests while the index build is in progress. If you add a new index via code, the index will get created when you deploy your service, which is probably not what you want (essentially, you’ll end up bringing your own service down for however long it takes to build the index).</p>
+<p>For production instances, the instance needs to be temporarily removed from the replica set, the index rebuilt, and then the instance is re-added. This process gets followed for all members of a replica set.<br/><br/><strong>Don’t keep unnecessary indexes around</strong></p>
+<p>Indexes incur a cost when records are moved.<strong id="internal-source-marker_0.5483054770156741"><br/></strong></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/08/08/a-big-thanks-to-this-years-girls-who-code-field">a big thanks to this years girls who code field</a></h1>
+  
+  <header>
+    
+    <time>08 August 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_m8g9mwdyu81qgexq2o1_1280.jpg"/><br/><p>A big thanks to this year&rsquo;s &rsquo;<a href="http://www.girlswhocode.com/" target="_blank">Girls Who Code</a>&rsquo; field trip for voting Gilt as the #1 workplace!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/07/27/search-on-gilt">Search on Gilt</a></h1>
+  
+  <header>
+    
+    <time>27 July 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Some of our users may have noticed a new and welcome addition to Gilt over the last few weeks—we’ve rolled out search across our Women’s, Men’s, Kids and Home stores! In Gilt Tech, we know how much our members love the thrill of the hunt when our sales go live every day; and, as a tech team, we’ve always felt good about building our site to drive a great flash-sale shopping experience. However, we also felt strongly about providing a way for letting our members find the gorgeous stuff they love faster. With this in mind, we’ve built out our keyword search using Scala, Play Framework and Apache Solr / Lucene, and have learnt a huge amount of stuff along the way.</p>
+
+<p>First: a tour. If you’re one of the lucky few in our A/B test group, you’ll see the ‘magnifying glass’ search control on the top right of your screen, just below your cart / checkout:</p>
+
+<p><img alt="Find the search control beneath the cart/checkout buttons" src="http://media.tumblr.com/tumblr_m7tx1tWf2O1qzxg4t.png"/></p>
+
+<p>Click on the magnifying glass, and you’ll see our search box playfully swish out; you can select a store to search and then type away happily. We autosuggest on our favorite brands, colors and all of our live sale products. You can then filter by category, brand, size and color using the facet controls on the left to find exactly what you want.</p>
+
+<p><img alt="Our new search results page with autocomplete" src="http://media.tumblr.com/tumblr_m7tx3au21j1qzxg4t.png"/></p>
+
+<p>Implementing search for a flash-sales business, where inventory is limited and changes rapidly as our sales go live to a stampede of members every noon, poses a number of technical challenges: with small numbers of fast-moving inventory, we’re keen to make sure that the search results you see are genuinely the products that we have to sell at the moment you search. To make it work, we index our live products using <a href="http://lucene.apache.org/solr/" target="_blank">Apache Solr</a>, and sort and filter search results with real-time inventory status using a set of custom Solr extensions.</p>
+
+<p>The search listing page is implemented in Scala using <a href="http://www.playframework.org/" target="_blank">Play Framework</a>. We’re loving Scala at Gilt, and while our growing corpus of Scala code plays very nicely with our existing Java infrastructure, it made sense to take a look at Play Framework as a new platform for Scala-based web-apps. Regular readers of the Gilt Tech blog will have seen how the <a href="http://tech.gilt.com/2012/07/08/gilt-live-a-new-way-to-shop" target="_blank">Gilt Live team recently released an awesome social shopping experience</a> using Play Framework and Web Sockets. For Search, we use Play’s templating language to render our initial listings from the client-side, and then use a combination of <a href="http://backbonejs.org/" target="_blank">Backbone.js</a> and <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a> to handle the subsequent AJAX rendering within the browser on the client-side. The result is super fast! We found the Play stack fun and easy to use; so much so that we had time to implement some really neat features: for example, when you hover over the Next or Previous page links on a listing, we preemptively initiate a request so that the data is already there for you if you decide to click.</p>
+
+<p>We feel really good about the solution, and we’re seeing our members respond really well to the feature! Happily, we have lots of great ideas and are going to continue to iterate on the experience.</p>
+
+<p><img alt="Team Galactus group photo" src="http://media.tumblr.com/tumblr_m7tx8pJgpd1qzxg4t.jpg"/></p>
+
+<p>We hope you like it as much as we do!</p>
+
+<p>Adrian Trenaman, Mark Wunsch<br/>Team Galactus, Gilt Tech</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#solr-ref">solr <span>4</span></a>
+      
+    <a href="/tags.html#scala-ref">scala <span>11</span></a>
+      
+    <a href="/tags.html#PlayFramework-ref">PlayFramework <span>4</span></a>
+      
+    <a href="/tags.html#backbone.js-ref">backbone.js <span>1</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#search-ref">search <span>7</span></a>
+      
+    <a href="/tags.html#customer experience-ref">customer experience <span>7</span></a>
+      
+    <a href="/tags.html#lucene-ref">lucene <span>3</span></a>
+      
+    <a href="/tags.html#autosuggest-ref">autosuggest <span>1</span></a>
+      
+    <a href="/tags.html#autosuggestion-ref">autosuggestion <span>1</span></a>
+      
+    <a href="/tags.html#real-time-ref">real-time <span>1</span></a>
+      
+    <a href="/tags.html#Adrian Trenaman-ref">Adrian Trenaman <span>2</span></a>
+      
+    <a href="/tags.html#Mark Wunsch-ref">Mark Wunsch <span>5</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/07/20/the-rare-double-deploy-by-geoff-guerdat">the rare double deploy by geoff guerdat</a></h1>
+  
+  <header>
+    
+    <time>20 July 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_m7h0urDexo1qgexq2o1_1280.jpg"/><br/><p>The rare double deploy by Geoff Guerdat.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#work culture-ref">work culture <span>20</span></a>
+      
+    <a href="/tags.html#photos-ref">photos <span>7</span></a>
+      
+    <a href="/tags.html#Geoff Guerdat-ref">Geoff Guerdat <span>4</span></a>
+      
+    <a href="/tags.html#double laptops-ref">double laptops <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/07/18/gilt-internal-hackathon-july-edition">Gilt Internal Hackathon--July Edition</a></h1>
+  
+  <header>
+    
+    <time>18 July 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>On July 12th the Gilt Tech team kicked off a two-day internal hackathon with four goals:</p>
+<p><em>1. Hack with people that you don&rsquo;t usually work with.</em><br/><em>2. Hack with people that you don&rsquo;t usually work with.</em><br/><em>3. Hack with people that you don&rsquo;t usually work with.</em><br/><em>4. Focus on building internal tools and cleaning up code.</em></p>
+<p><strong>The Event</strong></p>
+<p>Day One started with Yoni Goldberg keynoting event with a brief introduction and time allowance for pitching project ideas. A week prior to the event, engineers contributed a multitude of ideas for projects&ndash;some tongue-in-cheek grand aspirations while others were practical for the time allotment and would be of significant benefit to have. Anyone who hadn’t already committed to any projects quickly found teammates in groups up to five members, and everyone was off to the races.  </p>
+<p><a href="http://www.flickr.com/photos/gilttech/7583552760/in/set-72157630604896582/" target="_blank"><img alt="image" height="160" src="http://farm9.staticflickr.com/8291/7583552760_ae74963e17_m.jpg" width="240"/></a></p>
+<p>The food was awesome; we kicked the day with pretzel-croissants from <a href="http://www.thecitybakery.com/" target="_blank">City Bakery</a> (if you haven’t had one before, they are a must-try!) and a couple hours into our coding fest, we took a break to enjoy neatly-arranged rows of delicious steamed buns from the <a href="https://www.facebook.com/TheBaoery" target="_blank">Baoery</a> for lunch.   </p>
+<p><a href="http://www.flickr.com/photos/gilttech/7583549224/in/set-72157630604896582" target="_blank"><img alt="image" height="240" src="http://farm8.staticflickr.com/7254/7583549224_8bbfb4b074_m.jpg" width="169"/></a></p>
+<p>Some of us continued work after we dispersed on the first day, and since it wasn’t clear that we hadn’t planned on hosting an overnight stay, our intern, Lori, was left alone in the late evening wondering <a href="http://secure.flickr.com/photos/gilttech/7585793248/in/photostream/lightbox/" title="gilttech flickr photo" target="_blank">where everyone had gone</a>.   </p>
+<p>Almost everyone was able to return for the second day to hole-up for the final stretch. A couple groups scrambled to put the finishing touches on their projects to ensure they were presentable (complete with <a href="http://secure.flickr.com/photos/gilttech/7583551548/in/photostream/lightbox/" title="gilttech flickr photo" target="_blank">ASCII art</a>) in the minutes leading up to our presentation party while other groups started early on the celebratory beer and pizza.  </p>
+<p><strong>The Projects</strong></p>
+<p>Some of the projects that were born and presented at this hackathon included:<br/>    •    A <a href="http://www.flickr.com/photos/gilttech/7583551964/in/photostream/lightbox/" title="gilttech flickr photo" target="_blank">radial dependency graph</a> of all of Gilt’s services<br/>    •    Implementation of a predictive algorithm to estimate the resources required for a customer service project<br/>    •    A UI A/B testing framework to share and manage the way too many active Gilt’s A/B tests<br/>    •    Significant improvements to an internal UI mockup tool for non-specialists<br/>    •    Various improvements to our version control workflow and application deployment process</p>
+<p><strong>Retrospective</strong></p>
+<p>The participants were really enthusiastic about having a block of uninterrupted coding time, having the freedom to explore languages/frameworks that they&rsquo;re interested in, and having the opportunity to work in ad hoc teams.</p>
+<p>Although Gilt occasionally hosts and participates in hackathons such as our recent public API hackathon, we’re really hoping this one focuses solely on internal tools will become a regular part of Gilt’s tech culture.</p>
+<p><iframe frameborder="0" height="300" scrolling="no" src="http://www.flickr.com/slideShow/index.gne?group_id=&amp;user_id=60172469@N07&amp;set_id=72157630604896582&amp;text=Hackathon+-+July+2012+Edition" width="400"></iframe></p>
+<p><br/> -<em>Yoni Goldberg and Chris Cho</em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#hackathons-ref">hackathons <span>8</span></a>
+      
+    <a href="/tags.html#internal hackathons-ref">internal hackathons <span>2</span></a>
+      
+    <a href="/tags.html#work culture-ref">work culture <span>20</span></a>
+      
+    <a href="/tags.html#Yoni Goldberg-ref">Yoni Goldberg <span>14</span></a>
+      
+    <a href="/tags.html#Baoery-ref">Baoery <span>1</span></a>
+      
+    <a href="/tags.html#City Bakery-ref">City Bakery <span>1</span></a>
+      
+    <a href="/tags.html#pretzel croissant-ref">pretzel croissant <span>1</span></a>
+      
+    <a href="/tags.html#Chris Cho-ref">Chris Cho <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/07/08/gilt-live-a-new-way-to-shop">Gilt Live: A New Way to Shop</a></h1>
+  
+  <header>
+    
+    <time>08 July 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p class="MsoNormal">Gilt Live is a new way to shop on Gilt.  It gives you the chance to see what our members are buying on Gilt - right now.  We are excited because it gives you a way to discover new products that you might never have seen.  And since it is updating in real-time you can see something sell out right before your eyes –- or not if you are quick enough to jump on it.</p>
+<p class="MsoNormal"><strong><img src="http://media.tumblr.com/tumblr_m6r4gqcMKy1rszxsm.png"/></strong></p>
+<p class="MsoNormal"><strong>The Technology</strong></p>
+<p class="MsoNormal">Gilt Live is Gilt’s first public facing application to use websockets. Why websockets?  The key component of Live is the ability to send real-time messages to our members. Websockets are the perfect candidate.</p>
+<p class="MsoNormal">Live is written in Scala on the <a href="http://www.playframework.org/" target="_blank">Play 2.0.1</a> framework and uses <a href="http://akka.io/" target="_blank">Akka</a> for thread management, a decision based on the the framework&rsquo;s scalability and websocket integration approach.</p>
+<p class="MsoNormal"><strong>What is Supported?</strong></p>
+<p class="MsoNormal">Websockets are only supported in Firefox 11+, Chrome 6.0+, Safari 5.0.1+ and Internet Explorer 10.0. This does exclude a set of users from the experience, and it is a drawback, but we feel the benefits outweigh the loss.</p>
+<p class="MsoNormal"><strong>The Client</strong></p>
+<p class="MsoNormal">The client uses the jQuery Isotope library to render the product messages in a multi-size, dynamic layout. In order to prevent an excessive number of products in the browser and save CPU resources on the client’s machine, the client removes the top unseen products from the DOM, a process we call “Chunking” – after our favorite character from Goonies.</p>
+<p class="MsoNormal"><strong>Load Balancing</strong></p>
+<p class="MsoNormal">Live uses the Zeus load balancer. Initial load testing allowed for only 500 concurrent connections, but after a few configuration tweaks, we have reached over 28K concurrent connections and counting!</p>
+<p class="MsoNormal"><strong>Inventory Updates</strong></p>
+<p class="MsoNormal">One of the coolest features of live is our inventory updates, made possible through the use of websockets. If there are 5 or fewer items left to buy, you’ll see a countdown flag on the product, and if you stay around, you’ll see the count drop from 5 units, to 4…to Sold out!</p>
+<p class="MsoNormal"><strong><img src="http://media.tumblr.com/tumblr_m6r4iyqtaE1rszxsm.png"/></strong></p>
+<p class="MsoNormal"><strong>Summary</strong></p>
+<p class="MsoNormal">We’ve learned new technologies, faced scalability challenges, and most importantly had fun through the development of Live. We are already forming ideas to take live to the next level and use websockets in other areas of the site.</p>
+<p class="MsoNormal">Thanks for reading, and let us know if you have any <a href="mailto:live@gilt.com" target="_blank">suggestions</a>!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/06/18/we-saw-a-great-turnout-here-at-gilt-hq-on-saturday">we saw a great turnout here at gilt hq on saturday</a></h1>
+  
+  <header>
+    
+    <time>18 June 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_m5tvd1NJHh1qgexq2o1_1280.jpg"/><br/><img src="/tumblr_files/tumblr_m5tvd1NJHh1qgexq2o2_1280.jpg"/><br/><img src="/tumblr_files/tumblr_m5tvd1NJHh1qgexq2o3_1280.jpg"/><br/><img src="/tumblr_files/tumblr_m5tvd1NJHh1qgexq2o4_1280.jpg"/><br/><img src="/tumblr_files/tumblr_m5tvd1NJHh1qgexq2o5_1280.jpg"/><br/><img src="/tumblr_files/tumblr_m5tvd1NJHh1qgexq2o6_1280.jpg"/><br/><br/><p>We saw a great turnout here at Gilt HQ on Saturday for NYC Fashion Hack Day 2012!</p>
+
+<p>At roughly 9:30am, after short presentations from the sponsors about their APIs and services, developers, designers, product aficionados and fashion experts broke into groups, some pre-formed and some improvised on the spot, and got to work in our biggest conference room area, along with a couple small groups breaking out into their own spaces to plan in private.</p>
+
+<p>At 8pm, after a long day of work, socializing, music, and food we all gathered together to see the projects that people had put together— more than 10 individuals/teams got up front and showed off their work to each other as well as a group of people that gathered in the office in the evening just to see what people had accomplished.</p>
+
+<p>Projects ran the gamut from web applications that modified existing fashion-centric sites like Gilt and Pinterest to help shoppers find the best products for them to new apps that help the fashion industry work: sourcing materials for photo shoots, recommending coordinated products to shoppers, and even exploring the fringes of digital fabric printing.</p>
+
+<p>A few projects were even by Gilt engineers who flexed their tech muscle to show off cool product slideshows and Tumblr command line tools.</p>
+
+<p>Thanks a lot to everyone who came out to the event and to all the companies that worked with us: Apigee, Tumblr, 10gen, and Uber!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#hackathon-ref">hackathon <span>7</span></a>
+      
+    <a href="/tags.html#hack day-ref">hack day <span>2</span></a>
+      
+    <a href="/tags.html#fashionhack-ref">fashionhack <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/06/01/users-can-now-browse-the-gilt-daily-sales-in-a">users can now browse the gilt daily sales in a</a></h1>
+  
+  <header>
+    
+    <time>01 June 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_m4y5jxgr0z1qgexq2o1_500.png"/><br/><p>Users can now browse the Gilt daily sales in a native application for the Windows Mobile platform! codeArcher’s <a href="http://www.windowsphone.com/en-US/apps/9a523727-6c53-47bc-a5f7-837d60656ce3" target="_blank">Glitter</a> features gilt.com’s flash sales, making use of the Public API to pull in information on the curated sales as well as the products in those sales. If you’re rocking a Lumia or other Windows phone, <a href="http://www.windowsphone.com/en-US/apps/9a523727-6c53-47bc-a5f7-837d60656ce3" target="_blank">check this app out and review it in the Windows Phone Marketplace</a>!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#apps-ref">apps <span>8</span></a>
+      
+    <a href="/tags.html#windows phone-ref">windows phone <span>1</span></a>
+      
+    <a href="/tags.html#public api-ref">public api <span>4</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#shopping-ref">shopping <span>13</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    <a href="/tags.html#codeArcher-ref">codeArcher <span>1</span></a>
+      
+    <a href="/tags.html#Glitter-ref">Glitter <span>1</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/05/21/nyc-fashion-hack-day-2012-june-16">NYC Fashion Hack Day 2012: June 16</a></h1>
+  
+  <header>
+    
+    <time>21 May 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p><a href="http://nycfashionhackday.eventbrite.com/" target="_blank"><img src="http://media.tumblr.com/tumblr_m4dxxmd9Xt1qzuc2n.png" alt=""/></a></p>
+
+<p>What&rsquo;s the NYC Fashion Hack Day? On Saturday, June 16, 2012, Gilt Tech is joining forces with two giants of their respective industries: <a href="http://www.apigee.com" target="_blank">Apigee</a>, in the business of <a href="http://apigee.com/about/products/enterprise" target="_blank">APIs</a> and <a href="http://apigee.com/about/products/usergrid" target="_blank">cloud platforms</a>, and <a href="http://www.tumblr.com" target="_blank">Tumblr</a>, in the business of <a href="http://www.tumblr.com/about" target="_blank">hosting and spreading the word about art and creativity</a> and <a href="http://www.maddieonthings.com" target="_blank">blogs about dogs on top of things</a>. Together, we&rsquo;re excited to host a 12-hour hackathon event at Gilt HQ in Midtown Manhattan in search of individuals and small teams who want to spend the day building a brand new application: web, desktop, mobile… whatever suits your fancy, we&rsquo;d love to see you come out and make something!</p>
+
+<p>All three companies will have people on hand to help you get up and running with our APIs &amp; tools if that&rsquo;s your thing, or else you can just come and work on a project if the idea of making something while meeting and networking with the NYC Tech scene is appealing to you.</p>
+
+<p>At the end of the day we&rsquo;ll be giving out prizes for best usage of the hosts&rsquo; APIs, most fashion-conscious application, and coolest technical accomplishment! Tickets are limited, so <a href="http://nycfashionhackday.eventbrite.com/" target="_blank">sign up today</a> to reserve your spot!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#tumblr-ref">tumblr <span>1</span></a>
+      
+    <a href="/tags.html#apigee-ref">apigee <span>1</span></a>
+      
+    <a href="/tags.html#hackathon-ref">hackathon <span>7</span></a>
+      
+    <a href="/tags.html#hack day-ref">hack day <span>2</span></a>
+      
+    <a href="/tags.html#nyctech-ref">nyctech <span>2</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2012/05/18/gilt-is-hosting-the-play-nyc-meetup">Gilt is hosting the Play! NYC meetup</a></h1>
+  
+  <header>
+    
+    <time>18 May 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <a href="http://www.meetup.com/Play-NYC/events/63123672/">Gilt is hosting the Play! NYC meetup</a><br/><p>This Monday (May 21) Gilt will host the <a href="http://www.meetup.com/Play-NYC/" target="_blank">Play! NYC group</a> in our shiny new office space.</p>
+
+<p>A few of us at Gilt have really taken a liking to the <a href="http://www.playframework.org/" target="_blank">Play! web framework</a>, but we wanted to be able to connect with other engineers so we could share experiences and learn about this exciting new framework. We started this group to fill a void we saw in NYC.</p>
+
+<p>The first meetup of the group will be an easy-going introduction to Play! 2. We&rsquo;ll talk briefly about why Gilt has chosen Play for some of its new applications, and then turn it over to Peter Hausel, one of the core developers of Play.</p>
+
+<p>Peter will be leading an informal session about the best practices surrounding Play development.</p>
+
+<p>If you&rsquo;re in the NYC area, a Play! expert, a Scala beginner, or just interested in what makes this web framework different, I encourage you to join the group and check out this first meetup.</p>
+
+<p>This Monday, May 21st at 7:30 at Gilt&rsquo;s offices, 2 Park Ave, 5th Floor.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#play-ref">play <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/57/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 58 of 64</span>
+  
+    <a href="/posts/59/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

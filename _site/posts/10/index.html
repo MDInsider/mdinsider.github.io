@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/15/prison-ed-cats-and-vmware-meet-the-gilt">Prison Ed, Cats, and VMWare: Meet The Gilt Corporate Applications Team</a></h1>
+  
+  <header>
+    
+    <time>15 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Gilt Corporate Applications is a diverse and vital team of 27 men and women working together across two continents (North America and Europe) and multiple cities (New York, Dublin, Limerick, and Louisville, KY) to make sure that Gilt-the-company continues running. They are the unsung heroes who field all of our &ldquo;HELP! MY COMPUTER IS ACTING WEIRD&rdquo; queries and deal with our failures to reset our passwords. They are the front line in our battles against chaos and negative-surprise. Recently I polled them to find out more about who they are, and what makes them tick.</p>
+<p><strong>Who they are: </strong>systems engineers, technical specialists, security governance analysts, and documentation specialists. Moms and dads. Men and women:</p>
+<p><img alt="image" src="https://31.media.tumblr.com/a673535bb58628e5960b3e211258d7ca/tumblr_inline_ndjpq22AOD1s17bu5.png" width="800"/></p>
+<p><strong>Average team-member tenure with Gilt: </strong>Three years. Many Gilt people are &ldquo;old-timers&rdquo; according to standard tech-company attrition rates, but Corporate Applications people are particularly loyal. Some members have been with Gilt since its earliest, earliest days (i.e., when we were using Ruby).</p>
+<p>This graph shows how &ldquo;the Corporate Applications 27&rdquo; landed at Gilt:</p>
+<p><img alt="image" src="https://31.media.tumblr.com/32d2ddfa86dc57c89369df0810fe28ca/tumblr_inline_ndi95orNgj1s17bu5.png" width="800"/></p>
+<p>(In case you&rsquo;re unfamiliar with narwhals, <a href="http://en.wikipedia.org/wiki/Narwhal" target="_blank">this</a> should help.)</p>
+<p>What keeps these dedicated technologists happy, healthy and <a href="http://tech.gilt.com/2014/10/15/okta-bierfest" target="_blank">holiday-celebrating</a> at Gilt? This graph (its format is called &ldquo;exploding pie,&rdquo; BTW) sheds some light:</p>
+<p><img alt="image" src="https://31.media.tumblr.com/4af130f3fefcb63e31dfdfc1f16fc377/tumblr_inline_ndi9f1G4l81s17bu5.png"/></p>
+<p>Ask anyone at Gilt what they love about working here, and &ldquo;the people&rdquo; is almost always the first thing that comes to mind&ndash;so this result was expected. A follow-up exploding pie seemed in order:</p>
+<p><img alt="image" src="https://31.media.tumblr.com/65eadbf9893cecfeee36a4112bfb86fc/tumblr_inline_ndi9iee0MY1s17bu5.png" width="800"/></p>
+<p>More than half cited the ample opportunities to learn and grow on the job. Some team members specifically mentioned learning new technologies, while others cited team-building and management skills. Our pantry options (<a href="http://tech.gilt.com/2014/01/06/come-to-nyc-tech-talks-at-gilt-on-january-14" target="_blank">cold-brew</a>, popcorn, seltzer, fresh fruit and vegetables, and other treats) and flexible vacation policy came in second and third place, respectively.</p>
+<p><strong>More about learning: </strong>Many people enthusiastically went into detail, sharing bits of wisdom they&rsquo;ve learned along the Gilt way:</p>
+<ul><li>&ldquo;Numbers count&rdquo;</li>
+<li>&ldquo;Everything requires a ticket.&rdquo;</li>
+<li>&ldquo;Change is constant so deal with it, Macs are a good thing, and elk makes a tasty burger.&rdquo;</li>
+<li>&ldquo;Be Agile. Be ready to take on anything and everything with style. Learn from your mistakes and get better for the next.&rdquo;</li>
+<li>&ldquo;What might be important one day (projects, reports) might not be the next, so don&rsquo;t take it too seriously!&rdquo;</li>
+<li>&ldquo;The true nature of what the Internet is really for [is] shopping on Gilt!&rdquo;</li>
+<li>&ldquo;If it ain&rsquo;t broke, leave it well alone!&rdquo;</li>
+<li>&ldquo;Work hard and give it your all regardless of the person, situation, or problem.&rdquo;</li>
+<li>&ldquo;Own your mistakes and learn from them.&rdquo;</li>
+<li>&ldquo;A great team helps you fix things quickly.&rdquo;</li>
+<li>&ldquo;Don&rsquo;t be afraid to try new things. If you break something, it&rsquo;s OK as long as you fix it.&rdquo;</li>
+<li>&ldquo;Having a relatively happy, respectful workplace with flexible scheduling is more motivating for employees to do great work than anything else I&rsquo;ve ever experienced before.&rdquo;</li>
+<li>&ldquo;Document it before you break it. Ask questions.&rdquo;</li>
+<li>&ldquo;Don&rsquo;t make a disk thick until making the comparison on VMware and NetApp.&rdquo;</li>
+<li>&ldquo;As much as you think you know, someone knows more.&rdquo;</li>
+<li>IT folk are not nasty and condescending &hellip;They just have really tough jobs!&ldquo;</li>
+<li>Learn as much as possible, and use it as much as possible.&rdquo;</li>
+</ul><p>One respondent developed their own motto for the team: &ldquo;Autonomy, Mastery, Purpose.&rdquo; We need to translate this into Latin, stat.</p>
+<p>For my last question, I wanted to get to know a bit about what makes the team tick outside the Gilt walls. A lot, apparently:</p>
+<p><img alt="image" src="https://31.media.tumblr.com/f8a3aa02cec7129938a49ec5fc3ed02c/tumblr_inline_ndi9xb6h6n1s17bu5.png" width="800"/></p>
+<p>Some of people&rsquo;s interests are particularly worth mentioning:</p>
+<ul><li>&ldquo;Cigars&rdquo;</li>
+<li>&ldquo;Welding&rdquo;</li>
+<li>&ldquo;Lawn work&rdquo;</li>
+<li>&ldquo;Cats. Playing with cats, baking with cats, watching TV with cats, telling jokes to cats &amp; laughing at jokes my cats tell, laser tag with cats&rdquo;</li>
+<li>&ldquo;Recreational shooting&rdquo;</li>
+<li>Writing, performing, teaching in prisons &amp; Occupying Wall Street</li>
+<li>&ldquo;Walking along the beach at sun set hand in hand&rdquo;</li>
+<li>&ldquo;Sitting on the beach and taking it all in&rdquo;</li>
+<li>&ldquo;Spending time out in the bog&rdquo;</li>
+<li>&ldquo;Researching real estate&rdquo;</li>
+</ul>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#corporate applications-ref">corporate applications <span>2</span></a>
+      
+    <a href="/tags.html#IT-ref">IT <span>3</span></a>
+      
+    <a href="/tags.html#exploding pie graphs-ref">exploding pie graphs <span>1</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#people-ref">people <span>40</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/15/okta-bierfest">OKTA-bierfest</a></h1>
+  
+  <header>
+    
+    <time>15 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/9fe6d3e1679a73426396c1d21a5759e6/tumblr_inline_ndi7vvagjK1s17bu5.jpg" width="800"/></p>
+<p>Today Gilt corporate applications&ndash;the team responsible for managing our OKTA services, among <em>many many </em>other things&ndash;put their own spin on Octoberfest by generously hosting a company-wide &ldquo;OKTA-bierfest&rdquo; celebration. The team covered our IT help desk with buckets of Yonkers Brewery bier and platters of cheese (both &ldquo;standard&rdquo; and &ldquo;<a href="http://tech.gilt.com/2014/02/07/fancy-cheese-friday" target="_blank">fancy</a>&rdquo; varieties, cupcakes, fruits &lsquo;n&rsquo; nuts, and homemade pretzels. We&rsquo;ve had several office parties since fall officially kicked off, but this one has generated the most buzz among tech&ndash;<em>so far</em>.</p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#IT-ref">IT <span>3</span></a>
+      
+    <a href="/tags.html#corporate applications-ref">corporate applications <span>2</span></a>
+      
+    <a href="/tags.html#pretzels-ref">pretzels <span>1</span></a>
+      
+    <a href="/tags.html#beer-ref">beer <span>2</span></a>
+      
+    <a href="/tags.html#Octoberfest-ref">Octoberfest <span>1</span></a>
+      
+    <a href="/tags.html#Okta-ref">Okta <span>1</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    <a href="/tags.html#IT desk-ref">IT desk <span>1</span></a>
+      
+    <a href="/tags.html#cheese-ref">cheese <span>2</span></a>
+      
+    <a href="/tags.html#meat-ref">meat <span>1</span></a>
+      
+    <a href="/tags.html#parties-ref">parties <span>1</span></a>
+      
+    <a href="/tags.html#Yonkers Brewery-ref">Yonkers Brewery <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/14/gilt-cio-is-a-david-rockefeller-fellow">Gilt CIO Is a David Rockefeller Fellow</a></h1>
+  
+  <header>
+    
+    <time>14 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/105f55c758c32ec80983f3e63e97f0df/tumblr_inline_ndfzl1X8pL1s17bu5.png"/></p>
+<p>Gilt Tech is proud to inform you that Gilt CIO <a href="http://tech.gilt.com/search/steve+jacobs" target="_blank">Steve Jacobs</a> is one of only 19 NYC-area senior executives chosen to participate in this year&rsquo;s David Rockefeller Fellows program! Created in 1989 by the <a href="http://pfnyc.org/" target="_blank">Partnership for New York City</a>, a membership organization made up of CEOs from 200 leading businesses headquartered in New York, the Rockefeller Fellows program enables participants to learn more about current civic issues and meet the governmental, business and nonprofit leaders in charge of addressing those issues. Participants also get to tour important landmarks such as NYC courts and jails, transportation centers, and commercial hubs. Steve joins execs from Nickelodeon, Xerox, Citigroup and Time Warner; check the full list <a href="http://pfnyc.org/news_press/partnership-for-new-york-city-announces-2014-2015-class-of-david-rockefeller-fellows/" target="_blank">here</a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Steve Jacobs-ref">Steve Jacobs <span>11</span></a>
+      
+    <a href="/tags.html#leadership-ref">leadership <span>5</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#Partnership for New York City-ref">Partnership for New York City <span>1</span></a>
+      
+    <a href="/tags.html#Partnership for NYC-ref">Partnership for NYC <span>1</span></a>
+      
+    <a href="/tags.html#David Rockefeller Fellow-ref">David Rockefeller Fellow <span>1</span></a>
+      
+    <a href="/tags.html#David Rockefeller fellowships-ref">David Rockefeller fellowships <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/09/gilt-tech-team-outing-rebuilding-documentary">Gilt Tech Team Outing: "Rebuilding" Documentary Screening</a></h1>
+  
+  <header>
+    
+    <time>09 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><iframe frameborder="0" height="354" src="//player.vimeo.com/video/59497753" width="630"></iframe></p>
+<p>Earlier this week #gilttech&rsquo;s <a href="http://tech.gilt.com/search/lauren+ribando" target="_blank">Lauren Ribando</a>, <a href="http://tech.gilt.com/tagged/Rangarajan-Radhakrishnan" target="_blank">Rangarajan Radhakrishnan</a> and I headed north to the <a href="http://www.generalsociety.org/" target="_blank">General Society of Mechanics and Tradesmen</a> in Midtown for a public screening of <a href="http://rebuildingmovie.com/world-trade-center-new-york-film/" target="_blank"><em>Rebuilding</em></a>: artist/filmmaker Marcus Robinson&rsquo;s visually stunning documentary about the reconstruction of the World Trade Center site and the men and women who did the work. Robinson started work on his film in 2006&ndash;capturing the construction activity on time-lapse film and through his own wonderful paintings, which are interspersed throughout the film (and currently on exhibit on the 48th floor of Tower 4). Robinson&rsquo;s poignant interviews with carpenters, foremen, surveyors, iron workers, window installers and other workers give a human face to the gargantuan WTC project, and also reflect the intimacy and trust he was able to establish with the crew. <em>Rebuilding </em>makes a powerful statement about the resilience of the human spirit, while documenting the incredible perseverance of both the filmmaker and his subjects.</p>
+<p><em>Rebuilding </em>has been featured on the <a href="http://www.history.com/shows/history-films/articles/rebuilding-the-world-trade-center" target="_blank">History Channel</a> and the UK&rsquo;s Channel 4; find out about upcoming showings by signing up for <a href="http://rebuildingmovie.com/world-trade-center-new-york-film/" target="_blank">the film&rsquo;s enewsletter</a>. And if you&rsquo;re in NYC, take some time to visit the Tradesmen&rsquo;s building&ndash;it&rsquo;s <span>a New York City landmark and on the National Register of Historic Places.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#documentary-ref">documentary <span>2</span></a>
+      
+    <a href="/tags.html#Rangarajan Radhakrishnan-ref">Rangarajan Radhakrishnan <span>4</span></a>
+      
+    <a href="/tags.html#General Society of Mechanics and Tradesmen-ref">General Society of Mechanics and Tradesmen <span>1</span></a>
+      
+    <a href="/tags.html#Marcus Robinson-ref">Marcus Robinson <span>1</span></a>
+      
+    <a href="/tags.html#Rebuilding-ref">Rebuilding <span>1</span></a>
+      
+    <a href="/tags.html#time-lapse-ref">time-lapse <span>2</span></a>
+      
+    <a href="/tags.html#outings-ref">outings <span>1</span></a>
+      
+    <a href="/tags.html#tech team outing-ref">tech team outing <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/08/our-next-free-course-at-gilt-data-visualization">Our Next Free Course at Gilt: Data Visualization</a></h1>
+  
+  <header>
+    
+    <time>08 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/6a2449fd807c5f4cf6899a8d4aa7b968/tumblr_inline_nd518hOewS1s17bu5.png" width="800"/></p>
+<p>For all of you 9-to-5ers who enjoy your free <a href="http://tech.gilt.com/search/free+courses" target="_blank">Gilt tech courses</a> to take place after work, great news: Our next freebie will be an evening course. The focus: data visualization. But not just <em>any </em>data visualization: This three-hour session will cover visualizations for forests, trees and clustering in the context of visualization for multivariate analysis. Leading the way will be Paul Trowbridge, an adjunct instructor at NYU&rsquo;s Center for Advanced Digital Applications.</p>
+<p>Multivariate, high-dimensional data sets pose challenges for low-dimensional visual representation, interpretation and communication. In this class, Paul will explore clustering, trees and Random forests&ndash;three common methods for analyzing multivariate data when classification and prediction are key goals of the analysis. He&rsquo;ll introduce each analysis method, and present visualization strategies and techniques for each method&ndash;focusing on Random forests. He&rsquo;ll review these existing visualization methods, teaching how to produce and interpret each visual. He&rsquo;ll then proceed to explore some visualization strategies to diagnose and study the quality of the prediction and classification output of a Random forest analysis. Each step in his presentation will draw from relevant example data sets.</p>
+<p><strong>The essentials:</strong></p>
+<p><strong>When:</strong> <span><span>Thursday, October 23, 2014 from </span></span>5-9 PM<br/><strong>Where:</strong> Gilt office in Manhattan<br/><strong>Cost:</strong> Nothing!<br/><strong>Who:</strong> Gilt technologists … and you?</p>
+<p><strong>About the instructor: </strong>In addition to teaching at NYU, Paul is a PhD student in Statistics at Rutgers and organizer of the meetup group <a href="http://www.meetup.com/DataVisualization/" target="_blank">Data Visualization New York</a>, which has +2200 members.</p>
+<p>Fill out the form below to submit your contact info. (<strong>Note: </strong>You must be age 18 or older to attend.) Please keep in mind that<strong> submitting this form does not guarantee you a seat</strong>. However, it does mean that you’ll receive details about the other courses we’re developing as soon as they become available. We hope you can join us!</p>
+<p><strong>REGISTRATION IS CLOSED.</strong></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#data visualization-ref">data visualization <span>5</span></a>
+      
+    <a href="/tags.html#Paul Trowbridge-ref">Paul Trowbridge <span>1</span></a>
+      
+    <a href="/tags.html#Random forest-ref">Random forest <span>1</span></a>
+      
+    <a href="/tags.html#free courses-ref">free courses <span>30</span></a>
+      
+    <a href="/tags.html#free classes-ref">free classes <span>30</span></a>
+      
+    <a href="/tags.html#free tech courses-ref">free tech courses <span>22</span></a>
+      
+    <a href="/tags.html#free tech classes-ref">free tech classes <span>29</span></a>
+      
+    <a href="/tags.html#free-ref">free <span>4</span></a>
+      
+    <a href="/tags.html#classes-ref">classes <span>1</span></a>
+      
+    <a href="/tags.html#data-ref">data <span>25</span></a>
+      
+    <a href="/tags.html#clustering-ref">clustering <span>1</span></a>
+      
+    <a href="/tags.html#frees-ref">frees <span>1</span></a>
+      
+    <a href="/tags.html#multivariate data-ref">multivariate data <span>1</span></a>
+      
+    <a href="/tags.html#data analysis-ref">data analysis <span>2</span></a>
+      
+    <a href="/tags.html#Data Visualization New York-ref">Data Visualization New York <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/06/on-being-a-woman-member-of-gilts-tech-team">On Being a (Woman) Member of Gilt’s Tech Team</a></h1>
+  
+  <header>
+    
+    <time>06 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span><img alt="image" src="https://31.media.tumblr.com/0d67dbf3e21baeaa3e50461b36da6a99/tumblr_inline_nd1l7tHqi91s17bu5.jpg" width="800"/></span></p>
+<p><em><a href="http://findingada.com/" target="_blank">Ada Lovelace Day</a> is October 14, BTW&ndash;mark your calendar!</em></p>
+<p><span>In my role as Gilt’s tech evangelist (if you’re asking, “what’s a tech evangelist?”&ndash;it’s a common question&ndash;</span><a href="https://www.linkedin.com/pulse/article/20140919154040-104539147-spotlight-friday-lauri-apple-tech-evangelism-specialist" target="_blank"><span>here’s a start</span></a><span>), I prefer to find speaking gigs for the other members of the team. Public speaking doesn’t terrify me (anymore), and often it&rsquo;s a lot of fun&ndash;but it’s more rewarding to watch one of my colleagues get attention (and receive follow-up speaking invites) than to be in the spotlight.</span></p>
+<p><span>Recently, however, I’ve taken advantage of two opportunities to appear on tech-related panels: One at the Nixon Peabody law firm’s office in NYC, and another at the Interop conference/expo, which closed in NYC last Friday. The Nixon Peabody event was a recap of sorts of the previous weekend’s </span><a href="http://www.codethedeal.com/" target="_blank"><span>Code the Deal hackathon</span></a><span>, and focused on legal tech. Although I earned a law degree a few years ago, I’ve never practiced and don’t really know much about transactional law other than that it involves a lot of “whereas”’s. However, I </span><span>do </span><span>know many lawyers who aren’t entirely ecstatic about their workplace environments. So I evangelized the progressive ideas about work culture implemented at technology companies like Gilt. </span></p>
+<p>As Gilt cofounder/CTO <a href="http://tech.gilt.com/search/michael+bryzek" target="_blank">Michael Bryzek</a> has publicly discussed many times, our team culture is built upon a foundation of trust, autonomy, empowerment, and flexibility. These principles challenge the entrenched workplace norms you&rsquo;ll find in many companies, including law firms: micromanaging, defining leadership by job title/hierarchies, showing preferential treatment to &ldquo;<a href="http://www.americanlawyer.com/id=1202612505186" target="_blank">star players</a>&rdquo; (instead of focusing on overall innovation and output from the entire team), and knee-jerk risk aversion (in contrast to trusting smart and capable people to take smart risks). Yet they could work perfectly well in any industry, including—maybe even especially—law. Like tech, law is heavily populated by very logical and educated people who know how to creatively problem-solve.</p>
+<p><span>Some might suggest that “entrenched workplace norms” include hiring and workplace practices that hinder </span><a href="http://blogs.wsj.com/law/2014/05/05/women-partners-still-lag-behind-men-in-billing-rates-management-roles/" target="_blank"><span>women from advancing in their careers</span></a><span>. This brings me to my next recent public speaking experience, at </span><a href="http://www.interop.com/newyork/" target="_blank"><span>Interop</span></a><span>. As we all know, women are lagging behind in the tech sector, too. Lemelson-MIT Prizewinner Sangeeta N. Bhatia neatly summarizes the current trend in </span><a href="http://www.technologyreview.com/view/530576/closing-the-high-tech-gender-gap/" target="_blank"><span>this September 2014 article</span></a><span> for MIT Technology Review:</span></p>
+<ul><li>
+<p><span>“Girls choose engineering less often and drop out of engineering disproportionately (the so-called “leaky pipeline”).</span></p>
+</li>
+<li>
+<p><span>“The percentage of women computer science majors peaked 30 years ago.</span></p>
+</li>
+<li>
+<p><span>“The higher I climb, the fewer other women there are at the table with me.”</span></p>
+</li>
+</ul><p><a href="http://bits.blogs.nytimes.com/2014/09/26/the-business-case-for-diversity-in-the-tech-industry/?_php=true&amp;_type=blogs&amp;_r=0" target="_blank"><span>So that our companies are successful</span></a><span>, we need to ensure that the ratio of women to men in tech becomes more balanced. There’s much work to do to </span><a href="http://qz.com/143967/the-tech-industrys-woman-problem-statistics-show-its-worse-than-you-think/" target="_blank"><span>boost the numbers</span></a><span>&ndash;and it’s not going to be easy, given that </span><a href="http://www.huffingtonpost.com/2013/09/09/titstare-techcrunch-disrupt_n_3893442.html" target="_blank"><span>this sort of thing</span></a><span> still happens at mainstream tech events, and women applicants for tech jobs are often told that they’re “</span><a href="http://valleywag.gawker.com/culture-fit-is-a-shitty-excuse-for-marginalizing-wome-1186914306" target="_blank"><span>just not a culture fit</span></a><span>.” Women who speak up and think for themselves are </span><a href="http://fortune.com/2014/08/26/performance-review-gender-bias/" target="_blank"><span>treated </span><span>negatively </span><span>in their performance reviews</span></a><span>, while their male peers are praised for exhibiting the same behaviors. For these and other reasons, women-in-tech panels remain important. They enable women and girls to learn from other women how to circumnavigate&ndash;or at minimum, prepare for&ndash;these potential barriers to success.  </span></p>
+<p><span>As Gilt’s tech evangelist, I was able to inform the girls at Interop that I work for a company headed by a woman CEO. I was able to state that, of five Gilt cofounders, two were women. I discussed with other panelists some of the other perks of being a woman at Gilt: </span></p>
+<ul><li>
+<p><span>my first manager&ndash;a man&ndash;supported my career development and helped me build my leadership skills; other men at Gilt, in tech and out, have done the same for me and other women</span></p>
+</li>
+<li>
+<p><span>my current manager is a woman </span></p>
+</li>
+<li>
+<p><span>Some of my male</span><span> </span><span>colleagues have suggested that we hold more women-in-tech events</span></p>
+</li>
+<li>
+<p><span>other male colleagues routinely condemn outside-the-company displays of sexism (often with a “facepalm” emoticon, but occasionally with more forceful language) </span></p>
+</li>
+<li>
+<p><span>we have a Gilt tech women’s group that’s open to men, and supported by men </span></p>
+</li>
+</ul><p><span>In my two-plus years at Gilt, I’ve witnessed male colleagues praising women. I’ve heard male tech execs encourage women on their teams to take advantage of career-building opportunities. And I&rsquo;ve watched most of male colleagues demonstrate one or more of the behaviors represented on this </span><a href="http://www.ncwit.org/resources/read-online-maleadvocate" target="_blank"><span>“Top 10 Ways To Be a Male Advocate for Technical Women”</span></a><span> list. Sure, our tech team has room for improvement: For example, it would be great to achieve or surpass the 50-50 gender ratio. Stats aside, I’m grateful to arrive at the office every morning knowing that I can expect to be respected and treated as an equal.</span></p>
+<p><span>One of the questions our Interop panel moderator asked us concerned the phrase “act like a man”&ndash;advice she’d recently heard a woman executive share. Should women strive to “act like a man” in order to succeed? I’d say no. Neither sex has a monopoly on any of the characteristics commonly associated with business world success&ndash;ambition, brilliance, toughness, etc. Better, I think, to focus on “acting like a human.” All humans have the capacity to practice open-mindedness, self-respect, and respect for others, while still making shrewd business decisions. The frequent displays of such qualities at Gilt tech, I’d say, are what really make our culture healthy for women&ndash;and in turn, healthy for everyone. </span></p>
+<p><span><span>Does having a woman CEO affect Gilt’s work culture? Someone asked me this question recently, and I don’t think it’s that simple. After all, not every woman CEO would </span><a href="http://www.nytimes.com/2014/04/20/business/michelle-peluso-of-gilt-groupe-i-dont-need-an-ivory-tower-or-an-office.html" target="_blank"><span>tell the <em>New York Times</em></span></a><span> that she doesn’t need a personal office. Having leaders who display humility sets a tone for the rest of the team, and that obviously <em>does </em>affect our work culture.<br/></span></span></p>
+<p><span><span>This </span>brings me back to trust and autonomy, two values I mentioned earlier as fundamental to Gilt tech’s culture. We manifest these two values in a variety of ways, but one of the most important for building an open and accepting culture involves our hiring practices. We hire people at all levels of the organization who can be trusted to act responsibly, reasonably, and respectfully. People who already reflect our values will help our team maintain them as we grow.</span></p>
+<p><span>&ldquo;There are important skills for succeeding in tech beyond the technical — and realizing that doesn’t mean lowering standards,&rdquo; writes journalist Ann Friedman <a href="https://medium.com/matter/this-is-the-last-thing-youll-ever-need-to-read-about-sexism-in-tech-56b9a3a77af0" target="_blank">in a recent article</a> about women in tech. &ldquo;Turns out that valuing these skills doesn’t just attract women, it also draws in a different sort of male employee.&rdquo; Friedman quotes <span><a class="markup--anchor markup--p-anchor" href="http://www.linkedin.com/in/kellanem" rel="nofollow" target="_blank" data-href="http://www.linkedin.com/in/kellanem">Kellan Elliott-McCrea</a></span>, the CTO of Etsy:  </span></p>
+<blockquote>
+<p><span>“The men who come into our organization who are excited about the fact that we have diversity as a goal are generally the people who are better at listening, they’re better at group learning, they’re better at collaboration, they’re better at communication, they’re particularly the people you want to be your engineering managers and your technical leads&hellip;[t]hese people are hard to find, and when you can find them, they’re awesome.”<br/></span></p>
+</blockquote>
+<p><span><span>A work culture that champions decency and respect in addition to creativity and talent is a great culture to evangelize. And it&rsquo;s something that any company can create for itself without endangering growth, competitiveness, or the bottom line.</span> Without the stress, discouragement and low morale <a href="http://www.forbes.com/sites/investopedia/2013/07/10/the-causes-and-costs-of-absenteeism-in-the-workplace/" target="_blank">caused</a> by toxic workplace factors like exclusion, discrimination and micro-management, employees are freed up to be creative and productive. Why <em>wouldn&rsquo;t</em> anyone evangelize that?</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#women in technology-ref">women in technology <span>3</span></a>
+      
+    <a href="/tags.html#New York Times-ref">New York Times <span>4</span></a>
+      
+    <a href="/tags.html#Interop-ref">Interop <span>4</span></a>
+      
+    <a href="/tags.html#Code the Deal-ref">Code the Deal <span>3</span></a>
+      
+    <a href="/tags.html#trust-ref">trust <span>3</span></a>
+      
+    <a href="/tags.html#autonomy-ref">autonomy <span>2</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#Lauri Apple-ref">Lauri Apple <span>6</span></a>
+      
+    <a href="/tags.html#tech evangelism-ref">tech evangelism <span>3</span></a>
+      
+    <a href="/tags.html#Ways To Be a Male Advocate for Technical Women-ref">Ways To Be a Male Advocate for Technical Women <span>1</span></a>
+      
+    <a href="/tags.html#Sangeeta N. Bhatia-ref">Sangeeta N. Bhatia <span>1</span></a>
+      
+    <a href="/tags.html#MIT Technology Review-ref">MIT Technology Review <span>1</span></a>
+      
+    <a href="/tags.html#Ada Lovelace Day-ref">Ada Lovelace Day <span>1</span></a>
+      
+    <a href="/tags.html#Ann Friedman-ref">Ann Friedman <span>1</span></a>
+      
+    <a href="/tags.html#Kellan Elliott-McCrea-ref">Kellan Elliott-McCrea <span>1</span></a>
+      
+    <a href="/tags.html#Etsy-ref">Etsy <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/03/innovation-driven-by-the-open-source-ethos-gilt">Innovation Driven by the Open Source Ethos: Gilt at Interop (video)</a></h1>
+  
+  <header>
+    
+    <time>03 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><iframe align="right" class="tw-sp" frameborder="0" height="280" id="tw_3819690485001" marginheight="0" marginwidth="0" scrolling="no" src="http://thewallstreetwiki.com/sp/?p=iw&amp;v=3819690485001" width="336"></iframe></p>
+<p>Maslow&rsquo;s <a href="http://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs" target="_blank">hierarchy of needs</a>, micro-services, and the practicality of introducing key performance indicators (KPI) to family life: These are just a few of the topics covered (and connected) by Gilt cofounder/CTO Michael Bryzek yesterday in his <a href="http://tech.gilt.com/2014/09/29/gilt-to-present-at-this-weeks-interop-expo" target="_blank">Interop</a> conference <a href="http://www.interop.com/video/keynotes/?videoID=3819690485001" target="_blank">keynote</a>. Michael also used his time on the <a href="http://www.interop.com/newyork/" target="_blank">Interop</a> stage to introduce <a href="http://www.apidoc.me/" target="_blank">apidoc</a>, a new open-source project at Gilt that enables developers to create beautiful documentation for REST services. Click the video to enlarge!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#Interop-ref">Interop <span>4</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#open source development-ref">open source development <span>1</span></a>
+      
+    <a href="/tags.html#OS-ref">OS <span>4</span></a>
+      
+    <a href="/tags.html#FOSS-ref">FOSS <span>2</span></a>
+      
+    <a href="/tags.html#innovation-ref">innovation <span>4</span></a>
+      
+    <a href="/tags.html#KPIs-ref">KPIs <span>4</span></a>
+      
+    <a href="/tags.html#key performance indicators-ref">key performance indicators <span>4</span></a>
+      
+    <a href="/tags.html#Martin Fowler-ref">Martin Fowler <span>2</span></a>
+      
+    <a href="/tags.html#micro-services-ref">micro-services <span>21</span></a>
+      
+    <a href="/tags.html#APIs-ref">APIs <span>9</span></a>
+      
+    <a href="/tags.html#REST-ref">REST <span>3</span></a>
+      
+    <a href="/tags.html#apidoc-ref">apidoc <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/03/welcome-michael-palma">Welcome, Michael Palma!</a></h1>
+  
+  <header>
+    
+    <time>03 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/ceee5613ef2adf7dec852c9538127e7a/tumblr_inline_ncvxi2yQnd1s17bu5.png" width="800"/></p>
+<p>Gilt is super-excited to welcome Michael Palma to our software engineering team! Formerly known as &ldquo;The Intern&rdquo;&ndash;he spent fall/winter 2013 with us through the University of Waterloo co-op program&ndash;Michael is now known around the office as &ldquo;The Employee.&rdquo; Here is what he has to say about himself:</p>
+<div>
+<blockquote>
+<div>&ldquo;I&rsquo;m a recent Computer Engineering graduate, originally from Toronto. I am extremely passionate about my job here at Gilt and have fallen in love with the beautiful city of New York. I am a big fan of cooking, video games, and&ndash;of course&ndash;grabbing drinks with a few friends. I really am looking forward to the challenges I face as a Software Engineer at Gilt!</div>
+</blockquote>
+<div>Glad to have you back, Employee!</div>
+</div>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Michael Palma-ref">Michael Palma <span>2</span></a>
+      
+    <a href="/tags.html#University of Waterloo-ref">University of Waterloo <span>3</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#Ninjas-ref">Ninjas <span>6</span></a>
+      
+    <a href="/tags.html#people-ref">people <span>40</span></a>
+      
+    <a href="/tags.html#hiring-ref">hiring <span>30</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#hello-ref">hello <span>8</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/03/gilt-techs-scott-albrecht-has-an-art-opening">Gilt Tech's Scott Albrecht Has an Art Opening Tonight</a></h1>
+  
+  <header>
+    
+    <time>03 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/4d70d530003bd08d1203bc552f0dda9c/tumblr_inline_ncvjb1rEX81s17bu5.png"/></p>
+<p><a href="http://boingboing.net/2014/10/02/scott-albrecht-new-show-of-ha.html" target="_blank">As reported by Boing Boing</a>(!), Gilt Art Director <a href="http://scottyfivealive.com/" target="_blank">Scott Albrecht</a> is having an art opening tonight at Philadelphia&rsquo;s Art in the Age gallery. Titled &ldquo;In The Distance Between Two Points,&rdquo; the show features new wooden sculptures and hand-drawn typographical art, including the piece above. Scott&rsquo;s <a href="http://scottyfivealive.com/Exhibitions" target="_blank">exhibition history</a> includes shows across the North America (all the way to Hawaii, in fact), and his work has been featured in by <a href="http://www.juxtapoz.com/current/scott-albrecht-explores-repetition-and-empty-sentiment-in-new-solo" target="_blank">Juxtapoz</a>, <a href="http://www.designsponge.com/2013/06/wood-pulp.html" target="_blank">Design Sponge</a> and other prominent art publications. If you&rsquo;re in Philly tonight, we encourage you to check out his opening!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Scott Albrecht-ref">Scott Albrecht <span>1</span></a>
+      
+    <a href="/tags.html#art-ref">art <span>2</span></a>
+      
+    <a href="/tags.html#design-ref">design <span>5</span></a>
+      
+    <a href="/tags.html#Philadelphia-ref">Philadelphia <span>1</span></a>
+      
+    <a href="/tags.html#art openings-ref">art openings <span>1</span></a>
+      
+    <a href="/tags.html#people-ref">people <span>40</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#Boing Boing-ref">Boing Boing <span>1</span></a>
+      
+    <a href="/tags.html#In The Distance Between Two Points-ref">In The Distance Between Two Points <span>1</span></a>
+      
+    <a href="/tags.html#Art in the Age-ref">Art in the Age <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/10/01/two-of-europes-top-node-js-experts-visit-gilt">Two of Europe's Top Node.js Experts Visit Gilt!</a></h1>
+  
+  <header>
+    
+    <time>01 October 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/efa8b930ae112dab245847f89ce3cff9/tumblr_inline_ncsdn0sQ0t1s17bu5.jpg" width="800"/></p>
+<p>Yesterday the #gilttech team in NYC hosted two very special guests: nearForm co-founders <a href="http://@Cianomaidin" target="_blank">Cian Ó Maidín</a> (CEO, pictured above) and <a href="https://twitter.com/rjrodger" target="_blank">Richard Rodger</a> (CTO), who spent more than an hour sharing with us their vast knowledge of using Node.js with micro-services. Based in Waterford, Ireland, Cian and Richard founded nearForm in 2011 largely because they were super-excited about Node.js. That passion has paid off for them in many ways (do what you love, right?).</p>
+<p>In addition to running the largest Node consultancy in Europe, Cian and Richard write books on Node.js, provide Node training, and run the blog Node Crunch (Richard&rsquo;s recent article, &ldquo;<a href="http://www.nearform.com/nodecrunch/deployment-youre-wrong/" target="_blank">Deployment: You&rsquo;re Doing It Wrong</a>,&rdquo; cites our own Michael Bryzek&rsquo;s <a href="http://tech.gilt.com/2014/07/02/immutable-infrastructure-with-docker-and-ec2-gilt-at" target="_blank">DockerCon talk on &ldquo;Immutable Infrastructure with Docker and EC2</a>&rdquo;&ndash;thanks, Richard!). Cian is a cofounder and curator of <a href="http://www.nodeconf.eu/" target="_blank">NodeConf.eu</a>, Europe&rsquo;s largest Node conference (and <a href="http://tech.gilt.com/2014/09/22/gilt-goes-to-nodeland-a-recap-of-nodeconf-eu" target="_blank">attended by our own team</a> this year). And Richard created <a href="http://nodezoo.com/" target="_blank">nodezoo.com</a>, a search engine for <a href="http://nodejs.org" target="_blank">Node.js</a> modules. Thanks to both of them for spending time with us!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#GIlt Groupe-ref">GIlt Groupe <span>4</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#nearForm-ref">nearForm <span>1</span></a>
+      
+    <a href="/tags.html#Ireland tech-ref">Ireland tech <span>1</span></a>
+      
+    <a href="/tags.html#Cian Ó Maidín-ref">Cian Ó Maidín <span>1</span></a>
+      
+    <a href="/tags.html#Richard Rodger-ref">Richard Rodger <span>1</span></a>
+      
+    <a href="/tags.html#Node Crunch-ref">Node Crunch <span>1</span></a>
+      
+    <a href="/tags.html#Node.js-ref">Node.js <span>7</span></a>
+      
+    <a href="/tags.html#NodeConf.eu-ref">NodeConf.eu <span>1</span></a>
+      
+    <a href="/tags.html#NodeConf.EU-ref">NodeConf.EU <span>1</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#DockerCon-ref">DockerCon <span>3</span></a>
+      
+    <a href="/tags.html#immutability-ref">immutability <span>6</span></a>
+      
+    <a href="/tags.html#EC2-ref">EC2 <span>4</span></a>
+      
+    <a href="/tags.html#Docker-ref">Docker <span>20</span></a>
+      
+    <a href="/tags.html#micro-services-ref">micro-services <span>21</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/9/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 10 of 64</span>
+  
+    <a href="/posts/11/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

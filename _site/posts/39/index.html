@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/11/01/our-next-free-tech-course-at-gilt-hadoop-with">Our Next Free Tech Course at Gilt: Hadoop with MapR Technologies' Michael Hausenblas</a></h1>
+  
+  <header>
+    
+    <time>01 November 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="http://media.tumblr.com/5e7c3f1868ea496e887ab488cc4412a4/tumblr_inline_mvlao083D51s17bu5.png"/></p>
+<p>Last month&rsquo;s free Gilt Tech course in NYC brought together 15 Gilt technologists and 45 non-Gilt employees from all walks of life&ndash;from software engineering to neuroscience&ndash;to learn the basics of the <a href="http://tech.gilt.com/2013/09/17/next-free-tech-course-at-gilt-r" target="_blank">R programming language</a>. For our <em>next</em> free class, we&rsquo;re going a bit more intimate and Emerald-Isle with an <strong>Intro to Hadoop</strong> session taught in Dublin by MapR Technologies Chief Data Engineer Michael Hausenblas! <strong>The essentials:</strong></p>
+<p><strong>When:</strong> <span class="aBn"><span class="aQJ">Monday, November 18, 2013 from 10AM-6PM</span></span><br/><strong>Where:</strong>  Clarion Hotel IFSC, Excise Walk, Dublin 1<br/><strong>Cost:</strong> Nothing!<br/><strong>Who:</strong> Gilt technologists &hellip; and you?</p>
+<p><strong>About the course:</strong> This one-day, eight-hour class will introduce you to data processing with Hadoop. We will go through the underlying principles (data locality, schema-on-read), explain the Hadoop components (distributed file system, MapReduce) and review the Hadoop ecosystem (Hive, HBase) and upcoming projects. We&rsquo;ll also walk through an end-to-end Hadoop application&ndash;from data ingestion over manipulation to serving&ndash;following the Lambda Architecture.</p>
+<p><strong>About <a href="http://mhausenblas.info/" target="_blank">Michael Hausenblas</a></strong>: Michael works at MapR EMEA in the role of Chief Data Engineer, where he helps people to tap the potential of big data. His background is in large-scale data integration research and development, advocacy and standardization. He has experience with NoSQL databases and the Hadoop ecosystem. Michael contributes to Apache Drill, a distributed system for interactive analysis of large-scale datasets. Follow him on Twitter.</p>
+<p><strong>About <a href="http://www.mapr.com/" target="_blank">MapR Technologies</a>:</strong> MapR provides an enterprise-grade platform for Hadoop that supports various mission-critical and real-time production uses. It&rsquo;s  used across financial services, retail, media, healthcare, manufacturing, telecommunications and government organizations, and Fortune 100 and Web 2.0 companies. Amazon, Cisco and Google are part of MapR’s broad partner ecosystem. Investors include Lightspeed Venture Partners, Mayfield Fund, NEA, and Redpoint Ventures. Learn more about MapR on Facebook, LinkedIn, and Twitter.</p>
+<p>Fill out the form below to submit your contact info. (<strong>Note: </strong>You must be age 18 or order to attend.) Please keep in mind that<strong> submitting this form does not guarantee you a seat</strong>. However, it does mean that you’ll receive details about the other courses we’re developing as soon as they become available. We hope you can join us!</p>
+<p><strong>APPLICATION CLOSED</strong></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Hadoop-ref">Hadoop <span>6</span></a>
+      
+    <a href="/tags.html#MapR Technologies-ref">MapR Technologies <span>1</span></a>
+      
+    <a href="/tags.html#Michael Hausenblas-ref">Michael Hausenblas <span>1</span></a>
+      
+    <a href="/tags.html#big data-ref">big data <span>17</span></a>
+      
+    <a href="/tags.html#free courses-ref">free courses <span>30</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Clarion Hotel-ref">Clarion Hotel <span>1</span></a>
+      
+    <a href="/tags.html#free classes-ref">free classes <span>30</span></a>
+      
+    <a href="/tags.html#free tech classes-ref">free tech classes <span>29</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/31/gilt-vp-architecture-eric-bowman-on-continuous">Gilt VP Architecture Eric Bowman on "Continuous Innovation at Gilt" (Video, Slides)</a></h1>
+  
+  <header>
+    
+    <time>31 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><iframe frameborder="0" height="360" scrolling="no" src="http://new.livestream.com/accounts/60688/events/2478486/videos/33616803/player?autoPlay=false&amp;height=360&amp;mute=false&amp;width=640" width="640"></iframe></p>
+<p>This week Dublin&rsquo;s played host to the <a href="http://www.websummit.net" target="_blank">Web Summit</a>: a two-day conference featuring CEOs, investors, developers and other professionals from the world&rsquo;s most innovative and recognized tech companies. Today Gilt VP Architecture Eric Bowman was a featured speaker on the Developers Stage, the Summit&rsquo;s dedicated venue for engineers and tech execs. Titled &ldquo;Continuous Innovation at Gilt,&rdquo; Eric&rsquo;s talk focused on the parallels between the values driving the Gilt tech culture (autonomy, decentralization) and our approaches to using and developing technology (<a href="http://tech.gilt.com/2013/10/25/gilts-kevin-scaldeferri-on-enabling-micro-service" target="_blank">lots of micro-services</a>, creating a <a href="http://tech.gilt.com/2013/08/09/meet-a-gilt-technologist-roland-tritsch-vp" target="_blank">deployment platform</a> that emphasizes flexibility and allows for safely taking risks). </p>
+<p><iframe frameborder="0" height="485" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/27773515" width="595"> </iframe></p>
+<div></div>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Eric Bowman-ref">Eric Bowman <span>13</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#websummit-ref">websummit <span>1</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#Galactica-ref">Galactica <span>4</span></a>
+      
+    <a href="/tags.html#continuous delivery-ref">continuous delivery <span>13</span></a>
+      
+    <a href="/tags.html#slideshow-ref">slideshow <span>20</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/30/welcome-gary-loshuertos">Welcome Gary LosHuertos!</a></h1>
+  
+  <header>
+    
+    <time>30 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="http://media.tumblr.com/a69505575c982fe3e1b4bd49153b274b/tumblr_inline_mvhpseAMLz1s17bu5.jpg"/></p>
+<p>We&rsquo;re super-excited to welcome <a href="https://twitter.com/garylosh" target="_blank">Gary LosHuertos</a> to Gilt Tech! Gary joins our personalization team&ndash;the crew that focuses on our <a href="http://techcrunch.com/2013/08/26/gilt-launches-personalized-sales-because-personalization-is-where-its-at/" target="_blank">personal sales</a> and other sexy initiatives&ndash;as a Senior Software Engineer and will work remotely from Gainesville, Florida (he&rsquo;ll also visit us in NYC every once in a while). Gary recently co-founded a start-up and participated in the <a href="http://www.techstars.com/" target="_blank">TechStars</a> program, so he&rsquo;s no stranger to NYC.</p>
+<p>Outside of work, Gary enjoys catching up with HBO&rsquo;s many popular shows, eating at some of Gainesville&rsquo;s &ldquo;(few) wonderful restaurants,&rdquo; and &ldquo;adding fluffy descriptive adjectives to my sentences.&rdquo;</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gary LosHuertos-ref">Gary LosHuertos <span>1</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#people-ref">people <span>40</span></a>
+      
+    <a href="/tags.html#personalization-ref">personalization <span>12</span></a>
+      
+    <a href="/tags.html#TechStars-ref">TechStars <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/28/making-news-gilt-ireland-coo-fidelma-healy">Making News: Gilt Ireland COO Fidelma Healy</a></h1>
+  
+  <header>
+    
+    <time>28 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="http://media.tumblr.com/c51ee1ba0d62ac07fc01c4b596cd5bf9/tumblr_inline_mvecimpBjb1s17bu5.jpg"/></p>
+
+<p>Over the weekend, Gilt Ireland Chief Operations Officer Fidelma Healy was featured in &ldquo;Wonder Web Women,&rdquo; an <em>Irish Independent </em>article about Ireland-based women tech executives. &ldquo;The technology industry constantly changes, which I relish, as I thrive in that kind of environment,&rdquo; Fidelma told the paper. &ldquo;I&rsquo;ve never been conscious of the glass ceiling because for me it was just a case of doing my job well and enjoying what I was doing.&rdquo; You can read the full article h<a href="http://www.independent.ie/lifestyle/wonder-web-women-29700691.html" target="_blank">ere</a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Fidelma Healy-ref">Fidelma Healy <span>2</span></a>
+      
+    <a href="/tags.html#Irish Independent-ref">Irish Independent <span>1</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#COOs-ref">COOs <span>1</span></a>
+      
+    <a href="/tags.html#women in tech-ref">women in tech <span>15</span></a>
+      
+    <a href="/tags.html#leadership-ref">leadership <span>5</span></a>
+      
+    <a href="/tags.html#tech-ref">tech <span>20</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/28/the-story-of-the-gilt-load-testing-platform">"The Story of the Gilt Load-Testing Platform": Gilt at Scala.IO</a></h1>
+  
+  <header>
+    
+    <time>28 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="http://media.tumblr.com/b5d5e38ac5a3d88b70f169d084f67950/tumblr_inline_mve2w14uD01s17bu5.png"/></p>
+
+<p>Last week Gilt Senior Software Engineer Andrew Duffy traveled to Paris to present at <strong><a href="http://scala.io/" target="_blank">Scala.IO</a></strong>, a two-day conference for Scalasmiths and functional programming enthusiasts. Organized by a multinational committee of Scala devs, Scala.IO featured speakers from Typesafe, Google and other well-known tech companies.</p>
+<p>In his talk, Andrew described how Gilt survives our daily, noon EST traffic spikes (illustrated above). Andrew also described his work as a contributor to <a href="https://github.com/gilt/gatling" target="_blank"><strong>Gatling</strong></a>, a great open-source load testing tool built on Scala and Akka that he introduced to Gilt. We now use Gatling as the foundation of our load-testing platform. (Check out the Gatling WebSocket add-on that Andrew recently created <strong><a href="https://github.com/gilt/gatling-websocket" target="_blank">here</a></strong>.)</p>
+<p>For the complete slide deck, <a href="http://amjjd.github.io/scala_io_2013/#/" target="_blank"><strong>click here</strong></a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Scala.IO-ref">Scala.IO <span>1</span></a>
+      
+    <a href="/tags.html#load-testing-ref">load-testing <span>3</span></a>
+      
+    <a href="/tags.html#Andrew Duffy-ref">Andrew Duffy <span>2</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Gatling-ref">Gatling <span>4</span></a>
+      
+    <a href="/tags.html#Gatling websocket-ref">Gatling websocket <span>1</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/25/gilt-on-the-go-4-0">Gilt on the Go 4.0</a></h1>
+  
+  <header>
+    
+    <time>25 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p id="docs-internal-guid-5fa2ff28-f186-85c9-0957-89cc70347edb"><span>For iOS engineers, iOS 7 offers a lot to get excited about: Background data tasks, UIKit dynamics, new gestures, a freshly Ive&rsquo;d-up design language…the list is long. Born from that excitement, this week the Gilt mobile team released a pretty major update to our flagship iPhone app. Much is new about this latest iteration of our mobile experience, but here are two new things worth highlighting:</span></p>
+<ul><li><span>A new look and feel that incorporates the UX / design patterns of iOS 7. Possibly the best principle that Apple is driving with its new OS is de-emphasizing UI chrome to get out of the way of content. One of Gilt&rsquo;s best assets has always been its extremely high-quality photography, which we generate in-house. Our photos help us sell products better than any text style or gradient ever could. Gilt’s Mobile team worked hard to eliminate and consolidate some UI elements in our new app, cutting out the tab bar and reorganizing functionality into a cleaner layout.</span></li>
+<li><span>Of all of the great new under-the-hood improvements we could take advantage of, background data tasks had the biggest immediate appeal to us. For Gilt members, being first in line to take advantage of our daily flash-sales offers a real advantage. Background fetches can allow us to pre-cache some preliminary sales data that will allow our most competitive shoppers to walk through our virtual door and buy the products they want the exact moment a sale starts. Turning an OS feature into a competitive shopping advantage is an enormous win for us.</span></li>
+</ul><p><span>When it comes to UI, achieving simplicity in design is often difficult to execute. One of my favorite aspects of our app and its progression is that, despite the increasing complexity of our feature set, it continuously evolves over time to be less cluttered and simpler to use. Want proof? Gilt Director of Mobile Product Christopher Gonzalez put together this awesome series highlighting changes to the launch page since the early days of Gilt 1.x. Check it out! And while you&rsquo;re at it,</span><a href="https://itunes.apple.com/us/app/gilt-shop-designer-sales/id331804452" target="_blank"><span> </span><span>give the app a try!</span></a><span> </span></p>
+<p><span><img alt="image" src="http://media.tumblr.com/b35546af754ecc2f66e4dc557762d284/tumblr_inline_mv8ugmT4yi1s17bu5.gif"/></span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#iOS7-ref">iOS7 <span>1</span></a>
+      
+    <a href="/tags.html#Gilt Mobile-ref">Gilt Mobile <span>22</span></a>
+      
+    <a href="/tags.html#background data tasks-ref">background data tasks <span>1</span></a>
+      
+    <a href="/tags.html#Gilt on the Go-ref">Gilt on the Go <span>2</span></a>
+      
+    <a href="/tags.html#UI-ref">UI <span>1</span></a>
+      
+    <a href="/tags.html#UIKit-ref">UIKit <span>1</span></a>
+      
+    <a href="/tags.html#gifs-ref">gifs <span>1</span></a>
+      
+    <a href="/tags.html#Gilt on the Go 4.0-ref">Gilt on the Go 4.0 <span>1</span></a>
+      
+    <a href="/tags.html#christopher gonzalez-ref">christopher gonzalez <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/25/gilts-kevin-scaldeferri-on-enabling-micro-service">Gilt's Kevin Scaldeferri on Enabling Micro-service Architectures with Scala (Video)</a></h1>
+  
+  <header>
+    
+    <time>25 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><iframe frameborder="0" height="480" src="//www.youtube.com/embed/EDbO47MKljQ" width="640"></iframe></p>
+
+<p>If you&rsquo;ve read about Gilt&rsquo;s <a href="http://tech.gilt.com/2013/06/20/gilts-development-deployment-infrastructure-slides" target="_blank">microservices architecture</a> but always wanted to learn more, you&rsquo;re in luck: Here&rsquo;s a video of Gilt Principal Engineer Kevin Scaldeferri presenting at last month&rsquo;s Commercial Users of Functional Programming (CUFP) conference in Boston. Kevin’s talk focused on the evolution of Gilt’s production architecture from a single monolithic web application to a highly-distributed collection of more than 200 micro-services and small web applications. Structuring our services this way helps us to deploy and innovate faster and more efficiently. </p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Kevin Scaldeferri-ref">Kevin Scaldeferri <span>4</span></a>
+      
+    <a href="/tags.html#CUFP-ref">CUFP <span>2</span></a>
+      
+    <a href="/tags.html#microservices-ref">microservices <span>18</span></a>
+      
+    <a href="/tags.html#architecture-ref">architecture <span>9</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#functional programming-ref">functional programming <span>12</span></a>
+      
+    <a href="/tags.html#Commercial Users of Functional Programming-ref">Commercial Users of Functional Programming <span>2</span></a>
+      
+    <a href="/tags.html#continuous delivery-ref">continuous delivery <span>13</span></a>
+      
+    <a href="/tags.html#SBT-ref">SBT <span>3</span></a>
+      
+    <a href="/tags.html#micro-services-ref">micro-services <span>21</span></a>
+      
+    <a href="/tags.html#micro-service architecture-ref">micro-service architecture <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/24/scala-self-types-gregor-heines-presentation-at">Scala Self-Types: Gregor Heine's Presentation at Dublin Scala Users Group (slides)</a></h1>
+  
+  <header>
+    
+    <time>24 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="480" src="http://media.tumblr.com/1f044f51fc4094df1d63035ba422fe5a/tumblr_inline_mv6nqvxdzQ1s17bu5.jpg" width="640"/></p>
+<p>Here&rsquo;s Gilt Principal Software Engineer giving his talk on Scala self-types during the <a href="http://www.meetup.com/Dublin-Scala-users-group/" target="_blank">Dublin Scala Users Group</a>&rsquo;s most recent meetup, which took place earlier this week at Engine Yard&rsquo;s Dublin office. In his talk, <span class="full">Gregor explained how to use self-types to assemble application components at compile time and examine the problems and risks involved in using self-types. He also discussed Scala-style dependency injection and showed how self-types are a typesafe alternative to Spring and other DI frameworks. Check out his slides here: </span></p>
+
+<p align="center"><iframe frameborder="0" height="480" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/27537668" width="640"> </iframe></p>
+<div></div>
+<div>Workday Senior Software Engineer Iain Hull also gave a talk about DSL design in Scala:</div>
+<div></div>
+<div><img alt="image" height="480" src="http://media.tumblr.com/9110ad167ac790798e4addc544c3c4eb/tumblr_inline_mv6o1hYXfi1s17bu5.jpg" width="640"/>
+<p>The Dublin Scala Users Group&rsquo;s next gathering takes place on Tuesday, November 26 at Engine Yard: <strong><a href="http://www.meetup.com/Dublin-Scala-users-group/events/147263062/" target="_blank">RSVP right here</a></strong>. If you&rsquo;d like to present, just contact us by clicking the little envelope at left on the Meetup RSVP/event page.</p>
+</div>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#self-types-ref">self-types <span>2</span></a>
+      
+    <a href="/tags.html#Gregor Heine-ref">Gregor Heine <span>11</span></a>
+      
+    <a href="/tags.html#Dublin Scala Users Group-ref">Dublin Scala Users Group <span>10</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Ireland-ref">Ireland <span>14</span></a>
+      
+    <a href="/tags.html#tech-ref">tech <span>20</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilttech-ref">Gilttech <span>18</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/24/welcome-brendan-st-john">Welcome Brendan St. John!</a></h1>
+  
+  <header>
+    
+    <time>24 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span class="il"><img src="http://media.tumblr.com/d4c7d0afe287ac71b731ea4dd3ce7b15/tumblr_inline_mv6i3cTpFy1s17bu5.jpg"/></span></p>
+<p>We&rsquo;re excited to welcome <span class="il">Brendan</span> St. John to the Gilt Tech fold! Brendan works out of our Dublin office and is part of our test architecture team.</p>
+<p>Before joining Gilt, Brendan worked on a mobile payments platform; prior to that, he spent time doing test automation and systems administration. In addition to programming in Java, he has experience developing small projects with Ruby and C#. He also knows some Scala&ndash;our favorite programming language&ndash;after participating in our recent, <a href="http://tech.gilt.com/2013/07/30/interested-in-free-scala-training-at-gilts-dublin" target="_blank">free Scala course</a>.</p>
+<p>Outside of work, Brendan flies paragliders if it&rsquo;s not rainy or windy. &ldquo;I learned while I was living in New Zealand and needed a hobby between ski seasons,&rdquo; he says. &ldquo;The mountains and climate made it ideal over there, but I still manage to get out a good bit in Ireland, especially with summers like the great one we just had.&rdquo;</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Gilttech-ref">Gilttech <span>18</span></a>
+      
+    <a href="/tags.html#Brendan St. John-ref">Brendan St. John <span>1</span></a>
+      
+    <a href="/tags.html#Ireland-ref">Ireland <span>14</span></a>
+      
+    <a href="/tags.html#Test Architecture-ref">Test Architecture <span>1</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/10/23/gilt-co-founder-cto-michael-bryzek-is-a-judge-at">Gilt Co-Founder/CTO Michael Bryzek Is a Judge at Tonight's MIT $100K Pitch Contest</a></h1>
+  
+  <header>
+    
+    <time>23 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="http://media.tumblr.com/5444ba75dd79dcc9ac4f49d3b891ba44/tumblr_inline_mv4utzO8jb1s17bu5.png"/></p>
+<p>Tonight Gilt co-founder and CTO Michael Bryzek will be judging <span>Products and Services business ideas <span>for the $100K Pitch Contest, part of the <a href="http://www.mit100k.org/" target="_blank"><span class="dynamic-settings-style-page-post_text">MIT $100K Entrepreneurship Competition</span></a>. For the Pitch, MIT students and researchers have 60 seconds to deliver their business proposals to a panel of judges, who then offer instant feedback. Michael (an MIT alum) and the other panelists will judge contestants based on the viability of their business plans and their pitch presentations. Good luck to all the participants!<br/></span></span></p>
+<p><span><span>This is the 24th year of the <span class="dynamic-settings-style-page-post_text">MIT $100K Entrepreneurship Competition, which also includes Accelerate (product demonstrations) and Launch (developing business plans to launch new start-ups). This year&rsquo;s prizes amount to $350,000.</span><br/></span></span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#MIT-ref">MIT <span>3</span></a>
+      
+    <a href="/tags.html#$100K Pitch-ref">$100K Pitch <span>1</span></a>
+      
+    <a href="/tags.html#Massachusetts Institute of Technology-ref">Massachusetts Institute of Technology <span>2</span></a>
+      
+    <a href="/tags.html#entrepreneurship-ref">entrepreneurship <span>5</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/38/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 39 of 64</span>
+  
+    <a href="/posts/40/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

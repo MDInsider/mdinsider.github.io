@@ -1,0 +1,19 @@
+---
+layout: page
+title: Categories
+header: Posts By Category
+group: navigation
+---
+{% include JB/setup %}
+
+<section id="site-categories">
+{% capture categories %}{% for category in site.categories %}{{ category[0] }}|{% endfor %}{% endcapture %}
+{% assign sortedcats = categories | split:'|' | sort %}
+{% for category in sortedcats %}
+  <h2 id="{{ category }}-ref">{{ category }}</h2>
+  <ul>
+    {% assign pages_list = site.categories[category] %}
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+</section>

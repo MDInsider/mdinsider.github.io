@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/04/08/working-with-time-series-data">Working with Time Series Data</a></h1>
+  
+  <header>
+    
+    <time>08 April 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Life in Gilt Tech involves much <a href="http://tech.gilt.com/2013/03/07/scaling-agile-at-gilt-with-teams-ingredients" target="_blank">lively discussion on KPIs</a>, consequently we spend a lot of time looking at <a href="http://en.wikipedia.org/wiki/Time_series" target="_blank">time series data</a>.</p>
+
+<p><span>We use a variety of tools to manipulate and present this type of data, including </span><a href="http://www.r-project.org/" target="_blank"><span>R</span></a><span>, </span><span>a language and environment for statistical computing and graphics.</span></p>
+<p><span>To help us through the process of standardizing the way we represent our KPIs we have developed a simple, R based open-source utility for easily representing time series data originating from a variety of sources.</span></p>
+
+<p><span>If you think you might find this useful, or you’d like to contribute, </span><span><a href="https://github.com/doofdoofsf/plotTimeSeries" target="_blank">check out the time series project on github</a></span>, and the examples below.</p>
+<h2><span> </span></h2>
+<h2><span>Example: a thumbnail showing acme revenue by time:</span></h2>
+
+<pre>plot_time_series --width=500 --height=400 --x_spacing="2 months" --csv_filename=test_data/acme_revenue.csv --point_color=gray80 --sunday_point_color=gray80  --remove_outliers --smoothness=0.8 --y_line="35000:Target" --y_prefix="$"</pre>
+<p><strong><strong><br/><span></span><img alt="image" height="400px;" src="https://lh3.googleusercontent.com/dv33rxVH5m0DPaSsW8RZOc26v23LV-u8jmeFOpQgikxLIWNDKb6qWVilnmKEuyGypKOocGs0RbkRewk-ZneBv0uDOJvL3h-cCxrKO9hbmGY3PeUqJRP-fTQ41g" width="500px;"/><span></span><br/><span></span><br/><span></span></strong></strong></p>
+<h2><span>Example: the same revenue data shown in more detail</span></h2>
+
+<pre>plot_time_series --width=1200 --height=700 --x_spacing=week --csv_filename=test_data/acme_revenue.csv --title="Acme Revenue: %s to %s" --remove_outliers --y_line="25000:Target for 2012:gold3!36000:Target for 2013:gold2!42000:Target for 2014:gold1" --y_prefix="$"</pre>
+<p><strong><br/><span></span><img alt="image" height="389px;" src="https://lh6.googleusercontent.com/NAKKiKJptearN77gI-nBX5tnPgdYr6cvxmsRUGpW8_D4TBOPWiuDb78cQQhn9OKTx2Q2IzKlxRil_cH389WRF3J5SS2Trs6rwjsjXKf0PurgPRC4RhyqyvK9Zw" width="666px;"/></strong></p>
+
+<p></p>
+<p><a href="https://github.com/doofdoofsf/plotTimeSeries" target="_blank">More plot time series examples and documentation &hellip;</a></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/04/05/gilt-mobile-web-redesigned-10-views-compared">Gilt Mobile Web Redesigned - 10 Views Compared</a></h1>
+  
+  <header>
+    
+    <time>05 April 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Over the last three months, we overhauled the front end (JSP, HTML, Handlebars, LESS/CSS, JavaScript, Zepto) for Gilt&rsquo;s mobile web experience (<a href="http://m.gilt.com" target="_blank">http://m.gilt.com</a>). The redesign was inspired by learnings acquired from our iPhone App and the design is meant to replicate a lot of those features.</p>
+<p>Here are 10 side by side comparisons with notes inline and at the bottom. Let us know what you think!</p>
+<p><img alt="image" src="http://media.tumblr.com/82e9b41a804cac5b423c676fa4468fdd/tumblr_inline_mksr1hcIHr1qz4rgp.png"/></p>
+<p>In the previous design, there was an assumption that the Gilt shopper uses the mobile experience quickly and wants to see as many sales as possible in a short amount of space and time. But according to our iPhone App results, our users want to see larger pictures. Having two sales on the first view compared to four has resulted in increased sales, largely due to our amazing imagery.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/62bb161b50103424115779b504550eb7/tumblr_inline_mksr1lpiRe1qz4rgp.png"/></p>
+<p>We dropped the black background on the product details because most of our imagery adopted a white background.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/e1dff40ac378c0bf72d707176dba0693/tumblr_inline_mksr1pHRab1qz4rgp.png"/></p>
+<p>A nice feature of the redesign is that the add to cart button is visible on the bottom while scrolling on the product detail page. If you are shopping on m.gilt.com and want to purchase an item, you should have the add to cart accessible at all times. But, this doesn&rsquo;t always work on all devices.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/fbdb2823d0345bb85325760b669b86d0/tumblr_inline_mksr1uK8d31qz4rgp.png"/></p>
+<p>We created a more streamlined view for our sign in and registration pages by simplifying the experience.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/e35bf7f89023b573a20e31283d81ead7/tumblr_inline_mksr1xF64e1qz4rgp.png"/></p>
+<p>Our cart page features a similar button to what existed on the product detail page. Again, we are trying to make it as easy as possible to shop on a mobile device.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/85f325ed5984a9a5fca7bed66904b379/tumblr_inline_mksr20ZVdU1qz4rgp.png"/></p>
+<p>The checkout experience mimics the iPhone App experience while trying to keep a style that is more generic so that it looks great on Android as well.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/79b952f7ab996e0215b72c749598a2b5/tumblr_inline_mksr249mtb1qz4rgp.png"/></p>
+<p>While scrolling to the bottom of the checkout page, the submit order button stays fixed. In our older version, the user had to scroll to the button to checkout.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/71693ce3d675a15a0c967f0764f47a75/tumblr_inline_mksr27mHsG1qz4rgp.png"/></p>
+<p>We are reusing elements in our account page that we used in the checkout flow.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/6f7c7b995b64c42fd1b9e1efe4a4bd76/tumblr_inline_mksr2acsxT1qz4rgp.png"/></p>
+<p>Our footer introduces more spacing as well as elements that were previously found in the checkout and account flow.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/e8cfec1bea3ab7841b22421ae7e3b86a/tumblr_inline_mksr2dgS7E1qz4rgp.png"/></p>
+<p>We have an amazing customer service team.</p>
+
+<p>Here are 5 learnings from redesigning the Gilt Mobile Web experience.<br/><br/><strong>1. Visual Components:</strong> Abstract away visual components that can be reused throughout the mobile experience. For example, the buttons in the footer are also used in the account page as well as in checkout. We only need to supply text and an optional image to create one.<br/><br/><strong>2. Cross-Browser Compatibility:</strong> Handle browser-specific issues like fixed-positioning on a per-device basis. The fixed &ldquo;submit button&rdquo; appears at the bottom of the screen on the product detail page, cart, and checkout page for modern browsers. But for early versions of Android, for example, the buttons appear inline.<br/><br/><strong>3. Iterating:</strong> Gilt Mobile Web is a complete experience in that it includes everything from the sales listing page through account and checkout. When trying to roll releases out to production, we searched for places where the old and new designs could coexist for a limited period of time. With this strategy, we didn&rsquo;t have to redesign everything at once.<br/><br/><strong>4. Cross-Device Compatibility:</strong> We tested m.gilt.com against several android and apple devices (as well as ie6 and ie7) to make sure it looked good on many different screen sizes. In many instances, DOM element sizes are determined as a percentage of the viewable screen. But since the majority of our users are accessing us from Safari on iPhone, development starts on the iOS Simulator.<br/><br/><strong>5. If it doesn&rsquo;t work, roll it back:</strong> I deployed our second phase to production and immediately upon doing so realized that &ldquo;sold out&rdquo; hover states were not&hellip; hovering. It was something that we missed and instead of making a quick fix, we rolled it back and spent a little more time testing. We pushed to production again a few days later with bug fixes in place and confidence that the experience was stable. Sometimes, we can&rsquo;t catch it all on staging environments.</p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#ios-ref">ios <span>5</span></a>
+      
+    <a href="/tags.html#web development-ref">web development <span>2</span></a>
+      
+    <a href="/tags.html#UX-ref">UX <span>18</span></a>
+      
+    <a href="/tags.html#user experience-ref">user experience <span>23</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#redesigns-ref">redesigns <span>1</span></a>
+      
+    <a href="/tags.html#apps-ref">apps <span>8</span></a>
+      
+    <a href="/tags.html#Gilt mobile web-ref">Gilt mobile web <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/03/26/26-3-13-todays-noon-outage-and-what-were-doing">26/3/13: Today's Noon Outage--and What We're Doing to Make Sure This Never Happens Again.</a></h1>
+  
+  <header>
+    
+    <time>26 March 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span>At Gilt we try to move as fast as we can getting code - be it fixes or awesome new features - to production as quickly and safely as possible. Sometimes we make mistakes, and, today was such a day. Around noon, a commit on one of our flagship applications ran riot: allocating native threads; consuming memory and CPU; and bringing down all other applications collocated on the same set of servers. Our customers were affected and for this the tech team at Gilt are truly sorry. There have been a ton of tweets from concerned members, and we were keen to explain what went wrong.</span></p>
+<p><strong><br/><span></span></strong></p>
+<p><span>Some interesting things arose in the aftermath of this outage (we take all our outages very, very seriously). First and foremost, this was largely a people problem: our process around code-review and performance testing failed - a commit that was not fully peer-reviewed was moved to production, and deployed -after- our morning performance run. Under normal load, everything looked ‘just fine’ - under our noon rush, everything fell apart. I estimate there’s about a 60% chance that a good code-review would have caught the issue - however, I’m 99.999% confident that our rigorous load tests would have caught the issue. </span><span>We use Gerrit for code review, and have automated load tests every morning; this was a late change for which we were hoping to gather some real life data related to load - ironically to debug a smaller performance issue we’ve been seeing in one of our applications - and we rushed the change.</span></p>
+<p><strong><br/><span></span></strong></p>
+<p><span>A positive we can take out of this as a tech organization is that we already have a number of initiatives in progress at Gilt that will prevent this kind of thing from happening. The more we use code-review, the more we see opportunities to automate the veracity of any release: you can imagine a script that says “this release contains a commit that was not reviewed and was +2’d by the author - abort!”. From a performance perspective, we’re working on incorporating performance testing into a continuous integration system we call ‘ION Cannon’; again, any release would be performance tested and rolled back automatically. These are areas where we can take human error out of the process, and I know that I (as the engineer who didn’t run the load test) am keen that we double our efforts in this regard. </span></p>
+<p><strong><br/><span></span></strong></p>
+<p><span>One of the other things we’re doing is making all of the applications that run gilt.com smaller and more isolated, an initiative we call ‘LOSA’ (Lots of Small Apps). LOSA is the mantra that lets us break up some of our large web applications into smaller chunks. The outcome? Stronger ownership of each part of gilt.com by the engineering teams; simpler code, with better sharing of assets and commons functionality;  and, better isolation - in the event that one of our applications serving a part of gilt.com goes awry, other apps should not be impacted. </span></p>
+<p><strong id="internal-source-marker_0.33266754099167883"><br/><span></span><span>Today we made a mistake - and we feel pretty bad about it. We feel good though about what we’re doing to make gilt.com better.</span></strong></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#code review-ref">code review <span>2</span></a>
+      
+    <a href="/tags.html#LOSA-ref">LOSA <span>5</span></a>
+      
+    <a href="/tags.html#Lots of Small Applications-ref">Lots of Small Applications <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/03/18/intro-to-angularjs-gilt-api">Intro to AngularJS + Gilt API</a></h1>
+  
+  <header>
+    
+    <time>18 March 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <a href="http://blog.dewmap.com/post/51353fa6717c080200000001">Intro to AngularJS + Gilt API</a><br/><p><a href="http://dewmap.com/" target="_blank">Brett Coffin</a> explains how to build a <a href="http://dewmap.com/experiment/gilt/index.html#/sale/women" target="_blank">super slick web application</a> that shows off what you can do with the <a href="http://dev.gilt.com" target="_blank">Gilt API</a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#API-ref">API <span>7</span></a>
+      
+    <a href="/tags.html#angularjs-ref">angularjs <span>1</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#javascript-ref">javascript <span>9</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/03/14/sxsw-2013-recap">SXSW 2013 Recap</a></h1>
+  
+  <header>
+    
+    <time>14 March 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <a href="http://ux.gilt.com/tagged/sxsw">SXSW 2013 Recap</a><br/><p><img alt="" src="http://sxsw.com/sites/all/themes/sxsw-2013/imgs/logo-interactive.png"/></p>
+<p>The Gilt UX team was at the SXSW Interactive conference this year, and we <a href="http://ux.gilt.com/tagged/sxsw" target="_blank">live blogged</a> all of the sessions we went to. Click in to see our notes on Google&rsquo;s innovation group and their Glass demo, the future of Foursquare and location, the emergence of tech in fashion, and more!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#sxsw-ref">sxsw <span>1</span></a>
+      
+    <a href="/tags.html#interactive-ref">interactive <span>1</span></a>
+      
+    <a href="/tags.html#ux-ref">ux <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/03/07/scaling-agile-at-gilt">Scaling Agile at Gilt</a></h1>
+  
+  <header>
+    
+    <time>07 March 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><em>With teams, ingredients, initiatives and KPIs</em></p>
+<p><em><img alt="image" src="https://31.media.tumblr.com/5490d8df52d63f94e20bf0cbe198e9ca/tumblr_inline_nb2t1ce4aY1s17bu5.png" width="800"/></em></p>
+<p><a href="http://en.youscribe.com/catalogue/studies-and-statistics/professional-resources/it-systems/scaling-agile-spotify-1911920" target="_blank">Spotify recently documented</a> their progressive approach to scaling Agile development with a fairly large team. Gilt’s approach has many similarities, but since some Spotify best practices are Gilt anti-patterns, it’s worth a closer look.<br/><br/>The Gilt tech team is about 100 strong. Most of our development is done in Manhattan. We’ve also got a small team in Portland, Oregon and a larger one in Dublin, Ireland.<strong><br/></strong></p>
+<h2><span>Initiatives</span></h2>
+<p>The cornerstone of the Gilt process is the initiative. We define an initiative as “a project we expect to work on for the foreseeable future.” Our foreseeable future is typically 3-12 months, depending on the area. An initiative might be to increase organic search traffic to the site.<br/><br/>We work on the order of 10 initiatives in parallel. The decision to green light an initiative depends on a number of factors. The most significant factor is a mathematical model of how we expect the initiative to perform, but we also consider softer factors like direct customer happiness and innovation.<br/><br/>Prioritizing a set of initiatives focuses the technology group on an initiative portfolio. This portfolio makes a clear statement on what is important, and indirectly, what is not. This has had a profound effect, halting our previously unending feature level prioritization discussions. This change has made not only our team happier and more productive, but also our stakeholders.<br/><br/>Unlike Spotify, we don’t maintain a roadmap document. Our roadmap is simply the sum of active initiatives. We revisit the set of prioritised initiatives every few months.<strong><br/></strong></p>
+<h2>KPIs</h2>
+<p>Initiatives are defined in terms of the key performance indicators (KPIs) used to measure them. We define two types of KPIs. Strategic KPIs measure the success of the initiative’s strategy and last as long as the initiative. Tactical KPIs measure the performance of the initiative’s tactics and come and go as tactics evolve. All tactical KPIs must drive  a strategic KPI.<br/><br/>For example, our SEO initiative might be defined by the strategic KPI: “Number of organic visitors in the last 30 days.” If current tactics involve stimulating inbound link creation a tactical KPI might be: “New inbound links in the last 30 days.” That tactical KPI would be abandoned when the initiative no longer employed that tactic, either because the team no longer thought they could get more out of that tactic or the team discovered a new tactic that could drive their strategic kpi faster.<br/><br/>We consider initiative mission statements an anti-pattern. “To be great at Organic search!” is simply a more subjective, and less useful denormalization of the strategic KPI.</p>
+<h2>Teams</h2>
+<p><span>We organize ourselves into teams (Squads in Spotify parlance) of around 4-10 cross functional members who sit together. Teams focus on a single initiative but may own others that are less active. Team members have a lot of input in selecting the initiatives their team works on.</span></p>
+<p>Team dynamics take a while to form and stabilize. Consequently we favor long running teams, surviving generations of initiatives. However mobility between teams is encouraged and takes two forms. Teams self-organize to swap engineers periodically to manage skills deficits or unexpected workloads, in a practice affectionately called “horse trading.” When teams take on new initiatives it’s not unusual for an engineer with a particular interest to permanently switch teams to work on that initiative.<br/><br/>Unlike Spotify Squads, teams are not tied to Initiatives. We anticipate teams outliving initiatives, and being able to handle concurrent initiatives. This doesn’t preclude a team having a single initiative for it’s lifetime.<strong><br/><br/></strong>Like Spotify, we strive to make a team operate and feel like a startup. Our teams have a strong identity and are empowered and independent. Teams are self organizing and self prioritizing. <br/><br/>Teams select their own development methodology. Agile methodologies are strongly encouraged and most teams have backlogs, stand-ups, sprints and retrospectives. Some adopt more rigorous Agile methodologies.<br/><br/>Strong team code stewardship is encouraged. We use stewardship to describe an ownership model where one team owns repositories of code and takes responsibility to encourage, review and approve modifications made by other teams. <a href="https://code.google.com/p/gerrit/" target="_blank">Gerrit</a> is used to facilitate the review process.<br/><br/>Unlike Spotify, teams have no product owners or business owners. Some teams include business partners. Ownership is considered an anti-pattern since it implies disempowerment of the team members who are not owners. KPIs and collaboration are king. Also unlike Spotify, we don’t appoint different individuals to the doing and prioritizing of work, believing these concepts are fundamentally indivisible. Prioritization happens by the team vigorously debating hypotheses and coming to agreement on the next hypotheses to test, factoring in both impact and feasibility.<br/><br/>Teams release early and often. “Minimum Viable Product” is a Gilt mantra.<br/><br/>Teams are encouraged to be highly analytical. We a/b test almost everything and discourage making decisions based on gut instinct. However, we respect intuition and encourage broad hypothesizing to ensure we optimize towards global rather than local maximas.</p>
+<h2><span>Ingredients</span></h2>
+<p>Teams are organizationally flat and cross-functional. To increase the likelihood they’ll execute successfully on their initiatives we use a palette of team ingredients as a guide to ensuring the team is appropriately staffed.<br/><br/>For a team to be successful at Gilt they need some combination of the ingredients: product visionary, coder, presenter, visual designer, business thinker, organizer, motivator, quality manager, coach, analyst, architect, writer, visual designer and ux specialist.<br/><br/>Rather than filling a narrow role, team members add a set of ingredients. This expectation both pushes and nurtures each team member. We don’t consider “It’s not my job to &hellip;” an acceptable way to start a sentence.<br/><br/>Depending on each team’s initiative, a different blend of these ingredients is optimal. One person might provide several ingredients, for example, a member who conducts tests, writes feature code and collects and analyses data.<br/><br/>Teams lacking key ingredients are assisted either by adding additional members or by external coaching.<strong><br/></strong></p>
+<h2><span>Oversight</span></h2>
+<p>A bi-weekly check-in gives each team a regular opportunity to provide an update on their results and seek guidance on their current direction. In addition to the team, attendees to this meeting alternate between a panel of technical managers and a panel of senior executives from across the company.<br/><br/>All check-in meetings have the same agenda. (1) a presentation of KPIs and their history (2) a presentation of recent a/b tests or other recent data and the associated learnings and insights (3) the story: a quick overview of tactics for the next few weeks. <br/><br/>The prescriptiveness of this agenda is to encourage teams to go deep on the strategy and the data supporting it and avoid discussing feature and UX nuances. Unchecked, these discussions historically tended towards feature debate at the expense of discussing results.</p>
+<h2><span>Enabling Autonomy</span></h2>
+<p>To allow teams to operate as autonomously we encourage the decentralization of almost everything.<br/><br/>Decentralization minimizes the dependencies teams have on other teams or systems, allowing them to develop code and release it to production with minimal external interaction.<br/><br/>Recently we’ve made a large investment in the tools and automation to enable this decentralization. We’re well on our way to fully automated system provisioning and configuration. <br/><br/>We’ve made a similar investment in our application architecture, moving away from monoliths and towards lots of small independent applications and lots of small independent services. This in combination with our continuous delivery pipeline allows teams to take complete control over delivering software to production. Although we’ve made a big investment here, it’s a work in progress.<strong><br/></strong></p>
+<h2>Extra-team Communication</h2>
+<p>In addition to the bi-weekly check-in meetings, we encourage the use of several other mechanisms for cross team communication and collaboration.<strong><br/></strong></p>
+<ul><li><strong>Tech Bytes: </strong><span>Monthly, each team sends out an email to a broad distribution, outlining the recent achievements of the team, framed by their KPIs.</span></li>
+<li><strong><a href="http://tech.gilt.com/post/3291537111/the-friday-5-5" target="_blank">Lightning Presentations</a>: </strong><span>Teams self-organize to run a meeting with quick-fire presentations on notable pieces of technology or features that have been developed or deployed recently. Everyone is welcome at the meeting and pizza and beer serve as bait to attract a wide audience.</span></li>
+<li><strong>Hack sessions: </strong><span>techies are encouraged to periodically take a break from their initiatives and join forces with other teams to work on things they care deeply about. Projects run the gamut from architectural changes, tools, bug squashes, a/b test infrastructure to user facing features.</span></li>
+<li><strong>Stakeholder Communication: </strong><span>Teams self organize to communicate regularly with and get input from their various stakeholders.</span></li>
+<li><strong>Guilds: </strong><span>Gilt has a fairly loose implementation of the Guild concept, defined by Spotify as an </span><span>“organic and wide-reaching ‘community of interest’, a group of people who want to share knowledge, tools, code, and practices.”</span><span> We have fairly active groups that self organize around areas including front end engineering and </span><a href="http://tech.gilt.com/2013/02/07/great-start-to-the-2013-gilt-groupe-architecture" target="_blank"><span>architecture</span></a><span>.</span></li>
+</ul><h2>Does this Process Work, and Will It Work for You?</h2>
+<p>Over the years we’ve used several different approaches for managing and organizing the Gilt development team. The one described above has been in active use for about 15 months.<br/><br/>The current approach embraces technology as a key differentiator for Gilt and serves to establish our technology department as a leadership organization rather than a service organization.<br/><br/>Being a leadership organization sounds great, but it’s not a panacea. It creates additional demands on teams, and requires them to have a deep understanding of our business and a strong point of view, clear vision and driving ambition. We need entrepreneurs to make this model succeed.<br/><br/>Not all technologists want to take this on. If you do, this approach might work for you.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilttech-ref">Gilttech <span>18</span></a>
+      
+    <a href="/tags.html#Agile-ref">Agile <span>11</span></a>
+      
+    <a href="/tags.html#Spotify-ref">Spotify <span>3</span></a>
+      
+    <a href="/tags.html#tech organization-ref">tech organization <span>1</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    <a href="/tags.html#management-ref">management <span>7</span></a>
+      
+    <a href="/tags.html#key performance indicators-ref">key performance indicators <span>4</span></a>
+      
+    <a href="/tags.html#KPIs-ref">KPIs <span>4</span></a>
+      
+    <a href="/tags.html#cross-functional teams-ref">cross-functional teams <span>1</span></a>
+      
+    <a href="/tags.html#team dynamics-ref">team dynamics <span>1</span></a>
+      
+    <a href="/tags.html#Gerrit-ref">Gerrit <span>2</span></a>
+      
+    <a href="/tags.html#autonomy-ref">autonomy <span>2</span></a>
+      
+    <a href="/tags.html#decentralization-ref">decentralization <span>2</span></a>
+      
+    <a href="/tags.html#application architecture-ref">application architecture <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/02/26/love-the-tech-badge-of-honor-stickers-appearing">love the tech badge of honor stickers appearing</a></h1>
+  
+  <header>
+    
+    <time>26 February 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_mitze9zn7M1qgexq2o1_1280.jpg"/><br/><p>Love the tech badge of honor stickers appearing around the office recently</p>
+
+<div>Awesome Galactus Sticker design by <a href="http://tim-flanagan.com" target="_blank">Tim Flanagan</a></div>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/02/20/gilt-at-the-fashion-hackathon">Gilt at the Fashion Hackathon</a></h1>
+  
+  <header>
+    
+    <time>20 February 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Hello there!</p>
+<p><span>I’m Miguel Fajardo, an engineer at Gilt. I want to share a great experience I had with fellow Gilt engineers Jose Sanchez and Patrick Losco at the recent Fashion Hack during New York Fashion Week.</span></p>
+<p>Hearst Corporation hosted the event in their New York City headquarters, the Hearst Tower. The building is easily identified by its diamond-patterned façade. Many other companies co-sponsored the event, including Microsoft, Spotify, Okta, HTC, and of course, Gilt.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/15b343feabaadbee64cdea9b72e5a44a/tumblr_inline_mi4vmyisMm1qz4rgp.jpg"/></p>
+
+<p>The two-day event kicked off on Saturday morning in the auditorium where Hearst explained the rules of the competition. The goal was to build a web or mobile application that would interact with the APIs of some of the sponsoring companies, that included Gilt. </p>
+
+<p><img alt="image" src="http://media.tumblr.com/cd22b18df4eb5bbfcc69c471acc718cb/tumblr_inline_mi4w26jrN71qz4rgp.jpg"/></p>
+
+<p>As one of the companies exposing the APIs to be used as part of the competition, we presented our developer portal and showed some examples to illustrate how to use the Gilt API. Anyone can query our systems to retrieve information about current or future sales, including what products will be included and a ton of info about them (price, current availablity, checkout URL, etc). If you are interested, you can find more info <a href="https://betadev.gilt.com" title="Gilt developer portal" target="_blank">in our developer portal</a>.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/5e15e51eaf459dec888ee0b11345f642/tumblr_inline_mi4w3sYfnF1qz4rgp.jpg"/></p>
+
+<p>Here you can see the team once dinner was served at 7pm:</p>
+
+<p><img alt="image" src="http://media.tumblr.com/a72c29a5f6c75dfa56c2dd188f8b3fa9/tumblr_inline_mi4w2r4Bse1qz4rgp.jpg"/></p>
+
+<p>From left to right: Miguel, Jose, Patrick, and Dalia (she joined our team as application designer and front end developer).</p>
+
+<p>Our idea was to use a city selected by the user and the current local weather to show trends in the form of relevant clothing and accessories from Hearst media. When the user chooses an image, the application recommends similar products available on Gilt. We built it using the Play framework with Java and Twitter Bootstrap.</p>
+
+<p></p>
+
+<p>By midnight, we had the retrieval of content from the APIs completed and started focusing on the front end. Time flies in this kind of event, where you are trying to design and build an entire application in such a short period of time!</p>
+
+<p></p>
+<p><img alt="image" src="http://media.tumblr.com/d125ba719abcf1f3c47c515e7c33fd46/tumblr_inline_mi4w460WxW1qz4rgp.jpg"/></p>
+
+<p>We had all major functionality wired up by dawn, and then it was a matter of improving the user interface and optimizing performance. We improved the algorithm to select what images from Hearst to show and how to link these to the Gilt items on sale. We decided to fetch the weather at runtime, but cached other API calls that were taking up to a minute. The submission deadline was Sunday at 1pm and we made it just in time. There was no time to rest before all the teams presented their work.</p>
+<p>The presentations took place on the 44th floor of the amazing Hearst Tower.</p>
+<p><img alt="image" src="http://media.tumblr.com/fbfc5dc0fc5c6fbdc70f03ea19cc21df/tumblr_inline_mi4x25FsJX1qz4rgp.jpg"/></p>
+
+<p>The views were stunning, especially with fresh snow from the previous day&rsquo;s blizzard covering the city.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/09d596b5bde33d21afce2de22986b923/tumblr_inline_mi4w4upouH1qz4rgp.jpg"/></p>
+
+<p>Our presentation went smoothly and we even appeared in a tweet from Hearst president David Carey.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/9484322d9ef7d01d569c86c0dc2d7728/tumblr_inline_mi4w54jPoq1qz4rgp.png"/></p>
+
+<p>In the end we got a special mention as one of the top 5 applications.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/6da204335a2afa9605f2950898bc6769/tumblr_inline_mi4w5mkjHr1qz4rgp.jpg"/></p>
+
+<p>Jose was already asleep by the time we got to the prizes.</p>
+<p>The Hearst Fashion Hack was a great experience. Not only did we learn a lot about the APIs, but we had a lot of fun together. You can view a demonstration of the application <a href="http://youtu.be/1hviIAxlTOM" title="Application Demo" target="_blank">in this video</a>.</p>
+<p><span>Hope you enjoyed the post!</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#miguel fajardo-ref">miguel fajardo <span>2</span></a>
+      
+    <a href="/tags.html#Fashion Hack-ref">Fashion Hack <span>1</span></a>
+      
+    <a href="/tags.html#New York Fashion Week-ref">New York Fashion Week <span>1</span></a>
+      
+    <a href="/tags.html#hackathon-ref">hackathon <span>7</span></a>
+      
+    <a href="/tags.html#Hearst-ref">Hearst <span>1</span></a>
+      
+    <a href="/tags.html#mobile apps-ref">mobile apps <span>5</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    <a href="/tags.html#APIs-ref">APIs <span>9</span></a>
+      
+    <a href="/tags.html#Play framework-ref">Play framework <span>1</span></a>
+      
+    <a href="/tags.html#twitter bootstrap-ref">twitter bootstrap <span>1</span></a>
+      
+    <a href="/tags.html#Java-ref">Java <span>12</span></a>
+      
+    <a href="/tags.html#photos-ref">photos <span>7</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/02/20/already-looking-forward-to-dress-like-nathan-day">already looking forward to dress like nathan day</a></h1>
+  
+  <header>
+    
+    <time>20 February 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <img src="/tumblr_files/tumblr_mij78ttxaL1qgexq2o1_1280.jpg"/><br/><p>Already looking forward to Dress Like Nathan Day 2014!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/02/20/gilt-tech-mongodb-austin-2013">Gilt Tech @ MongoDB Austin 2013</a></h1>
+  
+  <header>
+    
+    <time>20 February 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Last week, Gilt Tech presented &lsquo;MongoDB at Gilt&rsquo; at <a href="http://www.10gen.com/events/mongodb-austin-2013" target="_blank">MongoDB Austin</a>. Thank you <a href="http://www.10gen.com" target="_blank">10Gen</a> for hosting the event.</p>
+<p><a href="https://speakerdeck.com/sullis/mongodb-at-gilt-mongodb-austin-2013" target="_blank"><img alt="image" src="http://media.tumblr.com/eff2c5d1768816a2ccce60de291db3ff/tumblr_inline_miifz3CcFb1qz4rgp.png"/></a></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#mongodb-ref">mongodb <span>2</span></a>
+      
+    <a href="/tags.html#Sean Sullivan-ref">Sean Sullivan <span>5</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#MongoDB Austin-ref">MongoDB Austin <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/54/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 55 of 64</span>
+  
+    <a href="/posts/56/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / New in Gilt Open Source: A Performance Timing Google Chrome Extension</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2014/11/07/new-in-gilt-open-source-a-performance-timing">New in Gilt Open Source: A Performance Timing Google Chrome Extension</a></h1>
+  
+  <header>
+    
+    <time>07 November 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>At <a href="http://gilt.com/" target="_blank">Gilt</a>, we are obsessed with our site&rsquo;s performance. We use a variety of tools and design patterns to make sure our user experience is as fast as possible. In addition, our Web Performance team&ndash;Senior Software Engineer Eric Shepherd and me (Gregory Mazurek, Lead Software Engineer)&ndash;is committed to creating internal tools that can help our engineers, designers, and product people create great experiences for our users.</p>
+<p>Today we launched an open-source Google Chrome Extension to help everyone see a site&rsquo;s performance in a non-invasive and clear way. It&rsquo;s called <a href="https://chrome.google.com/webstore/detail/web-performance-timing-ap/nllipdabkglnhmanndddgcihbcmjpfej?hl=en-US&amp;authuser=1" target="_blank">Web Performance API Timing</a> and is available for download for free. In addition, the code that drives the extension is available on <a href="https://github.com/GregM/performance-timing-google-chrome-extension" target="_blank">my GitHub page</a>.</p>
+<p>The extension takes advantage of the browser&rsquo;s native Performance Timing API to show the event&rsquo;s respective time and the percentage of the total load time. When you hover over each event, you will see how this timing was calculated.</p>
+<p>We hope it&rsquo;s a useful tool for you as you become more and more obsessed with your website&rsquo;s or someone else site&rsquo;s performance. Please let us know what you think!</p>
+<p><img alt="image" src="https://31.media.tumblr.com/c9299962461bc8f2d5853e10a6de1f0b/tumblr_inline_neou3tL44z1rjy8d3.png"/></p>
+
+<p></p>
+<p><img alt="image" src="https://31.media.tumblr.com/e83ac7cfdb1a81e6945d27d5f8d7a96c/tumblr_inline_neoub5KEpT1rjy8d3.png"/></p>
+
+<p></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Greg Mazurek-ref">Greg Mazurek <span>3</span></a>
+      
+    <a href="/tags.html#web performance-ref">web performance <span>2</span></a>
+      
+    <a href="/tags.html#web perf-ref">web perf <span>2</span></a>
+      
+    <a href="/tags.html#API-ref">API <span>7</span></a>
+      
+    <a href="/tags.html#Google Chrome Extension-ref">Google Chrome Extension <span>1</span></a>
+      
+    <a href="/tags.html#Chrome-ref">Chrome <span>1</span></a>
+      
+    <a href="/tags.html#Eric Shepherd-ref">Eric Shepherd <span>12</span></a>
+      
+    <a href="/tags.html#Web Performance API Timing-ref">Web Performance API Timing <span>1</span></a>
+      
+    <a href="/tags.html#tool-ref">tool <span>1</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

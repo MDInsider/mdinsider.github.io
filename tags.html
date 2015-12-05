@@ -1,0 +1,19 @@
+---
+layout: page
+title: Tags
+header: Posts By Tag
+group: navigation
+---
+{% include JB/setup %}
+
+<section id="site-categories">
+{% capture tags %}{% for tag in site.tags %}{{ tag[0] }}|{% endfor %}{% endcapture %}
+{% assign sortedtags = tags | split:'|' | sort %}
+{% for tag in sortedtags %}
+  <h2 id="{{ tag }}-ref">{{ tag }}</h2>
+  <ul>
+    {% assign pages_list = site.tags[tag] %}
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+</section>

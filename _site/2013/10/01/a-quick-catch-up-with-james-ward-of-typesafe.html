@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / A Quick Catch-up With James Ward of Typesafe</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2013/10/01/a-quick-catch-up-with-james-ward-of-typesafe">A Quick Catch-up With James Ward of Typesafe</a></h1>
+  
+  <header>
+    
+    <time>01 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><em>Next week <a href="http://typesafe.com/" target="_blank">Typesafe</a> Developer Advocate <a href="https://twitter.com/_JamesWard" target="_blank">James Ward</a> will present (at least) three talks in New York City: &ldquo;<a href="http://www.meetup.com/Play-NYC/events/139275752/" target="_blank">Diving Into Play Framework&rsquo;s Deep End</a>&rdquo; (10/8 at Amplify); &ldquo;Building Reactive Apps&rdquo; (hosted by NYJavaSIG on 10/9 at Credit Suisse) and &ldquo;<a href="http://www.meetup.com/ny-scala/events/140721862/" target="_blank">Intro to Play Framework</a>&rdquo; (hosted by NY-Scala on 10/10 at Meetup). James was kind enough to take a few moments to answer some questions for us.</em></p>
+<p id="docs-internal-guid-31448f00-75cf-b896-ef02-5847bd52af8b"><strong>Gilt: How did you come to work at Typesafe? What attracted you to your current role?</strong></p>
+<p><span><strong>James Ward: </strong>I started using Play Framework a few years ago and was very impressed with how powerful and yet simple it is. One year ago the opportunity arose to become a Developer Advocate at Typesafe and I couldn&rsquo;t resist.  Since then I&rsquo;ve been learning more about Akka and Scala and see many similarities with Play. Akka provides a simple abstraction for concurrent systems, and Scala is a very powerful language where my code becomes more concise and readable the more I learn about it.  It is a ton of fun to evangelize technologies that developers love!</span></p>
+<p><span><strong>G: In your &ldquo;A Java Developer&rsquo;s Primer to the Typesafe Platform&rdquo; talk, what are the key things you try to emphasize? What is the response from developers?</strong> </span></p>
+<p><span><strong>JW: </strong>Lately I&rsquo;ve been talking about building Reactive applications. Recently the <a href="http://reactivemanifesto.org" target="_blank">Reactive Manifesto</a></span><span> was published to coalesce some of the emerging patterns in software development. Java developers are always pleasantly surprised by the power and simplicity of building Reactive applications with the Typesafe Platform: Play Framework, Akka, and Scala/Java.</span></p>
+<p><strong><span><strong>G:</strong></span> How would you explain to a newbie the differences between Play and other frameworks, highlighting Play&rsquo;s advantages?</strong><span></span></p>
+<p><span><span><strong>JW: </strong></span>Play Framework does a great job of getting out of the way so that I can easily implement RESTful JSON services or use abstractions to build complex Single Page Apps. One of the best parts of Play is its developer friendliness. The &ldquo;just hit refresh&rdquo; workflow supports a high-velocity development experience while still using type-safe languages. Play also includes native support for modern APIs like WebSockets, and tools like CoffeeScript and LESS asset compilers.</span></p>
+<p><strong><span><strong>G:</strong></span> Could you talk a bit about WebSockets and actor integration, and offer some tips or best practices?</strong><span></span></p>
+<p><span><span><strong>JW: </strong></span>Modern web applications often need to react in real-time to events and changing data. This requires a scalable way to push data from the server to the client. WebSockets offer a great way to do that. The WebSocket is just a channel, so when combined with an Akka Actor, applications have a great way to build event-driven applications that extend all the way out to the client.</span></p>
+<p><strong><span><strong>G:</strong></span> Could you provide any tips for handling JSON in Play 2.1? Of all the available options&ndash;transformers, macro inception, combinators, JsResult&ndash;what&rsquo;s the best to pursue?</strong></p>
+<p><span><span><strong>JW: </strong></span>Typical JSON APIs are pretty basic, as they are primarily meant for serializing and deserializing data. Play&rsquo;s Scala JSON API goes way beyond typical data marshaling, enabling developers to do powerful transformation and validation of JSON data. One of the coolest examples of this is called &ldquo;JSON Coast to Coast,&rdquo; where data is stored in a JSON data-store, possibly composed together with JSON from other datasources, transformed, and sent to the client using a Reactive (async + non-blocking) connection. Depending on the architecture, the actual tools may vary&ndash;but Play&rsquo;s Scala JSON API provides a giant toolbox to pull from.</span></p>
+<p><strong><span><strong>G:</strong></span> What are some of your favorite uses of Play&ndash;your own, and those of other developers?</strong><span></span></p>
+<p><span><span><strong>JW: </strong></span>I use Play for all of my apps now.  But my favorite (and typical) use is for Single Page Applications that expose JSON on the back-end and have a JavaScript front-end.</span></p>
+<p><strong><span><strong>G:</strong></span> What will Play 3.0 look like?</strong></p>
+<p><span><span><strong>JW: </strong></span>Good question!  I&rsquo;m not sure yet.  At this point we&rsquo;ve only thought through Play 2.3 and are in more of an incremental mode for the time-being. (<a href="https://docs.google.com/document/d/11sVi1-REAIDFVHvwBrfRt1uXkBzROHQYgmcZNGJtDnA/pub" target="_blank">The Roadmap</a> is public.) We have some big ideas we are brainstorming for 3.0, but there isn&rsquo;t anything firm yet.</span></p>
+<p><span><em>Thanks, James! For more of his perspective, you might want to watch this interview he did with JavaOne in late August:</em><br/></span></p>
+<p><iframe frameborder="0" height="315" src="//www.youtube.com/embed/2AcM45DBmkQ" width="420"></iframe></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#James Ward-ref">James Ward <span>2</span></a>
+      
+    <a href="/tags.html#Typesafe-ref">Typesafe <span>22</span></a>
+      
+    <a href="/tags.html#WebSockets-ref">WebSockets <span>3</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    <a href="/tags.html#Reactive applications-ref">Reactive applications <span>1</span></a>
+      
+    <a href="/tags.html#Java-ref">Java <span>12</span></a>
+      
+    <a href="/tags.html#REST-ref">REST <span>3</span></a>
+      
+    <a href="/tags.html#JavaOne-ref">JavaOne <span>2</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

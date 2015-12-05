@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / How We Scale Our Push Notification System with Akka: NYMAD Comes to Gilt</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2014/03/20/how-we-scale-our-push-notification-system-with">How We Scale Our Push Notification System with Akka: NYMAD Comes to Gilt</a></h1>
+  
+  <header>
+    
+    <time>20 March 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/32b6acc4cd6ef17957a66c888bfa5183/tumblr_inline_n2qvi3zh4v1s17bu5.jpg" width="800"/></p>
+
+<p>On Tuesday night Gilt hosted the <a href="http://www.meetup.com/NYCMAD/" target="_blank">New York Mobile App Developer</a> meetup&rsquo;s March event: a technical talk delivered by our very own Principal Software Engineer, <strong>Adam Kaplan</strong>! More than 100 engineers from Twitter, Getty Images, Bloomberg, the <em>New York Times</em>and other companies joined us for Adam&rsquo;s talk, which highlighted the ways we&rsquo;ve been using Akka to scale our massive push notification system. How massive? <em>Three-million-messages-in-less-than-60-seconds massive!</em></p>
+<p>In his presentation, Adam described his team&rsquo;s work building a distributed <span class="full">architecture built with Scala, Akka, ZooKeeper, and other technologies. He explained how Akka&rsquo;s clustering capabilities not only make mass messaging possible, but also promote overall system integrity, scalability, and better performance (and, on the business side of things, higher revenues!). He also placed push notifications in the context of Gilt&rsquo;s general engineering culture, which emphasizes a micro-services architecture, fault tolerance, and (the good kind of) redundancy.  </span></p>
+<p><span class="full">Some highlights from the meetup:</span></p>
+<p><span class="full"><img alt="image" height="597" src="https://31.media.tumblr.com/53f9f766513ebaad78906305c1b6c85e/tumblr_inline_n2qtza6c6O1s17bu5.jpg" width="800"/></span></p>
+<p><em>Gilt Recruiting Coordinator Tineshsia Matthew helps one of our guests at the check-in station.<br/></em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/be05a67bac1dc705c70ef20c123a581f/tumblr_inline_n2qu10aeNC1s17bu5.jpg" width="800"/></em></p>
+<p><em>Gilt Software Engineers Asha Seetheram and Dave Singh have some drinks &hellip;</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/ec84c193d0af1b0940ac97fdc1213890/tumblr_inline_n2qu5xpNsV1s17bu5.jpg" width="800"/></em></p>
+<p>&hellip; <em>while Gilt Engineer Andres Pereira and some of our guests dig in to the <a href="http://numpangnyc.com/" target="_blank">Num Pang</a> sandwiches!</em></p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/171ba7ae832e68f51e00da53b9571921/tumblr_inline_n2qu8keJIu1s17bu5.jpg" width="800"/></p>
+<p><em>After a quick intro to Gilt by VP Mobile &amp; Global Engineering Yonatan Feldman, Adam and his laptop took to the podium. Adam started things off by asking the audience a few questions. (That&rsquo;s Typesafe Tech Lead Console, ex-Akka team member and recent NYC transplant Henrik Engström on the left!) </em></p>
+
+<p></p>
+
+<p><span class="full"><img alt="image" height="597" src="https://31.media.tumblr.com/2399ef69c8010ab8117911c3c77425c9/tumblr_inline_n2que6iLv91s17bu5.jpg" width="800"/></span></p>
+
+<p><em>The audience listens &hellip;</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/9db7aea0589df25a37c3862e94d98acf/tumblr_inline_n2qunlbNX91s17bu5.jpg" width="800"/></em></p>
+<p><em>Many guests stayed long after Adam&rsquo;s talk and Q&amp;A to ask questions, grab another drink and mingle with Gilt technologists and other attendees. </em></p>
+<p>Thanks to NYMAD and all of our guests for a great night! Our next tech event will be a panel on Docker on April 29; more details to come!</p>
+<p><em>All photos by <a href="http://qoolfoto.com/" target="_blank">Craig Wililston/QoolFoto</a></em></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#Adam Kaplan-ref">Adam Kaplan <span>2</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#distributed systems-ref">distributed systems <span>4</span></a>
+      
+    <a href="/tags.html#presentations-ref">presentations <span>42</span></a>
+      
+    <a href="/tags.html#tech talks-ref">tech talks <span>7</span></a>
+      
+    <a href="/tags.html#ZooKeeper-ref">ZooKeeper <span>2</span></a>
+      
+    <a href="/tags.html#Num Pang sandwiches-ref">Num Pang sandwiches <span>1</span></a>
+      
+    <a href="/tags.html#events-ref">events <span>26</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

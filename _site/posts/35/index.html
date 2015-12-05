@@ -1,0 +1,861 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/18/santa-claus-comes-to-gilt">Santa Claus Comes to Gilt</a></h1>
+  
+  <header>
+    
+    <time>18 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/35ea1274a4dcde1f74fe04b580ac7dbd/tumblr_inline_my0uf1lDPq1s17bu5.jpg" width="800"/></p>
+<p>Yesterday Santa Claus stopped by our Park Avenue office to meet with our tech team and ask us about our shipping operations. Seems that Santa has become frustrated with his traditional delivery-by-reindeer approach and wanted some of our expert opinions on how to distribute presents to people faster and with less chafing (from the chimneys, obvs) and false burglary arrests (when <a href="http://business.time.com/2013/12/18/santa/" target="_blank">chimney entry isn&rsquo;t possible</a>). We were surprised to find out that recently he has begun exploring adoption of <a href="http://tech.gilt.com/search/robots" target="_blank">Kiva robots</a> and other technologies related to speedier merch-moving and shipping.</p>
+<p>During his visit, Santa posed for photographs with some of our tech team and even participated in our afternoon <strong>cookie-decorating</strong> session. Here he is with Gilt Application Support Director Kent Helbig, who couldn&rsquo;t pass up an opportunity to promote our <a href="https://twitter.com/search?q=%23carpeholiday&amp;src=typd" target="_blank">#carpeholiday</a> hashtag:</p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/aa1deae8350fc5237db3a3c86a257195/tumblr_inline_my0v06795c1s17bu5.jpg" width="800"/></p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilttech-ref">Gilttech <span>18</span></a>
+      
+    <a href="/tags.html#Holidays-ref">Holidays <span>1</span></a>
+      
+    <a href="/tags.html#Santa Claus-ref">Santa Claus <span>1</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#Kent Helbig-ref">Kent Helbig <span>1</span></a>
+      
+    <a href="/tags.html#carpeholiday-ref">carpeholiday <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/18/alleywatch-interviews-father-of-sensors-and">AlleyWatch Interviews "Father of Sensors (and Recent Gilt Presenter!) Dr. Janusz Bryzek</a></h1>
+  
+  <header>
+    
+    <time>18 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>The NYC-centric tech website AlleyWatch just <a href="http://tech.gilt.com/2013/12/02/slides-from-dr-janusz-bryzeks-roadmap-for-the" target="_blank">published an interview</a> with Dr. Janusz Bryzek, the &ldquo;Father of Sensors&rdquo; (and of Gilt co-founder and CTO Michael Bryzek!) Dr. Bryzek gave a fascinating presentation at our 2 Park Avenue office just before Thanksgiving&ndash;<a href="http://www.alleywatch.com/2013/12/a-talk-with-janusz-bryzek-the-father-of-sensors/" target="_blank">click here</a> to view the slides.</p>
+<p>An excerpt from AlleyWatch&rsquo;s interview:</p>
+<blockquote>
+<p>[<strong>Dr. Bryzek]: </strong>We are currently working on the development of the list of large applications; we call them TApps (trillion sensor apps).  In the next step, we will produce TSensors Roadmap characterizing major sensing technologies capable of supporting each TApp.  The following step will be a selection of new sensing technologies with the largest global impact, and focus on acceleration of their commercialization.</p>
+<p>My vision for fastest commercialization is through the startups: recruiting technology developers and licensing their technology to new organizations.  The new organization would have to have the Board including successful entrepreneurs with scars from sensor commercialization, such as myself and many of my friends, to help founders to eliminate errors we have made.  We would also want to give them direction for what not to do, which is usually speeding up (dramatically) commercialization.</p>
+</blockquote>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#AlleyWatch-ref">AlleyWatch <span>2</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Janusz Bryzek-ref">Janusz Bryzek <span>3</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#Roadmap for the Trillion Sensor Universe-ref">Roadmap for the Trillion Sensor Universe <span>2</span></a>
+      
+    <a href="/tags.html#sensors-ref">sensors <span>1</span></a>
+      
+    <a href="/tags.html#internet of things-ref">internet of things <span>2</span></a>
+      
+    <a href="/tags.html#presentations-ref">presentations <span>42</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/17/welcome-paul-roman">Welcome Paul Roman!</a></h1>
+  
+  <header>
+    
+    <time>17 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/525cc2f2dd274b4ba4f52a2f50181fc5/tumblr_inline_mxywzoS5IK1s17bu5.png"/></p>
+
+<p>We&rsquo;re pleased as <a href="http://www.marthastewart.com/313320/holiday-citrus-punch?czone=entertaining%2Fholiday-entertaining%2Fholidaycenter-drinks&amp;gallery=275508&amp;slide=313320&amp;center=276958" target="_blank">holiday citrus punch</a> to welcome Paul Roman to Gilt! Based in Blacksburg, Virginia, Paul will work on our <a href="http://www.mmh.com/article/gilt_groupe_no_flash_in_the_distribution_pan" target="_blank">Distribution</a> team.</p>
+<p>Before joining Gilt, Paul worked on a real-time, contextual stream-processing PaaS and was responsible for REST, WebSocket, and XMPP API services. Prior to that, he worked on back-end services for a secure, real-time collaboration platform. His favorite technologies at the moment are <a href="http://tech.gilt.com/search/scala" target="_blank">Scala</a> and Akka for building elastic, distributed systems (which is really convenient for us). He also likes functional programming and is not afraid to use <a href="http://en.wikipedia.org/wiki/Monad_%28functional_programming%29" target="_blank">the M word</a>.</p>
+<p>Outside of technology world, Paul is a yoga warrior, so if you run into him don&rsquo;t be surprised if he talks to you about Ujjayi breath!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Paul Roman-ref">Paul Roman <span>1</span></a>
+      
+    <a href="/tags.html#hiring-ref">hiring <span>30</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#distributed systems-ref">distributed systems <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/17/gilt-co-founder-cto-michael-bryzek-to-present-at">Gilt Co-Founder/CTO Michael Bryzek to Present at Startup Grind NYC!</a></h1>
+  
+  <header>
+    
+    <time>17 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/426389fae5a3fa5555093e3185910c87/tumblr_inline_mxyrghr7ly1s17bu5.jpg"/></p>
+
+<p>This Thursday (December 19) Gilt co-founder/CTO <a href="http://tech.gilt.com/search/michael+bryzek" target="_blank">Michael Bryzek</a> will be the featured speaker at <a href="http://startupgrind.com/new-york/" target="_blank">Startup Grind NYC</a>&ndash;hosted this month by AOL in Lower Manhattan. A global start-up community that connects and educates entrepreneurs, Startup Grind has chapters in more than 40 cities in 20 countries. Michael will speak about his unique experiences co-founding a successful eCommerce company and scaling a technology organization, among other topics. <a href="http://startupgrind.com/event/startup-grind-new-york-city-presents-michael-bryzek-cofounder-of-gilt-groupe/" target="_blank">Go here</a> to purchase your ticket!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#Startup Grind-ref">Startup Grind <span>2</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#presentations-ref">presentations <span>42</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/13/introspy-an-open-source-mobile-security-tool-to">Introspy: An Open-Source Mobile Security Tool to Help You Save Time and Avoid Anguish</a></h1>
+  
+  <header>
+    
+    <time>13 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span><span></span>This past June, mobile revenue surpassed 40% of Gilt’s total revenue for the first time since our founding in 2007. In 2014, we expect mobile revenues to grow even more, which has influenced us to adopt a “<a href="http://mobilegovwiki.howto.gov/Mobile+First" target="_blank">Mobile First</a>” approach to development. On the user experience side, Mobile First means creating intuitive and innovative ways to use the mobile framework&ndash;for example, iOS push notifications&ndash;to help solve traditional notification problems and ultimately make life easier for customers. For me and other engineers on Gilt’s security team, Mobile First means continuing to ensure our mobile platform is functionally secure by looking </span><span>deeper into run-time behavior, traffic analysis, local storage, and caching of our mobile apps</span><span>.  </span></p>
+<p><span>Though mobile development is a booming market, until recently the range of security tools available to perform deep security assessments has remained limited. To date, the assessment process has been very arduous and mostly manual. Security teams have needed to employ a sometimes hodge-podge variety of traditional tools and assessment methodologies&ndash;for example, proxying mobile traffic through an interceptor tool to capture and inspect network traffic contents&ndash;and combine them with detailed manual code reviews. This method works but is time-consuming, because it requires installation and configuration of a plethora of fragmented assessment tools on a iOS device.</span></p>
+<p><span>However, our security team has recently benefited greatly from some new open source tools aimed to simplify things&ndash;namely <a href="http://isecpartners.github.io/introspy/" target="_blank">Introspy</a></span><span>, a security profiler for iOS. With Introspy, we’ve been able to save time and augment automation to the current application analysis process. </span></p>
+<p><span>We learned about Introspy via Twitter. Several of our security-conscious acquaintances began tweeting about it, but one tweet in particular from Cryptome caught our attention:</span></p>
+<p><span><span><br/><span></span><img alt="image" height="99px;" src="https://lh6.googleusercontent.com/N9JUpAjAl7xmbcUneLhtB-9zkYy9jS2LMJS9Qjf-jC2tATZj4CVfpGYf7iPeGh1aI5tDr3J9ijTSxcsBLM2ogtPo9Kpw5l0pj2GRa-YiAttBWUiI4GwSGGY4Rw" width="379px;"/><span></span><br/><span></span></span></span></p>
+<p><span>Developed by Tom Daniels and Alban Diquet, and fully backed by iSEC Partners, Introspy </span><span>was born out of necessity. “The amount of mobile (specifically iOS) work I was doing about a year and a half ago was ever increasing,” Tom recently told me via email, “and anytime we were doing blackbox assessments or unusually complex projects I never felt like I had the appropriate tools to do the job.” Performing even minor tasks required substantial time and effort. After building some one-off MobileSubstrate tweaks, Daniels pitched the idea of Introspy to Diquet, who expressed the same frustration with the lack of tools. “Thanks to iSEC, we were able to get the time and resources we needed and just built it,” Tom says.</span></p>
+<h2><span>How Introspy works</span></h2>
+<p><span>As a prerequisite to installation, you need a jailbroken iOS device. In a nutshell, jailbreaking your iOS device removes all limitations implemented by the manufacturer, allowing root-level access of your device and installation of many unauthorized applications, themes, and plugins (you may notice a UI hack or two in our iOS screenshots below). As this goes to press/blog, a device with iOS 6.1.2 or lower is required. Our team used an iPad and iPhone, both running iOS 6.1.2. </span></p>
+<p><span>Introspy is comprised of</span><span> two separate components: an </span><span>iOS tracer</span><span> and an </span><span>analyzer.  </span><span>Both components can be downloaded from the <a href="https://github.com/iSECPartners/introspy" target="_blank">iSEC GitHub repo</a></span><span> </span><span>and installed to the jailbroken iOS device directly from the command line.  </span><span>Once the tracer is installed, the user can select which iOS apps to monitor thought the iOS GUI. The tracer will hook into the security-sensitive iOS API calls of the apps you choose, checking for sensitive calls relating to security (data storage, cryptography, user privacy, etc).  </span></p>
+<p><span><span><br/><span></span><img alt="image" height="295px;" src="https://lh5.googleusercontent.com/BaiNq8EV3gbXq46DZJGVIgtWepvJ3bnoV9JIzbNnJ75h5bEgDEZCHeSqb4O91AgF5piA-7k8VMTx_PJ9411T53PNIiv582djSUWR1PCkxKv-BQCmEDxlYG_7lQ" width="197px;"/><img alt="image" height="295px;" src="https://lh6.googleusercontent.com/5eAvRTykevPbz4eSFB6JYgYyIwUVDbq3jf5WwdHwRqajTd-gt8uDrkQggIiM7cREfNse6xE4nuNHDE7P0gVCwIKys25Bwd7XIxWotWE73XLd3aevHbUDfbvJ-g" width="197px;"/><span></span><br/><span></span></span></span></p>
+<p><span>As you begin using the app, the details of each </span><span>call are all recorded and persisted in a SQLite database on the device. For the Gilt app, we performed every possible action on both iPhone and iPad apps, paying special attention to the output of critical actions such as logging in, adding a credit card, and making a purchase.  </span></p>
+<p><span>The database results are fed into the </span><span>analyzer</span><span> portion of the app, which generates an interactive HTML report displaying all recorded API calls and any potential vulnerabilities or security misconfigurations. If necessary, the reports can be saved locally and distributed to relevant stakeholders. If you prefer command-line interaction (we do), you can use the command line tool to view the tracer’s results directly, circumventing the UI.</span></p>
+<h2><span>Pro-Tip!: Comparative Security<br/></span></h2>
+<p><span>We also performed some comparative security analysis between the Gilt apps and other popular iOS apps like Amazon and GMail to gain perspective approach to mobile </span><span>security configurations</span><span>. We confirmed that the Gilt app has a </span><span>security best-practice configuration quite similar to the other apps we investigated, which gave </span><span>us some additional affirmation that we’re doing things right! </span><span></span></p>
+<h2><span>The Future of Introspy</span></h2>
+
+<p><span>Daniels says he and Diquet plan to plan to keep Introspy updated “at least … in terms of which APIs it’s capable of hooking.” So keep an eye out for some iOS7 relevant additions, such as the abstractions to the URL loading system (NSURLSessions) and the new JavaScript to Objective-C bridge (JavaScriptCore).</span></p>
+<h2><span>Conclusion</span></h2>
+<p><span>If you’re looking for a good place to start with mobile penetration testing, Introspy is great app (and 100% free and open source!).  Assuming you’re working with a jailbroken device (if not, jailbreaking can be a fun and rewarding exercise to explore), many key security elements can be investigated by doing not much more effort than simply using your app and exploring the results.</span></p>
+<p><span id="docs-internal-guid-35b737ac-eda9-f253-f8ed-73ba625131ee"><br/><span></span></span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Introspy-ref">Introspy <span>1</span></a>
+      
+    <a href="/tags.html#infosec-ref">infosec <span>2</span></a>
+      
+    <a href="/tags.html#information security-ref">information security <span>1</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#iSEC Partners-ref">iSEC Partners <span>1</span></a>
+      
+    <a href="/tags.html#Sam Kassoumeh-ref">Sam Kassoumeh <span>2</span></a>
+      
+    <a href="/tags.html#security-ref">security <span>5</span></a>
+      
+    <a href="/tags.html#mobile security-ref">mobile security <span>1</span></a>
+      
+    <a href="/tags.html#tools-ref">tools <span>5</span></a>
+      
+    <a href="/tags.html#Mobile First-ref">Mobile First <span>1</span></a>
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#Cryptome-ref">Cryptome <span>1</span></a>
+      
+    <a href="/tags.html#Tom Daniels-ref">Tom Daniels <span>1</span></a>
+      
+    <a href="/tags.html#Alban Diquet-ref">Alban Diquet <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/12/new-york-city-postgresql-user-group-at-gilt">New York City PostgreSQL User Group at Gilt, 12/11/13 (Slides + Video)</a></h1>
+  
+  <header>
+    
+    <time>12 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/5de45ab2c70a51e8d75bb72be2a93a16/tumblr_inline_mxpumzTUv41s17bu5.jpg" width="800"/></p>
+<p>Here&rsquo;s Gilt Senior Software Engineer Rangarajan Radhakrishnan delivering &ldquo;Postgres Setup Using Docker,&rdquo; a brief talk he gave at the <a href="http://www.meetup.com/postgresql-3/events/152670772/" target="_blank">NYC PostgreSQL User Group</a>&rsquo;s meetup <a href="http://tech.gilt.com/2013/12/05/gilt-to-host-the-new-york-city-postgresql-user-group-on" target="_blank">last night at Gilt</a>. In addition to Ranga&rsquo;s talk, the evening included a presentation by meetup co-organizer Jonathan S. Katz on <a href="http://www.slideshare.net/jkatz05/explain-the-index-of-postgresql-indexes" target="_blank">Postgres Indexes</a>, and a major announcement(!): <a href="http://nyc.pgconf.us/2014/" target="_blank">PGConf NYC 2014</a> will take place Thursday, April 3, 2014 at the New York Marriott Downtown in New York City (YAY!).</p>
+<p>Here&rsquo;s the demo from Ranga&rsquo;s presentation &hellip;<iframe frameborder="0" height="480" src="//www.youtube.com/embed/4qlUc462xYE" width="640"></iframe></p>
+<p>&hellip; and the slides are below. BTW: If you&rsquo;re excited about Docker (we are!) and want to learn more, try to swing by 2 Park on Tues 12/17. That&rsquo;s when Docker VP of Services James Turnbull visits us to deliver a talk at the <a href="http://tech.gilt.com/2013/12/11/our-last-tech-meetup-of-2013-full-stack-engineering-on" target="_blank">Full-Stack Engineering meetup</a>!</p>
+<p><iframe frameborder="0" height="486" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/29159686" width="597"> </iframe></p>
+<div><strong> <a href="https://www.slideshare.net/LappleApple/postgresql-setup-using-docker" title="PostgreSQL Setup Using Docker" target="_blank">PostgreSQL Setup Using Docker</a> </strong> from <strong><a href="http://www.slideshare.net/LappleApple" target="_blank">Gilt Tech Talks</a></strong></div>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Rangarajan Radhakrishnan-ref">Rangarajan Radhakrishnan <span>4</span></a>
+      
+    <a href="/tags.html#Docker-ref">Docker <span>20</span></a>
+      
+    <a href="/tags.html#New York City PostgreSQL User Group-ref">New York City PostgreSQL User Group <span>3</span></a>
+      
+    <a href="/tags.html#PostgreSQL-ref">PostgreSQL <span>11</span></a>
+      
+    <a href="/tags.html#Jonathan Katz-ref">Jonathan Katz <span>2</span></a>
+      
+    <a href="/tags.html#Indexing-ref">Indexing <span>1</span></a>
+      
+    <a href="/tags.html#Postgres indexes-ref">Postgres indexes <span>1</span></a>
+      
+    <a href="/tags.html#LXC-ref">LXC <span>2</span></a>
+      
+    <a href="/tags.html#slideshow-ref">slideshow <span>20</span></a>
+      
+    <a href="/tags.html#PGConf NYC-ref">PGConf NYC <span>2</span></a>
+      
+    <a href="/tags.html#James Turnbull-ref">James Turnbull <span>7</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#tech-ref">tech <span>20</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilt groupe-ref">gilt groupe <span>5</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/12/gilt-featured-in-ny-daily-news-article-about-stem">Gilt Featured in NY Daily News Article About STEM Education in New York City</a></h1>
+  
+  <header>
+    
+    <time>12 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/dc2916d774f9c3bbb9d9982ba5b03f5f/tumblr_inline_mxpep0S82z1s17bu5.jpg"/></p>
+<p>This week the <em>New York Daily News </em><a href="http://www.nydailynews.com/new-york/education/nyc-schools-stem-tide-unemployment-science-math-article-1.1542791" target="_blank">published an article</a> on our November visit with some very special guests: A group of girls from the Bronx Academy for Software Engineering! In addition to learning from some of Gilt&rsquo;s women technologists about roles in business systems management, UX/design, project management and software development, the girls worked on an HTML app, shared lunch with the team, and took a tour of our office. They also got to meet and hear a talk from Gilt CEO Michelle Peluso, who told the <em>NYDN </em>that it was &ldquo;wonderful to be able to give these girls a boost. It’s inspiring to all of us.&rdquo; Agreed!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Bronx Academy for Software Engineering-ref">Bronx Academy for Software Engineering <span>2</span></a>
+      
+    <a href="/tags.html#BASE-ref">BASE <span>6</span></a>
+      
+    <a href="/tags.html#Michelle Peluso-ref">Michelle Peluso <span>5</span></a>
+      
+    <a href="/tags.html#nyc-ref">nyc <span>44</span></a>
+      
+    <a href="/tags.html#womenintech-ref">womenintech <span>6</span></a>
+      
+    <a href="/tags.html#in the news-ref">in the news <span>1</span></a>
+      
+    <a href="/tags.html#STEM-ref">STEM <span>2</span></a>
+      
+    <a href="/tags.html#women in stem-ref">women in stem <span>1</span></a>
+      
+    <a href="/tags.html#education-ref">education <span>3</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/11/ios-office-hours-12-09-2013">iOS Office Hours, 12/09/2013</a></h1>
+  
+  <header>
+    
+    <time>11 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/cbe55c973a56a810f4d7207b8ed89fe0/tumblr_inline_mxo4otoVKY1s17bu5.jpg" width="800"/></p>
+<p><em>Here&rsquo;s self-taught developer Orpheus Richards describing <a href="https://itunes.apple.com/us/app/flonation/id674474536?mt=8" target="_blank">Flonation</a>&ndash;an app he created that teaches people how to freestyle-rap&ndash;at our recent <a href="http://tech.gilt.com/2013/12/03/gilt-hosts-ios-office-hours-holiday-edition-on-12-9" target="_blank">iOS Office Hours</a> meetup. Thanks to Orpheus, <a href="https://moven.com/" target="_blank">Moven</a>, <a href="https://www.calvinapp.com/" target="_blank">Calvin</a> and <a href="https://itunes.apple.com/us/app/rise-alarm-clock/id577221529?mt=8&amp;ign-mpt=uo%3D4" target="_blank">Rise</a> for presenting!</em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Calvin app-ref">Calvin app <span>1</span></a>
+      
+    <a href="/tags.html#Flonation-ref">Flonation <span>2</span></a>
+      
+    <a href="/tags.html#Moven-ref">Moven <span>2</span></a>
+      
+    <a href="/tags.html#Rise-ref">Rise <span>2</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#apps-ref">apps <span>8</span></a>
+      
+    <a href="/tags.html#iOS Office Hours-ref">iOS Office Hours <span>6</span></a>
+      
+    <a href="/tags.html#iOS-ref">iOS <span>22</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/11/our-last-tech-meetup-of-2013-full-stack">Our Last Tech Meetup of 2013: Full-Stack Engineering on Dec. 17!</a></h1>
+  
+  <header>
+    
+    <time>11 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><strong><strong><img alt="image" src="https://31.media.tumblr.com/e37cbc19ad1d4abd97f4ac03e4fe2741/tumblr_inline_mxnsnv4iIE1s17bu5.png"/></strong></strong></p>
+
+<p><a href="http://www.meetup.com/Full-Stack-Engineering-Meetup/" target="_blank">Full-Stack Engineering</a> is a new (and rapidly growing) meetup featuring presenters from across the stack discussing topics ranging from DevOps to data modeling to scalability. Organized by Greenhouse.io Director of Engineering <a href="https://twitter.com/mboufford" target="_blank">Mike Boufford</a>, the group held its first meetup on November 26 with presentations from Basho, ZocDoc and Chartbeat&ndash;some of NYC&rsquo;s most well-known tech companies.</p>
+<p>Full-Stack&rsquo;s next installment at Gilt on Tuesday, December 17 is another winner! The evening will include talks by Gilt Senior Software Engineer <strong>Casey Kolderup </strong>(who will discuss our <a href="https://dev.gilt.com/" target="_blank">public APIs</a>), Docker VP of Services <strong>James Turnbull</strong>, and Customer.io Founder/CTO <strong>John Allison</strong>, as well as pizza, beer, and some networking time. RSVP <strong><a href="http://www.meetup.com/Full-Stack-Engineering-Meetup/events/149727602/" target="_blank">here</a></strong> and soon&ndash;seats are almost gone! But if you can&rsquo;t make it, just plan to visit us in <a href="http://www.meetup.com/Full-Stack-Engineering-Meetup/events/152218942/" target="_blank">January</a>, when Full-Stack Engineering returns to Gilt.</p>
+<p>Recently we asked Mike a few questions about his full-stack experiences and purpose for starting a dedicated full-stack meetup group:</p>
+<p><strong>Gilt: How did you evolve into a full-stack engineer?</strong></p>
+<p><strong>Mike Boufford:</strong> I started by doing a lot of front-end programming and design in high school (mostly for fun), then I got my big break: a chance to help build my friend&rsquo;s dad&rsquo;s flower shop website for $10 <span></span>per hour(!). One of the requirements was to receive orders via a form, and save them all in a database. I had no clue what was involved. So, I got a lot of help from a friend who was much <span>r</span><span>more backend savvy</span> than I was. He started teaching me how to program in ASP, and how to structure a Microsoft Access database (don&rsquo;t judge me! it was 1999). That was when I started learning how all of the different layers of a website hung together; from then on, I was hooked. Fourteen years later, I finally kinda/sorta know how it all works.</p>
+<p><strong>What&rsquo;s in <em>your </em>stack? </strong></p>
+<p><span>At Greenhouse.io we use SSS (the Standard Start-up Stack): Ruby on Rails, PostgreSQL, JavaScript, Sass, HTML, Memcache, and host our site on Heroku/S3. There are a lot of other peripheral elements to our stack, but those are our primary technologies. </span> <span> </span></p>
+<p><strong>Which technologies do you personally use the most?</strong><span><br/></span> <span>Most of my experience is in a Java environment, but nowadays I&rsquo;m having a lot of fun writing everything from Bash scripts to JavaScript libraries.</span></p>
+<p><strong>Why would an engineer present themselves as &ldquo;full-stack&rdquo; instead of specialized in one area?</strong><span><span><br/> There are two important advantages: first, if you&rsquo;re in a small company, like a start-up, you have to be a technical generalist. You probably won&rsquo;t have other team members who specialize in DevOps, DBA, Testing, Backend, JavaScript, and markup to lean on. You have to understand how everything works together in order to get anything done. <br/><br/>Second, I can hand a full-stack engineer an entire feature, and they&rsquo;re able to build it end to end. This saves time on coordination between developers, allows for more loosely spec&rsquo;d requirements from product, and provides the full-stack engineer with total ownership over the outcomes of his/her work. Total ownership means that a feature becomes an extension of the developer&rsquo;s identity&ndash;you&rsquo;ll see higher productivity, more creativity, and a greater sense of accomplishment when their code is shipped to production. </span></span></p>
+<p><span><span><strong>Why do full-stack engineers need their own meetup?</strong> <span>Full-stack engineers are a new breed of developer: We&rsquo;re more versatile than specialized, our day-to-day concerns are different from those of traditional specialists, and we need a community built around the way we work. </span> </span></span></p>
+<p><span><span>NYC is filled with awesome meetup groups, but they tend to be either highly specialized (e.g., AngularJS) or very high-level (e.g., NY Tech).  As a full-stack engineer, I&rsquo;d have to attend a half-dozen meetups every month in order to gain sufficiently broad exposure to the topics that interest me. Our group is more concerned with breadth than depth. I created this group for two primary reasons: to expose members to different parts of an application stack in every meetup, and to help other engineers develop an understanding of full-stack engineering as a modern and holistic approach to software development.  <br/><br/>I also thought it would be fun to surround myself with a ton of smart people who like beer, pizza, and programming ;). </span></span></p>
+<p><span><span><strong>What topics do you hope to see covered by your meetup?</strong></span></span></p>
+<p>Each meetup will touch upon several parts of an application stack, from containerization all the way up to the browser.  For instance, our first meetup covered distributed systems, Lua, and how to compose components in a Backbone application. Our <span><span><span class="aBn"><span class="aQJ">December 17</span></span></span></span> installment will cover APIs, <span>Docker.io</span>, and <span>JavaScript</span><strong>.</strong></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#full-stack engineering-ref">full-stack engineering <span>6</span></a>
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#meetups-ref">meetups <span>32</span></a>
+      
+    <a href="/tags.html#Mike Boufford-ref">Mike Boufford <span>4</span></a>
+      
+    <a href="/tags.html#Casey Kolderup-ref">Casey Kolderup <span>1</span></a>
+      
+    <a href="/tags.html#technology stack-ref">technology stack <span>1</span></a>
+      
+    <a href="/tags.html#engineering-ref">engineering <span>12</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#John Allison-ref">John Allison <span>2</span></a>
+      
+    <a href="/tags.html#James Turnbull-ref">James Turnbull <span>7</span></a>
+      
+    <a href="/tags.html#Docker.io-ref">Docker.io <span>5</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    <a href="/tags.html#APIs-ref">APIs <span>9</span></a>
+      
+    <a href="/tags.html#presentations-ref">presentations <span>42</span></a>
+      
+    <a href="/tags.html#Docker-ref">Docker <span>20</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2013/12/10/the-gilt-mobile-teams-favorite-apps-of-2013">The Gilt Mobile Team's Favorite Apps of 2013</a></h1>
+  
+  <header>
+    
+    <time>10 December 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>2013 was a great year for <a href="http://www.gilt.com/apps/iphone" target="_blank">Gilt Mobile</a>. In addition to creating the platforms driving more than 40 percent of our revenue, the team saw their work <a href="http://tech.gilt.com/2013/10/22/apple-features-gilt-push-notifications-in-todays" target="_blank">featured in Apple&rsquo;s October demo</a>, released some <a href="http://tech.gilt.com/2013/10/25/gilt-on-the-go-4-0" target="_blank">major updates</a> to Gilt on the Go, <a href="http://tech.gilt.com/2013/09/06/talking-mobile-in-nj-on-september-11" target="_blank">got</a> <a href="http://tech.gilt.com/2013/11/08/gilts-christopher-gonzalez-featured-at-mobile-mondays" target="_blank">invited</a> to <a href="http://tech.gilt.com/2013/08/30/come-to-our-mobile-fireside-chat-on-9-5" target="_blank">speak</a> in some <a href="http://tech.gilt.com/2013/07/11/gilt-featured-on-huffpost-lives-tech-game-changers" target="_blank">high-profile</a> venues, grew by a few members (<a href="http://www.gilt.com/careers/job/r1121/" target="_blank">apply here</a> to be the next one), and even <a href="http://tech.gilt.com/2013/10/09/gilt-mobile-engineer-featured-in-new-moma-exhibition" target="_blank">exhibited at the MoMA</a>!</p>
+<p>They also used and checked out lots of apps produced by other mobile teams around the world. Here are a few favorites and essentials from 2013:</p>
+<h2>Digg</h2>
+<p><img alt="image" src="https://31.media.tumblr.com/d5046fd5584ed66c05800532dd983380/tumblr_inline_mxm20vc1N81s17bu5.jpg"/></p>
+<p>I have a ton of apps on my phone. Most of them I open only once or twice just to check them out&ndash;but I keep going back to <a href="http://digg.com/" target="_blank">Digg</a>. It has a simple, clean interface, and the content includes a great selection of real news, geeky stuff and silly fun. A simple but super-useful feature inverts the background and copies colors when in low lighting, which makes for much easier reading. Digg has become my preferred way to waste a few minutes and maaaaaybe learn some new things! <em>&ndash;Christopher Gonzalez, Director of Mobile Product</em></p>
+<h2>Capitol Bells</h2>
+<h2><span><img alt="image" src="https://31.media.tumblr.com/8d1b8e371fd0a0550d6ffcfbd34b6391/tumblr_inline_mxnfkoo4R11s17bu5.png"/></span></h2>
+
+<p><span><a href="http://www.capitolbells.com/" target="_blank">Capitol Bells</a> is positioning itself to change American politics in a huge way, and to some extent it already has. By providing live voting alerts and bill information, it has attracted a growing user base of legislators&ndash;and its virtual voting feature enables the general public to cast their vote on individual bills. Users can also add their voting district, completing the feedback loop and allowing politicians to gauge local favor in their districts. Capitol Bells might still need some work, but it’s pretty impressive considering that just one guy built and maintains it! <em>&ndash; Randy Gretz, QA Analyst</em><br/></span></p>
+<h2>Rent the Runway</h2>
+<h2><img alt="image" src="https://31.media.tumblr.com/60264c8ed3b96458a4c096e0616cfea1/tumblr_inline_mxm310ruKv1s17bu5.png"/></h2>
+<p>I love the new iPhone app from <a href="http://www.renttherunway.com/rtr_home" target="_blank">Rent the Runway</a>. The sleek design incorporates beautiful, large images, which makes it easy and fun to browse. The app is not overly abundant with features: the content reflects the information that I would most likely look up quickly on my phone while out and about. I was excited to play with Dress Match, which lets users take advantage of their phone cameras to snap a picture of a dress, pattern or color and then suggests similar dresses based on it. At Gilt, we always try to enhance our customers&rsquo; shopping experiences by finding the best uses for all the great sensors included in phones (check out our Try It On feature!). It&rsquo;s really great to see other companies strive to do the same. <em>&ndash;Ruxy Staicut, Software Engineer<br/></em></p>
+<h2>99Taxis</h2>
+<h2><img alt="image" src="https://31.media.tumblr.com/c0d91c9eb3cebb557436279415477496/tumblr_inline_mxm4ifeqvW1s17bu5.jpg"/></h2>
+<p>When it comes to calling a cab, <a href="http://www.99taxis.com/" target="_blank">99Taxis</a> is super-useful. It finds your location (you can edit the address if the app provides the wrong one) and shows a map with the taxis near you. When you click &ldquo;Request Taxi,&rdquo; the app notifies taxi drivers to head your way (there&rsquo;s a different app for drivers). The first driver who answers is assigned to you. The app then displays the taxi&rsquo;s car model and license plate and the driver&rsquo;s name, picture and phone number. You can send the driver some predefined messages, an SMS, or call him/her. You still see the map with your and the taxi&rsquo;s location until you get in the car and click &ldquo;Taxi Arrived.&rdquo; 99taxis claims to verify the driver&rsquo;s documents, so in theory it&rsquo;s safer than grabbing a random cab on the street. Most taxi drivers in Sao Paulo are using it (they have a few other cities too), which makes it really fast and easy to get a cab. It&rsquo;s amazing how there&rsquo;s always a bunch of taxis near you&ndash;just not necessarily in sight. <em>&ndash;<span>Rodrigo Carpintero, Senior Software Engineer</span> </em></p>
+<h2>Moves</h2>
+<h2><img alt="image" src="https://31.media.tumblr.com/e41072f975214bced06a535d5711d999/tumblr_inline_mxm27g4qDa1s17bu5.jpg"/></h2>
+<p><a href="http://www.moves-app.com/" target="_blank">Moves</a> is a great app for tracking where you go and how much walking&ndash;or running, biking, or driving&ndash;you do to get there. On any given day you can see how many steps you took, the distance you walked, and how long you spent in each spot. A helpful map shows where you went, and allows you to attach names to specific locations you frequently visit. Previous versions of Moves severely degraded battery life, but the latest version now takes advantage of the M7 chip on the latest iPhone, the 5s. Battery drain is still a concern on older devices, but don&rsquo;t let that stop you from using this handy mobility measuring tool. <em>&ndash;Evan Maloney, Principal Software Engineer<br/></em></p>
+<h2><span>LearnVest</span></h2>
+<h2><span><img alt="image" src="https://31.media.tumblr.com/1026dbd12864e662188bd310afd035d7/tumblr_inline_mxm2nhDYUl1s17bu5.jpg"/></span></h2>
+<p><span><span><a href="https://www.learnvest.com/" target="_blank">LearnVest</a> has a really cute design! It makes managing your finances and budgeting not so terrible ;). I like how they use a passcode to easily unlock the app. I would love to see them add support for background fetch to instantly update. <span><span><em>&ndash;Christine Yokoyama, Senior Software Engineer</em></span></span><br/></span></span></p>
+<h2><span>IFTTT</span></h2>
+<h2><span><img alt="image" src="https://31.media.tumblr.com/b82f3f01dbf2bf9223010af0b3d35180/tumblr_inline_mxm28l5L0l1s17bu5.jpg"/></span></h2>
+<p><span><span>I am not a huge fan of intro tutorials, but <a href="https://ifttt.com/" target="_blank">IFTTT</a> is a special exception. The animation is well polished and feels playful, yet does not overwhelm. I also think IFTTT is a unique enough concept that it probably warrants an explanation of how to use the app on first launch. Once you are signed in, the app has a super-simple navigation structure paired with a few gentle animations. I think it is a good example of sophisticated minimalism. Now if only I had a need that it satisfied. <em>&ndash;Louis Vera, Senior Software Engineer</em><br/></span></span></p>
+<h2><span><span>Conjugation Nation (Spanish Edition)<br/></span></span></h2>
+<p><span><span><img alt="image" src="https://31.media.tumblr.com/911c1cf7a185dc3cdc705cce7b1155d6/tumblr_inline_mxm3icDJ0I1s17bu5.jpg"/></span></span></p>
+
+<p><span><span>At first glance, <a href="https://itunes.apple.com/us/app/conjugation-nation-spanish/id320530591" target="_blank">Conjugation Nation</a> is nothing special: the UI is simple and straightforward, and you might even say it could be prettier. Nevertheless, I think it&rsquo;s a really great resource for learning Spanish vocabulary words and verb conjugations. What I especially like is that you can tailor the difficulty level of the quizzes to those areas where you need extra practice. The quizzes can be so hard, in fact, that even native Spanish speakers will have trouble getting them right. <span><span><em>&ndash;Matt Isaacs, Senior Software Engineer<br/></em></span></span></span></span></p>
+<h2><span>Songza</span></h2>
+<h2><span><img alt="image" src="https://31.media.tumblr.com/f65a3ae3fd757c968b95495e7084dca3/tumblr_inline_mxm30l0f771s17bu5.png"/></span></h2>
+<p><span><span><a href="http://songza.com/" target="_blank">Songza</a> is my current go-to app for music. I love the user flow, which enables you to select a playlist to match your current activity. (My latest favorite pairing is &ldquo;cooking&rdquo; with the &ldquo;1960s girls around the world&rdquo; mix.) The iPhone app is very easy to use, especially for new users, which makes it instantly addicting. The iPad app offers some nice animations for transitioning between screens. <em>&ndash;Christine Yokoyama, Senior Software Engineer</em><br/></span></span></p>
+<h2><span>Forecast</span></h2>
+<h2><span><img alt="image" src="https://31.media.tumblr.com/434cc3b8ace3b3d3af454a3cc268368e/tumblr_inline_mxm2dstTki1s17bu5.png"/></span></h2>
+<p><span><span><a href="http://forecast.io/" target="_blank">Forecast.io</a> isn&rsquo;t really an app, but it is a fantastic mobile experience. When you navigate to forecast.io from your iPhone, you&rsquo;re greeted with instructions to &ldquo;Add to Home Screen&rdquo; so that, when you click on the icon in the future, the site looks and feels like an app. I love its simple visual treatment, user experience cues and reliability. Among its novel features, forecast.io includes a visualization that lets you know if it&rsquo;s raining and for how many more minutes. And each day is represented as a row that includes an hour-by-hour color spectrum that lets you know what the weather will be like. A key characteristic for me in judging a really excellent user experience on an app is whether I think I can use the app while blindfolded. Is it THAT easy to use? Yes: Forecast.io is impossible to get lost in or misunderstand. It has saved me during many a rainy moment and has shown me that some of the greatest experiences on the iPhone can still be produced via the mobile web. Of all the apps I introduced to my friends and family in 2013, this was the easiest to use. <span><span><em>&ndash;Gregory Mazurek, Software Engineer<br/></em></span></span></span></span></p>
+<h2><span><span>Weather Line</span></span></h2>
+<h2><span><span><img alt="image" src="https://31.media.tumblr.com/a959a4a05826f817641e7bde1e939712/tumblr_inline_mxm2qaXc0Y1s17bu5.png"/></span></span></h2>
+<p><a href="http://weatherlineapp.com/" target="_blank">This new weather app</a>, introduced this year, takes a different approach to displaying a weather forecast. The graphs are amazing: they pack so much useful information into an incredibly digestible display. The contextual weather info is helpful, especially when you’re on the go and trying to find out what to expect from the weather as quickly as possible. <em>&ndash;Eric Czarny, Principal Software Engineer<br/></em></p>
+<h2><span>Instagram</span></h2>
+<h2><span><img alt="image" src="https://31.media.tumblr.com/cd4b8649626264266b99e8ecc7273437/tumblr_inline_mxm305Uhji1s17bu5.png"/></span></h2>
+<p>I had to add <a href="http://instagram.com/#" target="_blank">Instagram</a>: It&rsquo;s probably the app I use the most (besides Gilt!). It&rsquo;s great for killing time, catching up with friends, and finding inspiration! The UI is very clean, simple, and easy to use. I loved their iOS7 update. <span><span><em>—<a href="http://twitter.com/adkap" target="_blank">Adam Kaplan</a>, Principal Software Engineer<br/></em></span></span></p>
+<h2>Venmo</h2>
+<p><img alt="venmo screenshot" src="https://31.media.tumblr.com/0b0b8d816a73161dcb489a5722e93109/tumblr_inline_mxm7fcATvO1qgk6x5.png" width="320"/></p>
+<p><a href="https://www.venmo.com/" target="_blank">Venmo</a> is a mobile payment platform that enables me to casually and quickly send money to my friends and family. My most common use of Venmo is reimbursing my friends for meals and taxis (I never seem to have cash when I need it!). When I send money, the service will deduct it from my account balance first, then my bank account (or credit card for a fee). My friends will immediately receive a push notification, email or text message confirming the transfer. The app and service are free to use. By default Venmo will add incoming transfers to your balance, but with one tap of the &ldquo;Cash Out&rdquo; button, I can have it transfer funds to my bank. It&rsquo;s also worth mentioning that the Venmo iOS app has passcode protection for piece of mind. <em>—<a href="http://twitter.com/adkap" target="_blank">Adam Kaplan</a>, Principal Software Engineer</em></p>
+<h2>Uber</h2>
+<h2><img alt="image" src="https://31.media.tumblr.com/aa4b6bae331eaeed5c927116483d4cb0/tumblr_inline_mxm2as03YS1s17bu5.jpg"/></h2>
+<p><span><a href="https://www.uber.com/" target="_blank">Uber</a>&rsquo;s an amazing service that&rsquo;s changing the taxi/car service industry. It&rsquo;s a great example of a user experience that focuses on the task that the user is trying to accomplish. <em>&ndash;Yonatan Feldman, Vice President, Mobile/Global Engineering</em><br/></span></p>
+<p>A second vote for Uber. My wife and I live in a part of town where you can&rsquo;t always flag down a cab at odd hours. We used Uber when she was in labor at 5AM, and we used Uber to bring our newborn back from the hospital. (As far as we know, we have the world&rsquo;s first Uber Baby!) The system they&rsquo;ve built ensures stellar customer service, and we&rsquo;ve never been disappointed. In just a short time, Uber has revolutionized the livery industry.—<em>Evan Maloney, Principal Software Engineer<br/></em></p>
+<h2><span>Sunrise</span></h2>
+<p><span><span><img alt="image" src="https://31.media.tumblr.com/e526988d649c63a5f31e68f9460b61a5/tumblr_inline_mxndzbdg5f1s17bu5.png"/></span></span></p>
+
+<p><span><span><a href="https://www.sunrise.im/" target="_blank">Sunrise</a> is a slick calendar app that helps keep me on top of short-term events like Facebook birthdays and my upcoming appointments for the next couple of days. The simple UI and focused views are fast and easy to navigate. <em>&ndash;Christopher Barr, Interactive Designer</em><br/></span></span></p>
+<h2><span><span>MLB at Bat</span></span></h2>
+<p><img alt="image" src="https://31.media.tumblr.com/59274c50d5acdd3b980c901009f3cef3/tumblr_inline_mxm41qJZz71s17bu5.jpg"/></p>
+<p>I&rsquo;m really not that crazy about American sports, but baseball holds the most appeal for me. The <a href="https://itunes.apple.com/us/app/mlb.com-at-bat/id493619333?mt=8&amp;ign-mpt=uo%3D4" target="_blank">MLB app</a> is surprisingly good: Though fairly complicated, with a lot of moving parts and features, it&rsquo;s nevertheless stable and crash-free. The scoreboard on the iPad version of the app is well-designed. <span><span> <em>&ndash;Matt Isaacs, Senior Software Engineer<br/></em></span></span></p>
+<h2><span>Postagram<br/></span></h2>
+<h2><span><img alt="image" src="https://31.media.tumblr.com/ca54d8b8d17454e3b5fc888705552144/tumblr_inline_mxm29qf7Sp1s17bu5.jpg"/></span></h2>
+<p>Here’s something I’ve wanted since I studied abroad. Created by Sincerely, <a href="https://itunes.apple.com/us/app/postagram-postcards/id429264904" target="_blank">Postagram</a> allows you to use your own photos to create and send physical personalized postcards. Among other things, you can import contacts from your phone’s address book and send a postcard to multiple recipients; Postagram also supports integration with Instagram, Facebook, and Dropbox for pulling photos. Each postcard is 99 cents&ndash;a great deal in comparison to having to find and buy postcards and postage in foreign locales. They’re printed in the U.S. (‘Merica!) and generally take a week for domestic delivery. I finally got to use it during some recent travels to Kenya, Jordan, and Turkey, and got a lot of positive feedback from the wide audience of friends and family I was able to reach for the &lsquo;thoughtful gesture.&rsquo; <em>&ndash;Randy Gretz, QA Analyst<br/></em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#mobile applications-ref">mobile applications <span>1</span></a>
+      
+    <a href="/tags.html#apps-ref">apps <span>8</span></a>
+      
+    <a href="/tags.html#Gilt mobile-ref">Gilt mobile <span>8</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#best apps of 2013-ref">best apps of 2013 <span>1</span></a>
+      
+    <a href="/tags.html#Postagram-ref">Postagram <span>1</span></a>
+      
+    <a href="/tags.html#Sunrise-ref">Sunrise <span>1</span></a>
+      
+    <a href="/tags.html#Instagram-ref">Instagram <span>1</span></a>
+      
+    <a href="/tags.html#Capitol Bells-ref">Capitol Bells <span>1</span></a>
+      
+    <a href="/tags.html#Songza-ref">Songza <span>1</span></a>
+      
+    <a href="/tags.html#Uber-ref">Uber <span>1</span></a>
+      
+    <a href="/tags.html#Conjugation Nation-ref">Conjugation Nation <span>1</span></a>
+      
+    <a href="/tags.html#IFTTT-ref">IFTTT <span>1</span></a>
+      
+    <a href="/tags.html#99taxis-ref">99taxis <span>1</span></a>
+      
+    <a href="/tags.html#Digg-ref">Digg <span>1</span></a>
+      
+    <a href="/tags.html#Rent the Runway-ref">Rent the Runway <span>1</span></a>
+      
+    <a href="/tags.html#Moves-ref">Moves <span>1</span></a>
+      
+    <a href="/tags.html#LearnVest-ref">LearnVest <span>1</span></a>
+      
+    <a href="/tags.html#venmo-ref">venmo <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/34/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 35 of 64</span>
+  
+    <a href="/posts/36/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

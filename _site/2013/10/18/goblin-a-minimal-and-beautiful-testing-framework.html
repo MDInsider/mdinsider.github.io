@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Goblin: A Minimal and Beautiful Testing Framework for the Go Language</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2013/10/18/goblin-a-minimal-and-beautiful-testing-framework">Goblin: A Minimal and Beautiful Testing Framework for the Go Language</a></h1>
+  
+  <header>
+    
+    <time>18 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="http://media.tumblr.com/4682d40b70f9da0113a948f47e7c47f4/tumblr_inline_muvgzbZMDW1spue4h.jpg"/></p>
+<p>Inspired by the flexibility and simplicity of Node&rsquo;s Mocha, but frustrated by the rigorousness of the Go way of testing, my friend <a href="https://twitter.com/marcosnils" target="_blank"><span class="profile-field">Marcos Nils</span></a> and <a href="https://twitter.com/xetorthio" target="_blank">I</a> set out to create a new tool to write self-describing and comprehensive code. The result (and just in time for Halloween): <strong><a href="https://github.com/franela/goblin" target="_blank">Goblin</a></strong>.</p>
+<h2>What do I get with Goblin?</h2>
+<ul><li>Preserve the exact same syntax and behavior as Node.js&rsquo;s Mocha</li>
+<li>Nest as many <code>Describe</code> and <code>It</code> blocks as you want</li>
+<li>Use <code>Before</code>, <code>BeforeEach</code>, <code>After</code> and <code>AfterEach</code> for setup and teardown your tests</li>
+<li>No need to remember confusing parameters in <code>Describe</code> and <code>It</code> blocks</li>
+<li>Use a declarative and expressive language to write your tests</li>
+<li>Plug different assertion libraries (<a href="https://github.com/onsi/gomega" target="_blank">Gomega</a> supported so far)</li>
+<li>Skip your tests the same way as you would do in Mocha</li>
+<li>Two-line setup is all you need to get up and running</li>
+</ul><h2><a class="anchor" href="https://github.com/franela/goblin#how-do-i-use-it" id="how-do-i-use-it" name="how-do-i-use-it" target="_blank"></a>How do I use it?</h2>
+<p>Since <code>go test</code> is not currently extensive, you will have to hook Goblin to it. Just add a single test method in your test file, and all your goblin tests will be implemented inside this function.</p>
+<div class="highlight highlight-go">
+<pre><span class="kn">package</span> <span class="nx">foobar</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">"testing"</span>
+    <span class="p">.</span> <span class="s">"github.com/franela/goblin"</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">Test</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">g</span> <span class="o">:=</span> <span class="nx">Goblin</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">Describe</span><span class="p">(</span><span class="s">"Numbers"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should add two numbers "</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">g</span><span class="p">.</span><span class="nx">Assert</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should match equal numbers"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">g</span><span class="p">.</span><span class="nx">Assert</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should substract two numbers"</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre>
+</div>
+<p>Output will look something like this:</p>
+<p><a href="https://github.com/marcosnils/goblin/blob/master/goblin_output.png?raw=true" target="_blank"><img alt="" src="https://github.com/marcosnils/goblin/blob/master/goblin_output.png?raw=true"/></a></p>
+<p>Nice and easy, right?</p>
+<h2><a class="anchor" href="https://github.com/franela/goblin#how-do-i-use-it-with-gomega" id="how-do-i-use-it-with-gomega" name="how-do-i-use-it-with-gomega" target="_blank"></a>How do I use Goblin with Gomega?</h2>
+<p>Gomega is a nice assertion framework, but it doesn&rsquo;t provide a nice way to hook it to testing frameworks. It should just panic instead of requiring a fail function. There is an issue about that <a href="https://github.com/onsi/gomega/issues/5" target="_blank">here</a>. While this problem is being discussed and hopefully fixed, you can use Gomega with Goblin. How to do it:</p>
+<div class="highlight highlight-go">
+<pre><span class="kn">package</span> <span class="nx">foobar</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">"testing"</span>
+    <span class="p">.</span> <span class="s">"github.com/franela/goblin"</span>
+    <span class="p">.</span> <span class="s">"github.com/onsi/gomega"</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">Test</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">g</span> <span class="o">:=</span> <span class="nx">Goblin</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+
+    <span class="c1">//special hook for gomega</span>
+    <span class="nx">RegisterFailHandler</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">m</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">_</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span> <span class="nx">g</span><span class="p">.</span><span class="nx">Fail</span><span class="p">(</span><span class="nx">m</span><span class="p">)</span> <span class="p">})</span>
+
+    <span class="nx">g</span><span class="p">.</span><span class="nx">Describe</span><span class="p">(</span><span class="s">"lala"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"lslslslsls"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">Expect</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">To</span><span class="p">(</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+      <span class="p">})</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</pre>
+</div>
+<h2><a class="anchor" href="https://github.com/franela/goblin#todo" id="todo" name="todo" target="_blank"></a>What&rsquo;s next for Goblin?</h2>
+<p>Marcos and I will soon address the <a href="https://github.com/franela/goblin/issues" target="_blank">issues</a> still pending with Goblin. Meantime, feel free to contribute and send us your pull requests (with tests, please).</p>
+<p><em>Special thanks to <a href="https://github.com/leandroreox" target="_blank">Leandro Reox</a> (Leitan) for designing the Goblin logo.</em></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Node.js-ref">Node.js <span>7</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#testing-ref">testing <span>5</span></a>
+      
+    <a href="/tags.html#frameworks-ref">frameworks <span>2</span></a>
+      
+    <a href="/tags.html#Gomega-ref">Gomega <span>1</span></a>
+      
+    <a href="/tags.html#goblin-ref">goblin <span>1</span></a>
+      
+    <a href="/tags.html#go-ref">go <span>1</span></a>
+      
+    <a href="/tags.html#golang-ref">golang <span>1</span></a>
+      
+    <a href="/tags.html#Jonathan Leibiusky-ref">Jonathan Leibiusky <span>12</span></a>
+      
+    <a href="/tags.html#Goblin-ref">Goblin <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

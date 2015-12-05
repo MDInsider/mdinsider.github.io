@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / MongoDB performance at Gilt</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2012/10/02/mongodb-performance-at-gilt">MongoDB performance at Gilt</a></h1>
+  
+  <header>
+    
+    <time>02 October 2012</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Over the past several months several high traffic services have gone live at Gilt using MongoDB as a back end. MongoDB collections are a really good fit for many of our use cases. What we&rsquo;ve found is that when MongoDB is happy it runs fast and reliably; but there are a few things that can catch you out.</p>
+<p><strong>Throttle your writes/updates</strong><br/>MongoDB uses a global write lock. Only one process can write at a time, and while writing is happening, nothing can read (items will queue). A very high write load will make read operations very slow.</p>
+<p>If you need to do data migrations or batch jobs of any kind on your DB, you will need to ensure that the writes happen at a rate of &lt; 50 per second if not using SSD (you can go higher with SSDs). Usually, you&rsquo;ll need to implement some way of prioritizing real-time updates during this process.</p>
+<p>If you expect a high write load during normal operation, you need to think about sharding. Good capacity planning and loadtesting prior to going live are important.</p>
+<p><br/><strong>SSDs</strong><br/>MongoDB write performance is limited by disk performance, so if lots of writes are going to happen SSDs are a must.<br/><br/><strong>Load testing</strong><br/>While performance testing your service, make sure to use a write load as well as a read-only load, to simulate how your service will perform in production. <br/><br/><strong>Manage the length of field names</strong><br/>Mongo stores the field name as part of each record. If you pick very long names for your fields your data will be larger than it needs to be. MongoDB only performs well if it can keep working data in memory, so keep field names as short as is reasonable.<br/><br/><strong>Use indexes</strong><br/>For any substantial dataset, query performance will suck if you don’t use the right indexes (I have seen it make a difference of about 4 orders of magnitude in response time). <br/>More info here: <a href="http://www.mongodb.org/display/DOCS/Indexes" target="_blank">http://www.mongodb.org/display/DOCS/Indexes</a><br/>Indexed data doesn’t have to be unique, and compound indexes are supported.<br/><br/><strong>Use the _id field wisely</strong><br/>MongoDB requires this field and always creates an index on it, so if possible actually use it for something useful.<br/><br/><strong>Think about how your records will grow over time</strong><br/>If your record grows in size, MongoDB will have to move it. This is the most expensive thing you can do in MongoDB, because it means two writes, and then all indexes need to be updated as well (more writes). If your records are likely to grow it’s worth creating them with currently unused attributes in the documents (set to whitespace or similar). This means your updates won’t always lead to document moves. This needs to be balanced against unnecessary bloat in your document size, though. <br/><br/><strong>Don’t use ensureIndex in code</strong></p>
+<p>Building an index is a blocking operation for MongoDB, and it won’t service requests while the index build is in progress. If you add a new index via code, the index will get created when you deploy your service, which is probably not what you want (essentially, you’ll end up bringing your own service down for however long it takes to build the index).</p>
+<p>For production instances, the instance needs to be temporarily removed from the replica set, the index rebuilt, and then the instance is re-added. This process gets followed for all members of a replica set.<br/><br/><strong>Don’t keep unnecessary indexes around</strong></p>
+<p>Indexes incur a cost when records are moved.<strong id="internal-source-marker_0.5483054770156741"><br/></strong></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

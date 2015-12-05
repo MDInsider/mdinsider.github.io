@@ -1,0 +1,33 @@
+---
+layout: page
+title: Authors
+subtitle: Posts By Author
+group: navigation
+---
+{% include JB/setup %}
+
+{% for post in site.posts %}
+  {% if post.author %}
+  {% unless rawauthors contains post.author %}
+      {% capture rawauthors %}{{ post.author }}|{{ rawauthors }}{% endcapture %}
+  {% endunless %}
+  {% endif %}
+{% endfor %}
+
+{% assign authors = rawauthors | split:'|' | sort %}
+
+<section id="site-authors">
+{% for author in authors %}
+  {% if author %}
+  {% capture rawposts %}{% for post in site.posts %}{% if post.author == author %}{{ post.title }}*{{ post.url }}|{% endif %}{% endfor %}{% endcapture %}
+  {% assign posts = rawposts | split:'|' | sort %}
+  <h2 id="{{ author | downcase }}-ref">{{ author }}</h2>
+  {% for post in posts %}
+  <ul>
+    {% assign parts = post | split:'*' %}
+    <li><a href="{{ BASE_PATH }}{{ parts[1] }}">{{ parts[0] }}</a></li>
+  </ul>
+  {% endfor %}
+  {% endif %}
+{% endfor %}
+</section>

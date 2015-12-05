@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Hadoop vs. Aster: A Quick Comparison</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2013/10/10/hadoop-vs-aster-a-quick-comparison">Hadoop vs. Aster: A Quick Comparison</a></h1>
+  
+  <header>
+    
+    <time>10 October 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p>If you’ve got more data than money, you’re probably checking out open source data analytics platforms. But how well do these no- or low-cost alternatives perform in comparison to their more expensive, licensed counterparts? Curious about the answer, I recently conducted an experiment to determine the feasibility of using Hadoop instead of <a href="http://www.asterdata.com/" target="_blank">Aster</a>, the licensed analytics platform the Gilt data team uses to store and manage our vast data resources. The TL; DR result: Hadoop performs well in comparison for some use cases.</p>
+<h3>Methodology and setup</h3>
+<p><span>In planning my experiment, I didn’t set out to make an extensive evaluation of either Aster or Hadoop&ndash;rather, I wanted to quickly explore how to stand up a Hadoop cluster, then compare it to Aster. I could have made a variety of different optimizations on both platforms during testing, but I wanted to limit the scope of my evaluation to complete it within a reasonable amount of time.</span></p>
+<p><span>Our data team had an eight-node Aster cluster available for testing, and Hortonworks’ documentation recommended setting up clusters in multiples of three to support the default replication factor of three, so my test involved eight Aster nodes vs. nine Hadoop nodes. The exact setup: </span></p>
+<ul><li>
+<p><span>Aster 5.0.2 on eight nodes, with a replication factor of two</span></p>
+</li>
+<li>
+<p><span>Hortonworks 2.0 Community Preview distribution on nine nodes, with a default replication factor of three</span></p>
+</li>
+<li>
+<p><span></span><span>Hive 0.11</span></p>
+</li>
+</ul><h3>What I evaluated, and why</h3>
+<p><span>For test data, I used two months of raw, Gilt clickstream data&ndash;approximately 900 million rows (~120GB compressed on disk). To test Aster, I used an unindexed, row storage table. To test Hadoop, I chose two table formats: raw gzip compressed files logically partitioned by month, and an Optimized Row Columnar (ORC) table with compression [</span><a href="http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.0.0.2/ds_Hive/orcfile.html" target="_blank"><span>ORC Format</span></a><span>]. The load times between Aster and Hadoop column store were comparable.</span></p>
+<p><span>A few notes:</span></p>
+<ul><li>
+<p><span>The load into Aster includes time to decompress gzipped files</span></p>
+</li>
+<li>
+<p><span>The load into the Hadoop column store table was done using the raw Hadoop table, so the actual load time includes the loading of the raw Hadoop table.</span></p>
+</li>
+</ul><p><span>To compare the results of performance tests using Aster, Hadoop with raw data, and Hadoop with column store data, I used identical data sets in all tests; ran the tests at times when there was no other activity on the cluster; and made some basic query optimizations as described in the documentation for Hive. Once again, lower was better.</span><span></span></p>
+<p><span>Regarding the query performance of progressively larger data-sets on Hadoop and Aster, I performed the test using a single-column table with an increasing number of rows&ndash; first one row, then 10K, 1 million, 1 billion, 10 billion, and 20 billion&ndash;and at times when there was no other activity on the cluster. Comparable performance once again.</span></p>
+<p><span>After running this evaluation, I&rsquo;ve concluded that HDFS can be useful for storing raw data (log files, etc.) or archival of older transformed data. But the day-to-day activities in the data warehouse space (SQL, analysis, etc.) should remain in Aster. HDFS is not a perfect substitution: For example, I’ve also noted that Hive requires some effort and patience to get it working; it’s unstable when using with embedded metastores. And sometimes it throws exceptions for which I wasn’t able to find resolutions: for example, “java.sql.SQLException: Error retrieving next row,” and&ndash;when selecting from ORC tables&ndash;“java.lang.OutOfMemoryError: Java heap space error.” (Using MySQL to store metadata seemed to improve Hive’s stability.)  </span></p>
+<p><span>Other problems: Orphaned/Zombie jobs could be problematic&ndash;you need to manually intervene to kill those jobs. You need to be careful when designing table structures, because that is the biggest factor in performance of queries (storage format, compression, clustering, partitioning, skew, serde). Finally, Hadoop’s concurrency sucks: The first query/job receives the bulk of your resources. (The documentation says that significant improvements were made in the resource manager, known as YARN, but sometimes jobs/queries are blocked until a running job/query completes.)</span></p>
+<h3>Running your own test</h3>
+<p><span><span>There are still many unexplored options for optimizing for performance. If you can identify some real-world use cases, then you can optimize Hive with logical partitioning, physical partitioning (clustering), sorted data storage, and indexing. Similarly, you can also optimize Aster to use column stores, logical partitioning, physical partitioning, indexing, etc. </span></span></p>
+<p><em>Interested in our work with big data? <strong><a href="http://www.gilt.com/careers/job/r1123/" target="_blank">Apply for our machine learning &amp; recommendations opportunities</a>.</strong> </em></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#hadoop-ref">hadoop <span>1</span></a>
+      
+    <a href="/tags.html#aster-ref">aster <span>2</span></a>
+      
+    <a href="/tags.html#data-warehousing-ref">data-warehousing <span>1</span></a>
+      
+    <a href="/tags.html#amardeep singh-ref">amardeep singh <span>1</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#big data-ref">big data <span>17</span></a>
+      
+    <a href="/tags.html#Hortonworks-ref">Hortonworks <span>2</span></a>
+      
+    <a href="/tags.html#hive-ref">hive <span>1</span></a>
+      
+    <a href="/tags.html#HDFS-ref">HDFS <span>2</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#SQL-ref">SQL <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

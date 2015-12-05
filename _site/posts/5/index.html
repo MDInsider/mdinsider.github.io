@@ -1,0 +1,1313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/05/some-quick-tips-for-using-scala-futures">Some Quick Tips for Using Scala Futures</a></h1>
+  
+  <header>
+    
+    <time>05 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span><img alt="image" src="https://31.media.tumblr.com/7caac1a5f7d1d3fb1a0c3b30395039e1/tumblr_inline_nhpuyzVH7n1s17bu5.png" width="800"/></span></p>
+<p id="docs-internal-guid-c53ce096-bb50-4751-0846-391603088dd0"><span>The Gilt engineering team has been transitioning to the latest version of our in-house library&ndash;a move that involves migrating from Guava </span><a href="https://code.google.com/p/guava-libraries/wiki/ListenableFutureExplained" target="_blank"><span>ListenableFutures</span></a><span> to Scala </span><a href="http://docs.scala-lang.org/overviews/core/futures.html" target="_blank"><span>Futures</span></a><span>. Futures are a key building block of reactive applications, and offer a really nice API for writing fast, efficient, non-blocking code. However, using them requires some skills that are a bit outside the scope of “traditional” programming.</span><span> </span></p>
+<p><span>For all of you who are new to Scala, or not-so-new but unfamiliar with futures, I thought it was worth sharing some thoughts on important things to watch out for when working with them.</span></p>
+<h3>Your code should be non-blocking</h3>
+<p><span>The easy <code>.get()</code> option, which is available on ListenableFuture, is not available on Scala Future. Instead, you are required to use the deliberately less elegant Await API. This is actually a good thing, as it gives you plenty of time to reconsider the fact that you’re blocking, while you’re typing it out :) Blocking is strongly discouraged, as it defeats the whole purpose of futures&ndash;and there is almost always a better, more efficient way to write the code in a non-blocking way.</span></p>
+<p><span>Having said all that, there may be times when you have no choice but to block. If you find yourself in this situation, you need to think carefully about which threads you are holding onto while you are blocking. For example, if you’re writing a </span><a href="https://www.playframework.com" target="_blank"><span>Play</span></a><span> application and decide to block the main request thread, then your application will very quickly run out of threads, and throughput will slow to a trickle. This is because the thread you are blocking on is from a very small thread pool that Play makes available for handling incoming requests.</span></p>
+<p><span>One case where blocking may be acceptable, or even desired, is a background thread&ndash;perhaps one that is refreshing a cache. In this case, you can create a fixed-size thread pool for handling the cache refresh and block on this. Since the use of the thread pool is isolated, there is no harm holding onto threads while you wait for a Future to resolve.</span></p>
+<h3>Which execution context you use matters</h3>
+<p><span>More and more APIs require an execution context to be passed either implicitly or explicitly. For example, the Scala <code>Future.onComplete</code> function is defined as:</span></p>
+<pre><code>def onComplete[U](f: Try[T] =&gt; U)(implicit executor: ExecutionContext): Unit</code></pre>
+<p><span>The callback function (f) is executed on a thread from the passed-in execution context. It&rsquo;s very important to consider what type of operations are executed in f.</span></p>
+<p><span>For CPU-bound (i.e. non-blocking) operations, you can follow the guidance of the Scala compiler error that you get when you forget to provide the context&ndash;namely, importing </span><code>scala.concurrent.ExecutionContext.Implicits.global</code><span>. Alternatively, it may be desirable to use a &ldquo;same thread&rdquo; execution context.&ndash;i.e., the callback executes on the same thread that completes the Future, rather than forcing a hand-off to another thread.</span></p>
+<p><span>For I/O-bound (i.e. blocking) operations, you should consider providing a different context. The global context by default has only N threads, where N is the number of processors available to the JVM. If you call <code>Await.result</code> on one of the global execution context threads, it will create another thread to compensate. (Its main goal in life is to keep the CPU busy&ndash;check out </span><a href="http://blog.jessitron.com/2014/02/scala-global-executioncontext-makes.html" target="_blank"><span>this post</span></a><span> for more info.) However, if you’re doing a lot of blocking it’s better to create your own context with an appropriately-sized Executor and leave the global context available to everybody else for what it was intended for&ndash;small CPU-bound tasks.</span></p>
+<h3>What happens if a Future fails?</h3>
+<p><span>Futures will fail for a variety of reasons: timeouts calling a service, deserialization exceptions, etc. You need to think about what the behaviour should be when this happens. For comprehensions and the operators map, flatMap and foreach may be nice to use, but they can also lull you into a false sense of security. And since Scala doesn’t have checked exceptions, you won’t get any help from the compiler. Somebody is going to have to deal with the exception at some point. Luckily a Scala Future has really nice APIs like <code>.recover</code>, <code>.recoverWith</code> and <code>.onFailure</code> for handling exceptions and providing fallback behavior.</span></p>
+<p><span>Futures are a really powerful tool for building fast, efficient, non-blocking applications. The APIs are elegant and simple to use. However, behind the simple APIs lies a world of complexity. It’s important to think carefully about how you are using futures and get a good understanding of the basic concepts behind them.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#John Kenny-ref">John Kenny <span>4</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Scala Futures-ref">Scala Futures <span>1</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#Guava ListenableFutures-ref">Guava ListenableFutures <span>1</span></a>
+      
+    <a href="/tags.html#futures-ref">futures <span>1</span></a>
+      
+    <a href="/tags.html#blocking-ref">blocking <span>1</span></a>
+      
+    <a href="/tags.html#APIs-ref">APIs <span>9</span></a>
+      
+    <a href="/tags.html#reactive applications-ref">reactive applications <span>1</span></a>
+      
+    <a href="/tags.html#.get()-ref">.get() <span>1</span></a>
+      
+    <a href="/tags.html#Await API-ref">Await API <span>1</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/30/best-of-2014-gilt-tech-culture-and-evangelism">Best of 2014: Gilt Tech Culture and Evangelism</a></h1>
+  
+  <header>
+    
+    <time>30 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>At many companies, “technology evangelism” is about promoting products. At Gilt, “technology evangelism” is about promoting <em>the people</em> behind our products. The goal: to help our technologists to grow professionally while telling the stories behind our work, projects and discoveries.</p>
+<p>#gilttech&rsquo;s innovations and expertise earned us the attention of industry leaders and media outlets worldwide many times in 2014. And with our continuing efforts to innovate even better and faster in 2015, we expect the upcoming year to be even more fun and exciting.</p>
+<p>On with the show&hellip;</p>
+<h3>We Made the News</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/ac0c5bb1f22db78617ce191959973b6d/tumblr_inline_nhd6gdZ0ra1s17bu5.jpg" width="800"/></p>
+<p>The Gilt Tech team got lots of attention this year from a variety of major news outlets:</p>
+<ul><li><a href="http://tech.gilt.com/2014/05/08/readwrite-profiles-gilt-and-our-insane-traffic" target="_blank">ReadWrite</a> asked us about how our architecture sustains our daily &ldquo;insane&rdquo; traffic spikes</li>
+<li><a href="http://abcnews.go.com/Lifestyle/stilettos-state-research-shows-wears-highest-heels/story?id=26702939" target="_blank">ABC News</a>, <a href="http://www.fastcodesign.com/3037902/infographic-of-the-day/the-only-sane-women-in-the-united-states-live-in-nebraska-kansas-and-" target="_blank">Fast Company</a>, <a href="http://vimeo.com/111228358" target="_blank">Live with Kelly &amp; Michael</a>, and MANY other media outlets talked about our data team&rsquo;s &ldquo;Stilettos by State&rdquo; infographic</li>
+<li><a href="http://tech.gilt.com/2014/11/12/bloomberg-covers-gilts-singles-day-relaunch-in" target="_blank">Bloomberg Businessweek</a> quoted our tech blog post on the product/UX behind our 11/11 relaunch in China</li>
+<li><a href="http://tech.gilt.com/2014/11/05/informationweek-writes-about-gilt-tech-evangelism" target="_blank">InformationWeek</a> was curious about what &ldquo;tech evangelism&rdquo; means at Gilt</li>
+<li><a href="http://www.csmonitor.com/Innovation/2014/0512/Why-so-few-women-in-tech-Seven-challenges-and-potential-solutions/The-amount-of-women-graduating-with-computer-science-degrees-has-drastically-decreased-in-the-last-three-decades.-One-solution-Girls-Who-Code" target="_blank">Christian Science Monitor</a> mentioned out support of Girls Who Code</li>
+<li><a href="http://betabeat.com/2014/04/how-to-get-an-nyc-tech-job-from-the-people-who-are-actually-hiring/" target="_blank">NY Observer&rsquo;s Betabeat</a> talked to us about tech recruiting</li>
+<li><a href="http://tech.gilt.com/2014/09/25/gilt-and-preemptive-shipping-a-q-a-with-our-chief" target="_blank">SearchCIO</a> wanted to know about our pre-emptive shipping work</li>
+<li>A lot of our favorite tech weeklies talked about us: <a href="http://softwareleadweekly.com/issues/104" target="_blank">Software Lead Weekly</a>, <a href="http://us2.campaign-archive2.com/?u=887caf4f48db76fd91e20a06d&amp;id=9ab2d99a2b&amp;e=7c18d0c508" target="_blank">Android Weekly</a>, <a href="http://us2.campaign-archive2.com/?u=13681e0f8a4ac09ce229a9b48&amp;id=f90a032721" target="_blank">Docker Weekly</a>, <a href="http://us4.campaign-archive2.com/?u=559bc631fe5294fc66f5f7f89&amp;id=3b8d4130b5&amp;e=203f0f1c00" target="_blank">Responsive Design Weekly</a>, <a href="http://postgresweekly.com/issues/59" target="_blank">Postgres Weekly</a>, <a href="http://nodeweekly.com/issues/26" target="_blank">Node Weekly</a></li>
+<li><a href="http://tech.gilt.com/2014/06/06/scala-scalability-open-source-and-more-listen" target="_blank">The Cloudcast</a> talked to us about everything from Scala to scalability</li>
+<li><a href="http://tech.gilt.com/2014/05/22/enterprisedb-features-gilt-as-a-postgresql-pro" target="_blank">EnterpriseDB</a> featured Gilt as a &ldquo;PostgreSQL Pro&rdquo;</li>
+<li><a href="http://tech.gilt.com/2014/05/07/metro-ny-covers-gilts-free-tech-courses" target="_blank">Metro NY</a> wrote about our free tech courses</li>
+<li><a href="http://tech.gilt.com/2014/01/21/gilt-cio-steve-jacobs-gives-his-new-york-tech" target="_blank">AlleyWatch</a> asked Gilt CIO Steve Jacobs for his thoughts on what would happen in the NYC tech community in 2014</li>
+<li>The <a href="http://tech.gilt.com/2014/01/27/gilts-michael-bryzek-featured-on-the-business-of" target="_blank">Business of Technology</a> podcast wanted to know more about the history and growth of Gilt&rsquo;s tech organization</li>
+<li><a href="http://tech.gilt.com/2014/02/25/new-agilefm-vodcast-with-gilt-senior-director-pmo" target="_blank">AgileFM</a> chatted with Senior Director, Program Management Office Heather Fleming about Agile at Gilt</li>
+<li><a href="http://tech.gilt.com/2014/08/21/gilt-cio-steve-jacobs-featured-on-nj-tech-weekly" target="_blank">NJ Tech Weekly</a> reported on Steve Jacobs&rsquo; NJ Tech Meetup presentation on emotionally connecting with customers</li>
+</ul><h3>We Got Around</h3>
+<p><iframe frameborder="0" height="360" src="//player.vimeo.com/video/105583932" width="640"></iframe></p>
+<p><strong>January</strong></p>
+<ul><li><strong>NYC Machine Learning: </strong>VP Personalization Erik Lumer on &ldquo;<a href="http://tech.gilt.com/2014/01/10/a-brief-chat-with-nyc-machine-learning-organizer" target="_blank">the art of personalization in flash commerce</a>&rdquo;</li>
+<li><strong>NYC Tech Talks:</strong> Lead Software Engineer Yoni Goldberg on <a href="http://tech.gilt.com/2014/01/15/scaling-gilt-at-gilt-nyc-tech-talks-comes-to-2" target="_blank">Scala microservices at Gilt</a></li>
+<li><strong>NYCEDC Tech Talent Draft</strong>: CIO Steve Jacobs <a href="http://tech.gilt.com/2014/01/29/gilt-cio-steve-jacobs-the-columbia-nyc-tech" target="_blank">appeared on a careers panel at his alma mater, Columbia University</a></li>
+<li><strong>Sauce Labs (webinar):</strong> Senior Software Engineer Matt Isaacs on <a href="http://tech.gilt.com/2013/12/30/register-for-sauce-labs-next-webinar-automating" target="_blank">how we use Appium</a></li>
+</ul><p><strong>February:</strong></p>
+<ul><li><strong>ISpossible: </strong>Senior Director, PMO Heather Fleming talked about <a href="http://tech.gilt.com/2014/02/24/gilts-heather-fleming-and-nithya-venkateswaran" target="_blank">being comfortable while being uncomfortable</a>; QA Engineer Nithya Venkateswaran shared her improv skills with the crowd</li>
+<li><strong>Full-Stack Engineering: </strong>Software Engineer Nathan Stilwell <a href="http://tech.gilt.com/post/77190561156/fashionably-full-stack-scenes-from-last-nights" target="_blank">on WebSockets and his open-source project, SocketWrench</a></li>
+<li><strong>Looker NYC:</strong> Director of Data Engineering Geoff Guerdat on <a href="http://tech.gilt.com/2014/02/12/looker-gilt-presentation-includes-slideshow" target="_blank">Looker at Gilt</a></li>
+<li><strong>Open Analytics NYC</strong>: Data Evangelist Roger Huang on <a href="http://tech.gilt.com/2014/02/27/gilts-roger-huang-speaks-at-open-analytics-nyc" target="_blank">clickstream analysis</a></li>
+<li><strong>NYC CSS/UX:</strong> Lead Software Engineer Gregory Mazurek on &ldquo;<a href="http://tech.gilt.com/2014/02/26/interior-design-for-the-mobile-web-presentation" target="_blank">interior design for the mobile web</a>&rdquo;</li>
+<li><strong>Confoo:</strong> Principal Software Engineer Sean Smith on <a href="http://confoo.ca/en/speaker/sean-smith-1" target="_blank">the back-end of ecommerce</a></li>
+</ul><p><strong>March</strong></p>
+<ul><li><strong>Free Scala Course: </strong>Principal Engineer Gregor Heine and Lead Software Engineer John Kenny <a href="http://tech.gilt.com/2014/03/03/scenes-from-fridays-free-scala-course-at-gilt" target="_blank">tag-team-taught a full day of Scala</a></li>
+<li><strong>Startup CTO Summit:</strong> cofounder/CTO Michael Bryzek <a href="http://tech.gilt.com/2014/03/04/chatting-with-new-york-startup-cto-summit" target="_blank">keynoted at this inaugural conference for CTOs</a></li>
+<li><strong>NY Mobile App Developer Meetup:</strong> Principal Software Engineer Adam Kaplan on <a href="http://tech.gilt.com/2014/03/12/our-next-meetup-using-akka-to-scale-gilts" target="_blank">using Akka to scale Gilt’s massive push notification system</a></li>
+<li><strong>Hacker Union:</strong> Principal Systems Engineer Jonathan Leibiusky on <a href="http://tech.gilt.com/2014/03/06/exploring-docker-at-gilt-presentation-slides" target="_blank">Docker at Gilt</a></li>
+</ul><p><strong>April</strong></p>
+<ul><li><strong>XO Group: </strong>Cofounder/CTO Michael Bryzek on <a href="http://tech.gilt.com/2014/05/01/gilt-goes-to-xo-group" target="_blank">scaling Gilt&rsquo;s tech organization</a></li>
+<li><strong>Docker panel at Gilt:</strong> Michael again, this time <a href="http://tech.gilt.com/2014/04/30/video-and-photos-from-last-nights-awesome-docker" target="_blank">on our work with Docker</a></li>
+<li><strong>Dublin Scala Users Group: </strong>Software Engineer Chavdar Chernashki on <a href="http://tech.gilt.com/2014/04/25/java-8-vs-scala-and-more-at-the-dublin-scala" target="_blank">the differences between Java 8 and Scala</a></li>
+<li><strong>Brooklyn iOS Developer Meetup:</strong> Senior Software Engineer Matt Isaacs on <a href="http://tech.gilt.com/2014/04/18/check-out-the-slides-from-mobile-testing-at-gilt" target="_blank">mobile testing at Gilt</a></li>
+<li><strong>LambdaConf:</strong> Lead Software Engineer Yoni Goldberg on <a href="http://tech.gilt.com/2014/04/18/gilt-featured-at-this-weekends-lambdaconf" target="_blank">Scala microservices at Gilt</a></li>
+<li><strong>PGConf NYC:</strong> cofounder/CTO Michael Bryzek keynoted and <a href="http://tech.gilt.com/2014/04/02/gilt-co-founder-cto-michael-bryzek-to-keynote" target="_blank">discussed how and why we&rsquo;ve supported and used PostgreSQL</a></li>
+<li><strong>Boston Area Scala Enthusiasts:</strong> Lead Software Engineer Yoni Goldberg on <a href="http://tech.gilt.com/2014/04/07/going-the-extra-mile-more-than-200-extra-miles" target="_blank">our Scala-built microservices architecture</a></li>
+<li><strong>Agile NYC:</strong> Senior Director, PMO Heather Fleming and Director of Program Management Justin Riservato (&ldquo;Flemivato&rdquo;) on the <a href="http://tech.gilt.com/2014/04/15/check-out-the-slides-from-gilt-pmos-the-agile" target="_blank">Agile PMO</a></li>
+<li><strong>NYC HTML5:</strong> Principal Software Engineer Eric Shepherd on the &ldquo;<a href="http://tech.gilt.com/2014/04/14/nyc-html5-features-gilt-in-april" target="_blank">Matrix of Detection</a>&rdquo;</li>
+<li><strong>Hack Red Hook:</strong> I gave a <a href="http://tech.gilt.com/2014/04/18/gilt-goes-to-hack-red-hook-tonight" target="_blank">short presentation on the Gilt APIs</a></li>
+<li><strong>Portland Java User Group:</strong> Principal Software Engineer Sean Sullivan on <a href="http://tech.gilt.com/2014/04/16/taxes-and-payments-at-gilt" target="_blank">taxes and payments at Gilt</a></li>
+<li><strong>New York City Web Development Community</strong>: Senior Director, Back Office Engineering Christopher Hazlett on <a href="http://tech.gilt.com/2014/04/22/gilts-back-office-goes-to-the-snapple-theater" target="_blank">saying &ldquo;no&rdquo; for the greater good</a></li>
+</ul><p><strong>May</strong></p>
+<ul><li><strong>Fashion 2.0</strong>: Chief Data Scientist Igor Elbert on &ldquo;<a href="http://tech.gilt.com/2014/05/30/team-data-at-last-nights-fashion-2-0-panel" target="_blank">smart data and marketing intelligence</a>&rdquo;</li>
+<li><strong>Dublin Scala Users Group:</strong> Senior Software Engineer Christine Yokoyama on <a href="http://tech.gilt.com/2014/05/22/last-nights-mobile-engineering-at-gilt" target="_blank">Gilt&rsquo;s mobile engineering</a></li>
+<li><strong>Product Council NYC</strong>: VP Product Management &amp; UX Dominique Essig was on <a href="http://tech.gilt.com/2014/05/20/gilt-featured-at-tonights-product-council-nyc" target="_blank">the council&rsquo;s May panel</a></li>
+<li><strong>Full-Stack Engineering:</strong> Lead Software Engineer Will Chiong <a href="http://tech.gilt.com/2014/05/28/data-driven-personalization-at-gilt-video" target="_blank">on &ldquo;Data-Driven Personalization&rdquo;</a></li>
+<li><strong>!!Con</strong>: Software Engineer Jennifer Shin on &ldquo;<a href="http://tech.gilt.com/2014/05/14/gilt-presents-at-this-weekends-con" target="_blank">High Schoolers vs. Robots!!</a>&rdquo;</li>
+<li><strong>EmpireJS</strong>: Principal Software Engineer Eric Shepherd on &ldquo;<a href="http://tech.gilt.com/2014/05/13/gadgets-for-holistic-web-detection-gilt" target="_blank">Gadgets for Holistic Web Detection</a>&rdquo;</li>
+<li><strong>Ad Age Marketing Tech Summit:</strong> Steve Jacobs on <a href="http://events.adage.com/marktech2014/agenda" target="_blank">the relationship between CIOs and marketing teams</a></li>
+<li><strong>OMMA Mobile NY</strong>: Director of Mobile Product Christopher Gonzalez on <a href="http://www.mediapost.com/ommaatinternetweek/" target="_blank">our mobile innovations</a></li>
+</ul><p><strong>June</strong></p>
+<ul><li><strong>DockerCon: </strong>cofounder/CTO Michael Bryzek on &ldquo;<a href="http://tech.gilt.com/2014/07/02/immutable-infrastructure-with-docker-and-ec2" target="_blank">Immutable Infrastructure with Docker and EC2</a>&rdquo;<strong><br/></strong></li>
+<li><strong>QCon New York: </strong>Lead Software Engineer Yoni Goldberg <a href="http://tech.gilt.com/2014/10/31/video-of-scaling-gilt-from-monolithic-ruby-app" target="_blank">talked about our microservices architecture</a>; cofounder/CTO Michael Bryzek told his audience about <a href="http://tech.gilt.com/2014/09/30/learnings-from-building-and-scaling-gilt-video" target="_blank">how we&rsquo;ve scaled our tech organization</a></li>
+<li><strong>Typesafe webinar</strong>: Senior Software Engineer Giancarlo Silvestrin on <a href="http://tech.gilt.com/2014/07/28/play-framework-at-gilt-webinar-video" target="_blank">how we use Play Framework</a></li>
+<li><strong>The People&rsquo;s Side</strong>: VP Product Management &amp; UX Dominique Essig on <a href="http://tech.gilt.com/2014/06/02/rsvp-for-tonights-product-and-the-people-side-an" target="_blank">building a product team</a></li>
+<li><strong>New York Front End Coders:</strong> Principal Software Engineer Eric Shepherd on <a href="http://tech.gilt.com/2013/07/05/if-you-love-it-so-much-why-dont-you-write-a" target="_blank"><span class="full">building wrappers around jQuery-like APIs</span></a></li>
+</ul><h4>July</h4>
+<ul><li><strong>Metis NYC</strong>: Principal Data Scientist Igor Elbert <a href="http://tech.gilt.com/2014/07/21/watch-last-weeks-metis-data-science-meetup" target="_blank">on data science passion projects</a></li>
+<li><strong>NYC Java Users Group: </strong>Principal Systems Engineer Jonathan Leibiusky <a href="http://tech.gilt.com/2014/07/15/learn-about-jedis-and-redis-from-gilts-jonathan" target="_blank">on Jedis, the Redis Java client he created</a></li>
+<li><strong>NJ Tech Meetup</strong>: CIO Steve Jacobs on <a href="http://tech.gilt.com/2014/07/18/connection-where-emotions-drive-kpis-a-talk-by" target="_blank">how emotions drive KPIs </a></li>
+<li><strong>Docker Dublin</strong>: cofounder/CTO Michael Bryzek on <a href="http://tech.gilt.com/2014/07/10/a-great-turnout-at-last-nights-docker-dublin" target="_blank">our work with Docker</a></li>
+<li><strong>3DayStartup:</strong> I gave a brief talk on Gilt&rsquo;s tech culture and mentored startup teams on product development</li>
+</ul><h4>August</h4>
+<ul><li><strong>Appium Roadshow: </strong>Senior Software Engineer Matt Isaacs presented on <a href="http://tech.gilt.com/2014/08/21/gilt-presents-at-the-appium-roadshow-slideshow" target="_blank">how we&rsquo;re using Appium for our automated mobile testing efforts</a></li>
+<li><strong>iOSoho</strong>: Principal Engineer Evan Coyne Maloney from our mobile team talked about <a href="http://tech.gilt.com/2014/08/13/handling-changes-to-your-server-side-data-model" target="_blank">handling changes to your server-side data model</a></li>
+<li><strong>Distilled</strong>: Principal Software Engineer Eric Shepherd presented on gadgets for holistic web detection (see above video)</li>
+<li>
+<div><strong>Organization for the Understanding of Dynamic Languages</strong>: Senior Software Engineer Yoshi Sugawara gave <a href="http://tech.gilt.com/2014/08/25/an-intro-to-swift-slideshow" target="_blank">an intro to Swift</a></div>
+</li>
+</ul><h4>September</h4>
+<ul><li><span><strong>Atlassian Summit</strong>: Flemivato on “</span><a href="http://tech.gilt.com/2014/11/07/watch-the-agile-pmo-video" target="_blank"><span>The Agile PMO</span></a><span>”; Lead Software Engineer Yoni Goldberg on </span><a href="http://tech.gilt.com/2014/04/18/gilt-featured-at-this-weekends-lambdaconf" target="_blank"><span>scaling microservices at Gilt</span></a><span><br/></span></li>
+<li><span><strong>Code the Deal:</strong> I <a href="http://tech.gilt.com/2014/10/27/code-the-deal-and-watch-the-video" target="_blank">spoke</a> on a law-and-technology panel</span></li>
+<li><span><strong>DroidconNYC</strong>: Senior Software Engineer Kevin Schultz <a href="http://tech.gilt.com/2014/09/19/gilt-presents-at-this-weekends-droidcon-nyc" target="_blank">presented on building maintainable Android applications</a></span></li>
+<li><span><strong>Dublin Scala Users Group</strong>: Senior Software Engineer Val Dumitrescu and Software Engineer Pawel Raszewski <a href="http://tech.gilt.com/2014/09/24/slideshows-and-photos-from-last-nights-dublin" target="_blank">debuted their open source CAVE project </a></span></li>
+</ul><h4>October</h4>
+<ul><li><strong>Interop: </strong>cofounder/CTO Michael Bryzek <a href="http://tech.gilt.com/2014/10/03/innovation-driven-by-the-open-source-ethos-gilt" target="_blank">gave one of the conference&rsquo;s keynote addresses</a>, focusing on the relationship between open source principles and innovation; I spoke on a women in tech panel</li>
+<li><strong>Strata + Hadoop World:</strong> Principal Data Scientist <a href="http://strataconf.com/stratany2014/public/schedule/detail/36225" target="_blank">Igor Elbert</a> and Director of Data Engineering Geoff Guerdat both spoke at this major conference</li>
+<li><strong>The Future of Retail</strong>: Gilt VP Product Management &amp; User Experience Dominique Essig <a href="http://tech.gilt.com/2014/10/24/gilt-featured-at-todays-nyu-stern-luxury-retail" target="_blank">spoke at this luxury and retail conference</a> held at New York University</li>
+<li><strong>Bucks County Tech</strong>: Principal Data Engineer Michael Hansen on <a href="http://tech.gilt.com/2014/10/28/gilt-presents-tonight-at-meetme" target="_blank">our real-time data capturing</a> efforts</li>
+<li><strong>Gilt Tech Events:</strong> Our Special Operations team <a href="http://tech.gilt.com/2014/10/31/zero-room-to-move-at-our-rwd-gilt-meetup" target="_blank">shared their responsive web design expertise</a> with a standing-room-only crowd</li>
+<li><strong>Rent the Runway: </strong>Flemivato on &ldquo;The Agile PMO&rdquo;</li>
+<li><strong>Lean Eggs &amp; Ham:</strong> Again, Flemivato <a href="http://tech.gilt.com/2014/10/24/slideshow-gilt-pmo-headlines-the-next-lean-eggs" target="_blank">spoke</a>!</li>
+<li><strong>Cocoaheads Miami: </strong>Matt Isaacs on <a href="http://www.meetup.com/CocoaHeads-Miami/events/209717682/" target="_blank">event tracking on iOS</a></li>
+<li><strong>Fordham School of Law Data Night:</strong> Senior Manager of Business Processes and Internal Controls Eric Fishman on <a href="http://fashionlawinstitute.com/institute-events/data-night-the-lawyers-role-in-data-privacy-e-commerce" target="_blank">how we protect our customers&rsquo; data</a></li>
+</ul><h4>November</h4>
+<ul><li><span><strong>NYCEDC Tech Talent Draft</strong>: Senior Program Manager Fidan Kasra <a href="http://tech.gilt.com/2014/11/12/gilt-at-last-nights-tech-talent-draft-cuny" target="_blank">on this careers panel at CUNY</a><br/></span></li>
+<li><span><strong>Tech@NYU</strong>: Senior UX Designer David Park </span>and Senior Interactive Designer Christopher Barr on “<a href="http://tech.gilt.com/2014/11/04/mobile-design-at-gilt-see-the-slides" target="_blank">Mobile Design at Gilt</a>”; I spoke on a <a href="https://www.facebook.com/events/296855990519913/" target="_blank">diversity in tech panel</a></li>
+<li><span><strong>Typesafe (Webinar):</strong> Senior Software Engineer Michael Reed on &ldquo;<a href="http://tech.gilt.com/2014/12/05/responsive-tools-and-pushy-actors-akka-at-gilt" target="_blank">Akka at Gilt</a>&rdquo;</span></li>
+<li><strong>Hack Princeton: </strong>Principal Data Engineer Michael Hansen mentored at this hackathon</li>
+<li><strong>Studio at Cornell Tech:</strong> Lead Software Engineer Gregory Mazurek and Software Engineer Kyle Dorman talked about tech careers</li>
+<li><strong>Agile Development and Better Software/East conference: </strong>Flemivato on &ldquo;The Agile PMO&rdquo;</li>
+</ul><h4>December</h4>
+<ul><li><span><strong>Design Driven NYC</strong>: Director of Product Andrew Chen on &ldquo;<a href="http://tech.gilt.com/2014/12/08/designing-for-china-with-gilts-andrew-chen" target="_blank">Designing for China</a>&rdquo; </span></li>
+</ul><h3>Dublin Gets an(other) Awesome Space</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/b57c46cfa1ad87aaf84fc58c6e5854e2/tumblr_inline_nhd4pn5ETz1s17bu5.jpg"/></p>
+<p>Over the summer our Dublin team moved into a new office in Dublin 4 that features roomy conference areas, a colorful commons area and a modern kitchen. While we miss our old view of the Liffey, we’ve welcomed the opportunity to host <a href="http://tech.gilt.com/2014/09/24/slideshows-and-photos-from-last-nights-dublin" target="_blank"><span>meetups</span></a><span> and free courses&ndash;as well as </span><a href="http://tech.gilt.com/2014/11/14/hallway-to-the-danger-zone-gilt-techs-first-ever" target="_blank"><span>paper airplane contests</span></a><span>, movie nights, and </span><a href="http://tech.gilt.com/2014/10/31/happy-gregorween" target="_blank"><span>Gregorweens</span></a><span>&ndash;<span>in our own home</span>.</span></p>
+<h3>Martin Odersky Visits Gilt</h3>
+<p><iframe frameborder="0" height="480" src="//www.youtube.com/embed/dXwhPnXQqn8" width="640"></iframe></p>
+<p><span>Friends and followers of Gilt Tech know that we’re a proud Scala shop, so having the actual creator of the Scala programming language visit our NYC office was pretty awesome. In May, </span><a href="http://tech.gilt.com/2014/05/21/dr-martin-odersky-at-gilt-5-19-2014-video" target="_blank"><span>Dr. Martin Odersky </span></a><span>gave two talks in one day at Gilt: An afternoon Q&amp;A session with our engineering team, and an evening presentation for the tech community. In addition to being a brilliant computer scientist, Dr. Odersky is incredibly humble and generous with his time. </span><span></span></p>
+<h3>We Broke Bread (or Pizza) With Some Other Amazing People</h3>
+<p><span>In addition to Dr. Odersky, other tech leaders who shared their knowledge and a meal with our team in 2014 included:</span></p>
+<ul><li><span><a href="http://tech.gilt.com/2014/03/21/gilt-lunches-with-adrian-cockcroft-of-battery" target="_blank"> Adrian Cockcroft</a> of Battery Ventures</span></li>
+<li><span><a href="http://tech.gilt.com/2014/05/07/gilt-lunchtime-tech-talk-parse" target="_blank">Bear Douglas</a> of Twitter (formerly of Facebook)<br/></span></li>
+<li><span>Zola CEO <a href="http://tech.gilt.com/2014/03/26/a-special-guest-and-familiar-face-visits-with" target="_blank">Shan-Lyn Ma</a></span></li>
+<li><span><a href="http://tech.gilt.com/2014/01/21/some-special-guests-from-typesafe-and-the-akka" target="_blank">James Ward, Henrik Engström and Tim Kirk</a> of Typesafe<br/></span></li>
+<li><span>Dr. <a href="http://tech.gilt.com/2014/04/28/dr-roland-kuhn-of-typesafe-visits-gilt" target="_blank">Roland Kuhn</a> of Typesafe</span></li>
+<li><span>Node.js experts <a href="http://tech.gilt.com/2014/10/01/two-of-europes-top-node-js-experts-visit-gilt" target="_blank">Cian Ó Maidín and Richard Rodger</a> <br/></span></li>
+<li><span><a href="http://tech.gilt.com/2014/10/21/gil-at-gilt-our-lunchtime-chat-with-gil-tene" target="_blank">Gil Tene</a> of Azul Systems<br/></span></li>
+<li><span><a href="http://tech.gilt.com/2014/05/27/gilt-lunches-with-brandon-philips-of-coreos" target="_blank">Brandon Philips</a> of CoreOS</span></li>
+<li><span>&ldquo;Father of Data Warehousing&rdquo; <a href="http://tech.gilt.com/2014/06/26/gilt-lunches-with-the-father-of-data-warehousing" target="_blank">Bill Inmon</a></span></li>
+<li><span><a href="http://tech.gilt.com/2014/04/25/gilt-lunchtime-tech-talk-spray-some-nsq-on-it" target="_blank">Matt Reiferson</a> of Torando Labs</span></li>
+</ul><h3>We Taught You Things</h3>
+<p><span>Our free tech courses initiative continues to grow and grow. The courses we offered this year:<br/></span></p>
+<p><strong>NYC:</strong></p>
+<ul><li><span><a href="http://tech.gilt.com/2014/08/27/scenes-from-gilts-free-go-class" target="_blank">Go</a> <br/></span></li>
+<li><a href="http://tech.gilt.com/2014/10/08/our-next-free-course-at-gilt-data-visualization" target="_blank"><span>Data Visualization</span></a></li>
+<li><a href="http://tech.gilt.com/2014/11/24/next-free-tech-course-at-gilt-nyc-chef" target="_blank"><span>Chef</span></a></li>
+<li><a href="http://tech.gilt.com/2014/07/16/josh-suereth-at-gilt" target="_blank"><span>sbt</span></a></li>
+<li><a href="http://tech.gilt.com/2014/06/10/our-next-free-class-at-gilt-nyc-advanced" target="_blank"><span>Scala libraries</span></a></li>
+<li><a href="http://tech.gilt.com/2014/05/23/gaslight-at-gilt-scenes-from-yesterdays-free" target="_blank"><span>AngularJS</span></a></li>
+<li><a href="http://tech.gilt.com/2014/05/09/our-next-free-class-at-gilt-cartodb-on-june-4" target="_blank"><span>CartoDB</span></a></li>
+<li><a href="http://tech.gilt.com/2014/03/27/thumbs-up-to-a-great-git-github-skills-class" target="_blank"><span>Git/GitHub</span></a></li>
+<li><a href="http://tech.gilt.com/2014/03/10/free-tech-course-at-gilt-nyc-hadoop-with-sameer" target="_blank"><span>Hadoop</span></a></li>
+<li><a href="http://tech.gilt.com/2014/03/03/scenes-from-fridays-free-scala-course-at-gilt" target="_blank"><span>Scala</span></a></li>
+</ul><p><strong>Dublin:</strong></p>
+<ul><li><a href="http://tech.gilt.com/2014/06/27/gilts-next-free-tech-course-in-dublin-angularjs" target="_blank">AngularJS</a></li>
+<li><a href="http://tech.gilt.com/2014/09/08/new-gilt-hires-get-a-crash-course-in-scala" target="_blank">Scala</a> (internal, ongoing)</li>
+<li><a href="http://tech.gilt.com/2014/06/04/our-next-free-tech-class-at-gilt-mongodb-in" target="_blank">MongoDB</a></li>
+<li><a href="http://tech.gilt.com/2014/08/12/our-next-free-course-at-gilt-dublin-machine" target="_blank">Machine Learning</a></li>
+<li><a href="http://tech.gilt.com/2014/03/31/bigchat-and-other-highlights-from-last-weeks" target="_blank">Cassandra</a></li>
+<li><a href="http://tech.gilt.com/2013/11/01/our-next-free-tech-course-at-gilt-hadoop-with" target="_blank">Hadoop</a></li>
+</ul><p><span>And thanks to Uncubed, we&rsquo;re now getting to teach you online. Through Uncubed Edge, a new online platform, Lead Software Engineer Gregory Mazurek and Principal Data Scientist Igor Elbert have <a href="http://tech.gilt.com/2014/12/05/learn-cutting-edge-techniques-from-gilt-and" target="_blank">created one-hour courses</a> on responsive and adaptive design at Gilt (that&rsquo;s Greg) and saving time with MetaSQL (that&rsquo;s Igor).</span></p>
+<h3>We Had Cool Interns</h3>
+<p>University of Waterloo student <a href="http://tech.gilt.com/2014/05/13/welcome-chris-poenaru" target="_blank">Chris Poenaru</a> took advantage of his school&rsquo;s co-op program to spend his summer with our engineering team, while University of Delaware senior Samantha Sabo spent hers with our Program Management Organization. Samantha <a href="http://tech.gilt.com/2014/08/14/summer-interning-with-gilts-program-management" target="_blank">wrote a blog post about her experience at Gilt</a>:</p>
+<blockquote>
+<p>I sat in on sprint planning meetings and retrospectives, joined the team for social events, company softball games and team lunches, and observed how the program managers do their jobs. Every day I learned something new or developed a new skill.</p>
+</blockquote>
+<p>Lucky for us, Samantha was able to come back to Gilt for a few wintry weeks and intern some more&ndash;she&rsquo;ll be with us through the end of January 2015. <em><strong>If you&rsquo;d like to be a Gilt software engineering intern in summer 2015, <a href="http://www.gilt.com/careers/job/r1905/" target="_blank">go here to apply</a>.</strong></em></p>
+<h3>The Plasma Prix</h3>
+<p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/uvV0MOt7rq8" width="640"></iframe></p>
+<p><span>Our tech teams in NYC and Dublin spent much of February learning how to drive PlasmaCars: small plastic cars usually steered by children, but hearty enough to accommodate a (svelte) 6’8” Gilt technologist. When we all got together for our Architecture Summit in NYC, we held the Plasma Prix: a race pitting the top ten-fastest PlasmaCar racers against each other in a bid for fame, glory, and trophies. Relive the magic by watching our</span><a href="http://tech.gilt.com/2014/03/25/the-2014-gilt-plasma-prix-the-movie" target="_blank"><span> movie</span></a><span> about it. </span></p>
+<h3>We Had Non-Vehicular Fun, Too</h3>
+<p><span><a href="http://tech.gilt.com/2014/05/01/gilt-techs-first-game-night-was-a-blast" target="_blank">Game night</a>!</span></p>
+<p><span><a href="http://tech.gilt.com/2014/02/07/fancy-cheese-friday" target="_blank">Fancy Cheese Fridays</a> (and Cheese-mageddons)! </span></p>
+<p><span><a href="http://tech.gilt.com/2014/10/15/okta-bierfest" target="_blank">OKTA-bierfest!</a> </span></p>
+<p><span><a href="http://tech.gilt.com/2014/10/31/happy-gregorween" target="_blank">Gregorween</a>! </span></p>
+<p><span><a href="http://tech.gilt.com/2014/07/01/gregor-brews-some-anchorage-weissbier" target="_blank">Gregorbier</a>! </span></p>
+<p><a href="http://tech.gilt.com/2014/02/18/scenes-from-the-annual-encryption-key-ceremony-at" target="_blank"><span>Encrypting!</span></a></p>
+<p><span><a href="http://tech.gilt.com/2014/11/07/team-scalasaurus-ftw" target="_blank">NYCity-wide trivia victories</a>!</span></p>
+<p><span><a href="http://tech.gilt.com/2014/04/03/bronx-academy-of-software-engineering-students" target="_blank">Zumo robot-making with the kids from Bronx Academy of Software Engineering</a>!</span></p>
+<p><span><a href="http://tech.gilt.com/2014/09/26/hacking-hipchat-for-foosball-fun" target="_blank">HipFoosball</a>!</span></p>
+<p><span><a href="http://tech.gilt.com/2014/09/02/gilttech-celebrates-wear-white-after-labor-day" target="_blank">White after Labor Day<span></span></a><span><span>!</span></span></span></p>
+<p><span><a href="http://tech.gilt.com/2014/11/14/hallway-to-the-danger-zone-gilt-techs-first-ever" target="_blank">Paper airplane contests</a>!</span></p>
+<p><a href="http://tech.gilt.com/2014/09/16/dream-girl-documentarian-visits-with-gilts" target="_blank"><span>Wine, cheese, and filmmakers<span></span></span></a><span><span>!</span></span></p>
+<p><a href="http://tech.gilt.com/2014/06/04/gilts-special-ops-team-has-a-mini-offsite" target="_blank"><span>Mini-offsites</span></a><span><span>!</span></span></p>
+<p><a href="http://tech.gilt.com/2014/04/11/whats-for-brunch" target="_blank"><span>Bagel brunching</span></a><span><span>!</span></span></p>
+<p><span><a href="http://tech.gilt.com/2014/01/24/meet-the-gilt-tech-office-horse" target="_blank">Horse adoption</a>!</span></p>
+<p><span>These are just some of the fun things we were all about in 2014. </span></p>
+<h3>The Gilt Design Team Joins Tech</h3>
+<p><span>Making sure that we’re as bold and innovative as possible about driving user engagement is one of our goals. With this in mind, we decided this summer to more tightly align our Web Design and User Experience teams&ndash;allowing for closer collaboration between UX, design, product, and front-end developers. With this unification we’ve generated greater momentum around strategic initiatives and evolving the customer experience.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#DockerCon-ref">DockerCon <span>3</span></a>
+      
+    <a href="/tags.html#Atlassian Summit-ref">Atlassian Summit <span>4</span></a>
+      
+    <a href="/tags.html#Interop-ref">Interop <span>4</span></a>
+      
+    <a href="/tags.html#Design Driven NYC-ref">Design Driven NYC <span>4</span></a>
+      
+    <a href="/tags.html#Typesafe-ref">Typesafe <span>22</span></a>
+      
+    <a href="/tags.html#PlasmaCar-ref">PlasmaCar <span>4</span></a>
+      
+    <a href="/tags.html#Plasma Prix-ref">Plasma Prix <span>4</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#evangelism-ref">evangelism <span>3</span></a>
+      
+    <a href="/tags.html#Martin Odersky-ref">Martin Odersky <span>6</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#free tech courses-ref">free tech courses <span>22</span></a>
+      
+    <a href="/tags.html#free tech classes-ref">free tech classes <span>29</span></a>
+      
+    <a href="/tags.html#free tech classes at Gilt-ref">free tech classes at Gilt <span>4</span></a>
+      
+    <a href="/tags.html#UX-ref">UX <span>18</span></a>
+      
+    <a href="/tags.html#user experience-ref">user experience <span>23</span></a>
+      
+    <a href="/tags.html#Kyle Dorman-ref">Kyle Dorman <span>6</span></a>
+      
+    <a href="/tags.html#Fidan Kasra-ref">Fidan Kasra <span>3</span></a>
+      
+    <a href="/tags.html#Tech Talent Draft-ref">Tech Talent Draft <span>4</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    <a href="/tags.html#Dublin Scala Users Group-ref">Dublin Scala Users Group <span>10</span></a>
+      
+    <a href="/tags.html#bestof2014-ref">bestof2014 <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/23/best-of-gilt-2014-security">Best of Gilt 2014: Security</a></h1>
+  
+  <header>
+    
+    <time>23 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span><span><img alt="image" src="https://31.media.tumblr.com/d6bbe664eddaeb39126c2509c1d2b35b/tumblr_inline_nh23r3uW6L1s17bu5.png" width="800"/></span></span></p>
+
+<p><em>Photo of dangerous hacker by Mike Hendren <a href="http://www.flickr.com/photos/thrumikesviewfinder/6771208003/in/photolist-bjmdez-RBbbj-RBaPJ-33bmPq-hyEL2p-q776tA-h7zJGB-4oeckP-dWBQ6g-aw66J8-diU6je-fG8Mib-bkA1Lm-paZaXs-bWU33u-8WeWSp-6CC58N-9SPCzf-6CC55q-6XS7PU-dipTch-a89UgM-4XbwhY-5fV2aB-nurBWm-2he9dV-aSoKyH-bF6kV9-hPhLHZ-dipToE-av6N1N-58caSN-4Zi6vh-6xUyUb-chqjK5-43gZh-2rA2L-5pgFU9-dB4SDX-2hdLSz-bkA1WE-hywsso-o1rPRH-4GUsTW-dTmqBD-bkA1UQ-byuUnB-byuUFD-qqdrPC-j6baQm" target="_blank">at Creative Commons</a>.</em></p>
+<p><span><span></span>2014 was a wild ride in the security world. We saw everything from crazy vulnerabilities in very popular software (looking at you, </span><a href="https://www.openssl.org/" target="_blank"><span>OpenSSL</span></a><span>) to massive DDoS attacks against&hellip;well, everyone. Being an e-commerce company with nine million members, Gilt is always facing attacks from hackers and fraudsters alike. Here are three things that we learned in 2014 that helped us stay in the saddle, security-wise:</span></p>
+<h3>1. Prepare for the DDoS</h3>
+<p><span>Sending a </span><a href="http://www.usatoday.com/story/news/nation/2014/05/14/ransom-ware-computer-dark-web-criminal/8843633/" target="_blank"><span>ransom note</span></a><span> to extort money from top tech companies, then following up with DDoS attacks on companies who refused to comply, was a very common tactic used by hackers this year. </span><a href="http://techcrunch.com/2014/04/21/say-media-owned-blogging-platform-typepad-enters-day-5-of-on-and-off-ddos-attacks/" target="_blank"><span>Meetup, SAY Media, Vimeo and other major companies</span></a><span> all suffered headaches caused by hackers who deployed this strategy. And the size of DDoS attacks has grown larger than ever, as </span><a href="https://www.verisigninc.com/assets/report-ddos-trends-Q22014.pdf" target="_blank"><span>Verisign</span></a><span> and </span><a href="http://www.prolexic.com/kcresources/attack-report/attack_report_q214/Prolexic-Q22014-Global-Attack-Report-A4.pdf" target="_blank"><span>Prolexic</span></a><span> (two leading Internet security firms) both report.</span></p>
+<p><span>The best way to counter these attacks is to get some sort of DDoS protection in place. Gilt jumped on board with </span><a href="https://www.cloudflare.com/" target="_blank"><span>CloudFlare</span></a><span>, a company whose specialty is blocking DDoS attacks. CloudFlare has been experiencing something of a business windfall in recent years thanks to the spike in attacks&ndash;as </span><a href="http://www.cnbc.com/id/102278567#." target="_blank"><span>CNBC reports</span></a><span>, the company plans to build a new data center per week in the coming year&ndash;and we’ve had a great experience working with them.</span></p>
+<p><span>A word to the wise: Lower your DNS TTLs. If you need to get behind a service like Cloudflare, having lower-than-average TTLs will help you to move traffic over to your new DDoS-protected IPs more quickly. Otherwise, your traffic will be stuck hitting the old IPs until the ISPs’ DNS cache refreshes.<span> <br/></span></span></p>
+<h3>2. Have solid plans/policies in place</h3>
+<p><span>Everyone uses their plans and policies for more than &ldquo;compliance,&rdquo; right? </span></p>
+<p><span>Right????</span></p>
+<p><span>With all of the breaches and leaked-credential attacks on companies worldwide, we’ve seen an increase in </span><a href="http://en.wikipedia.org/wiki/Brute-force_attack#Credential_recycling" target="_blank"><span>credential brute-force attacks</span></a><span>. In these, attackers gain access to batches of user:password combos, then try them all until he finds one that works. The first question that everyone asks when such an attack occurs is, “What do we do?” How prepared your company is to respond can mean the difference between successfully mitigating an attack and having to ask your security team, “Wait&ndash;how many accounts has the attacker accessed?” </span></p>
+<p><span>Speed in incident response is key. Plan for security issues and develop policies for acting quickly should they befall your company. Make sure everyone knows their role and works quickly to close the issue.</span></p>
+<h3>3. Be alert to new kinds of phishing attacks</h3>
+<p><span>Security buffs (and attackers) all know that phishing 1) works well and 2) is the easy way into a network. One increasingly common phishing tactic involves attackers </span><a href="http://www.bankinfosecurity.com/interviews/david-pollino-i-2397/op-1" target="_blank"><span>impersonating C-level executives</span></a><span> in order to get employees to quickly carry out ad-hoc tasks, such as wire-transferring money to a fraudulent account. At Gilt, we’ve combated this by establishing a rule to prepend &ldquo;Potential Phishing Attempt!&rdquo; to subject lines for specific emails that appear to come from a Gilt email account, but are actually spoofed. The check compares the Sender with the SPF record, and prepends the phishing subject line to any email subject that violates the rule.</span></p>
+<h3>4. Train your users</h3>
+<p><span>As with most things in life, the best way to get better at doing something (like avoiding phishing emails) is through practice. To this end, we&rsquo;ve started using </span><a href="http://www.phishingfrenzy.com/" target="_blank"><span>Phishing Frenzy</span></a><span>, an open source phishing framework, to phish our own user base and train them to better spot real phishing attacks. </span></p>
+<p><span>Attackers are getting more and more sophisticated all the time. Luckily, so are security engineers. With that, we wish you a safe and secure holiday and a phish-free 2015.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Chip Durland-ref">Chip Durland <span>2</span></a>
+      
+    <a href="/tags.html#security-ref">security <span>5</span></a>
+      
+    <a href="/tags.html#CloudFlare-ref">CloudFlare <span>1</span></a>
+      
+    <a href="/tags.html#DDoS-ref">DDoS <span>1</span></a>
+      
+    <a href="/tags.html#ransom note-ref">ransom note <span>1</span></a>
+      
+    <a href="/tags.html#DDoS attacks-ref">DDoS attacks <span>1</span></a>
+      
+    <a href="/tags.html#TTLs-ref">TTLs <span>1</span></a>
+      
+    <a href="/tags.html#phishing-ref">phishing <span>1</span></a>
+      
+    <a href="/tags.html#phish-ref">phish <span>1</span></a>
+      
+    <a href="/tags.html#masquerading-ref">masquerading <span>1</span></a>
+      
+    <a href="/tags.html#Verisign-ref">Verisign <span>1</span></a>
+      
+    <a href="/tags.html#Prolexic-ref">Prolexic <span>1</span></a>
+      
+    <a href="/tags.html#OpenSSL-ref">OpenSSL <span>1</span></a>
+      
+    <a href="/tags.html#Mike Hendren-ref">Mike Hendren <span>1</span></a>
+      
+    <a href="/tags.html#Phishing Frenzy-ref">Phishing Frenzy <span>1</span></a>
+      
+    <a href="/tags.html#bestof2014-ref">bestof2014 <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/23/video-gilt-back-offices-2014-in-2-33">Video: Gilt Back Office's 2014 in 2:33</a></h1>
+  
+  <header>
+    
+    <time>23 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/7EMHHTFS4VA?list=UUAwLkGR6kyNlJSjrkj4W4iw" width="640"></iframe></p>
+<p>Gilt Director of Program Management <a href="http://tech.gilt.com/search/justin+riservato" target="_blank">Justin Riservato</a> and Senior Director, Back Office Systems <a href="http://tech.gilt.com/search/christopher+hazlett" target="_blank">Christopher Hazlett</a> wanted to list in a video everything the Back Office and Global Engineering teams accomplished in 2014. So they recruited other members of the Gilt PMO, found some markers and got to work. The cast:</p>
+<ul><li>Justin Riservato, Director</li>
+<li><a href="http://tech.gilt.com/search/mackenzie+nicholson" target="_blank">Mackenzie Nicholson</a>, Actor</li>
+<li>Patrick Richardson, Actor</li>
+<li>Christopher Hazlett, Actor</li>
+<li><a href="http://tech.gilt.com/search/justin+vitale" target="_blank">Justin Vitale</a>, Cinematographer</li>
+<li><a href="http://tech.gilt.com/search/heather+fleming" target="_blank">Heather Fleming</a>, Moral Supporter</li>
+<li><a href="http://tech.gilt.com/search/lauri+apple" target="_blank">Lauri Apple</a>, Composer</li>
+</ul><p>An extra shout-out to Justin Vitale, who stood almost perfectly straight for 1.5 hours while holding his iPhone to make this video possible.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Back Office-ref">Back Office <span>8</span></a>
+      
+    <a href="/tags.html#Global-ref">Global <span>1</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#Patrick Richardson-ref">Patrick Richardson <span>2</span></a>
+      
+    <a href="/tags.html#Mackenzie Nicholson-ref">Mackenzie Nicholson <span>2</span></a>
+      
+    <a href="/tags.html#Justin Vitale-ref">Justin Vitale <span>2</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    <a href="/tags.html#Lauri Apple-ref">Lauri Apple <span>6</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/22/best-of-gilt-2014-product-and-user-experience">Best of Gilt 2014: Product and User Experience</a></h1>
+  
+  <header>
+    
+    <time>22 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Today&rsquo;s &ldquo;Best of&rdquo; list highlights some of the fantastic new features and user experience improvements launched by Gilt&rsquo;s product and UX team in 2014. Be sure to check out our other &ldquo;Best of 2014&rdquo; posts celebrating <a href="http://tech.gilt.com/2014/12/19/best-of-gilt-2014-engineering" target="_blank">Gilt Engineering</a>, the <a href="http://tech.gilt.com/2014/12/19/the-gilt-personalization-teams-best-of-list-for" target="_blank">Gilt Personalization team&rsquo;s favorite things of 2014</a>, and the <a href="http://tech.gilt.com/2014/12/17/the-gilt-mobile-teams-favorite-apps-of-2014" target="_blank">Gilt Mobile Team&rsquo;s favorite apps of the year</a>.</p>
+<h3>11/11 relaunch + Alipay</h3>
+<p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/_DcStWhZ_yY" width="640"></iframe></p>
+<p><span>Gilt celebrated the most lucrative Singles’ Day yet by </span><a href="http://tech.gilt.com/2014/11/10/betting-on-china-gilts-relaunch-into-the-worlds" target="_blank"><span>relaunching in China</span></a><span> with an exciting new set of products and features. Language localization, integration of the Alipay and UnionPay platforms, and the launch of our iOS and Android apps in Chinese were just some of the elements of this amazing company-wide effort. Our hard work paid off in huge sales and coverage from the likes of </span><a href="http://tech.gilt.com/2014/11/12/bloomberg-covers-gilts-singles-day-relaunch-in" target="_blank"><span>Businessweek</span></a><span> and <em>Women&rsquo;s Wear Daily</em>. Earlier this month, Gilt Director of Product Andrew Chen recapped his experiences working on 11/11 for the </span><a href="http://tech.gilt.com/2014/12/08/designing-for-china-with-gilts-andrew-chen" target="_blank"><span>Design Driven NYC meetup</span></a><span>.</span></p>
+<h3>The Shops</h3>
+<p><span>Looking for a business suit, a new pair of jeans, or special-occasion item? </span><a href="http://tech.gilt.com/2014/07/30/new-gilt-product-feature-the-shops" target="_blank"><span>The Shops</span></a><span>, released in July, is a Gilt product feature that provides destination spots for customers to browse and shop for the basics. Current shops include The Art Shop, The Accessories Shop (men), and The Holiday Gifts Shop. How much simpler could shopping get?</span></p>
+<h3>One-Hour Free Shipping Countdown</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/d254be8b6c81fcecefa01213800a5ead/tumblr_inline_ngzvwasK3M1s17bu5.png"/></span></p>
+
+<p><span>To create a sense of urgency, we created a feature showing customers how much time they have left to take advantage of their one hour of free shipping after making a purchase. The timer follows the user on all the pages they browse across sales and categories.</span></p>
+<h3>Gilt Unlimited</h3>
+<p><span>In July, we rolled out the Gilt Unlimited shipping option to all of our members. With Gilt Unlimited, our members pay $9.95 once and enjoy free shipping for 30 days for all orders shipped within the U.S. This proved to be a compelling shipping option for our customers.</span></p>
+<h3>Personalized Sales Experience</h3>
+<p><span>Our personalized sales initiative allows us to decide in real-time which sales to show to which users based on their previous behavior. If it’s Thursday, and you missed a sale on Monday that you would have really liked (based on your past visits to Gilt), you&rsquo;ll still be able to see the sale.</span></p>
+<h3>New Product Detail and Product Landing Pages</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/7d88b4a30129546b603f0fa52b0dfb23/tumblr_inline_ngzweqh5HA1s17bu5.png" width="800"/></p>
+
+<p><span>Keeping our shopping experience fresh and exciting is one of our primary goals. To this end, in September we revamped our product pages by enlarging our imagery; making it easier to switch from selecting a color to selecting a size and adding it to the shopping cart; bringing more recommended products to the top of the screen; optimizing our content and social sharing layouts, and increasing the number of “You May Also Like” products from three to four. </span></p>
+<h3>Gilt Global Localization System</h3>
+<p><span>As we’ve continued to grow our Global customer base, we’re keenly aware of our need to serve our customers in their native language. Given that Gilt has been built on an English centric system, we had to develop a new way for us to provide translations for any piece of static content on our site our mobile apps. This system has proven to allow instantaneous insertion of translations and given us a strong edge in our high priority international countries.</span></p>
+<h3>New Navigation Bar</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/c8bbe7fb060095fb4d760572ce938d6b/tumblr_inline_ngzwc2hBFo1s17bu5.png" width="800"/></span></p>
+
+<p><span>In July, our user experience team completed work on a </span><a href="http://tech.gilt.com/2014/07/22/designing-a-responsive-navigation" target="_blank"><span>new Gilt navigation bar</span></a><span> that saves space, highlights discounts for our customers, and aligns with our goals to make the Gilt.com website responsive. Our new nav earned the notice of others in the design community, including </span><a href="https://twitter.com/UXBooth/status/494860033331458049" target="_blank"><span>UX Booth</span></a><span>. </span></p>
+<h3>Post Purchase Waitlist</h3>
+<p><span>After noticing that our customers’ waitlists combined amounted to $9 billion in potential sales, we launched this feature in May. Created by Global Lead Software Engineer Karl Norling, Post Purchase Waitlist shows available Waitlist items on the receipt page after a customer places an order, thereby alerting them to which of their personal waitlist items are available and giving them an opportunity to buy them. Post Purchase Waitlist has generated more than $36 million for Gilt so far. </span></p>
+<h3>Gilt Direct<span></span></h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/a3490013757ccf3b40e62e2ed8d35643/tumblr_inline_ngzw4z0YYk1s17bu5.png" width="800"/></span></p>
+<p><span></span><span>Launched in August, </span><a href="https://direct.gilt.com/" target="_blank"><span>Gilt Direct</span></a><span> offers vendors a brand-new way to get their products on Gilt.com and sell them to our millions of users. Through an online portal, vendors can upload their photos, product descriptions and pricing to our system; then our buyers hand-select items based on our sales calendar and needs. Vendors then receive the orders, and ship the goods directly to customers. Gilt Direct is one of our innovative efforts to introduce new brands to our users and discover great products.</span></p>
+<h3>Shop the Warehouse</h3>
+<p><span>Shop the Warehouse has augmented Gilt’s keyword search index with products that we’ve sold before, but that aren’t in an upcoming sale. This feature has greatly increased the number of products available for our customers to purchase and has improved search traffic. On the engineering side of things, Shop the Warehouse illustrates the power of our microservices architecture in that there is nice isolation between the service powering search traffic and the service powering sale traffic.</span></p>
+<h3>Today’s Best Sellers</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/3e05ba789b35d1b9485ce07f7eba83f6/tumblr_inline_ngzwab69Qp1s17bu5.png" width="800"/></span></p>
+
+<p><span>Curious about the day’s highest-selling products at Gilt? <a href="http://tech.gilt.com/2014/11/04/product-launch-todays-best-sellers" target="_blank">Today&rsquo;s Best Sellers</a> tells you what they are&ndash;and also helps you to discover new products and brands. </span></p>
+<h3>We Raised Shopping Cart Limits From Five to 15 Items</h3>
+<p><span>Just last week we raised our cart limit from 5 to 15 items for desktop and mobile apps. Making our cart bigger provides value to all our members&ndash;especially international customers, who have a higher tendency to max out the cart limit of 5 items.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gilt Product-ref">Gilt Product <span>17</span></a>
+      
+    <a href="/tags.html#UX-ref">UX <span>18</span></a>
+      
+    <a href="/tags.html#user experience-ref">user experience <span>23</span></a>
+      
+    <a href="/tags.html#product management-ref">product management <span>10</span></a>
+      
+    <a href="/tags.html#Andrew Chen-ref">Andrew Chen <span>9</span></a>
+      
+    <a href="/tags.html#Singles Day-ref">Singles Day <span>2</span></a>
+      
+    <a href="/tags.html#China-ref">China <span>4</span></a>
+      
+    <a href="/tags.html#Shop the Warehouse-ref">Shop the Warehouse <span>1</span></a>
+      
+    <a href="/tags.html#Today's Best Sellers-ref">Today's Best Sellers <span>1</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    <a href="/tags.html#shopping-ref">shopping <span>13</span></a>
+      
+    <a href="/tags.html#customer experience-ref">customer experience <span>7</span></a>
+      
+    <a href="/tags.html#cart limit-ref">cart limit <span>1</span></a>
+      
+    <a href="/tags.html#shopping cart-ref">shopping cart <span>1</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    <a href="/tags.html#free shipping-ref">free shipping <span>1</span></a>
+      
+    <a href="/tags.html#Alipay-ref">Alipay <span>2</span></a>
+      
+    <a href="/tags.html#UnionPay-ref">UnionPay <span>1</span></a>
+      
+    <a href="/tags.html#Design Driven NYC-ref">Design Driven NYC <span>4</span></a>
+      
+    <a href="/tags.html#The Shops-ref">The Shops <span>2</span></a>
+      
+    <a href="/tags.html#Gilt Unlimited-ref">Gilt Unlimited <span>1</span></a>
+      
+    <a href="/tags.html#unlimited shipping-ref">unlimited shipping <span>1</span></a>
+      
+    <a href="/tags.html#UX Booth-ref">UX Booth <span>1</span></a>
+      
+    <a href="/tags.html#navigation bar-ref">navigation bar <span>1</span></a>
+      
+    <a href="/tags.html#Karl Norling-ref">Karl Norling <span>1</span></a>
+      
+    <a href="/tags.html#bestof2014-ref">bestof2014 <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/19/the-gilt-personalization-teams-best-of-list-for">The Gilt Personalization Team's "Best of" List for 2014</a></h1>
+  
+  <header>
+    
+    <time>19 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Not to be outdone by the <a href="http://tech.gilt.com/2014/12/17/the-gilt-mobile-teams-favorite-apps-of-2014" target="_blank">Gilt Mobile team</a>, the Gilt <a href="http://tech.gilt.com/search/personalization" target="_blank">Personalization</a> team also found time to share some of their favorite tools, tips and talks in this space. Read on (and check out <a href="http://tech.gilt.com/2013/12/19/some-of-the-gilt-personalization-teams-favorite" target="_blank">their 2013 faves here</a>):</p>
+<h3>Spark 1.0</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/24af31cf68c666dee4759474131917c9/tumblr_inline_ngup86i2kR1s17bu5.png"/></span></p>
+<p><span>In 2013 we listed the open source cluster-computing engine </span><a href="http://tech.gilt.com/2013/12/19/some-of-the-gilt-personalization-teams-favorite" target="_blank"><span>Spark as a great tool for getting started with parallel processing</span></a><span>. This year, Spark reached version 1.0. With this major release, the developers behind Spark also bundled MLib in with the core framework&ndash;providing machine learning algorithms out of the box and making the linear regression algorithm easier to run than ever. Other Spark 1.0 algorithms that Gilt’s tech team uses are PCA (for pre-processing the data), collaborative filtering (for brand recommendations) and KMeans clustering (to segment our audience). Although there are still some rough spots&ndash;for example, PCA is still not fully parallelized&ndash;this release is a big step towards making scalable machine learning accessible for all. <em>&ndash; Scott Thompson, Software Engineer<br/></em></span></p>
+<h3>Facial recognition</h3>
+<p><span>Computer vision keeps getting better at facial and image recognition, and the most recent incremental improvements have finally pushed the machines above their main competitor&ndash;humans. A number of approaches now show that level of performance; </span><a href="http://arxiv.org/abs/1404.3840" target="_blank"><span>GaussianFace</span></a><span>, which is based on a Discriminative Gaussian Process Latent Variable Model, </span><span>caught my eye earlier this year, and </span><a href="http://arxiv.org/abs/1412.1265" target="_blank"><span>DeepID2+</span></a><span>&ndash;released just this month&ndash;advanced the top of the leaderboard.</span><span> From a different perspective, </span><a href="http://arxiv.org/abs/1312.6082" target="_blank"><span>Google “solved” its own recaptcha task</span></a><span> and is now moving away from recognizing numbers in signs toward comparing images in different contexts&ndash;something it’s </span><a href="http://googleonlinesecurity.blogspot.com/2014/12/are-you-robot-introducing-no-captcha.html" target="_blank"><span>also hoping to improve from an algorithmic perspective</span></a><span>. Although humans remain far superior at answering questions around storytelling based on images, expect recognition of more complex contexts to be the next frontier. <em>&ndash; Zachary Cohn, Machine Learning Specialist<br/></em></span></p>
+<h3>Machine Learning as a Service</h3>
+<p><span>Machine learning as a service has seen a lot of growth, with several major tech players deciding to invest in this work and gain additional value from the products that they have developed in-house. Google&rsquo;s <a href="https://cloud.google.com/prediction/docs" target="_blank">Prediction API</a>, IBM’s <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/" target="_blank">Watson</a>, and <a href="http://azure.microsoft.com/en-us/services/machine-learning/" target="_blank">Microsoft Azure ML</a> have all made significant updates to their offerings this year&ndash;joining an already-crowded field of smaller providers hoping to capitalize on the growing democratization of “big data” platforms. More and more companies are finding themselves sitting on troves of data that they have no idea what to do with; why not experiment? How far these tools can go without having an expert to guide them remains to be seen&ndash;but as software and algorithms improve, much of what is hand-crafted today will be automated tomorrow. <em>&ndash; Zachary Cohn</em></span></p>
+<h3>Machine Learning + Online Learning = Easy Learning</h3>
+<p><span>The number of online resources that will help you acquire knowledge and skills related to machine learning and big data continues to grow. On Coursera, you can enroll in </span><a href="https://www.coursera.org/course/ml" target="_blank"><span>free intro to machine learning classes</span></a><span> taught by Coursera cofounder/Stanford professor Andrew Ng or University of Washington professor </span><a href="https://www.coursera.org/course/machlearning" target="_blank"><span>Pedro Domingos</span></a><span>; learn R, data analysis, and other relevant topics through Johns Hopkins University’s </span><a href="https://www.coursera.org/specialization/jhudatascience/1" target="_blank"><span>10 different courses</span></a><span>; master data mining and analysis through </span><a href="https://www.coursera.org/specialization/datamining/20" target="_blank"><span>the University of Illinois’ track</span></a><span>, and more (new classes are posted all the time). Other online resources include </span><a href="https://www.udacity.com/course/ud120" target="_blank"><span>Udacity’s affordable machine learning course</span></a><span> with Stanford prof/Udacity founder Sebastian Thrun; DataCamp’s </span><a href="https://www.datacamp.com/" target="_blank"><span>data analyst</span></a><span> classes; Stanford’s free </span><a href="http://cs229.stanford.edu/" target="_blank"><span>CS 229 Machine Learning course</span></a><span>; and the seemingly endless number of informative articles, slideshows, and recorded talks you can find just by conducting a simple Google search. Mix and match and see what you learn. </span><em>&ndash; Lauri Apple, Tech Evangelist</em></p>
+<h3>Evangelizing Machine Learning at Gilt</h3>
+<p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/47g5I8_CNgY" width="640"></iframe></p>
+<p><span>Gilt VP Personalization Erik Lumer kicked things off in this vein in January by presenting a talk for </span><a href="http://tech.gilt.com/2014/01/10/a-brief-chat-with-nyc-machine-learning-organizer" target="_blank"><span>NYC Machine Learning</span></a><span>&ndash;the huge machine learning-oriented meetup group co-organized by InfluxDB CEO <a href="http://tech.gilt.com/2014/01/10/a-brief-chat-with-nyc-machine-learning-organizer" target="_blank">Paul Dix</a> and Palantir engineer Max Kesin. In May, Lead Software Engineer Will Chiong </span><a href="http://tech.gilt.com/2014/05/28/data-driven-personalization-at-gilt-video" target="_blank"><span>presented a talk for the Full-Stack Engineering meetup</span></a><span> on how we analyze customer behavior data to make recommendations. In August, Gilt Tech’s Dublin team </span><a href="http://tech.gilt.com/2014/08/12/our-next-free-course-at-gilt-dublin-machine" target="_blank"><span>hosted a free Machine Learning course</span></a><span> taught by University College Dublin professor/expert Padraig Cunningham. We also expanded our personalization team by several members&ndash;adding </span><a href="http://tech.gilt.com/2014/06/03/welcome-zachary-cohn" target="_blank"><span>our first machine learning specialist</span></a><span> and several engineers. </span><em>&ndash; Lauri Apple</em></p>
+<h3>Spotify&rsquo;s &ldquo;Top Tracks in Your Network&rdquo;</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/7b5369e667e28267019e4b80b60aacbf/tumblr_inline_nguoqv8fbf1s17bu5.jpg"/></span></p>
+
+<p><span>Earlier this month Spotify released </span><a href="http://mashable.com/2014/12/11/spotify-top-tracks-network/" target="_blank"><span>Top Tracks in Your Network</span></a><span>&ndash;a new feature that enables you to learn which specific songs are most popular with your friends. Using algorithmic magic, Spotify generates a “Billboard Hot 100” just for you, based on the songs your friends listen to most, and most often. This feature will be particular ideal for anyone whose friends are open to discovering new music and/or have great taste, and through its inherent trend-revealing nature will also help you to better create appropriate playlists for your upcoming parties (assuming your friends on Facebook are the same people as your real-life friends, and not just a bunch of strangers you have randomly chosen to follow). </span><em>&ndash; Lauri Apple</em></p>
+<h3>Deep Learning</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/18da8a30cd3418aefb4c822000c67b09/tumblr_inline_nguoraH2Ee1s17bu5.jpg"/></span></p>
+<p><em>Image from <a href="https://twitter.com/dl4j1" target="_blank">Deep Learning&rsquo;s Twitter page</a><br/></em></p>
+<p><span>If you’ve followed machine learning news from this past year, you’ve no doubt heard of “deep learning.” Large tech companies like Google and Facebook are getting better than ever at detecting our faces in photos and recognizing voice commands, and the secret to these gains all stem from deep learning. Until this year, applying methods from deep learning has generally required expert-level knowledge in the subject. However, the developers from </span><a href="http://skymind.io" target="_blank"><span>Skymind</span></a><span>, a business intelligence and enterprise software firm based in San Francisco, have been working to simplify DL and make it more accessible by releasing </span><a href="http://deeplearning4j.org/" target="_blank"><span>Deeplearning4j</span></a><span>: an open source framework written in Java. If you’re looking to experiment with the bleeding edge of machine learning, make sure to keep an eye on this project. <em>&ndash;Scott Thompson</em><br/></span></p>
+<h3>We Started Using Clojure (a Bit)</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/05af6ee51c594f330e9819dd6ea01ff7/tumblr_inline_ngup13PXZx1s17bu5.png"/></span></p>
+<p><span>Gilt is primarily a Scala shop, but that doesn’t mean we’ve “clojed” the door to other languages. This year members of our personalization and mobile teams spent some time delving deeper into Clojure&ndash;forming a study group, checking out </span><a href="http://clojurekoans.com/" target="_blank"><span>Clojure Koans</span></a><span> and other online learning resources, and even releasing an open source project: Senior Software Engineer Matt Isaacs’ </span><a href="https://github.com/gilt/gilt-chrome-extension" target="_blank"><span>Gilt Chrome extension</span></a><span>, written in ClojureScript. On the general functional programming side of things, Software Engineer Scott Thompson’s </span><a href="http://tech.gilt.com/2014/07/03/five-simple-lisp-tips-guaranteed-to-boost-your" target="_blank"><span>tips for boosting productivity with Lisp</span></a><span> got the attention of Planet Clojure. And in August, our NYC office had the great pleasure to host </span><a href="http://tech.gilt.com/2014/08/12/the-immutable-stack-david-nolen-speaks-at-gilt" target="_blank"><span>a talk by David Nolen</span></a><span> on immutability and the Clojure stack. <em>&ndash; Lauri Apple</em></span></p>
+<h3>Hadoop 2.0 (YARN) Release</h3>
+<p><span>Hadoop&rsquo;s long-awaited new resource manager holds the promise of allowing a much more diverse set of tasks on the platform&ndash;especially useful for managing diverse types of tasks on the same cluster. <em>&ndash;Lauri Apple</em><br/></span></p>
+<p><span><span>Lead Software Engineer <a href="http://tech.gilt.com/search/brian+ballantine" target="_blank">Brian Ballantine</a> also had a few favorite items to share, but didn&rsquo;t have time to write blurbs about them because he has twin babies:</span></span></p>
+<ul><li><span>1.0.0 release and rename/rebranding of </span><a href="https://github.com/tschellenbach/Stream-Framework" target="_blank"><span>Stream-Framework</span></a><span>, an open source project by Thierry Schellenbach that enables you to build newsfeed and notification systems using Cassandra and/or Redis<br/></span></li>
+<li><span>Cognitech&rsquo;s 2014 &ldquo;<a href="http://blog.cognitect.com/blog/2014/10/24/analysis-of-the-state-of-clojure-and-clojurescript-survey-2014" target="_blank">state of Clojure and ClojureScript</a>&rdquo; survey showed that Clojure&rsquo;s getting more and more popular.</span></li>
+</ul>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#machine learning-ref">machine learning <span>6</span></a>
+      
+    <a href="/tags.html#Will Chiong-ref">Will Chiong <span>5</span></a>
+      
+    <a href="/tags.html#Zachary Cohn-ref">Zachary Cohn <span>2</span></a>
+      
+    <a href="/tags.html#Scott Thompson-ref">Scott Thompson <span>5</span></a>
+      
+    <a href="/tags.html#Brian Ballantine-ref">Brian Ballantine <span>3</span></a>
+      
+    <a href="/tags.html#Coursera-ref">Coursera <span>2</span></a>
+      
+    <a href="/tags.html#Apache Spark-ref">Apache Spark <span>2</span></a>
+      
+    <a href="/tags.html#Spark 1.0-ref">Spark 1.0 <span>1</span></a>
+      
+    <a href="/tags.html#facial recognition-ref">facial recognition <span>1</span></a>
+      
+    <a href="/tags.html#DeepID2+-ref">DeepID2+ <span>1</span></a>
+      
+    <a href="/tags.html#GaussianFace-ref">GaussianFace <span>1</span></a>
+      
+    <a href="/tags.html#Google-ref">Google <span>4</span></a>
+      
+    <a href="/tags.html#Google Predictor API-ref">Google Predictor API <span>1</span></a>
+      
+    <a href="/tags.html#KMeans clustering-ref">KMeans clustering <span>1</span></a>
+      
+    <a href="/tags.html#MLib-ref">MLib <span>1</span></a>
+      
+    <a href="/tags.html#Erik Lumer-ref">Erik Lumer <span>7</span></a>
+      
+    <a href="/tags.html#Paul Dix-ref">Paul Dix <span>2</span></a>
+      
+    <a href="/tags.html#InfluxDB-ref">InfluxDB <span>2</span></a>
+      
+    <a href="/tags.html#Spotify-ref">Spotify <span>3</span></a>
+      
+    <a href="/tags.html#Top Tracks in Your Network-ref">Top Tracks in Your Network <span>1</span></a>
+      
+    <a href="/tags.html#Deep Learning-ref">Deep Learning <span>1</span></a>
+      
+    <a href="/tags.html#Clojure-ref">Clojure <span>2</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#opensource-ref">opensource <span>9</span></a>
+      
+    <a href="/tags.html#ClojureScript-ref">ClojureScript <span>2</span></a>
+      
+    <a href="/tags.html#Deeplearning4j-ref">Deeplearning4j <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/19/best-of-gilt-2014-engineering">Best of Gilt 2014: Engineering</a></h1>
+  
+  <header>
+    
+    <time>19 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Over the next few days we&rsquo;ll be recapping some of the #gilttech team&rsquo;s favorite and most significant tech developments of 2014. To kick things off, here are some of the highlights of our engineering work this year.</p>
+<h3>We Upped Our Commitment to Open Source</h3>
+<p><span>At our </span><a href="http://tech.gilt.com/2014/03/10/gilts-architecture-summit-bigger-and-better-than" target="_blank"><span>Architecture Summit in February</span></a><span>, our engineering team coalesced around the goals of incorporating more open source tools into our work and increasing our contributions to the OS community. Since then we’ve added dozens of new projects to </span><a href="http://code.gilt.com/#_=_" target="_blank"><span>our team GitHub page</span></a><span> (you’ll learn about several of them in more detail below), </span><a href="https://github.com/gilt/standards-open-source" target="_blank"><span>revised our OS guidelines</span></a><span> to simplify the release process for our engineers, and formed a working group to strengthen our OS culture internally. Several of our team’s OS projects&ndash;</span><a href="http://tech.gilt.com/2014/12/12/new-in-gilt-tech-open-source" target="_blank"><span>Android-Proguard-Snippets</span></a><span>, </span><a href="https://github.com/gilt/MBToolbox" target="_blank"><span>Mockingbird</span></a><span> (iOS), and </span><a href="http://tech.gilt.com/2014/06/09/some-sugar-for-your-sbt-dependency-graph" target="_blank"><span>sbt-dependency-graph-sugar</span></a><span> (Scala)&ndash;have generated lots of excitement in their respective communities, which we appreciate.</span></p>
+<h3>apidoc</h3>
+<p><span>Built by the Gilt engineering team, </span><a href="http://apidoc.me/doc/" target="_blank"><span>apidoc</span></a><span> is a lovingly crafted open source project that enables you to build beautiful documentation for REST services. With apidoc, you can download native client libraries with no (or almost no) dependencies. Its intuitive JSON format is easy to navigate, which makes it fun to use. </span><a href="http://apidoc.me/doc/todo" target="_blank"><span>Check out the apidoc to-do list</span></a><span> and contribute to this project, which you’ll hear more about in 2015.</span></p>
+<h3>AWS at Gilt</h3>
+<p><span>This year we started using AWS in order to reduce the effort spent managing physical hardware. Now our engineers can get a server with a simple click of a button. AWS aligns with our goal to make software engineering as simple, scalable and empowering as possible. “AWS enabled me to set up a fault-tolerant Elasticsearch cluster in a single afternoon,” says Senior Software Engineer Anthony Manfredi.</span></p>
+<h3>CAVE</h3>
+<p><iframe frameborder="0" height="485" marginheight="0" marginwidth="0" scrolling="no" src="//www.slideshare.net/slideshow/embed_code/39469824" width="595"> </iframe></p>
+<p><span>Begun in earnest this year, CAVE stands for &ldquo;continuous audit vault enterprise.&rdquo; Not sure what that means? Here&rsquo;s another description: CAVE is an open-source managed service for monitoring infrastructure, platform, and application metrics. Largely the work of Gilt Senior Software Engineer <a href="http://tech.gilt.com/search/val+dumitrescu" target="_blank">Val Dumitrescu</a> and Software Engineer <a href="http://tech.gilt.com/search/pawel+raszewski" target="_blank">Pawel Raszewski</a>, and built in Scala, CAVE combines InfluxDB, Kinesis, Amazon RDS, and other great technologies to provide visibility into your system’s performance and operational levels. Learn more about it by reviewing the above slideshow</span><span>.</span></p>
+<h3>Gilt’s Custom A/B Testing Platform</h3>
+<p id="docs-internal-guid-20e6957c-63c2-436b-ab57-259449325b71"><span>A/B testing is core to Gilt’s product development methodology. It informs our decision-making and gives us insight into what’s working and what’s not. The A/B testing system we used to use wasn’t able to scale as we grew&ndash;it essentially limited our platform to 64 test variants max. This created a situation in which we began to work on way more products than that platform could handle. To remedy this, Gilt Lead Software Engineer Young Moon and VP of Personalization Erik Lumer worked together to build a completely new platform that allows for a nearly limitless number of concurrent tests for our product development purposes. </span></p>
+<h3>We Went Responsive</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/3dd35d1daa17cac3c63dbe5ddc9578b6/tumblr_inline_nguf3uHGvG1s17bu5.png" width="800"/></span></p>
+
+<p><span>The <a href="http://tech.gilt.com/search/Special+Operations" target="_blank">Special Operations</a> Team led the charge in </span><a href="http://tech.gilt.com/search/responsive+design" target="_blank"><span>responsivizing Gilt’s website</span></a><span> to mobile devices&ndash;then generated massive amounts of interest in their work via tech talks, articles and social media outreach. Check out their blog posts on </span><a href="http://tech.gilt.com/2014/07/02/responsive-gilt-com-block-vs-in-selector-media" target="_blank"><span>writing in-selector CSS media-queries instead of blocks</span></a><span>, </span><a href="http://tech.gilt.com/2014/07/07/responsive-gilt-com-selenium-edition" target="_blank"><span>using Selenium-automated tests for responsive pages</span></a><span>, and </span><a href="http://tech.gilt.com/2014/07/09/responsive-gilt-com-the-full-screen-modal" target="_blank"><span>the full-screen modal</span></a><span>.</span></p>
+<h3>GitHub</h3>
+<p><span>This year we began to shift away from having an internal continuous integration setup infrastructure toward leveraging the open source tooling built around GitHub. Moving in this direction allows us to experiment with third-party software and open source tools that integrate with GitHub, such as Travis CI and Circle CI.</span></p>
+<h3>Estimated Delivery Windows</h3>
+<p><span>Over the summer, our <a href="http://tech.gilt.com/search/pmo" target="_blank">Program Management Organization</a> and <a href="http://tech.gilt.com/search/back+office" target="_blank">Back Office</a> team huddled in a room to dissect Gilt’s architecture around product delivery windows. Their goals: perfecting the service that estimates how much time it takes for a customer to receive their Gilt purchase; make it easier to deploy changes to this service to production; and simplify our delivery window calculation. Their results: Better engineering around this core Gilt function, and better results for our customers.</span></p>
+<h3>Docker</h3>
+<p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/GaHzdqFithc" width="640"></iframe></p>
+<p><span>“A thing must produce a Docker image to be deployed somewhere” became a standard for our engineering team this year. Adopting Docker has empowered our engineering team to experiment with new technologies quickly and easily, giving us the freedom to take more risks and diversify our stack without inducing headaches. One example: Our team has instrumented Play Framework in our tooling, but some of our engineers have recently begun building apps in Node.js. Without Docker, we wouldn’t be able to add these Node apps without plumbing the concept of Node throughout our infrastructure; now, a Node app is just another Docker image. Docker has also enabled our migration to Amazon Web Services. Throughout the year we shared our excitement about Docker with the larger tech community by hosting (crowded!) meetups in </span><a href="http://tech.gilt.com/2014/04/30/video-and-photos-from-last-nights-awesome-docker" target="_blank"><span>NYC</span></a><span> and </span><a href="http://tech.gilt.com/2014/07/10/a-great-turnout-at-last-nights-docker-dublin" target="_blank"><span>Dublin</span></a><span>, sharing our story at the first-ever </span><a href="http://tech.gilt.com/2014/07/02/immutable-infrastructure-with-docker-and-ec2" target="_blank"><span>DockerCon</span></a><span> in San Francisco and wearing our </span><a href="http://tech.gilt.com/2014/10/22/thanks-docker" target="_blank"><span>Docker swag</span></a><span> with pride.</span></p>
+<h3>HighJump</h3>
+<p><span>Our distro engineering and applications support teams engineered the launch of this new warehouse management system in June. HighJump gives us the ability to lower our software CPU costs, manage inventory more efficiently, establish functional parity across all of our distributions centers (i.e., the places where we store and ship out inventory) and generate a global view of our physical inventory within our WMS. </span></p>
+<h3>Avro, gfc-avro, and BlueSteel</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/8ed2ff355aa6e62840ed2706d830e8bf/tumblr_inline_ngue07Y3ED1s17bu5.png"/></span></p>
+<p><em>Image by <a href="https://www.flickr.com/photos/weeping-willow/9130669622/in/photolist-eUR4Yj-nrdFfh-4pDGTt-4pHKZb-596Vda-iiaHm4-nezfkW-naPJJB-tzFUk-ow1dgx-tQBer-7ZwCDe-c1QTnE-nukkFn-eUpgwP-7Xzfpk-co3RYN-n1e8ZP-7Yi5sP-gnMixW-sKcCB-co8UZW-9N1Ggm-iLTTYb-co8Xv7-dZjeSG-ccNZ5h-deX8e-mwAVz1-81EGSD-ardV5a-bVkDLB-bVkDQT-ccGUfm-gEsk44-ggJuTm-mY3H8L-bVkyGt-ccGNxY-co3r3W-ccGQtw-ekB4Wr-juVqrG-ecu81M-i8t6mK-2GmuoB-4udRzN-bVkA4g-bVkAkB-bVkBwa" target="_blank">Weeping-Willow Photography</a>.</em></p>
+<p><span>The Gilt engineering team (especially Principal Data Engineer </span><a href="http://tech.gilt.com/search/michael+hansen" target="_blank"><span>Michael Hansen</span></a><span>) has been using the open source data serialization framework Apache Avro along with Kafka and HDFS to manage our real-time (or near real-time) data capturing. For projects based on Scala, the Avro framework is not as friendly to use as you might hope. To address this, we created </span><a href="https://github.com/gilt/gfc-avro" target="_blank"><span>gfc-avro</span></a><span>: An Avro library in Scala base on Scala pickling. gfc-avro supports the conversion of case classes to Avro records or schema definitions. On the mobile site, Senior Software Engineer Matt Isaacs has been working on </span><a href="https://github.com/gilt/BlueSteel" target="_blank"><span>BlueSteel</span></a><span>: an Avro encoding/decoding library for Swift. Both gfc-avro and BlueSteel are looking for contributors&ndash;ping Matt if you want to get involved.</span></p>
+<h3>Product Look Link</h3>
+<p><span>In October, we launched a new feature that enables Gilt’s stylist to link accessories and other clothing included in each photo. This will allow us to showcase completely shoppable looks.</span></p>
+<h3>We Play-ed Hard</h3>
+<p><iframe frameborder="0" height="480" src="//www.youtube.com/embed/WliXLG2Yo5k" width="640"></iframe><span>Our engineers made substantial progress in rolling out <a href="https://playframework.com/" target="_blank">Play Framework</a> across all parts of our website. Part of our work building a <a href="http://tech.gilt.com/search/microservices" target="_blank">microservices</a> architecture has involved breaking up all of our pages from one monolithic app into smaller Play apps, each owned by different teams. As Scala users, we’ve become very familiar with Play and love working with it&ndash;it’s contributed greatly to our Developer Happiness KPI. With Play, site releases and eliminating dependencies is easy, and the framework scales very well for tech organizations like ours that like to move fast. Check out Senior Software Engineer </span><span>Giancarlo Silvestrin’s Typesafe webinar</span><span> on Play (above) to learn more about our work.</span></p>
+<h3>We Built a Native Android App</h3>
+<p><span>We released our very first native <a href="http://tech.gilt.com/search/android" target="_blank">Android</a> app to our millions of users in November, after establishing an Android team. We’ve seen the growth of Android over time and we wanted to give those users a much better customer experience. Our Android engineers have taken a heavily test-driven approach to building the application, laying a solid foundation for future expansion. They also took advantage of the many great open source tools available to Android devs, such as </span><a href="http://developer.android.com/training/volley/index.html" target="_blank"><span>Volley</span></a><span>, </span><a href="http://jakewharton.github.io/butterknife/" target="_blank"><span>Butter Knife</span></a><span>, and </span><a href="http://www.joda.org/joda-time/" target="_blank"><span>Joda-Time</span></a><span>. Customers can expect to see many new features next year, and our team will be releasing several open source libraries in early 2015.</span></p>
+<h3>Photo Shoot App</h3>
+<p><span>In February, we launched a new Photo Shoot application that eliminated much of the manual process for styling and shooting product looks. By putting the process into our system, we were able to completely eliminate a lot of the manual work involved in styling, shooting, and processing images. This gives our stylists and creative talent more time to do what they do best: create compelling photography to sell our products.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#Best of 2014-ref">Best of 2014 <span>1</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#opensource-ref">opensource <span>9</span></a>
+      
+    <a href="/tags.html#Architecture Summit-ref">Architecture Summit <span>2</span></a>
+      
+    <a href="/tags.html#Android-Proguard-Snippets-ref">Android-Proguard-Snippets <span>1</span></a>
+      
+    <a href="/tags.html#Gilt GitHub page-ref">Gilt GitHub page <span>1</span></a>
+      
+    <a href="/tags.html#Mockingbird-ref">Mockingbird <span>5</span></a>
+      
+    <a href="/tags.html#sbt-dependency-graph-sugar-ref">sbt-dependency-graph-sugar <span>2</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    <a href="/tags.html#apidoc-ref">apidoc <span>3</span></a>
+      
+    <a href="/tags.html#Amazon Web Services-ref">Amazon Web Services <span>3</span></a>
+      
+    <a href="/tags.html#AWS-ref">AWS <span>4</span></a>
+      
+    <a href="/tags.html#Anthony Manfredi-ref">Anthony Manfredi <span>1</span></a>
+      
+    <a href="/tags.html#CAVE-ref">CAVE <span>3</span></a>
+      
+    <a href="/tags.html#Val Dumitrescu-ref">Val Dumitrescu <span>3</span></a>
+      
+    <a href="/tags.html#Pawel Raszewski-ref">Pawel Raszewski <span>5</span></a>
+      
+    <a href="/tags.html#InfluxDB-ref">InfluxDB <span>2</span></a>
+      
+    <a href="/tags.html#Amazon Kinesis-ref">Amazon Kinesis <span>1</span></a>
+      
+    <a href="/tags.html#RDS-ref">RDS <span>1</span></a>
+      
+    <a href="/tags.html#A/B testing-ref">A/B testing <span>2</span></a>
+      
+    <a href="/tags.html#Young Moon-ref">Young Moon <span>1</span></a>
+      
+    <a href="/tags.html#Erik Lumer-ref">Erik Lumer <span>7</span></a>
+      
+    <a href="/tags.html#GitHub-ref">GitHub <span>5</span></a>
+      
+    <a href="/tags.html#bestof2014-ref">bestof2014 <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/17/the-gilt-mobile-teams-favorite-apps-of-2014">The Gilt Mobile Team's Favorite Apps of 2014</a></h1>
+  
+  <header>
+    
+    <time>17 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><a href="http://tech.gilt.com/search/gilt+mobile" target="_blank">Gilt Mobile</a> had so much to celebrate this year. We added an Android team to complement our iOS work; saw our <em>fancy</em> app appear in a <a href="https://www.youtube.com/watch?v=aKPiIlP_Bk8" target="_blank">Samsung commercial starring Iggy Azalea</a>; relaunched our <a href="http://tech.gilt.com/2014/08/19/introducing-gilt-japans-all-new-iphone-app" target="_blank">Gilt Japan iPhone app</a>; and brought home the <a href="http://tech.gilt.com/2014/04/28/we-won-the-webby" target="_blank">Webby Award</a> for &ldquo;best iPhone app&rdquo; in the shopping category. We also went to WWDC, delivered mobile-centric tech talks to meetup groups from NYC to Miami to <a href="http://tech.gilt.com/2014/05/22/last-nights-mobile-engineering-at-gilt" target="_blank">Dublin</a>, and grew our presence in the open source community through the release of projects like <a href="https://github.com/gilt/MBToolbox" target="_blank">Mockingbird Toolbox</a>, <a href="http://tech.gilt.com/2014/12/12/new-in-gilt-tech-open-source" target="_blank">Android-Proguard-Snippets</a>, and <a href="https://github.com/gilt/BlueSteel" target="_blank">BlueSteel</a>.</p>
+<p>We also checked out a lot of great new apps! Here are the team&rsquo;s favorites from 2014:</p>
+<h3>Breather</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/ecad5942b26d6cf51962c86221d72756/tumblr_inline_ngqltmyDUY1s17bu5.jpg"/></p>
+<p><a href="http://breather.com/" target="_blank">Breather</a> is basically Airbnb for meeting or working space. Need a quiet space to work for a couple of hours? Take advantage of Breather&rsquo;s simple and intuitive user interface and marvel at its high-quality photography. I&rsquo;ve given it a try and the entire process was positive. <em>&ndash;Louis Vera, Senior Software Engineer (Android)</em></p>
+<h3>Monument Valley</h3>
+<p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/K2P-YKsHpNs" width="640"></iframe></p>
+<p>I&rsquo;m sure you&rsquo;re tired of hearing people rave about this game, but this is that extremely rare case where the hype is deserved. Everything about <a href="http://www.monumentvalleygame.com/" target="_blank">Monument Valley</a> is incredible. The visuals are truly unique. Simple shapes are layered, combined with striking colors and smooth animations, to produce complex scenes that are truly a delight to see and interact with. Sound is ambient and unobtrusive, yet crucial to the experience. There is no dialog and so the storyline isn&rsquo;t narrated&ndash;instead, the experience is similar to watching an old silent movie. It&rsquo;s simple and straightforward, yet you&rsquo;ll be sad when it&rsquo;s over. <em>&ndash; <a href="http://tech.gilt.com/search/matt+isaacs" target="_blank">Matt Isaacs</a>, Senior Software Engineer (iOS)</em></p>
+<h3>Skitch</h3>
+<p><a href="http://evernote.com/skitch/" target="_blank">Skitch</a> enables you to mark up screenshots easily. A simple enough task, but here&rsquo;s a case where the tiny details make all the difference in the world. I have used Skitch to give directions, communicate with graphic designers, create content for conference presentations, and many other things. A picture (with arrows) is indeed worth a thousand words&ndash;especially when you are typing those words out on a mobile phone. And because Evernote created it, integration with their primary app is fantastic. <em>&ndash;<a href="http://tech.gilt.com/search/kevin+schultz" target="_blank">Kevin Schultz</a>, Senior Software Engineer (Android)</em></p>
+<h3>Emoji++/Swype (iOS)</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/5a963c0c587971a3a599acb1deb7ec02/tumblr_inline_ngqn57xvuq1s17bu5.png"/></p>
+<p>Third-party keyboard support in iOS 8 still feels a bit buggy, but already I&rsquo;ve become hooked on <a href="https://itunes.apple.com/us/app/emoji++-fast-emoji-keyboard/id919234935?mt=8" target="_blank">Emoji++</a> and <a href="https://itunes.apple.com/us/app/swype/id916365675?mt=8&amp;ign-mpt=uo%3D2" target="_blank">Swype</a>. Emoji++ makes finding the perfect emoji much easier than the built-in iOS emoji keyboard does. And Swype captures what I&rsquo;m trying to say much faster than the standard keyboard can—not to mention the fact that, by using Swype, I can actually tell when the shift key is engaged! But unless you&rsquo;re prepared for the occasional frustration of keyboards not appearing (which requires force-quitting and relaunching the affected app), you might want to wait until a future version of iOS, and/or future versions of these keyboards, emerge with these kinks sorted out. I can hear my Android friends snickering now&hellip;<em>&ndash;<a href="http://tech.gilt.com/search/evan+coyne+maloney" target="_blank">Evan Coyne Maloney</a>, Principal Software Engineer (iOS)<br/></em></p>
+<h3>UltraVisual</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/700318cc022d9a08ce6d6fa102fdceca/tumblr_inline_ngqm3eNQJc1s17bu5.png"/></p>
+<p>I must admit that I get a little lost navigating through <a href="http://ultravisual.com/" target="_blank">UltraVisual</a>: the Brooklyn-born, photo and video creation app acquired by Flipboard in September. I&rsquo;m never quite sure where I am or what I should do next, but that is the whole point to me. I love losing myself in its beautiful imagery and immersive interface. The app provides an endless stream of gorgeousness and inspiration. <em>&ndash;<a href="http://tech.gilt.com/search/christopher+gonzalez" target="_blank">Christopher Gonzalez</a>, Director of Mobile Product</em></p>
+<h3>Ping</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/3400984a93c0b5796784fc96fc481e32/tumblr_inline_ngqlh8A2bZ1s17bu5.png"/></p>
+<p>From the creators of Secret comes this great push notification-based app, which gives you a steady stream of information about weather, fitspiration, curiosities, daily history and more. It&rsquo;s usually fun and adds a little levity to your day. <a href="https://itunes.apple.com/us/app/ping/id922669797?mt=8" target="_blank">Ping</a> excels in its simplicity and laser precise focus—no unnecessary bells and whistles.<em>&ndash;<a href="http://tech.gilt.com/search/christopher+barr" target="_blank">Christopher Barr</a>, Senior Interactive Designer<br/></em></p>
+<h3>Dasher</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/a56166d115680656da5515581ef9a28d/tumblr_inline_ngqmyxOv9X1s17bu5.jpg"/></p>
+<p>Light and fun, <a href="http://dasher.im/" target="_blank">Dasher</a> enables your to message your friends with subtle animations, micro-payments, location coordination, and random gifs for all #things. (The # to animated gif sounds silly, but is actually very fun and quite addicting.) The app made its iOS debut earlier this year, and followed up in November with an Android version that&ndash;as noted in <a href="https://medium.com/dasher-announcements/unblocking-the-network-effect-d88a33d2532c" target="_blank">this Medium post by Dasher cofounder Jesse Boyes</a>&ndash;led to a spike in iOS downloads. Interesting. Jesse happens to be Gilt&rsquo;s former Director of Mobile Engineering, and Dasher&rsquo;s other cofounders sharpened their skills at Foursquare and Jetsetter, so we can expect more great work and insightful observations from this team in 2015. <em>&ndash;Louis Vera</em></p>
+<h3>Cord</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/4bb46e90fc0b5bfd36813fedc9e2c353/tumblr_inline_ngqmwcNlLW1s17bu5.png"/></p>
+<p>Cord Project brings voice back into our overtexted lives with the <a href="http://cordproject.co/" target="_blank">Cord app</a>. Instead of typing out a quick request, wish, or tiding, simply record a 12-second telegram that you can share with as many or as few of your friends as you like. Phonetic spelling, syntactic formatting, and emoticons can only capture and convey so much, while tone, accent, and emphasis speak volumes and come pre-programmed with our speech. Cord&rsquo;s been especially useful to me this winter by helping me to avoid shiver-induced typos and frostbite. On occasion, I reply to messages with soundbites from YouTube (TV and movie quotes just aren’t the same when expressed via text!). <em>&ndash;Randy Gretz, Quality Assurance Analyst<br/></em></p>
+<h3>TouchRetouch</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/0bfdcf67085040dc6c4237c7317beb42/tumblr_inline_ngqpuu8HvY1s17bu5.png"/></p>
+
+<p><a href="https://itunes.apple.com/us/app/touchretouch/id373311252?mt=8" target="_blank">TouchRetouch</a> is an essential app for editing life-event photos. It allows for removal of unwanted objects without any Photoshop involvement&ndash;saving you time and hassle. All you have to do is circle the item you want to remove and the TouchRetouch algorithm makes it magically disappear. It works very well and is so easy to use! <em>&ndash;<a href="http://tech.gilt.com/search/ruxy+staicut" target="_blank">Ruxy Levy</a>, Senior Software Engineer (iOS)</em></p>
+<h3>Tunnel Vision</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/7b229c9262883a564cd6a1a17bf05186/tumblr_inline_ngqmi5yr0y1s17bu5.png"/></p>
+<p>Have you ever wanted to see a live visualization of people entering and exiting the New York City subway system&rsquo;s nearly 470 stations? OK, maybe you never thought about it much&ndash;but once you see it, you will be mesmerized! Created as a graduate thesis project by students in <a href="http://itp.nyu.edu/itp/" target="_blank">New York University&rsquo;s ITP program</a>, <a href="http://www.tunnelvisionapp.com/" target="_blank">Tunnel Vision</a> is a simple app with little daily utility. But the beautiful visualizations it provides (based on publicly available MTA and U.S. Census data) made me think a little differently about my city. It&rsquo;s an app I can look at for minutes on end, just wondering about the people and metropolis around me.&ndash;<em>Christopher Gonzalez</em></p>
+<h3>1Password</h3>
+<p><iframe frameborder="0" height="360" src="//player.vimeo.com/video/88901304" width="640"></iframe></p>
+<p><a href="http://vimeo.com/88901304" target="_blank">1Password - No More Sticky Notes</a> from <a href="http://vimeo.com/agilebits" target="_blank">AgileBits</a> on <a href="https://vimeo.com" target="_blank">Vimeo</a>.</p>
+<p>This year Agile Bits&ndash;creators of the password manager 1Password&ndash;published an official Android version that is well polished, easy to use, and keeps in sync with all the other devices in my life (iPhone, Mac, etc.). A solid password manager is a must for any developer, and this one is my go-to. <em>&ndash;Louis Vera</em></p>
+<h3>Kitchen Stories</h3>
+<p><img alt="image" src="https://31.media.tumblr.com/01344388208c3ea21e53b95357b6cbd0/tumblr_inline_ngqn0g65BN1s17bu5.jpg"/></p>
+<p><a href="http://eng.kitchenstories.de/" target="_blank">Kitchen Stories</a> creators Mengting Gao and Verena Hubertz have partnered up with some of the world&rsquo;s top food and cooking brands&ndash;including KitchenAid, Bertolli and Le Creuset&ndash;to create this extremely useful app. Simple, straightforward and available in 12 languages, Kitchen Stories features recipes and tricks to make cooking super-enjoyable. The short videos are especially helpful. <em>&ndash;Nikita Korchagin, iOS Engineer</em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gilt mobile-ref">Gilt mobile <span>8</span></a>
+      
+    <a href="/tags.html#mobile apps-ref">mobile apps <span>5</span></a>
+      
+    <a href="/tags.html#apps-ref">apps <span>8</span></a>
+      
+    <a href="/tags.html#iOS-ref">iOS <span>22</span></a>
+      
+    <a href="/tags.html#Android-ref">Android <span>10</span></a>
+      
+    <a href="/tags.html#Monument Valley-ref">Monument Valley <span>1</span></a>
+      
+    <a href="/tags.html#Matt Isaacs-ref">Matt Isaacs <span>9</span></a>
+      
+    <a href="/tags.html#Kevin Schultz-ref">Kevin Schultz <span>6</span></a>
+      
+    <a href="/tags.html#Skitch-ref">Skitch <span>1</span></a>
+      
+    <a href="/tags.html#Christopher Gonzalez-ref">Christopher Gonzalez <span>7</span></a>
+      
+    <a href="/tags.html#UltraVisual-ref">UltraVisual <span>1</span></a>
+      
+    <a href="/tags.html#Flipboard-ref">Flipboard <span>1</span></a>
+      
+    <a href="/tags.html#Christopher Barr-ref">Christopher Barr <span>4</span></a>
+      
+    <a href="/tags.html#Louis Vera-ref">Louis Vera <span>1</span></a>
+      
+    <a href="/tags.html#Dasher Messenger-ref">Dasher Messenger <span>1</span></a>
+      
+    <a href="/tags.html#Dasher-ref">Dasher <span>1</span></a>
+      
+    <a href="/tags.html#Jesse Boyes-ref">Jesse Boyes <span>1</span></a>
+      
+    <a href="/tags.html#Cord-ref">Cord <span>1</span></a>
+      
+    <a href="/tags.html#Cord Project-ref">Cord Project <span>1</span></a>
+      
+    <a href="/tags.html#Randy Gretz-ref">Randy Gretz <span>1</span></a>
+      
+    <a href="/tags.html#Breather-ref">Breather <span>1</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    <a href="/tags.html#Ping-ref">Ping <span>1</span></a>
+      
+    <a href="/tags.html#TouchRetouch-ref">TouchRetouch <span>1</span></a>
+      
+    <a href="/tags.html#Ruxy Staicut-ref">Ruxy Staicut <span>3</span></a>
+      
+    <a href="/tags.html#Ruxy Levy-ref">Ruxy Levy <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/16/gilt-is-going-to-craft-conf">Gilt Is Going to Craft Conf!</a></h1>
+  
+  <header>
+    
+    <time>16 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/183176e6deaedc5686326015f75ace83/tumblr_inline_ngot7ke1qY1s17bu5.png"/></p>
+
+<p>2015 marks only the second year for Budapest, Hungary&rsquo;s <a href="http://craft-conf.com/2015/" target="_blank">Craft Conf</a>, but already the organizing team behind this software craftsmanship-centric conference have done a spectacular job of recruiting an A+ lineup of technologists from some of the globe&rsquo;s most innovative companies. Case in point: Gilt&rsquo;s own VP Engineering in Dublin, Adrian Trenaman (<a href="https://twitter.com/adrian_trenaman" target="_blank">follow him on Twitter</a>), will speak at <a href="http://craft-conf.com/2015/" target="_blank">Craft Conf 2015</a>!</p>
+<p><a href="http://tech.gilt.com/search/adrian+trenaman" target="_blank">Adrian</a>&ndash;or &ldquo;Ade,&rdquo; as we like to call him&ndash;will join Rent the Runway Engineering head/ZooKeeper committer <a href="http://craft-conf.com/2015/#speakers/CamilleFournier" target="_blank">Camille Fournier</a>, Silicon Valley Product Group Founder <a href="http://craft-conf.com/2015/#speakers/MartyCagan" target="_blank">Marty Cagan</a>, Cognitect developer and <a href="http://tech.gilt.com/search/david+nolen" target="_blank">past #gilttech speaker</a> <a href="http://craft-conf.com/2015/#speakers/DavidNolen" target="_blank">David Nolen</a>, and other highly respected technologists in presenting at the conference, which takes place April 22 through 24, 2015. More details to come on Ade&rsquo;s talk; meantime, keep up with conference announcements by <a href="https://twitter.com/CraftConf" target="_blank">following Craft on Twitter</a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Craft Conf-ref">Craft Conf <span>1</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#Adrian Trenaman-ref">Adrian Trenaman <span>2</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#Budapest-ref">Budapest <span>1</span></a>
+      
+    <a href="/tags.html#David Nolen-ref">David Nolen <span>2</span></a>
+      
+    <a href="/tags.html#Camille Fournier-ref">Camille Fournier <span>1</span></a>
+      
+    <a href="/tags.html#Marty Cagan-ref">Marty Cagan <span>1</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#software craftsmanship-ref">software craftsmanship <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/12/12/new-in-gilt-tech-open-source">New in Gilt Tech Open Source: Android-ProGuard-Snippets</a></h1>
+  
+  <header>
+    
+    <time>12 December 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/f9087dfb5574002432fab814b8dcdfba/tumblr_inline_ngh9o4Rf5n1s17bu5.jpg"/></p>
+<p>Gilt Senior Software Engineer <a href="http://tech.gilt.com/search/kevin+schultz" target="_blank">Kevin Schultz</a> has just released <a href="https://github.com/krschultz/android-proguard-snippets" target="_blank">android-proguard-snippets</a>: Sample ProGuard configurations for common Android libraries. If you&rsquo;re not familiar, <a href="http://proguard.sourceforge.net/" target="_blank">ProGuard</a> is a way to obfuscate and shrink code in an Android app by eliminating unused classes. Its configuration rules explicitly mark which code should be kept unchanged.</p>
+<p>&ldquo;ProGuard is prone to breaking your app by accidentally removing code that is actually used,&rdquo; Kevin says, &ldquo;and it&rsquo;s tough to write ProGuard rules&ndash;there&rsquo;s a lot of trial and error required.&rdquo; The goal of android-proguard-snippets is to collect working ProGuard configurations for popular libraries and save community the hassle of that trial-and-error process. </p>
+<p>If you&rsquo;d like to <strong>contribute to this project </strong>and help Gilt in supporting the OS community, please suggest new rules for new libraries, fixes for current libraries, and bug reports.</p>
+<p><em><strong>Follow Kevin on Twitter <a href="https://twitter.com/kevinrschultz" target="_blank">here</a>.</strong></em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#Android-ref">Android <span>10</span></a>
+      
+    <a href="/tags.html#Kevin Schultz-ref">Kevin Schultz <span>6</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#Gilt mobile-ref">Gilt mobile <span>8</span></a>
+      
+    <a href="/tags.html#mobile engineering-ref">mobile engineering <span>4</span></a>
+      
+    <a href="/tags.html#Android engineering-ref">Android engineering <span>1</span></a>
+      
+    <a href="/tags.html#ProGuard-ref">ProGuard <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/4/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 5 of 64</span>
+  
+    <a href="/posts/6/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

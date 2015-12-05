@@ -1,0 +1,14 @@
+
+http://mdinsider.github.io/404
+http://mdinsider.github.io/archive
+http://mdinsider.github.io/atom.xml
+http://mdinsider.github.io/authors
+http://mdinsider.github.io/categories
+http://mdinsider.github.io/
+http://mdinsider.github.io/pages
+http://mdinsider.github.io/rss.xml
+http://mdinsider.github.io/search.json
+http://mdinsider.github.io/sitemap.txt
+http://mdinsider.github.io/tags
+
+http://mdinsider.github.io/tech/blog/2015/12/04/gilt-tech-plus-jekyll-equals-love

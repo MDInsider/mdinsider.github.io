@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/21/some-tips-for-making-your-own-3d-printer">Some Tips for Making Your Own 3D Printer</a></h1>
+  
+  <header>
+    
+    <time>21 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/cde87f825d79e20e9654f826e79cf88a/tumblr_inline_n1d3bhRRAC1s17bu5.jpg"/></p>
+
+<p>So, you want to get a 3D printer. Or you’re not sure that you want one, but maybe you do (3D printing is so cool!). Either way, there are lots of options (perhaps too many, even) to get started in the world of 3D printing. As ever, it depends on what you want:</p>
+<ul><li>Do you care at all about the machine, or just the printed objects themselves?</li>
+<li>How much do you care about price?</li>
+</ul><p> If you are like me, and are interested in the mechanics of the machine itself, creating a DIY 3D printer from scratch is a lot of fun. Implementations or adaptations of <a href="http://reprap.org/wiki/RepRap" target="_blank">RepRap</a> models are popular because they’re based on open source and open hardware, and their designs have been optimized for DIY and low-cost production. You can go with a kit, or completely build your own from parts—it’s up to you. Building your own can be cheaper, but only if you know what you are doing—which I didn't—so I used a kit: the <a href="http://www.k8200.eu" target="_blank">K8200</a>, whose tagline is “the new 3D printer in town.” (This marketing language didn’t sway me in its direction—I simply chose this kit because it looked hackable and available at an approachable price point.)</p>
+<p> The hardest part of the assembly process was installing <a href="http://en.wikipedia.org/wiki/Circlip" target="_blank">circlips</a> without the right pair of pliers. Those little f*&amp;#$$s are tough! In the end, I managed&ndash;but &hellip; just get the tool! I’ve taken my own advice on this point.</p>
+<p>Mechanical calibration comes with some frustration as well. “Not too tight, not too loose, not too far, not too close,” seems to be the methodology to apply. If you break a part, then you’ve broken a real thing—i.e., you can&rsquo;t &lsquo;Git checkout&rsquo; to a previous version. (Luckily, I haven’t broken anything on my printer so far.) If you ever wonder what you get with a pre-assembled model, this is a big part. But if you are into mechanical stuff, the anxiety involved in trying not to break anything is fun in its own way.</p>
+<p><strong>Software:</strong></p>
+<p>This is the most complex part of it all. Luckily, even in the LINUX/open source world some good options exist:</p>
+<ul><li><strong>Model design: </strong>If you write code for a living and 'traditional&rsquo; CAD GUIs and mesh modelers scare you, <a href="http://www.openscad.org/" target="_blank">OpenSCAD</a> might just be your thing. Its main benefits: you can write your own code, and you don’t have to use GUI. Of course, for the impatient, there&rsquo;s always MakerBot&rsquo;s <a href="http://www.thingiverse.com/" target="_blank">thingiverse</a>, where you can find lots of predesigned goodies.</li>
+<li><strong>Slicing/printing: </strong>RepRap firmware is supported by the <a href="http://www.repetier.com/" target="_blank">Repetier</a>/<a href="http://slic3r.org/" target="_blank">Slic3r</a> combo. Both seem to work pretty well, although Repetier needs a lot of RAM for larger prints). At first, I used RepRap—but I’ve since written my own hack to feed generated G-Code to my printer. I’m still using Slic3r. </li>
+</ul><p><strong>PLAstic Fantastic</strong></p>
+<p>There are basically two kinds: <a href="http://en.wikipedia.org/wiki/Polylactic_acid" target="_blank">PLA</a> and <a href="http://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene" target="_blank">ABS</a>. ABS can be tougher but is a bit nastier to deal with. If you don&rsquo;t care or are not sure what you need, try PLA first. The plastic I picked (from an unscientific online search) comes with a compatible filament diameter.</p>
+<p>When working with plastic, it is very important for the heated bed to be level. It is also practically impossible with this particular model of the printer.  Solution: put a piece of glass on top of it. Mine is scavenged from an old laptop&rsquo;s LCD. If you Google it, small mirrors are often suggested. If the first layer doesn&rsquo;t stick well, you might as well stop the thing and figure that out, it&rsquo;s not going to work anyway. This is why it&rsquo;s important for the bed to be level and for the Z axis to be well calibrated and the right temperature to be set. However, when all the basics are covered and it still fails - a very thin layer of 'School glue&rsquo; makes prints stick perfectly and it&rsquo;s easy to take off, it&rsquo;s water-soluble.</p>
+<p>Choosing a good extruder temperature is a bit of a trial and error. One observation: there&rsquo;s a small kink on the heater&rsquo;s time/temperature graph, at about the right point.  This is possibly due to a quick phase transition in the material (but this is just my speculation).</p>
+<p>A final note: If you are mostly after the prints, and don&rsquo;t want to spend much time with the machine, any of the popular commercial 3D-printer options will do. Just pick what is right in terms of features and price. Price will most likely end up becoming the deciding factor. Ask yourself if you want:</p>
+<ul><li>One print color, or more?</li>
+<li>Auto-calibrated or not?</li>
+<li>How big will your printed objects be?</li>
+<li>Do you plan on using different plastic types?</li>
+</ul><p>Commercial printers are popping up like mushrooms these days, so you’ve got lots of options.</p>
+<p>Since creating my printer, I’ve generated a few prints from Thingiverse and a couple of enclosures for my own projects.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Andrey Kartashov-ref">Andrey Kartashov <span>2</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#3D printing-ref">3D printing <span>1</span></a>
+      
+    <a href="/tags.html#3D printer-ref">3D printer <span>1</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#RepRap-ref">RepRap <span>1</span></a>
+      
+    <a href="/tags.html#DIY-ref">DIY <span>1</span></a>
+      
+    <a href="/tags.html#K8200-ref">K8200 <span>1</span></a>
+      
+    <a href="/tags.html#circlips-ref">circlips <span>1</span></a>
+      
+    <a href="/tags.html#OpenSCAD-ref">OpenSCAD <span>1</span></a>
+      
+    <a href="/tags.html#MakerBot-ref">MakerBot <span>1</span></a>
+      
+    <a href="/tags.html#thingiverse-ref">thingiverse <span>1</span></a>
+      
+    <a href="/tags.html#Repetier-ref">Repetier <span>1</span></a>
+      
+    <a href="/tags.html#Slic3r-ref">Slic3r <span>1</span></a>
+      
+    <a href="/tags.html#ABS-ref">ABS <span>1</span></a>
+      
+    <a href="/tags.html#PLA-ref">PLA <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/20/mobile-ux-and-web-components-gilt-headlines-the">Mobile UX and Web-Components: Gilt Headlines the Next NYC CSS/UX Meetup</a></h1>
+  
+  <header>
+    
+    <time>20 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/9eaa45e83ff4626327ea98e9c540adbc/tumblr_inline_n1boofurGT1s17bu5.jpg"/></p>
+
+<p>Next Tuesday&ndash;that&rsquo;s February 25 (hooray, winter is almost OVER)&ndash;Gilt Lead Engineer (and resident coffee-roasting expert) <a href="http://tech.gilt.com/search/gregory+mazurek" target="_blank">Gregory Mazurek</a> will give a talk targeted to all of you front-end engineers and mobile devs. Titled &ldquo;<a href="http://www.meetup.com/nyccssux/events/156810572/" target="_blank">Gilt Mobile Web, and Web-Components</a>,&rdquo; Greg&rsquo;s talk covers some of the key decisions his team has made in designing the <a href="http://m.gilt.com" target="_blank">Gilt mobile web</a> experience, and how the results relate to the <a href="http://www.gilt.com" target="_blank">full-web Gilt experience</a>. Greg will also discuss his thoughts on the Card UI pattern and introduce the audience to web-components: the latter a collection of standards that, Greg believes, will help engineers and designers create better user experiences on both the mobile web and full-screen.</p>
+<p>Greg&rsquo;s talk takes place at Gilt&rsquo;s NYC office (2 Park Avenue). The frontend-friendly <a href="http://www.meetup.com/nyccssux/events/156810572/" target="_blank">NYC CSS/UX meetup group</a> cohosts. Yes, there will be pizza and beer (would we let you starve? No, we wouldn&rsquo;t).</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#NYC CSS/UX meetup-ref">NYC CSS/UX meetup <span>1</span></a>
+      
+    <a href="/tags.html#front-end engineering-ref">front-end engineering <span>11</span></a>
+      
+    <a href="/tags.html#Gilt Mobile-ref">Gilt Mobile <span>22</span></a>
+      
+    <a href="/tags.html#Web-Components-ref">Web-Components <span>1</span></a>
+      
+    <a href="/tags.html#UX-ref">UX <span>18</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/19/scenes-from-last-nights-full-stack-engineering">Scenes from Last Night's Full-Stack Engineering Meetup (Video)</a></h1>
+  
+  <header>
+    
+    <time>19 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><iframe frameborder="0" height="450" src="//player.vimeo.com/video/87190203" width="800"></iframe></p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/c72d3dbbbd051867c195c977c93e9490/tumblr_inline_n197dkPkfq1s17bu5.jpg" width="800"/></p>
+<p>Last night the <a href="http://tech.gilt.com/search/full-stack+engineering" target="_blank">Full-Stack Engineering</a> meetup came back to Gilt&ndash;and what a meetup it was! More than 130 people came out to hear Gilt front-end engineer <a href="http://tech.gilt.com/2013/06/28/meet-a-gilt-technologist-nathan-stilwell-software" target="_blank">Nathan Stilwell</a>, Greenhouse.io Director of Engineering/Full-Stack organizer Mike Boufford, and Vimeo <span class="full">Video Systems Engineer </span><span class="full">Dieter Plaetinck</span> talk about WebSockets, JavaScript, and GraphExplorer. Some scenes of the action:</p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/b671ad7292639d9070d99ef724b3004c/tumblr_inline_n19926RcUw1s17bu5.jpg" width="800"/></em></p>
+<p><em>The evening&rsquo;s three speakers: from left: Mike, Nathan and Dieter.</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/d6d31035c4ad6cd230685d32897631b6/tumblr_inline_n1990eKRDT1s17bu5.jpg" width="800"/></em></p>
+<p><em>Free swag, courtesy of us and Typesafe.<br/></em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/9e8a792112bec3347fa3df2998b59883/tumblr_inline_n1992dH9Tq1s17bu5.jpg" width="800"/></em></p>
+<p><em>Gilt mobile engineer Greg Mazurek (who <a href="http://www.meetup.com/nyccssux/events/156810572/" target="_blank">speaks at our office next week</a>) chats up a guest.</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/d442b9845019769b3b52b4df360a97fa/tumblr_inline_n199dvsr7W1s17bu5.jpg" width="800"/></em></p>
+<p><em>The food went fast&hellip;</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/0e5f704256feb589fd23656e53b6fd5a/tumblr_inline_n199eryYDF1s17bu5.jpg" width="800"/></em></p>
+<p><em>Gilt engineer Ryan Marti</em><em>n kicks off the evening with a brief intro.</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/0a956699e495f8206a65ba9df142550e/tumblr_inline_n199g0kVyD1s17bu5.jpg" width="800"/></em></p>
+<p><em>Full-Stack organizer Mike Boufford of Greenhouse.io starts of the night&rsquo;s presentations with a talk on &ldquo;mastering JavaScript.&rdquo; Video:<br/></em></p>
+<p><iframe frameborder="0" height="450" src="//player.vimeo.com/video/87133253" width="800"></iframe></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/3291d23104ddce35ffd5ee6271802944/tumblr_inline_n199hkYWzG1s17bu5.jpg" width="800"/></em></p>
+<p><em>Dieter Plaetinck</em><em> gave us an overview of <a href="http://vimeo.github.io/graph-explorer/" target="_blank">GraphExplorer</a>, Vimeo&rsquo;s open source dashboard:</em></p>
+<p><iframe frameborder="0" height="450" src="//player.vimeo.com/video/87194301" width="800"></iframe></p>
+
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/f8f135354a1bde4dc909a72d6196474b/tumblr_inline_n199meALTJ1s17bu5.jpg" width="800"/></em></p>
+<p><em>Nathan&rsquo;s star-spangled office slippers = lucky footwear?</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/30fd4fd3bd0caca0c48e3bac9b20f4f8/tumblr_inline_n199p4DtQf1s17bu5.jpg" width="800"/></em></p>
+<p><em>Nathan explains how Gilt&rsquo;s engineering team has used WebSockets to create real-time applications that require full duplex communication. He also gave an overview of <a href="https://github.com/nathanstilwell/socket-wrench" target="_blank">SocketWrench</a>, his open-source wrapper around native WebSockets that offers more flexibility than the official WebSocket API. <strong>View Nathan&rsquo;s full presentation <a href="http://nathanstilwell.github.io/socket-talk" target="_blank">here</a>.</strong></em></p>
+<p><a href="http://nathanstilwell.github.io/socket-talk" target="_blank"><img alt="image" height="597" src="https://31.media.tumblr.com/ef74ad9fa7abf2e33c1084610a5eb10c/tumblr_inline_n199s4lrag1s17bu5.jpg" width="800"/></a></p>
+<p><em>The night&rsquo;s speakers answer questions from the audience.<br/></em></p>
+<p>Thanks to all of our speakers and guests for making it such a fun and energetic meetup!</p>
+<p><em>Photos by <a href="http://qoolfoto.com/" target="_blank">Craig Williston/QoolFoto</a>.</em></p>
+
+<p></p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#full-stack engineering-ref">full-stack engineering <span>6</span></a>
+      
+    <a href="/tags.html#Nathan Stilwell-ref">Nathan Stilwell <span>7</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt tech-ref">Gilt tech <span>9</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#Mike Boufford-ref">Mike Boufford <span>4</span></a>
+      
+    <a href="/tags.html#Dieter Plaetinck-ref">Dieter Plaetinck <span>2</span></a>
+      
+    <a href="/tags.html#WebSockets-ref">WebSockets <span>3</span></a>
+      
+    <a href="/tags.html#front-end engineering-ref">front-end engineering <span>11</span></a>
+      
+    <a href="/tags.html#SocketWrench-ref">SocketWrench <span>1</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    <a href="/tags.html#events-ref">events <span>26</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/18/scenes-from-the-annual-encryption-key-ceremony-at">Scenes from the Annual Encryption Key Ceremony at Gilt</a></h1>
+  
+  <header>
+    
+    <time>18 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img height="597" src="https://31.media.tumblr.com/2e10ef1699dfc6cd8274b8c77516a6ce/tumblr_inline_n17i5mcUWH1s17bu5.jpg" width="800"/></p>
+
+<p>At Gilt, we take our customers&rsquo; security very seriously&ndash;so seriously, in fact, that we&rsquo;ve turned our credit-card number re-encryption process into an official ritual complete with several Grim Reapers (because why stop at one?) and <a href="http://tech.gilt.com/2011/06/03/pci-poetry" target="_blank">poetry</a>.</p>
+<p>The key-flipping ceremony begins with a procession (see above) that ends at a &ldquo;holy altar&rdquo; (some tables typically used by our Data teams for lunch-eating and beer-tasting). Then Senior Security &amp; Compliance Engineer Chip &ldquo;Pope Durland addresses the crowd:</p>
+<p><img height="597" src="https://31.media.tumblr.com/d4ed5c0c4a088c246c267e84bc6de5ee/tumblr_inline_n17ia6BePr1s17bu5.jpg" width="800"/></p>
+<p><em>The people listen:</em></p>
+<p><img height="597" src="https://31.media.tumblr.com/12d793cfe92b0b25d6d3c0a4209f2029/tumblr_inline_n17dyhbKj41s17bu5.jpg" width="800"/></p>
+<p><em>Reapers, reapin&rsquo; (most cheerful &quot;Angels of Death&rdquo; ever):</em></p>
+<p><img height="597" src="https://31.media.tumblr.com/1da0ab73409a15158a08021b70c82626/tumblr_inline_n17ibcVYeT1s17bu5.jpg" width="800"/></p>
+<p><em>Finishing up the job:</em></p>
+<p><img height="597" src="https://31.media.tumblr.com/b55a37a55bfeed416e6477043c953a3b/tumblr_inline_n17iyxueyd1s17bu5.jpg" width="800"/></p>
+
+<p></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt tech-ref">Gilt tech <span>9</span></a>
+      
+    <a href="/tags.html#security-ref">security <span>5</span></a>
+      
+    <a href="/tags.html#encryption-ref">encryption <span>1</span></a>
+      
+    <a href="/tags.html#ceremony-ref">ceremony <span>1</span></a>
+      
+    <a href="/tags.html#office culture-ref">office culture <span>3</span></a>
+      
+    <a href="/tags.html#fun things that we do-ref">fun things that we do <span>1</span></a>
+      
+    <a href="/tags.html#Chip Durland-ref">Chip Durland <span>2</span></a>
+      
+    <a href="/tags.html#PCI compliance-ref">PCI compliance <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/14/let-gilt-engineer-nathan-stilwell-school-you-on">Let Gilt Engineer Nathan Stilwell School You on WebSockets on 2/18</a></h1>
+  
+  <header>
+    
+    <time>14 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><strong><img alt="image" height="597" src="http://media.tumblr.com/2ed1ffcd6443d219b0a7909dc1d473b9/tumblr_inline_mp41opBDCg1qz4rgp.jpg" width="800"/></strong></p>
+<p><span>Two hundred NYC-area engineers have already RSVPed for next Tuesday&rsquo;s <a href="http://www.meetup.com/Full-Stack-Engineering-Meetup/events/159441252/" target="_blank">Full-Stack Engineering</a> meetup at Gilt&ndash;how exciting! Even more exciting: Gilt software engineer <a href="http://tech.gilt.com/2013/06/28/meet-a-gilt-technologist-nathan-stilwell-software" target="_blank">Nathan</a></span><a href="http://tech.gilt.com/2013/06/28/meet-a-gilt-technologist-nathan-stilwell-software" target="_blank"> Stilwell</a> (pictured above) is one of the evening&rsquo;s three featured speakers.</p>
+<p>Nathan, a front-end engineer who is part of Gilt&rsquo;s amazing Ninjas team, will give a presentation on <span class="il">WebSockets</span> and how we&rsquo;ve used them successfully to create real-time applications that require full duplex communication. <span>Nathan&rsquo;s talk will include </span>overview of what <span class="il">WebSockets</span> are and how to use the <span class="il">WebSockets</span> API, and describe some of the challenges Gilt&rsquo;s engineering team encountered as it integrated <span class="il">WebSockets</span> into its front-end technologies. He&rsquo;ll discuss why Gilt&rsquo;s team has embraced <span class="il">WebSockets</span> so heartily, how <span class="il">WebSockets</span> application at Gilt differs between front-end and back-end, and how the Gilt team uses <span class="il">WebSockets</span> with the Play Framework. Lastly, he&rsquo;ll talk about his open source project, Socket Wrench: a light wrapper around native <span class="il">WebSockets</span> that is more convenient than the <span class="il">WebSockets</span> API.<em><br/></em></p>
+<p>Also on Tuesday&rsquo;s bill: Full-Stack organizer/Greenhouse.io Director of Engineering Mike Boufford on &ldquo;mastering JavaScript,&rdquo; and Vimeo Video Systems Engineer Dieter Plaetinck on Metrics/GraphExplorer. Food and drink provided!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#front-end engineering-ref">front-end engineering <span>11</span></a>
+      
+    <a href="/tags.html#full-stack engineering-ref">full-stack engineering <span>6</span></a>
+      
+    <a href="/tags.html#Gilt tech-ref">Gilt tech <span>9</span></a>
+      
+    <a href="/tags.html#Nathan Stilwell-ref">Nathan Stilwell <span>7</span></a>
+      
+    <a href="/tags.html#WebSockets-ref">WebSockets <span>3</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/12/looker-gilt-presentation-includes-slideshow">Looker @ Gilt Presentation (Includes Slideshow)</a></h1>
+  
+  <header>
+    
+    <time>12 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/218bb5935e9a039fa8c52c1e94429656/tumblr_inline_n0wcw7knfP1s17bu5.jpg" width="800"/></p>
+
+<p>Last night Gilt hosted the first <a href="http://tech.gilt.com/2014/02/11/gilt-hosting-the-first-looker-user-group-meetup-tonight" target="_blank">Looker User Group</a> meetup in NYC. Gilt Director of Data Engineering Geoff Guerdat (pictured above) gave a brief talk about how we&rsquo;re using Looker, and what we hope to do with it in the future:</p>
+<p><iframe frameborder="0" height="486" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/31135742" width="597"> </iframe></p>
+<p>Thanks to everyone who joined us last night, and thanks to Looker for all of the delicious food!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Looker-ref">Looker <span>4</span></a>
+      
+    <a href="/tags.html#Looker data-ref">Looker data <span>1</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#presentations-ref">presentations <span>42</span></a>
+      
+    <a href="/tags.html#slideshows-ref">slideshows <span>4</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Geoff Guerdat-ref">Geoff Guerdat <span>4</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/11/gilt-hosting-the-first-looker-user-group-meetup">Gilt Hosting the First Looker User Group Meetup Tonight</a></h1>
+  
+  <header>
+    
+    <time>11 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/139e4bc0d721a7206a063b3a456331cb/tumblr_inline_n0ubo8rPJk1s17bu5.png"/></p>
+<p><br/>Tonight the Gilt Data Team hosts the first-ever <a href="http://www.meetup.com/Looker-User-Group-NY/events/156298422/" target="_blank">Looker User Group</a> meetup in NYC! Looker is a data tool that we&rsquo;re excited about at Gilt&ndash;it does a great job of  providing easy access to information, and is helping us to make our data more accessible to everyone company-wide. &ldquo;Seriously, <em>everyone</em>,&rdquo; says Gilt Director of Data Engineering Geoff Guerdat. &ldquo;And it does this while maintaining data definitions, which is important if you&rsquo;re concerned with all that data governance nerdy stuff.&rdquo;</p>
+<p>Tonight&rsquo;s meetup begins at 6:30 PM and features presentations by Geoff and reps from Upworthy and Frank &amp; Oak. Looker reps will also be on hand to answer questions and provide a Looker update. Food and drink provided!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Looker User Group-ref">Looker User Group <span>2</span></a>
+      
+    <a href="/tags.html#big data-ref">big data <span>17</span></a>
+      
+    <a href="/tags.html#Looker-ref">Looker <span>4</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Upworthy-ref">Upworthy <span>1</span></a>
+      
+    <a href="/tags.html#Frank & Oak-ref">Frank & Oak <span>1</span></a>
+      
+    <a href="/tags.html#meetups-ref">meetups <span>32</span></a>
+      
+    <a href="/tags.html#Gilt Data Team-ref">Gilt Data Team <span>1</span></a>
+      
+    <a href="/tags.html#data-ref">data <span>25</span></a>
+      
+    <a href="/tags.html#data governance-ref">data governance <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/10/lucene-solr-the-default-search-engine-for">"Lucene/Solr: The Default Search Engine for Hadoop" Meetup at Gilt This Wednesday</a></h1>
+  
+  <header>
+    
+    <time>10 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/bca8ff2d995a04a0ba8fbd533a226251/tumblr_inline_n0ssavkRD01s17bu5.png"/></p>
+
+<p>As fans and users of <a href="http://tech.gilt.com/2012/07/27/search-on-gilt" target="_blank">Apache Lucene/Solr</a>, we&rsquo;re excited to host the <a href="http://www.meetup.com/NYC-Apache-Lucene-Solr-Meetup/" title="NYC Apache Lucene/Solr Meetup - New York, NY" target="_blank"><span>NYC Apache Lucene/Solr Meetup</span></a>&rsquo;s roundtable this Wednesday, Feb. 12. Titled &ldquo;<a href="http://www.meetup.com/NYC-Apache-Lucene-Solr-Meetup/events/152814172/" target="_blank">Lucene/Solr: The Default Search Engine for Hadoop</a>,&rdquo; the meetup will feature some of the biggest Hadoop vendors in the market discussing ways to access data in a quick and predictable way that also leverages many of the features users have come to expect from search. If you&rsquo;re a software engineer or other technologist who&rsquo;s hoping to learn more about search and big data, this is an event for you!</p>
+<p>LucidWorks CEO Paul Doscher will host the roundtable, which will also feature Mark Miller of Cloudera, Mike Vogel of Knowledgent, and Joseph Caserta of Caserta Concepts. More on the night&rsquo;s speakers:</p>
+<ul><li><strong>Mark Miller</strong> is a Lucene/Solr committer and PMC member as well as an Apache member. After starting with Lucene in 2006, Mark has spent most of his time getting paid to work on the open source software projects that he loves. Mark is probably best known for his work on Lucene, Solr, and SolrCloud and is currently learning all about Hadoop while focusing on search as a software engineer at Cloudera.</li>
+<li><strong>Paul Doscher</strong>: As CEO, Paul is responsible for LucidWorks’ vision and success in the enterprise-wide search, discovery and analytics market. He comes to LucidWorks with 30 years of sales, marketing and business management experience within high-tech enterprise software. </li>
+<li><strong>Joe Caserta</strong> is president of Caserta Concepts, a New York-based technology consulting firm that builds big data solutions for businesses and organizations.</li>
+<li><strong>Mike Vogel </strong>is a senior technologist and product manager at Knowledgent Group, a consultancy that advises companies on their big data initiatives.</li>
+</ul><p>Hope to see you here! Food and drink provided.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Lucene-ref">Lucene <span>2</span></a>
+      
+    <a href="/tags.html#Solr-ref">Solr <span>3</span></a>
+      
+    <a href="/tags.html#Apache-ref">Apache <span>2</span></a>
+      
+    <a href="/tags.html#Mark Miller-ref">Mark Miller <span>1</span></a>
+      
+    <a href="/tags.html#Joe Caserta-ref">Joe Caserta <span>1</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#NYC Apache Lucene/Solr Meetup-ref">NYC Apache Lucene/Solr Meetup <span>1</span></a>
+      
+    <a href="/tags.html#search-ref">search <span>7</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#Hadoop-ref">Hadoop <span>6</span></a>
+      
+    <a href="/tags.html#big data-ref">big data <span>17</span></a>
+      
+    <a href="/tags.html#Mike Vogel-ref">Mike Vogel <span>1</span></a>
+      
+    <a href="/tags.html#Paul Doscher-ref">Paul Doscher <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/07/fancy-cheese-friday">Fancy Cheese Friday</a></h1>
+  
+  <header>
+    
+    <time>07 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" height="597" src="https://31.media.tumblr.com/d82bdbcf41c696ebb749119defcaa66b/tumblr_inline_n0nb6rxhyP1s17bu5.jpg" width="800"/></p>
+<p>Several months ago we taught you <a href="http://tech.gilt.com/2013/07/09/how-to-do-high-tea-the-gilt-tech-way" target="_blank">how to do high tea the Gilt tech way</a>. Now we show you how to celebrate cheese: Fancy Cheese Friday.</p>
+<p>Masterminded by Gilt software engineer Robert Brazier, Fancy Cheese Friday brings together non-vegan and lactose-tolerant Gilt technologists to rediscover the magic that is cheese. Today&rsquo;s gathering&ndash;the second in our history&ndash;involved the following cheeses:</p>
+<ul><li>Kolan hard-pressed cow milk cheese</li>
+<li>Lorenzo of Cazenovia, NY</li>
+<li>Guggisberg Baby Swiss</li>
+<li>Stilton</li>
+</ul><p>Plus baguettes, crackers and other bready things. Highlights:</p>
+<p><img alt="image" height="597" src="https://31.media.tumblr.com/183f738979223527027348fa61090680/tumblr_inline_n0nbcnva7k1s17bu5.jpg" width="800"/></p>
+<p><em>Gilt engineer Asha Seetharam gets her cheese on.</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/4fdff2c25af186b3e05c688c5f7f51b5/tumblr_inline_n0nbeqFpuY1s17bu5.jpg" width="800"/></em></p>
+
+<p><em>Engineer/<a href="http://tech.gilt.com/2014/02/06/gilt-software-engineer-miguel-fajardo-wrote-a" target="_blank">published author</a> Miguel Angel Fajardo does the cutting.</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/24f1ec9faa694665d26e48af25b6314a/tumblr_inline_n0nbgrR6fH1s17bu5.jpg" width="800"/></em></p>
+<p> <em>Fancy Cheese Friday founder Robert Brazier (far left) samples the goods.</em></p>
+<p><em><img alt="image" height="597" src="https://31.media.tumblr.com/77a77b3c28b20a8d0e2e63e41ab451fe/tumblr_inline_n0nbiuzYl61s17bu5.jpg" width="800"/></em></p>
+<p><em>This fellow, a distant cousin of <a href="http://tech.gilt.com/2014/01/24/meet-the-gilt-tech-office-horse" target="_blank">Giovanni the Office Horse</a>, showed up for a bite of Swiss.<br/></em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#cheese-ref">cheese <span>2</span></a>
+      
+    <a href="/tags.html#Fancy Cheese Friday-ref">Fancy Cheese Friday <span>1</span></a>
+      
+    <a href="/tags.html#technologie gastronomie-ref">technologie gastronomie <span>1</span></a>
+      
+    <a href="/tags.html#Robert Brazier-ref">Robert Brazier <span>3</span></a>
+      
+    <a href="/tags.html#team-building-ref">team-building <span>2</span></a>
+      
+    <a href="/tags.html#culture-ref">culture <span>28</span></a>
+      
+    <a href="/tags.html#miguel fajardo-ref">miguel fajardo <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/02/06/produce-a-great-tech-talk-by-asking-yourself-and">Produce a Great Tech Talk by Asking Yourself (and Answering!) These Questions</a></h1>
+  
+  <header>
+    
+    <time>06 February 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p>Members of the Gilt engineering team give lots of technical presentations at <a href="http://tech.gilt.com/2014/01/15/scaling-gilt-at-gilt-nyc-tech-talks-comes-to-2-park" target="_blank">meetups</a>, <a href="http://tech.gilt.com/2013/10/25/gilts-kevin-scaldeferri-on-enabling-micro-service" target="_blank">conferences</a>, our <a href="http://tech.gilt.com/2011/02/14/the-friday-5-4" target="_blank">in-house</a> gatherings, and <a href="http://tech.gilt.com/2013/12/30/register-for-sauce-labs-next-webinar-automating" target="_blank">online</a>. How do we make sure that our content is &ldquo;tech&rdquo; enough to interest experienced engineers? And how do we confidently tell the most compelling stories possible? With these concerns in mind, I&rsquo;ve created this list of questions to ask while planning and preparing a tech talk. All of you engineers out there in Greater Internetlandia might find it useful as you work on your own presentations:</p>
+<ul id="docs-internal-guid-2471b707-08ea-c5bc-9e71-4d89c430c2c3"><li>
+<p><span>Which technology/technologies will you discuss in this talk? </span></p>
+</li>
+<li>
+<p><span>Which technology or aspect of technology will be the </span><em>primary</em><span> focus: a language, a framework, a problem, a methodology, or a combination of technologies working together? (O<em>r &ldquo;other&rdquo;? If &ldquo;other&rdquo; is your answer, please define)</em></span></p>
+</li>
+<li>
+<p><span>How would you title and summarize your topic so that, if you saw it advertised on a random events listing page, you would regard it as a “must-attend” talk? <em>(If it&rsquo;s not a &ldquo;must-attend&rdquo; yet, keep working!</em>)<br/></span></p>
+</li>
+<li>
+<p><span>Will this topic be of obvious interest to engineers? What type of engineers? Please be as precise as possible in describing</span><span> type</span><span> (for example, “experienced generalist engineers who lean front-end,” “front-end mobile UX engineers,” “back-end engineers who work on big data initiatives involving X, Y and Z technologies,” etc.”)</span></p>
+</li>
+<li>
+<p><span>Have you done online research to make sure that no one in the area has given a substantially similar talk in the last 3-6 months? (<em>If someone has already given a similar talk, one option is to take an opposing view; another is to highlight subtopics that the past presenter(s) didn’t discuss</em>)</span></p>
+</li>
+<li>
+<p><span>From a technical POV, what is the </span><span>most novel/exciting aspect</span><span> of the content you’re providing? And from an implementation POV, what makes your approach remarkable? (<em>In related: What about this topic personally excites and inspires you?</em>)</span></p>
+</li>
+<li>
+<p><span>Does your presentation offer a solution to a commonly held technical problem? What about your proposed solution is novel/different from what you’ve seen discussed in other, similar talks/blog posts/tech lit? (<em>Put another way: Does your presentation offer a way to work better/more efficiently/more creatively?</em>)</span></p>
+</li>
+<li>
+<p><span>The format that would make this talk most compelling would be (choose one): “how-to,” “explainer,” “argument/opinion,” “case study/narrative,&ldquo; &quot;comparison,” &quot;demonstration&rdquo;</span></p>
+</li>
+<li>
+<p><span>Will your talk include a live demo? And what will your samples of code demonstrate or reveal? </span></p>
+</li>
+<li>
+<p><span>What notable outside sources&ndash;widely discussed technical articles, others&rsquo; presentations that have gone viral, quotes by well-known technologists&ndash;can your cite in order to place your talk in the broader context of what&rsquo;s currently &ldquo;hot&rdquo; in the engineering community?</span></p>
+</li>
+<li>
+<p><span></span><span>What are the resources you need to start and complete your talk: research help? guidance with structure? help creating visuals?</span></p>
+</li>
+</ul><ul><li><span>Who else on your team would you like to bring in to provide objective, constructive criticism, brainstorming help, and feedback? (Pick 1-2 members of your team + 1-2 engineers whose work isn’t directly related to your talk’s content)</span></li>
+</ul><p><span>Feel free to share your feedback by emailing lapple at gilt dot com. And if you have tips of your own, send them my way&ndash;you&rsquo;ll receive a byline here + a link to your Twitter feed, website or other choice online property that you own.</span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#tech evangelism-ref">tech evangelism <span>3</span></a>
+      
+    <a href="/tags.html#how-to-ref">how-to <span>17</span></a>
+      
+    <a href="/tags.html#presentations-ref">presentations <span>42</span></a>
+      
+    <a href="/tags.html#advice-ref">advice <span>3</span></a>
+      
+    <a href="/tags.html#creating a technical talk-ref">creating a technical talk <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/30/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 31 of 64</span>
+  
+    <a href="/posts/32/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

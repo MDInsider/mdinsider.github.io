@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Java has log4j...Objective-C has CocoaLumberjack...and now Swift has CleanroomLogger</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/swift/2015/05/08/java-has-log4j-objective-c-has">Java has log4j...Objective-C has CocoaLumberjack...and now Swift has CleanroomLogger</a></h1>
+  
+  <header>
+    
+    <cite><a href="/authors.html#Evan Maloney-ref">Evan Maloney</a></cite>
+    
+    <time>08 May 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#swift-ref">swift</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>Gilt Tech is proud to announce the release of <a href="https://github.com/emaloney/CleanroomLogger#cleanroomlogger" target="_blank">CleanroomLogger</a> 1.0, an open-source logging API for iOS.
+
+</p><p>CleanroomLogger provides a simple, lightweight and performant logging API written in Swift that will be readily understood by anyone familiar with other logging packages like CocoaLumberjack and log4j.
+
+</p><h1>CleanroomLogger Highlights</h1>
+
+<p>CleanroomLogger provides these key features:
+
+</p><ul><li>Classify log messages according to one of five <i>severity levels</i>: <b>verbose</b>, <b>debug</b>, <b>info</b>, <b>warning</b> and <b>error</b>
+</li><li>See the source file and line number of each log message recorded
+</li><li>Silently ignore messages below a given severity threshold
+</li><li>Far more respectful of the calling thread than <code>NSLog()</code>
+</li><li>A <code>trace()</code> function that can be used to trace an application&rsquo;s code paths by logging the location of its caller
+</li><li>Configurable log behavior that puts the application developer in control of embedded code
+</li><li>Extension points that allow custom implementations for (1) log message formatting, (2) message filtering logic, and (3) the recording of log messages to an underlying facility.
+</li></ul><h2>Message logging</h2>
+
+<p>Each message sent to the log is associated with a <i>severity</i> value indicating the relative importance of the message.
+
+</p><p>You would send an informational message as follows:
+
+</p><pre>
+Log.info?.message("The user has added \(count) items to the cart")
+</pre>
+
+<p>If a condition occurs that itself isn&rsquo;t an error, but that might signal future trouble, you might issue a <i>warning</i>:
+
+</p><pre>
+Log.warning?.message("We're running low on space!!!")
+</pre>
+
+<p>Finally, when things hit the fan, you&rsquo;ve got:
+
+</p><pre>
+Log.error?.message("Oh my, this is extremely embarrassing")
+</pre>
+
+<p>Each log message is recorded with the file and line that issued it, so you can very quickly figure out what code was responsible for a given message.
+
+</p><h2>Execution tracing</h2>
+
+<p>As you&rsquo;re developing and testing your code, you might want to understand the flow of execution your code takes. You can add <code>trace()</code> calls to various points in your code:
+
+</p><pre>
+Log.debug?.trace()
+</pre>
+
+<p>The code above would print out the file and line number containing the <code>trace()</code> call, as well as the name of the calling function. The output looks like:
+
+</p><pre>
+ModularTable.swift:364 — tableView(_:cellForRowAtIndexPath:)
+</pre>
+
+<h2>Logging arbitrary values</h2>
+
+<p>Sometimes life hands you an <code>NSError</code>. Why bother constructing a <i>new</i> message? The <code>NSError</code> <i>is</i> the message:
+
+</p><pre>
+Log.error?.value(err)
+</pre>
+
+<p>This function accepts <code>Any?</code>, meaning it&rsquo;ll handle anything you throw at it.
+
+</p><h2>Extensibility
+
+</h2><p>CleanroomLogger&rsquo;s extension points allow you to fully customize all aspects of logging without having to worry about the <i>mechanics</i> of how a logging engine is implemented.
+
+</p><p>The ability to provide one or more custom <code>LogRecorder</code> implementations is particularly powerful. You could implement your own <code>LogRecorder</code> to do things like:
+
+</p><ul><li>Write messages to a file or set of (potentially rotating) files
+</li><li>Store messages with a <i>warning</i> or <i>error</i> severity in a database for subsequent diagnostic evaluation
+</li><li>Send messages with an <i>error</i> severity to a network endpoint to enable rapid response to codebase instability
+</li></ul><p>And because more than one <code>LogRecorder</code> can be used at a time, you can multiplex your log messages to multiple destinations without writing any additional code.
+
+</p><h1>About CleanroomLogger</h1>
+
+<p>CleanroomLogger is part of <a href="https://github.com/gilt/Cleanroom" target="_blank">the Cleanroom project</a> a set of open-source Swift projects launched as &ldquo;an experiment in re-imagining Gilt&rsquo;s iOS codebase in a legacy-free incarnation that embraces the latest Apple technology.&rdquo;
+
+</p><p><a href="https://github.com/emaloney/CleanroomLogger" target="_blank">The source code for CleanroomLogger is available on GitHub</a>, and may be used, modified and redistributed freely under <a href="https://github.com/emaloney/CleanroomLogger/blob/master/LICENSE" target="_blank">the MIT license</a>. </p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#swiftlang-ref">swiftlang <span>1</span></a>
+      
+    <a href="/tags.html#swift-ref">swift <span>1</span></a>
+      
+    <a href="/tags.html#ios-ref">ios <span>5</span></a>
+      
+    <a href="/tags.html#xcode-ref">xcode <span>1</span></a>
+      
+    <a href="/tags.html#log4j-ref">log4j <span>1</span></a>
+      
+    <a href="/tags.html#cocoalumberjack-ref">cocoalumberjack <span>1</span></a>
+      
+    <a href="/tags.html#opensource-ref">opensource <span>9</span></a>
+      
+    <a href="/tags.html#github-ref">github <span>3</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#apple-ref">apple <span>2</span></a>
+      
+    <a href="/tags.html#iphone-ref">iphone <span>2</span></a>
+      
+    <a href="/tags.html#ipad-ref">ipad <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/swift/2015/05/08/java-has-log4j-objective-c-has">Java has log4j...Objective-C has CocoaLumberjack...and now Swift has CleanroomLogger</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Evan Maloney-ref">Evan Maloney</a></cite>
+    
+    <time>08 May 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#swift-ref">swift</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>Gilt Tech is proud to announce the release of <a href="https://github.com/emaloney/CleanroomLogger#cleanroomlogger" target="_blank">CleanroomLogger</a> 1.0, an open-source logging API for iOS.
+
+</p><p>CleanroomLogger provides a simple, lightweight and performant logging API written in Swift that will be readily understood by anyone familiar with other logging packages like CocoaLumberjack and log4j.
+
+</p><h1>CleanroomLogger Highlights</h1>
+
+<p>CleanroomLogger provides these key features:
+
+</p><ul><li>Classify log messages according to one of five <i>severity levels</i>: <b>verbose</b>, <b>debug</b>, <b>info</b>, <b>warning</b> and <b>error</b>
+</li><li>See the source file and line number of each log message recorded
+</li><li>Silently ignore messages below a given severity threshold
+</li><li>Far more respectful of the calling thread than <code>NSLog()</code>
+</li><li>A <code>trace()</code> function that can be used to trace an application&rsquo;s code paths by logging the location of its caller
+</li><li>Configurable log behavior that puts the application developer in control of embedded code
+</li><li>Extension points that allow custom implementations for (1) log message formatting, (2) message filtering logic, and (3) the recording of log messages to an underlying facility.
+</li></ul><h2>Message logging</h2>
+
+<p>Each message sent to the log is associated with a <i>severity</i> value indicating the relative importance of the message.
+
+</p><p>You would send an informational message as follows:
+
+</p><pre>
+Log.info?.message("The user has added \(count) items to the cart")
+</pre>
+
+<p>If a condition occurs that itself isn&rsquo;t an error, but that might signal future trouble, you might issue a <i>warning</i>:
+
+</p><pre>
+Log.warning?.message("We're running low on space!!!")
+</pre>
+
+<p>Finally, when things hit the fan, you&rsquo;ve got:
+
+</p><pre>
+Log.error?.message("Oh my, this is extremely embarrassing")
+</pre>
+
+<p>Each log message is recorded with the file and line that issued it, so you can very quickly figure out what code was responsible for a given message.
+
+</p><h2>Execution tracing</h2>
+
+<p>As you&rsquo;re developing and testing your code, you might want to understand the flow of execution your code takes. You can add <code>trace()</code> calls to various points in your code:
+
+</p><pre>
+Log.debug?.trace()
+</pre>
+
+<p>The code above would print out the file and line number containing the <code>trace()</code> call, as well as the name of the calling function. The output looks like:
+
+</p><pre>
+ModularTable.swift:364 — tableView(_:cellForRowAtIndexPath:)
+</pre>
+
+<h2>Logging arbitrary values</h2>
+
+<p>Sometimes life hands you an <code>NSError</code>. Why bother constructing a <i>new</i> message? The <code>NSError</code> <i>is</i> the message:
+
+</p><pre>
+Log.error?.value(err)
+</pre>
+
+<p>This function accepts <code>Any?</code>, meaning it&rsquo;ll handle anything you throw at it.
+
+</p><h2>Extensibility
+
+</h2><p>CleanroomLogger&rsquo;s extension points allow you to fully customize all aspects of logging without having to worry about the <i>mechanics</i> of how a logging engine is implemented.
+
+</p><p>The ability to provide one or more custom <code>LogRecorder</code> implementations is particularly powerful. You could implement your own <code>LogRecorder</code> to do things like:
+
+</p><ul><li>Write messages to a file or set of (potentially rotating) files
+</li><li>Store messages with a <i>warning</i> or <i>error</i> severity in a database for subsequent diagnostic evaluation
+</li><li>Send messages with an <i>error</i> severity to a network endpoint to enable rapid response to codebase instability
+</li></ul><p>And because more than one <code>LogRecorder</code> can be used at a time, you can multiplex your log messages to multiple destinations without writing any additional code.
+
+</p><h1>About CleanroomLogger</h1>
+
+<p>CleanroomLogger is part of <a href="https://github.com/gilt/Cleanroom" target="_blank">the Cleanroom project</a> a set of open-source Swift projects launched as &ldquo;an experiment in re-imagining Gilt&rsquo;s iOS codebase in a legacy-free incarnation that embraces the latest Apple technology.&rdquo;
+
+</p><p><a href="https://github.com/emaloney/CleanroomLogger" target="_blank">The source code for CleanroomLogger is available on GitHub</a>, and may be used, modified and redistributed freely under <a href="https://github.com/emaloney/CleanroomLogger/blob/master/LICENSE" target="_blank">the MIT license</a>. </p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#swiftlang-ref">swiftlang <span>1</span></a>
+      
+    <a href="/tags.html#swift-ref">swift <span>1</span></a>
+      
+    <a href="/tags.html#ios-ref">ios <span>5</span></a>
+      
+    <a href="/tags.html#xcode-ref">xcode <span>1</span></a>
+      
+    <a href="/tags.html#log4j-ref">log4j <span>1</span></a>
+      
+    <a href="/tags.html#cocoalumberjack-ref">cocoalumberjack <span>1</span></a>
+      
+    <a href="/tags.html#opensource-ref">opensource <span>9</span></a>
+      
+    <a href="/tags.html#github-ref">github <span>3</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#apple-ref">apple <span>2</span></a>
+      
+    <a href="/tags.html#iphone-ref">iphone <span>2</span></a>
+      
+    <a href="/tags.html#ipad-ref">ipad <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/conferences/2015/05/05/solr-gilt-powering-search-and-listing-for-the">Solr@Gilt-Powering Search and Listing for the Largest Flash Sale Site in America</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Heather Fleming-ref">Heather Fleming</a></cite>
+    
+    <time>05 May 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#conferences-ref">conferences</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p><a href="http://www.meetup.com/NYC-Apache-Lucene-Solr-Meetup/events/219670219/" target="_blank">Reserve your spot before they’re all gone!</a></p><p>Learn how we adopted Solr at Gilt to provide personalised search results, from early days using Solr 3 on just three nodes, to a more modern clustered deployment today running Solr 4 that powers all listing pages on Gilt through our daily pulse load at noon. We&rsquo;ll discuss what worked, what didn&rsquo;t, and where we&rsquo;re going next for search on gilt.com.<br/></p><p>If you haven’t yet heard Ade Trenaman speak, you are in for a treat!  Be there: Thursday, May 14th at 6:30pm!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#meetup-ref">meetup <span>6</span></a>
+      
+    <a href="/tags.html#ade trenaman-ref">ade trenaman <span>2</span></a>
+      
+    <a href="/tags.html#solr-ref">solr <span>4</span></a>
+      
+    <a href="/tags.html#search-ref">search <span>7</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/conferences/2015/04/17/were-hosting-the-nycpug-meetup-on-april-21">We’re hosting the NYCPUG meetup on April 21!</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Heather Fleming-ref">Heather Fleming</a></cite>
+    
+    <time>17 April 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#conferences-ref">conferences</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <div style="text-align:center"><img src="https://41.media.tumblr.com/e71003674212b3d7c28b112a30b8b76b/tumblr_inline_nmydsoMUBy1qhx62z_540.jpg" data-orig-height="180" data-orig-width="174"/></div><p>Join us on Tuesday, April 21 at 6:30pm for the NYCPUG meetup!  </p><p>David Steele in town to talk about PgBackRest and how to efficiently backup massive amounts of data.</p><p>More info on the <a href="http://www.meetup.com/postgresql-3/events/221813574/" target="_blank">meetup page</a>.  Hope to see you there!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Meetup-ref">Meetup <span>4</span></a>
+      
+    <a href="/tags.html#NYCPUG-ref">NYCPUG <span>1</span></a>
+      
+    <a href="/tags.html#postgresql-ref">postgresql <span>1</span></a>
+      
+    <a href="/tags.html#PgBackRest-ref">PgBackRest <span>1</span></a>
+      
+    <a href="/tags.html#David Steele-ref">David Steele <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/aws/2015/04/16/tips-for-debugging-ec2-container-service">Tips for Debugging EC2 Container Service</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Scott Thompson-ref">Scott Thompson</a></cite>
+    
+    <time>16 April 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#AWS-ref">AWS</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>Last week, Amazon made their <a href="http://aws.amazon.com/ecs" target="_blank">Elastic Container Service</a> generally available and also released a web UI to make it easier to create tasks. This service was exciting for our personalization team as we wanted to leverage ECS to simplify deployment of our jobs and have better control over failures.<br/></p><p><b></b></p><p>Getting started with ECS is easy but requires your full attention because there are a lot of important details (did you remember to set the correct IAM roles for your container instances?). If you haven’t done so already, make sure you go through the <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html" target="_blank">Getting Started documentation</a>.</p><p>Once you’re ready to run your task what to do if something fails or doesn’t go as planned? Here are some of our experiences debugging ECS tasks.</p><h2>Start with a simple application</h2><p>In our case we created a Scala main method with very few dependencies. A sleep method is sufficient to simulate a job running and should provide enough time to see our container running.<br/></p><figure data-orig-width="298" data-orig-height="81"><img src="https://40.media.tumblr.com/79d194eba676f73f0eb93559dd84484e/tumblr_inline_nmwny6vMRY1sjs9t1_540.png" alt="image" data-orig-width="298" data-orig-height="81"/></figure><h2><br/></h2><h2>Make sure your cluster has at least one container instance</h2><p><b></b></p><p>Your ECS cluster requires at least one container instance to run your container. You can check the web console to make sure there is at least one running.</p><figure data-orig-width="1130" data-orig-height="230" class="tmblr-full"><img src="https://40.media.tumblr.com/906b5806efef5d749370cdd7c171f436/tumblr_inline_nmwnxhRQI61sjs9t1_540.png" alt="image" data-orig-width="1130" data-orig-height="230"/></figure><p>If you don’t see your instances here make sure you’ve followed the <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html" target="_blank">Container Instance documentation</a>. In particular that you launched an instance with the <b>correct ECS AMI</b>, that you have attached the <b>correct IAM role</b> and that you have <b>pointed your instance to your cluster</b>.<br/></p><p><br/></p><h2>Inspect the ECS logs</h2><p><b></b></p><p>Once your container instance is attached to your cluster there will be an ecs-agent running on the machine. (note: the ecs-agent is open source and on <a href="https://github.com/aws/amazon-ecs-agent" target="_blank">github</a> so you may be able to find help on the ‘issues’ page if needed ). The ecs-agent emits logs that can help you debug. You will need to ssh to the container instance and inspect the ecs-agent log:</p><p><b>/var/log/ecs/ecs-agent.log</b></p><p>For example, when inspecting this log it can be useful to know that the agent has pulled your docker image:</p><p><i>t=2015-04-14T15:46:53+0000 lvl=dbug msg=&ldquo;Pulling image&rdquo; module=TaskEngine image=&lt;my-registry.my-domain&gt;.com/&lt;my-image&gt;:latest status=&ldquo;Pulling dependent layers&rdquo;</i></p><p><i><br/></i></p><h2>Make sure the container instance installed your docker image</h2><p>You can check to make sure the ecs-agent successfully downloaded your docker image. ssh to your container instance and run <b>docker images</b>. Your docker image should appear in this list.</p><figure data-orig-width="1999" data-orig-height="179" class="tmblr-full"><img src="https://40.media.tumblr.com/166cf3a403ed251a125f111a3ee42f5a/tumblr_inline_nmwo2asTgX1sjs9t1_540.png" alt="image" data-orig-width="1999" data-orig-height="179"/></figure><p>If you don’t see your image check the ecs-agent logs and make sure your container instance is able to contact your docker registry by curling the registry and printing out the available tags:<br/></p><p>curl &rsquo;<a href="https://docker-registry.gilt.com/v1/repositories/cerebro/svc-cerebro-job/tags" target="_blank">https://&lt;my-registry.my-domain&gt;.com/v1/repositories/&lt;my-image&gt;/tags</a>&rsquo;</p><h2><br/></h2><h2>Manually start your docker image</h2><p>Checking to see if your image can be run from the command line is a great way to make sure the image can be run on the container instance. This also gives you an opportunity to inspect the application logs. For example,</p><p><b>docker run -it docker-registry.gilt.com/cerebro/svc-cerebro-job:latest bin/cerebro_ngram_job.sh production</b></p><p><b><br/></b></p><h2>Check for failed container processes</h2><p>If your container can be run from the command line but is still not being run automatically through ECS Run Task then it’s likely you have something wrong in your ECS Task Definition. Check for failed container processes and inspect their container configuration. </p><p>To check for failed containers run <b>docker ps -a</b>.</p><p>Once you have the Container ID you can inspect the docker configuration. If you see an exit code other than 0 there may be an issue with your container configuration. </p><p><b>docker inspect &lt;containerId&gt;</b></p><p>For example, I noticed an exit code of 127 which indicates a bad command. This led me to fix a bug in the task definition CMD field that requires commands to be passed in json array format.</p><p>Finally, you can inspect the application log of the container.</p><p><b>docker logs &lt;containerId&gt;</b><br/></p><p>For reference, here is a working task definition:</p><figure data-orig-width="1080" data-orig-height="586" class="tmblr-full"><img src="https://40.media.tumblr.com/3d9d3e703c573258e186924460146e79/tumblr_inline_nmwo1lwajJ1sjs9t1_540.png" alt="image" data-orig-width="1080" data-orig-height="586"/></figure>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#ecs-ref">ecs <span>1</span></a>
+      
+    <a href="/tags.html#Docker-ref">Docker <span>20</span></a>
+      
+    <a href="/tags.html#elastic container service-ref">elastic container service <span>1</span></a>
+      
+    <a href="/tags.html#Amazon Web Services-ref">Amazon Web Services <span>3</span></a>
+      
+    <a href="/tags.html#aws-ref">aws <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/front-end/2015/04/08/ubar-open-source-first-front-end-effort">UBAR: Open-Source-First Front End Effort</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Gregory Mazurek-ref">Gregory Mazurek</a></cite>
+    
+    <time>08 April 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#front-end-ref">front-end</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>At Gilt, our open-source contributions generally come in the form of tools that we use internally that we think have value to the rest of the tech community. But like most other companies, we have internal systems that are very specific to Gilt. This makes open-source contributions tricky because our potential projects and tools are so tightly coupled to our systems. We wanted to bridge this gap and decided to do so through a tiny front end initiative we called Open Source First.<b><br/></b></p><p>For example, our front end architecture consists of over 100 requirejs modules that are bundled and served by an in-house legacy build system that is as tightly coupled as a ball of rubber bands. And, our internal requirements make it necessary that we wrap requirejs which means we oftentimes aren’t using off-the-shelf versions of each module. These modules depend on each other in ways that would make spiders jealous. It works. It’s stable. And once the learning curve is conquered, we defend its design while sipping our orange Kool-Aid. But, it makes open-sourcing any of these individual modules just about impossible.</p><p>The Special Operations team (Kyle Dorman, Jose Sanchez, Archana Kumar, and myself) set out to create a pattern by which we could open-source modules that could be used by the greater tech community without sacrificing any characteristics of the module had it been developed internally. We used a project that we had just finished called OAFE (Open App From Email) as the basis of this experiment. OAFE is one of those mobile-web user experiences you see that asks “if you’d like to install the app.” Internally, we have a lot of discourse about whether this is a good experience for our users or not. As a result, our implementation of OAFE is a little complex. It tries to be the best experience for people who want to be redirected and people who want to stay on the mobile web. OAFE was a perfect candidate for an open source project because it needed to be implemented on two completely separate code basis (Gilt and Gilt City).</p><p>We created <a href="http://code.gilt.com/ubar" target="_blank">UBAR</a> (Unidirectional Browser App Resolver) as an <a href="https://github.com/gilt/ubar" target="_blank">open-source</a> first module that behaved as OAFE. Our goal was to write a front-end module that could be easily consumed both by our current system and externally. We did so without sacrificing any internal requirements or features. Are we expecting that other people are going to use UBAR on their websites? Frankly, no. So, why go through this exercise of creating open-source modules? This is where the learnings happened that ultimately forced us to think better and harder about our work.</p><h2><b>5 Key Learnings</b></h2><ol><li><b>PRIDE</b> Your code being publicly available instills a sense of pride. This is our work. This what we are capable of doing. This is how we do it. We want it to be great because we want others in the tech industry to appreciate it. As a result, we are quick to make fixes to bugs and quick to make improvements to make it feel better. Since it’s something we want to be proud of, we all felt an energy of wanting it to be great. It has been a great team-building exercise.</li><li><b>GIVING BACK</b> We shared our creative process for implementing an open-source module so that we could inspire others to do the same. For so long, we have taken from the front-end community without giving back substantially. This is our attempt to give back, just a little. It feels good.</li><li><b>CODE LEGACY</b> Regardless what happens with the feature, the engineers on the team have a really cool sense of pride for their work. The hard part about working on websites is that features are pulled down as frequently as they’re put up. This is our way of giving some legacy to the code.</li><li><b>WORKFLOW</b> In the chance someone wants to use our open-source module, they can contribute to it. This allows input on our work from sources that we don’t necessarily interact with on a daily basis. One of our team members left the company during the development of the feature but since it was open-source, she was able to continue tracking its progress.</li><li><b>BETTER ARCHITECTURE</b> Open-source first completely reshaped the way we thought about architecting this module, for the better. We did not want to remove any characteristics or attributes of the module from the open-source project. We wanted to <a href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food" target="_blank">eat our own dogfood</a>. As a result, we thought a lot about how this module could be consumed by systems that were not our own. We created a patterns for how external users could easily implement tracking analytics, template rendering, deep-link requirements, and design. Through these abstractions, our code is easier to read and less tightly coupled than other comparable modules that we created.<br/></li></ol><p>Gilt was fully supportive of this effort largely due to the culture set forth by our technical leadership. And, that really moves us to our last point: this made us really excited about our work. It made us bond well as a team. It made us feel like we were making positive contributions to Gilt, to ourselves, to each other, and to the tech community. It felt like good technical culture.</p><p>And since we created patterns and frameworks, it’s a technical culture that we can share both internally and externally. Going forward, we’re going to try to open-source everything, first.</p><p>To view UBAR’s source code, please <a href="https://github.com/gilt/ubar" target="_blank">click here</a>.</p><p>To read more about UBAR and to see it on a mobile device, please <a href="http://code.gilt.com/ubar/" target="_blank">click here</a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#opensource-ref">opensource <span>9</span></a>
+      
+    <a href="/tags.html#frontend-ref">frontend <span>11</span></a>
+      
+    <a href="/tags.html#architecture-ref">architecture <span>9</span></a>
+      
+    <a href="/tags.html#happiness-ref">happiness <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/culture/2015/03/31/panel-recap-lets-talk-culture">Panel Recap: Let’s Talk Culture!</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Heather Fleming-ref">Heather Fleming</a></cite>
+    
+    <time>31 March 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#culture-ref">culture</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <div style="text-align:center"><img src="https://40.media.tumblr.com/c936fb06900ea54f71f9834906c6a0df/tumblr_inline_nm2zoaZzwz1qhx62z_540.jpg" data-orig-height="2448" data-orig-width="2448"/></div><hr><p>Senior Director, Heather Fleming (center) recently spoke about workplace culture and diversity at the “Let’s Talk Culture NYC” panel held at Paperless Post with Vox Media.  Other panelists included Millie Tran from Buzzfeed, Jackie Balzer from Behance/Adobe, and Kyle Macdonald from Carrot Creative.</p><p>Interested in having your own panel on culture?  Here are some of the questions from the discussion:</p><p><b></b></p><ul><li>“Culture fit” can be used negatively or positively. How do we stop it from being used negatively?</li><li>Do you work with people from other teams and how do those cultures differ or influence one another?</li><li>Is it important to you to encourage healthy work/life balance on your team and at your company? How do you or other team leaders do this?<br/></li><li>How do you try to get a diverse set of candidates for job openings? What issues do your team face when you’re hiring for a new position and what do you try to do to expand the pool of candidates?<br/></li><li>Do you have remote workers on your team? What does your team to make them feel a part of your workplace?<br/></li></ul>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#work culture-ref">work culture <span>20</span></a>
+      
+    <a href="/tags.html#office culture-ref">office culture <span>3</span></a>
+      
+    <a href="/tags.html#tech culture-ref">tech culture <span>3</span></a>
+      
+    <a href="/tags.html#diversity-ref">diversity <span>1</span></a>
+      
+    <a href="/tags.html#heather fleming-ref">heather fleming <span>2</span></a>
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    <a href="/tags.html#Millie Tran-ref">Millie Tran <span>1</span></a>
+      
+    <a href="/tags.html#Jackie Balzer-ref">Jackie Balzer <span>1</span></a>
+      
+    <a href="/tags.html#Kyle Macdonald-ref">Kyle Macdonald <span>1</span></a>
+      
+    <a href="/tags.html#Paperless Post-ref">Paperless Post <span>1</span></a>
+      
+    <a href="/tags.html#Vox Media-ref">Vox Media <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/scala/2015/03/18/interested-in-free-scala-training-at-gilts-dublin">Interested in Free Scala Training at Gilt’s Dublin Office?</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Gregor Heine-ref">Gregor Heine</a></cite>
+    
+    <time>18 March 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#scala-ref">scala</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <div style="text-align:center"><img src="https://41.media.tumblr.com/fb5070a67b5823a711a744396ad3c105/tumblr_inline_nlenl0odbY1s13p0m_500.jpg" alt="image" data-orig-width="1024" data-orig-height="680"/></div><p>Live in Dublin, or plan to hang out there in April? Tired of Java, and intrigued by this sleek and elegant Scala language you keep hearing about? Excited about learning languages for free? Then fill out the form below to express your interest in our upcoming free Scala course! Taught by some of Gilt Tech’s resident Scalasmiths, this <b>one-day, beginners-level class</b> will take place <b>Thursday April 16th</b> in our Dublin office. Our class will cover fundamentals such as:</p><ul><li>Classes, traits and objects</li><li>Tuples and case classes</li><li>Monads</li><li>More!</li></ul><p>The training day will last from 10 AM to 5 PM with a working lunch. Developers of all programming languages—but especially Java—are invited to participate. Just fill out the form below to submit your contact info, and we’ll let you know if you’ve been selected. <br/><br/>Submitting this form <b>does not guarantee you a seat</b>. However, it does mean that you’ll receive details about the other courses we’re developing—including advanced Scala and Play—as soon as they become available.</p><p><b>REGISTRATION FOR THIS SESSION IS CLOSED</b></p><p><i>Photo by <a href="http://www.flickr.com/photos/valeriebb/2601451939/in/photolist-4XT82D-6DAoau-bANcnZ-8fLbGf-8fGWKk-8fLbLd-8fGWWv-ok3YK-dR1mM5-5esrTZ-nmhWq-4tNyE-bSwwnK-bSwxp2-bDBP55-bSwyBD-bDBQi9-bDBQ4w-bSww2c-8cWFn-4yG1LZ-7Y4ti-5cDczL-316uT-94qyLc-bjwhkn-JFJ1-5SYUNb-sJC1k-sJC1r-da2uRe-sJC1j-sJC1p-doaaB5-9fwjCK-dc6Q4L-cYp71o-ajPj-71NJJN-5uw4S3-9rzpjp-5u7nPJ-8UeFgA-6jsE4-5urFSX-e2BKDq-cvTRq1-5beJEH-ck5auq-2SVXQz-7tiGM5/" target="_blank">Valerie Everett</a>. Creative Commons <a href="http://creativecommons.org/licenses/by-sa/2.0/deed.en" target="_blank">license</a>.</i><br/></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#scala-ref">scala <span>11</span></a>
+      
+    <a href="/tags.html#training-ref">training <span>6</span></a>
+      
+    <a href="/tags.html#dublin-ref">dublin <span>10</span></a>
+      
+    <a href="/tags.html#free tech classes-ref">free tech classes <span>29</span></a>
+      
+    <a href="/tags.html#free tech courses-ref">free tech courses <span>22</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/mobile/2015/03/16/an-update-on-gilts-ios-open-source-awesomeness">An update on Gilt’s iOS open-source awesomeness</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Evan Maloney-ref">Evan Maloney</a></cite>
+    
+    <time>16 March 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#mobile-ref">mobile</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>Gilt&rsquo;s Mockingbird open-source project for iOS was recently recognized by the popular <a href="https://github.com/vsouza/awesome-ios" target="_blank"><b>Awesome iOS</b></a>  page, which maintains &ldquo;a curated list of awesome iOS frameworks, libraries, tutorials, plugins Xcode, components and much more.&rdquo;
+
+</p><p>The <code><a href="https://github.com/emaloney/MBToolbox/blob/master/Code/Network/MBNetworkMonitor.h" target="_blank">MBNetworkMonitor</a></code> and <code><a href="https://github.com/emaloney/MBToolbox/blob/master/Code/Network/MBNetworkIndicator.h" target="_blank">MBNetworkIndicator</a></code> classes from <a href="https://github.com/emaloney/MBToolbox" target="_blank">the Mockingbird Toolbox</a> project can now be found under Awesome iOS&rsquo;s <a href="https://github.com/vsouza/awesome-ios#networking" target="_blank">section on Networking code</a>.
+
+</p><p>(We&rsquo;ve written about the <code>MBNetworkIndicator</code> class <a href="http://tech.gilt.com/2014/08/25/modularity-and-the-ios-status-bar-network" target="_blank">here on the Gilt Tech blog</a> in the past.)
+
+</p><p>In other news, a little birdie recently told us that <i>three</i> of the Mockingbird repositories are already <b>among the most popular Cocoapods</b> — and one of those hasn&rsquo;t even been publicly announced yet!
+
+</p><p>Four Mockingbird repos are currently available for public use under the MIT license on GitHub. Two of these repos are post-1.0 and are fully documented:
+
+</p><ul><li><a href="https://github.com/emaloney/MBToolbox" target="_blank">Mockingbird Toolbox</a> (MBToolbox)
+</li><li><a href="https://github.com/emaloney/MBDataEnvironment" target="_blank">Mockingbird Data Environment</a> (MBDataEnvironment)
+</li></ul><p>Two more repos contain pre-release versions and are awaiting full documentation:
+
+</p><ul><li><a href="https://github.com/emaloney/MBEventHandling" target="_blank">Mockingbird Event Handling Module</a> (MBEventHandling)
+</li><li><a href="https://github.com/emaloney/MBGeolocation" target="_blank">Mockingbird Geolocation Module</a> (MBGeolocation)
+</li></ul>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#ios-ref">ios <span>5</span></a>
+      
+    <a href="/tags.html#cocoapods-ref">cocoapods <span>1</span></a>
+      
+    <a href="/tags.html#mockingbird-ref">mockingbird <span>1</span></a>
+      
+    <a href="/tags.html#opensource-ref">opensource <span>9</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#github-ref">github <span>3</span></a>
+      
+    <a href="/tags.html#networking-ref">networking <span>1</span></a>
+      
+    <a href="/tags.html#mit-ref">mit <span>1</span></a>
+      
+    <a href="/tags.html#apple-ref">apple <span>2</span></a>
+      
+    <a href="/tags.html#iphone-ref">iphone <span>2</span></a>
+      
+    <a href="/tags.html#ipad-ref">ipad <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/culture/2015/03/12/lets-talk-culture">Let’s Talk Culture!</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Heather Fleming-ref">Heather Fleming</a></cite>
+    
+    <time>12 March 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#culture-ref">culture</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>How do you create and maintain a great company culture? What does “culture” even mean? We often simplify the idea of culture (especially in tech) as pertaining to physical objects or events such as ping pong tables or happy hours. But what does culture mean in the context of scaling a healthy, happy organization that is productive, collaborative, and diverse?</p><p>Senior Director, Heather Fleming has been invited to be on the panel discussing these topics and we hope you’ll join us for the conversation!</p><p>Tickets are free, but space is limited, so <a href="https://nvite.com/letstalkculture/e66b" target="_blank">RSVP to attend</a>!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#tech culture-ref">tech culture <span>3</span></a>
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    <a href="/tags.html#Women in Technology-ref">Women in Technology <span>1</span></a>
+      
+    <a href="/tags.html#panel discussion-ref">panel discussion <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/conferences/2015/03/10/missed-the-brooklyn-tech-triangle-u-tech-all-stars">VIDEO - Tech Triangle U All-Stars Panel</a></h1>
+  
+  <header>
+    
+    <cite><a href="authors.html#Heather Fleming-ref">Heather Fleming</a></cite>
+    
+    <time>10 March 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#conferences-ref">conferences</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <div style="text-align:center;"><iframe src="https://player.vimeo.com/video/121570823?title=0&byline=0&portrait=0" width="400" height="225" frameborder="0" title="Tech U 2015 | Tech All-Stars Panel" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><br/><p>Missed the <a href="http://brooklyntechtriangle.com/tech-u/" target="_blank">Brooklyn Tech Triangle U Tech All-Stars Panel</a>?  Here&rsquo;s the video!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Heather Fleming-ref">Heather Fleming <span>16</span></a>
+      
+    <a href="/tags.html#Brooklyn Tech Triangle-ref">Brooklyn Tech Triangle <span>2</span></a>
+      
+    <a href="/tags.html#techu-ref">techu <span>2</span></a>
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 2 of 64</span>
+  
+    <a href="/posts/3/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

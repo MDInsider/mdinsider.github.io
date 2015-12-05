@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / 26/3/13: Today's Noon Outage--and What We're Doing to Make Sure This Never Happens Again.</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2013/03/26/26-3-13-todays-noon-outage-and-what-were-doing">26/3/13: Today's Noon Outage--and What We're Doing to Make Sure This Never Happens Again.</a></h1>
+  
+  <header>
+    
+    <time>26 March 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span>At Gilt we try to move as fast as we can getting code - be it fixes or awesome new features - to production as quickly and safely as possible. Sometimes we make mistakes, and, today was such a day. Around noon, a commit on one of our flagship applications ran riot: allocating native threads; consuming memory and CPU; and bringing down all other applications collocated on the same set of servers. Our customers were affected and for this the tech team at Gilt are truly sorry. There have been a ton of tweets from concerned members, and we were keen to explain what went wrong.</span></p>
+<p><strong><br/><span></span></strong></p>
+<p><span>Some interesting things arose in the aftermath of this outage (we take all our outages very, very seriously). First and foremost, this was largely a people problem: our process around code-review and performance testing failed - a commit that was not fully peer-reviewed was moved to production, and deployed -after- our morning performance run. Under normal load, everything looked ‘just fine’ - under our noon rush, everything fell apart. I estimate there’s about a 60% chance that a good code-review would have caught the issue - however, I’m 99.999% confident that our rigorous load tests would have caught the issue. </span><span>We use Gerrit for code review, and have automated load tests every morning; this was a late change for which we were hoping to gather some real life data related to load - ironically to debug a smaller performance issue we’ve been seeing in one of our applications - and we rushed the change.</span></p>
+<p><strong><br/><span></span></strong></p>
+<p><span>A positive we can take out of this as a tech organization is that we already have a number of initiatives in progress at Gilt that will prevent this kind of thing from happening. The more we use code-review, the more we see opportunities to automate the veracity of any release: you can imagine a script that says “this release contains a commit that was not reviewed and was +2’d by the author - abort!”. From a performance perspective, we’re working on incorporating performance testing into a continuous integration system we call ‘ION Cannon’; again, any release would be performance tested and rolled back automatically. These are areas where we can take human error out of the process, and I know that I (as the engineer who didn’t run the load test) am keen that we double our efforts in this regard. </span></p>
+<p><strong><br/><span></span></strong></p>
+<p><span>One of the other things we’re doing is making all of the applications that run gilt.com smaller and more isolated, an initiative we call ‘LOSA’ (Lots of Small Apps). LOSA is the mantra that lets us break up some of our large web applications into smaller chunks. The outcome? Stronger ownership of each part of gilt.com by the engineering teams; simpler code, with better sharing of assets and commons functionality;  and, better isolation - in the event that one of our applications serving a part of gilt.com goes awry, other apps should not be impacted. </span></p>
+<p><strong id="internal-source-marker_0.33266754099167883"><br/><span></span><span>Today we made a mistake - and we feel pretty bad about it. We feel good though about what we’re doing to make gilt.com better.</span></strong></p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#gilt-ref">gilt <span>87</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#code review-ref">code review <span>2</span></a>
+      
+    <a href="/tags.html#LOSA-ref">LOSA <span>5</span></a>
+      
+    <a href="/tags.html#Lots of Small Applications-ref">Lots of Small Applications <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

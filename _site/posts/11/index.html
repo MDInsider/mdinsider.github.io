@@ -1,0 +1,989 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/30/learnings-from-building-and-scaling-gilt-video">Learnings from Building and Scaling Gilt: Video from InfoQ</a></h1>
+  
+  <header>
+    
+    <time>30 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/cfb94cd5680c4e2ea63424b878decba9/tumblr_inline_ncq5kj93CI1s17bu5.png" width="800"/></p>
+<p>Back in June, Gilt cofounder and CTO <a href="http://tech.gilt.com/search/michael+bryzek" target="_blank">Michael Bryzek</a> presented a talk about building and scaling Gilt&rsquo;s global tech organization at InfoQ&rsquo;s QCon New York conference&ndash;joining a lineup that included <a href="http://tech.gilt.com/search/adrian+cockcroft" target="_blank">Adrian Cockcroft</a>, <a href="http://tech.gilt.com/search/claudia+perlich" target="_blank">Claudia Perlich</a>, <a href="http://tech.gilt.com/search/david+nolen" target="_blank">David Nolen</a> (all of whom have spoken at or visited Gilt), Gil Tene (who will lunch with us next week) and Gilt Lead Software Engineer <a href="http://tech.gilt.com/search/yoni+goldberg" target="_blank">Yoni Goldberg</a>. Other speakers included CTOs and tech leads at LinkedIn, Facebook, NASA and Etsy.</p>
+<p><a href="http://www.infoq.com/presentations/scaling-gilt" target="_blank">Go here</a> to watch the video and view the slides from Michael&rsquo;s 48-minute presentation!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    <a href="/tags.html#scaling-ref">scaling <span>3</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    <a href="/tags.html#InfoQ-ref">InfoQ <span>3</span></a>
+      
+    <a href="/tags.html#QCon-ref">QCon <span>1</span></a>
+      
+    <a href="/tags.html#QCon New York-ref">QCon New York <span>2</span></a>
+      
+    <a href="/tags.html#micro-services-ref">micro-services <span>21</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/30/gilt-gets-uncubed">Gilt Gets Uncubed</a></h1>
+  
+  <header>
+    
+    <time>30 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/3a1a987c464d6c6fc40801d4ad7c543c/tumblr_inline_ncq4tt4Pkh1s17bu5.jpg" width="800"/></p>
+<p>Last Friday a video crew from <a href="http://uncubed.com/" target="_blank">Uncubed</a> trekked to our NYC office to shoot a suite of three one-hour learning sessions with Gilt <a href="http://tech.gilt.com/search/special+operations" target="_blank">Special Operations</a> Lead Software Engineer <a href="http://tech.gilt.com/search/gregory+mazurek" target="_blank">Gregory Mazurek</a> and Principal Data Scientist <a href="http://tech.gilt.com/search/igor+elbert" target="_blank">Igor Elbert</a>. Here&rsquo;s a snapshot of one of the afternoon&rsquo;s Hollywood-y moments. Greg and Igor&rsquo;s video presentations go public this Friday&ndash;we&rsquo;re excited to see the results! Thanks to the Uncubed team for inviting us to be a part of this great online learning initiative!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#Igor Elbert-ref">Igor Elbert <span>10</span></a>
+      
+    <a href="/tags.html#Uncubed-ref">Uncubed <span>2</span></a>
+      
+    <a href="/tags.html#Wakefield-ref">Wakefield <span>1</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    <a href="/tags.html#shipping-ref">shipping <span>1</span></a>
+      
+    <a href="/tags.html#data-ref">data <span>25</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/29/gilt-to-present-at-this-weeks-interop-expo">Gilt to Present at This Week's Interop Expo</a></h1>
+  
+  <header>
+    
+    <time>29 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/3d4ac12cb772be35db41970681ac9c25/tumblr_inline_ncogcoAC2a1s17bu5.jpg"/></p>
+<p>Starting today (September 29), New York City&rsquo;s Jacob Javits Convention Center hosts <a href="http://www.interop.com/newyork/" target="_blank">Interop</a>: a full week of keynotes, workshops, panels and talks by leading lights in the tech community. <em>Late Night </em>host Seth Meyers adds a touch of star power with his keynote address Wednesday, Oct. 1 at 9 AM&ndash;one of nine keynotes to take place through October 4. We&rsquo;re more excited about the keynote to be given by Gilt Cofounder and CTO Michael Bryzek, who will focus on the importance of the open source ethos in driving innovation. Catch <a href="http://www.interop.com/newyork/conference/keynote.php?itc=we_iny_le_iny_drp_text" target="_blank">Michael&rsquo;s talk</a> on Thursday, Oct. 2 at 9 AM.</p>
+<p>Your Gilt Tech Evangelist (that&rsquo;s me) will also be appearing at Interop. I&rsquo;ll speak on the <a href="http://www.interop.com/newyork/scheduler/session/women-in-technology-panel-luncheon" target="_blank">Women in Technology panel</a> along with <span class="nospace session-speaker"><a class="speaker_link" href="http://www.interop.com/newyork/scheduler/speaker/chubirka-michele.32379" target="_blank">Michele Chubirka</a> (<span class="session-speaker-title">Senior Security Architect, Postmodern Security), </span></span><span class="nospace session-speaker"><a class="speaker_link" href="http://www.interop.com/newyork/scheduler/speaker/jessup-jennifer.34025" target="_blank">Jennifer Jessup</a> (<span class="session-speaker-title">General Manager, Interop &amp; Cloud Connect, UBM Tech</span></span>), <span class="nospace session-speaker"><a class="speaker_link" href="http://www.interop.com/newyork/scheduler/speaker/mclaughlin-laurianne.33484" target="_blank">Laurianne McLaughlin</a> (<span class="session-speaker-title">Editor-In-Chief, InformationWeek), and </span></span><span class="nospace session-speaker"><a class="speaker_link" href="http://www.interop.com/newyork/scheduler/speaker/sunkara-sash.33328" target="_blank">Sash Sunkara</a> (<span class="session-speaker-title">Co-Founder and CEO, RackWare). The panel begins at 12:15 PM and includes a luncheon. Lean in + lunch in.<br/></span></span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Interop-ref">Interop <span>4</span></a>
+      
+    <a href="/tags.html#Michael Bryzek-ref">Michael Bryzek <span>34</span></a>
+      
+    <a href="/tags.html#Lauri Apple-ref">Lauri Apple <span>6</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#women in tech-ref">women in tech <span>15</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#events-ref">events <span>26</span></a>
+      
+    <a href="/tags.html#Jacob Javits Convention Center-ref">Jacob Javits Convention Center <span>1</span></a>
+      
+    <a href="/tags.html#innovation-ref">innovation <span>4</span></a>
+      
+    <a href="/tags.html#Michele Chubirka-ref">Michele Chubirka <span>1</span></a>
+      
+    <a href="/tags.html#Jennifer Jessup-ref">Jennifer Jessup <span>1</span></a>
+      
+    <a href="/tags.html#Laurianne McLaughlin-ref">Laurianne McLaughlin <span>2</span></a>
+      
+    <a href="/tags.html#Sash Sunkara-ref">Sash Sunkara <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/26/hacking-hipchat-for-foosball-fun">Hacking HipChat for Foosball Fun</a></h1>
+  
+  <header>
+    
+    <time>26 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/b0331461317cfee2b8c8f8c86ba460fa/tumblr_inline_nciurculaY1s17bu5.png" width="800"/></p>
+<p>The #gilttech team in Dublin has created a bot to organize and oversee intra-office foosball matches. How&rsquo;s that for a <a href="https://www.hipchat.com/" target="_blank">HipChat</a> hack?!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Felix Garcia Borrego-ref">Felix Garcia Borrego <span>3</span></a>
+      
+    <a href="/tags.html#Atlassian-ref">Atlassian <span>6</span></a>
+      
+    <a href="/tags.html#HipChat-ref">HipChat <span>2</span></a>
+      
+    <a href="/tags.html#chatroom-ref">chatroom <span>1</span></a>
+      
+    <a href="/tags.html#foosball-ref">foosball <span>1</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#hacks-ref">hacks <span>1</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/26/thanks-for-the-cupcakes-facebook">Thanks for the Cupcakes, Facebook!</a></h1>
+  
+  <header>
+    
+    <time>26 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/50e9d87cc7add2246eb05cb421384363/tumblr_inline_nciny8zDMI1s17bu5.jpg" width="800"/></p>
+<p>Facebook ads have driven more than one million downloads of Gilt&rsquo;s <a href="http://tech.gilt.com/2014/04/28/we-won-the-webby" target="_blank">award-winning</a> apps&ndash;and to celebrate this milestone, Facebook sent us these lovely treats from <a href="http://elenis.com/" target="_blank">Eleni&rsquo;s</a>! The SW corner cake expresses our sentiments exactly.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Mobile-ref">Gilt Mobile <span>22</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Facebook-ref">Facebook <span>2</span></a>
+      
+    <a href="/tags.html#cupcakes-ref">cupcakes <span>1</span></a>
+      
+    <a href="/tags.html#app-ref">app <span>3</span></a>
+      
+    <a href="/tags.html#mobile apps-ref">mobile apps <span>5</span></a>
+      
+    <a href="/tags.html#Eleni's-ref">Eleni's <span>1</span></a>
+      
+    <a href="/tags.html#bakery-ref">bakery <span>1</span></a>
+      
+    <a href="/tags.html#delicious-ref">delicious <span>1</span></a>
+      
+    <a href="/tags.html#yum-ref">yum <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/25/gilt-and-preemptive-shipping-a-q-a-with-our-chief">Gilt and Preemptive Shipping: A Q&A with Our Chief Data Scientist</a></h1>
+  
+  <header>
+    
+    <time>25 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/0591b3a6a26bbe98928a220a0a9748bc/tumblr_inline_nch9f8GpOG1s17bu5.jpg"/></p>
+<p>The Gilt tech team doesn&rsquo;t need an in-house psychic to help us predict which customers will buy products we&rsquo;ve never sold before. Instead, we rely on the data wizardry performed by our Principal Data Scientist, <a href="http://tech.gilt.com/search/igor+elbert" target="_blank">Igor Elbert</a>, who has been helping us to refine our product performance predictions (say<em> that</em> three times fast) by using various machine learning and predictive modeling techniques. Recently SearchCIO.com spoke to Igor about his ongoing work, which enables us to predict where products will sell better&ndash;and preemptively ship those products to reduce transit time. Here&rsquo;s an excerpt:</p>
+<p><strong>How is the problem Gilt is trying to solve different from what Amazon calls &lsquo;anticipatory shipping?&rsquo;</strong></p>
+<blockquote>
+<p>Elbert: We kind of envy <a href="http://whatis.techtarget.com/definition/Amazon" target="_blank">Amazon</a>, because their problem is much easier. If you predicted for toothpaste in Orange County, California, you have a reliable past history of toothpaste sales. If it&rsquo;s more or less stable, you can bet people next month will need the same amount of toothpaste they bought from you last month. Retailers have been doing this since forever &ndash; looking at sales forecasts and moving items closer to the customer. But Amazon took it one step further. They said, 'Knowing your previous purchase history, we&rsquo;ll send the product to your doorstep.&rsquo; The model relies on, from what I understand, knowing what you bought before. So, if you bought toothpaste last month, and you&rsquo;ve been buying toothpaste every two months for the last two years, they know you&rsquo;ll need toothpaste next month and they can ship it to you. It&rsquo;s a low risk to them because if you don&rsquo;t need it, you can return it, but it&rsquo;s likely you&rsquo;ll actually need it.</p>
+<p>We don&rsquo;t go that far. We&rsquo;re not going to ship a high-end dress to someone [before she&rsquo;s bought it]. But we try to move products in the direction of the intended buyer early on.</p>
+</blockquote>
+<p><a href="http://searchcio.techtarget.com/feature/Gilts-pre-emptive-shipping-is-an-experiment-in-data-science" target="_blank">Read more here</a>. And don&rsquo;t miss Part II of Igor&rsquo;s interview with SearchCIO: &ldquo;<a href="http://searchcio.techtarget.com/feature/Mechanical-Turk-supplies-Gilt-with-artificial-artificial-intelligence" target="_blank">Mechanical Turk supplies Gilt with 'artificial artificial intelligence</a>.&rsquo;&rdquo;</p>
+<p>If you&rsquo;re attending Strata + Hadoop World, you can hear Igor talk about his work in person when he <a href="http://strataconf.com/stratany2014/public/schedule/detail/36225" target="_blank">presents a talk on predictive shipping</a> (Friday, October 17 at 11:50 am).</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Igor Elbert-ref">Igor Elbert <span>10</span></a>
+      
+    <a href="/tags.html#Mechanical Turk-ref">Mechanical Turk <span>1</span></a>
+      
+    <a href="/tags.html#Amazon-ref">Amazon <span>1</span></a>
+      
+    <a href="/tags.html#data science-ref">data science <span>7</span></a>
+      
+    <a href="/tags.html#data-ref">data <span>25</span></a>
+      
+    <a href="/tags.html#predictions-ref">predictions <span>1</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    <a href="/tags.html#Searchcio.com-ref">Searchcio.com <span>1</span></a>
+      
+    <a href="/tags.html#artificial intelligence-ref">artificial intelligence <span>2</span></a>
+      
+    <a href="/tags.html#anticipatory shipping-ref">anticipatory shipping <span>1</span></a>
+      
+    <a href="/tags.html#predictive analytics-ref">predictive analytics <span>3</span></a>
+      
+    <a href="/tags.html#O'Reilly-ref">O'Reilly <span>1</span></a>
+      
+    <a href="/tags.html#Strata-ref">Strata <span>1</span></a>
+      
+    <a href="/tags.html#Hadoop World-ref">Hadoop World <span>1</span></a>
+      
+    <a href="/tags.html#mechanical turker-ref">mechanical turker <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/24/slideshows-and-photos-from-last-nights-dublin">Slideshows and Photos from Last Night's Dublin Scala UG at Gilt!</a></h1>
+  
+  <header>
+    
+    <time>24 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/83755ca545f88a610bcddf26ccc421d9/tumblr_inline_ncfdsmZvN81s17bu5.png" width="800"/></p>
+<p>The first meetup at Gilt&rsquo;s new office of the <a href="http://www.meetup.com/Dublin-Scala-users-group/events/205189002/" target="_blank">Dublin Scala Users Group</a>  featured two great talks, a lively crowd of engineers, and our brand-new, brightly colored ComfyChairs (not trademarked)! For all of you who couldn&rsquo;t make it, here are the slides from <span class="full">Citi Lead Mobile Architect Aman Kohli and Citi Software Engineer Kevin Yu Wei Xia&rsquo;s talk, &ldquo;<span class="full">Happy Performance Testing&ndash;DSLing Your System with Gatling</span>&rdquo;:</span></p>
+<p><iframe frameborder="0" height="486" marginheight="0" marginwidth="0" scrolling="no" src="//www.slideshare.net/slideshow/embed_code/39467151" width="597"> </iframe></p>
+<p>And here&rsquo;s Gilt Senior Software Val Dumitrescu leading our audience into the CAVE:</p>
+<p><img alt="image" src="https://31.media.tumblr.com/471e21fdd8189780221947d856263962/tumblr_inline_ncfejttxAH1s17bu5.png" width="800"/></p>
+<p><span class="full">CAVE is Gilt&rsquo;s open-source, managed service for monitoring infrastructure, platform, and application metrics that provide visibility into your system&rsquo;s performance and operational levels. Check out Val and Pawel Raszewski&rsquo;s slides are here:</span></p>
+<p><iframe frameborder="0" height="486" marginheight="0" marginwidth="0" scrolling="no" src="//www.slideshare.net/slideshow/embed_code/39469824" width="597"> </iframe></p>
+<p>We were super-excited to be hosting a meetup in our own space for the very first time in Dublin! Stay tuned for the next installment. And if you&rsquo;ve got a Scala talk to propose, please email your idea to <strong>lapple at gilt dot com</strong>!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gatling-ref">Gatling <span>4</span></a>
+      
+    <a href="/tags.html#Aman Kohli-ref">Aman Kohli <span>2</span></a>
+      
+    <a href="/tags.html#Val Dumitrescu-ref">Val Dumitrescu <span>3</span></a>
+      
+    <a href="/tags.html#Pawel Raszewski-ref">Pawel Raszewski <span>5</span></a>
+      
+    <a href="/tags.html#slides-ref">slides <span>4</span></a>
+      
+    <a href="/tags.html#slideshow-ref">slideshow <span>20</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Play Framework-ref">Play Framework <span>16</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#monitoring-ref">monitoring <span>3</span></a>
+      
+    <a href="/tags.html#infrastructure-ref">infrastructure <span>2</span></a>
+      
+    <a href="/tags.html#Kevin Yu Wei Xia-ref">Kevin Yu Wei Xia <span>2</span></a>
+      
+    <a href="/tags.html#Dublin Scala Users Group-ref">Dublin Scala Users Group <span>10</span></a>
+      
+    <a href="/tags.html#Dublin SUG-ref">Dublin SUG <span>3</span></a>
+      
+    <a href="/tags.html#performance testing-ref">performance testing <span>2</span></a>
+      
+    <a href="/tags.html#cloudtech-ref">cloudtech <span>2</span></a>
+      
+    <a href="/tags.html#cloud technology-ref">cloud technology <span>3</span></a>
+      
+    <a href="/tags.html#CAVE-ref">CAVE <span>3</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/23/five-things-you-need-to-know-about-hammer-js-2-0">Five Things You Need to Know About Hammer.js 2.0</a></h1>
+  
+  <header>
+    
+    <time>23 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span><img alt="image" src="https://31.media.tumblr.com/fc00ca7e2cd7af889fb369fc24257c86/tumblr_inline_ncd8saSMwU1s17bu5.png" width="800"/></span></p>
+<p><span><a href="http://hammerjs.github.io/" target="_blank">Hammer.js</a> is a JavaScript library that makes touch events easier to identify, handle and manipulate. Recently, Hammer.js was upgraded from 1.1.3 to 2.0 and the API was drastically changed. If you’re using Hammer.js 1.x at work or for fun, interested in Hammer.js, or intrigued by touch events in general (but haven&rsquo;t actually used them), this article is meant for you!</span></p>
+<p><span>The Gilt team uses Hammer.js in many of our carousels for tablets, but otherwise sticks to native touchstart and touchend events. In creating a personal project that made extensive use of Hammer.js 1.x, I found it to be an extremely helpful library for identifying complex touch events like pinch and swipe. I also found that it lacked a full set of API features, so I wrote some simple helpers and a wrapper to make Hammer easier to use for myself. The look and feel of Hammer 2.0’s API is completely different from that of 1.x, and includes many of the features that I believed Hammer.js lacked. </span></p>
+<p><span>These are the top five things I think everyone should know about Hammer 2.0 and how it&rsquo;s different from <span>Hammer 1.x</span>:</span></p>
+<h3>1. Multiple Hammer Instances</h3>
+<p><span>In Hammer 1.x, the Hammer creators advised you to create a single Hammer instance on the page. This instance would most likely be bound to the body, so all touch events would be listened for. As events happened on the page, the Hammer instance would act as a publisher and notify subscribers about touch events. The Hammer instance could be subscribed to different touch events.</span></p>
+<pre><code>
+    var armAndHammer = new Hammer(bodyElement, options);
+    
+    armAndHammer.on(‘hold’, handleHoldEvent(ev));
+    
+</code></pre>
+<p><span>In Hammer 2.0, you can (and are advised to) create multiple Hammer instances on the page and bind them to the specific DOM elements where they are needed. The new API feels much more like jQuery event-binding and much less like pup-sub.</span> </p>
+<pre><code class="javascript">
+    var armAndHammer = new Hammer.Manager(el, options);
+    
+    // or
+    
+    var armAndHammer = new Hammer(el, options);
+    
+</code></pre>
+<p><span>Initially, I was apprehensive about the new API approach. The pup-sub model was lightweight and easy to conceptualize, but the approach came at a cost. In Hammer.js 1.x, the Hammer instance notified the subscriber about every touch event on the page, and the subscriber was responsible for filtering touch events to ensure that the element that had been touched/tapped/etc. was indeed the element they wanted to act on.</span></p>
+<pre><code>
+    armAndHammer.on(‘hold’, function (ev) {
+    
+        if (ev.target === holdEl ) {
+        
+            handleHoldEvent(ev);
+        }
+    });
+    </code></pre>
+<p><span>Using Hammer 2.0, each Hammer instance is bound where the event happens and ensures the correct touch event happens on the correct element.</span></p>
+<h3>2. The Manager</h3>
+<p><span>In Hammer 2.0, each Hammer instance is called a Manager. A Manager can be instantiated by calling either</span></p>
+<pre><code>
+    var armAndHammer = new Hammer.Manager(el, options);
+    
+</code></pre>
+<p>or</p>
+<pre><code>
+    var armAndHammer = new Hammer(el, options);
+    
+</code></pre>
+<p><span>The single Hammer instance in Hammer 1.x can also be considered a Manager. In 1.x, the single Hammer Manager automatically listened to every Hammer touch event and broadcast every event it received, whether or not the developer wanted it to&ndash;or whether it was even necessary. For example, even if there were no subscribers to the pinch event, Hammer would calculate and publish any and all pinch events. If you were not specifically listening to this event, you would see no true effects on the page as no functions would be called via pub-sub. That being said, calculating touch events is not a simple JavaScript operation and it was unnecessary for the single Hammer Manager to listen for unused touch events.</span></p>
+<p><span>In 2.0, each Hammer instance is called a Manager. In 2.0 Managers bind to specific elements and are only responsible for the events associated with those elements. To phrase it another way: Rather than assume you are interested in all touch events for a specific element the Hammer instance is bound to, Hammer 2.0 enables developers to create empty Managers that listen to zero events and then specify which touch events this Manager should listen for.</span></p>
+<pre><code>
+    // empty Hammer instance
+    var armAndHammer = new Hammer.Manager(el, options); 
+    
+</code></pre>
+<p><span>Hammer 2.0 also allows users to create a Manager with a default set of events by skipping the Hammer.Manager constrictor and instead using the Hammer constructor:</span></p>
+<pre><code>
+    var armAndHammer = new Hammer(el, options);
+    
+</code></pre>
+<p><span>Although adding touch events to the Manager is more complex (because the developer is responsible for adding the touch events they are interested in), it gives the developer more specificity for their touch events. Additionally, this setup becomes much more testable because you know what the setup of the Manager will be on page load. </span></p>
+<h3>3. Recognizer</h3>
+<p><span>As I mentioned above, in Hammer 1.x the Manager knows about, listens for, and publishes all touch events. In 2.0, Managers start out empty, and the developer adds events to the Manager using objects called Recognizers. Recognizers are essentially objects that are responsible for groups of touch events in the same mutual category. For example, the swipe Recognizer listens for swipe, swipeleft, swiperight, swipeup, and swipedown events.</span></p>
+<p><span>For each touch event you are interested in, you create a new instance of a Recognizer and add it to the Manager. Once the Recognizer is added, the Manager can listen for events from that Recognizer.</span></p>
+<pre><code>
+    armAndHammer.add(new Hammer.Pan({event: 'pan'});
+    
+    // the Recognizer has been added to the Manager 
+    // and we can listen for pan events
+    
+    armAndHammer.on('pan', handlePanEvent(ev));
+        
+</code></pre>
+<p><span>In 1.x, the single Hammer instance essentially came with all Recognizers included. The benefits of adding Recognizers yourself are two-fold:</span></p>
+<ul><li>
+<p><span>First, each Hammer instance is lighter and responsible for a subset of touch events. </span></p>
+</li>
+<li>
+<p><span>Second, touch events can easily be customized. In Hammer 1.x, the options for events such as “hold event threshold” (time a user has to hold down before a hold event is fired) was set on the single Hammer instance, meaning every hold event had to be the same. In 2.0 developers can set the event options in the Recognizer, thus making touch events as customized as you wish them to be.</span></p>
+</li>
+</ul><pre><code>
+    var myPanRecognizer = new Hammer.Pan({ direction: Hammer.DIRECTION_VERTICLE, threshold: 0 });
+
+    armAndHammer.add( myPanRecognizer );
+    
+</code></pre>
+<h3>4. Upgrade Path</h3>
+<p><span>The simplest upgrade path from 1.x to 2.0 can take as little as one hour. More complex upgrade paths utilizing some of Hammer’s new API features can take longer. When I upgraded from 1.1 to 2.0, it took me about four hours to upgrade a project that used six different touch events.</span></p>
+<p><span><a href="https://gist.github.com/kyle-dorman/6b74c5aa4b9dd2f5aa60" target="_blank">Here is a Gist</a> that shows a simple and more complex upgrade path. In the simplest upgrade path, very little code has to change, and you can still rely on a single Hammer Manager bound to the body. If you use the Hammer constructor instead of the Hammer.Manager constructor, the Hammer Manager will have recognizers already added. You can still filter the touch events yourself for the appropriate element. The only difference is that you may have to change the options hash that you pass in.</span></p>
+<p><span>In the more complex upgrade path, bind a Hammer Manager directly to the element you want to listen for touch events on, then add Recognizers for the appropriate touch event.  Remove any DOM filtering code you had previously used. If you are only using Hammer in one place, upgrading to the simplest path is not a bad option and you may not even feel the need not upgrade at all. But if you are using Hammer for multiple DOM elements, upgrading to use multiple empty Hammer Managers and adding recognizers yourself is a better option and will hopefully simplify your code. </span></p>
+<h3>5. My favorite Hammer 2.0 feature and more</h3>
+<p><span>One of the biggest issues I had with Hammer 1.x was its inability to programmatically turn events on and off. On touch devices, it’s quite common to have many touch events associated with a single element/icon, but all the events may not be ‘active’ at the same time. Depending on the state of the phone for example, an app icon can be tapped, pressed, or dragged. In Hammer 1.x, I developed ways of checking the application state and preventing events from firing, but it was all very hacky.</span></p>
+<p><span>In Hammer 2.0, Recognizers have their own states, controlled through an enable option that is passed when initializing a Recognizer. The default is true&ndash;i.e., the Recognizer is on&ndash;but you can also pass false or a function. Using a function is the best option to handle states for your touch events&ndash;it allowed me, for example, to easily and directly control the state of my web-app for each touch event. I highly recommend checking out this feature if/when you check out Hammer 2.0. (<a href="http://hammerjs.github.io/toggle-recognizer/" target="_blank">http://hammerjs.github.io/toggle-recognizer/</a>)</span></p>
+<p><span>Overall, I am very happy with the Hammer 2.0 upgrade. Its API is much easier to use and it has some really useful touch event handling features baked in.</span></p>
+<p><em>Creative Commons photo by <a href="https://www.flickr.com/photos/86639298@N02/8559722063/" target="_blank">HomeSpot HQ</a></em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Hammer.js-ref">Hammer.js <span>1</span></a>
+      
+    <a href="/tags.html#Hammer.js 2.0-ref">Hammer.js 2.0 <span>1</span></a>
+      
+    <a href="/tags.html#Kyle Dorman-ref">Kyle Dorman <span>6</span></a>
+      
+    <a href="/tags.html#Special Operations-ref">Special Operations <span>10</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#JavaScript-ref">JavaScript <span>18</span></a>
+      
+    <a href="/tags.html#JavaScript libraries-ref">JavaScript libraries <span>1</span></a>
+      
+    <a href="/tags.html#Hammer.js 1.x-ref">Hammer.js 1.x <span>1</span></a>
+      
+    <a href="/tags.html#touch events-ref">touch events <span>1</span></a>
+      
+    <a href="/tags.html#DOM-ref">DOM <span>2</span></a>
+      
+    <a href="/tags.html#API-ref">API <span>7</span></a>
+      
+    <a href="/tags.html#pup-sub-ref">pup-sub <span>1</span></a>
+      
+    <a href="/tags.html#Recognizers-ref">Recognizers <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/22/gilt-goes-to-nodeland-a-recap-of-nodeconf-eu">Gilt Goes to Nodeland: A Recap of NodeConf.eu</a></h1>
+  
+  <header>
+    
+    <time>22 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span>More than 150 Node.js aficionados on the grounds of a 15th-century castle, on an island resort in County Waterford, Ireland. Throw in two Node.js neophytes from Gilt&rsquo;s engineering team in Dublin (my colleague, <a href="http://tech.gilt.com/2014/07/25/welcome-nick-rogers" target="_blank">Nick Rogers</a>, and myself), and what do you get? You get <a href="http://www.nodeconfeu.com/" target="_blank">NodeConfEU</a>: A lively conference for developers, spread over five days, featuring fun, sun, some great talks and interesting workshops. </span></p>
+<p><span><img alt="image" src="https://31.media.tumblr.com/265e4b663606ad82d9069a4b4b1cce29/tumblr_inline_ncauz64GTR1t1r5ak.png" width="800"/></span></p>
+<p><em>Check out t</em>he<em> ultra-modern conference venue!</em></p>
+<p><span>There were too many talks to describe each of them, so we’ve picked out a few that particularly resonated with us:</span></p>
+<ul><li>
+<p><a href="https://twitter.com/stinkydofu" target="_blank"><span>Alex Liu</span></a><span> from Netflix gave insights into how his team manages templates and assets across large sites. Netflix is doing some very cool stuff around producing conditional bundles of assets based on the A/B tests a user is in. Netflix can generate a possible</span><span> </span><span>2.5 million asset bundles based on their A/B testing matrix. Hey Netflix: it might be a good idea to open source this (hint, hint!).</span></p>
+</li>
+</ul><ul><li>
+<p><a href="https://twitter.com/fgeorge52" target="_blank"><span>Fred George</span></a><span>, father of the post-agile process termed &ldquo;Programmer Anarchy,&rdquo; spoke about the battle between asynchronous and synchronous microservices and some of the challenges going forward. Conclusion: synchronous isn’t so great. At a Node conference, that position wasn’t too controversial.</span></p>
+</li>
+</ul><ul><li>
+<p><a href="https://twitter.com/juxtajeff" target="_blank"><span>Jeff Harrell</span></a><span> from PayPal gave an engaging talk on transitioning a large engineering department from Java to Node (a move that LinkedIn made in 2013). He wrote about nine node anti-patterns </span><a href="https://twitter.com/juxtajeff/status/508952450045591552" target="_blank"><span>here</span></a><span>.</span></p>
+</li>
+</ul><ul><li>
+<p><span>StrongLoop co-founder </span><a href="https://twitter.com/piscisaureus" target="_blank"><span>Bert Belder</span></a><span> gave a call to arms to the community around resolving the next stage of development for the Node core. He also expressed some opinions about promises which were present in Node in 2009. I think he might want them back!</span></p>
+</li>
+</ul><ul><li>
+<p><a href="https://twitter.com/thlorenz" target="_blank"><span>Thorsten Lorenz</span></a><span> from NodeSource presented a wonderfully geeky dig into the internals of </span><a href="http://thlorenz.github.io/talks/demystifying-v8/talk.pdf" target="_blank"><span>how V8 stores objects</span></a><span>. Key takeaway: be predictable and define types up front.</span></p>
+</li>
+</ul><ul><li>
+<p><span>And speaking of geeky, University of Wisconsin grad student </span><a href="https://twitter.com/MikolaLysenko" target="_blank"><span>Mikola Lysenko</span></a><span> demonstrated how special relativity theory might apply to synchronization in online games by using Cauchy surfaces to prevent causality anomalies.</span></p>
+</li>
+</ul><ul><li>
+<p><span>PeerCDN founder </span><a href="https://twitter.com/feross" target="_blank"><span>Feross Aboukhadijeh</span></a><span> gave a great talk and demonstration of </span><a href="http://en.wikipedia.org/wiki/WebRTC" target="_blank"><span>WebRTC (Web Real Time Communication)</span></a><span>. His pre-alpha release of </span><a href="https://www.npmjs.org/package/webtorrent" target="_blank"><span>webtorrent</span></a><span>, his </span><a href="https://www.npmjs.org/package/webtorrent" target="_blank"><span>browser-based torrent client</span></a><span>, was very impressive. And by pre-alpha, Feross told us he had only got it to work the previous day!</span></p>
+</li>
+</ul><ul><li>
+<p><a href="https://twitter.com/rockbot" target="_blank"><span>Raquel Vélez</span></a><span> from npm gave a talk on robotics and Node that involved the creation of some *cough* beautiful art.</span></p>
+</li>
+</ul><p><span><img alt="image" src="https://31.media.tumblr.com/9689832724584e82c05f5a4eecc16e33/tumblr_inline_ncavehLjal1t1r5ak.jpg" width="800"/></span></p>
+<p><span>As for the workshops: Other than for the session on robotics&ndash;which involved getting to work/play with lots of </span><a href="http://littlebits.cc/" target="_blank"><span>LittleBits</span></a><span>, some nodecopters and a few </span><a href="https://tessel.io/" target="_blank"><span>Tessels</span></a><span> (how could anyone not love it?)—the highlight was </span><a href="https://twitter.com/nvcexploder" target="_blank"><span>Ben Acker</span></a><span>’s boundless enthusiasm and help teaching us how to be </span><a href="http://hapijs.com/" target="_blank"><span>hapi</span></a><span>.</span></p>
+<p><span>As for what else we learned:</span></p>
+<ul><li>
+<p><a href="http://en.wikipedia.org/wiki/Baseball" target="_blank"><span>Baseball</span></a><span> skills seem to be fairly readily transferable to </span><a href="http://en.wikipedia.org/wiki/Hurling" target="_blank"><span>hurling</span></a><span>, as we discovered when the “magical mystery tour” on Tuesday night included a trip to a local Gaelic Athletic Association (GAA) club.</span></p>
+</li>
+<li>
+<p><span>Make sure that the person who calls you a taxi knows whether they are calling it for 6am or 6pm.</span></p>
+</li>
+<li>
+<p><span>If you ever need directions to a GAA club in Waterford, we can help. We’ve been to them all.</span> </p>
+</li>
+</ul><p><span>Thanks so much to </span><a href="https://twitter.com/Cianomaidin" target="_blank"><span>Cian</span></a><span>, </span><a href="https://twitter.com/rjrodger" target="_blank"><span>Richard</span></a><span>, </span><a href="https://twitter.com/agatasurgot" target="_blank"><span>Agata</span></a><span> and all the folks at </span><a href="http://www.nearform.com/" target="_blank"><span>NearForm</span></a><span> for organising such an enjoyable </span>conference!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#nodeconf-ref">nodeconf <span>1</span></a>
+      
+    <a href="/tags.html#javascript-ref">javascript <span>9</span></a>
+      
+    <a href="/tags.html#waterford-ref">waterford <span>1</span></a>
+      
+    <a href="/tags.html#Node.js-ref">Node.js <span>7</span></a>
+      
+    <a href="/tags.html#Aidan Hollinshead-ref">Aidan Hollinshead <span>1</span></a>
+      
+    <a href="/tags.html#Nick Rogers-ref">Nick Rogers <span>3</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Ireland-ref">Ireland <span>14</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#Fred George-ref">Fred George <span>1</span></a>
+      
+    <a href="/tags.html#Alex Liu-ref">Alex Liu <span>1</span></a>
+      
+    <a href="/tags.html#Jeff Harrell-ref">Jeff Harrell <span>1</span></a>
+      
+    <a href="/tags.html#Bert Belder-ref">Bert Belder <span>1</span></a>
+      
+    <a href="/tags.html#Thorsten Lorenz-ref">Thorsten Lorenz <span>1</span></a>
+      
+    <a href="/tags.html#V8-ref">V8 <span>1</span></a>
+      
+    <a href="/tags.html#Mikola Lysenko-ref">Mikola Lysenko <span>1</span></a>
+      
+    <a href="/tags.html#PeerCDN-ref">PeerCDN <span>1</span></a>
+      
+    <a href="/tags.html#Feross Aboukhadijeh-ref">Feross Aboukhadijeh <span>1</span></a>
+      
+    <a href="/tags.html#WebRTC-ref">WebRTC <span>2</span></a>
+      
+    <a href="/tags.html#webtorrent-ref">webtorrent <span>1</span></a>
+      
+    <a href="/tags.html#Raquel Velez-ref">Raquel Velez <span>1</span></a>
+      
+    <a href="/tags.html#npm-ref">npm <span>2</span></a>
+      
+    <a href="/tags.html#LittleBits-ref">LittleBits <span>1</span></a>
+      
+    <a href="/tags.html#Tessels-ref">Tessels <span>1</span></a>
+      
+    <a href="/tags.html#Ben Acker-ref">Ben Acker <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2014/09/19/gilt-presents-at-this-weekends-droidcon-nyc">Gilt Presents at This Weekend's Droidcon NYC!</a></h1>
+  
+  <header>
+    
+    <time>19 September 2014</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/aa560303e8f7f1478c270fe9ad9e9642/tumblr_inline_nc67z73k931s17bu5.png"/></p>
+<p>Gilt Senior Software Engineer <a href="http://tech.gilt.com/search/kevin+schultz" target="_blank">Kevin Schultz</a> represents for our mobile team in a big way this weekend, when he takes the stage at the first-ever Droidcon NYC conference for Android developers. Kevin will present at 5:10 PM tomorrow (Saturday, Sept. 20) on &ldquo;Building Maintainable Android Applications&rdquo;&ndash;focusing on Android-specific architecture, testing patterns, best practices, and tools to help teams build large-scale apps successfully. Droidcon takes place tomorrow and Sunday at the Metropolitan Pavilion in Manhattan; <a href="http://nyc.droidcon.com/2014/#" target="_blank">go here</a> to register!</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Droidcon NYC-ref">Droidcon NYC <span>1</span></a>
+      
+    <a href="/tags.html#Android-ref">Android <span>10</span></a>
+      
+    <a href="/tags.html#Kevin Schultz-ref">Kevin Schultz <span>6</span></a>
+      
+    <a href="/tags.html#conferences-ref">conferences <span>25</span></a>
+      
+    <a href="/tags.html#mobile development-ref">mobile development <span>21</span></a>
+      
+    <a href="/tags.html#mobile-ref">mobile <span>21</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#tech-ref">tech <span>20</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/10/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 11 of 64</span>
+  
+    <a href="/posts/12/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+

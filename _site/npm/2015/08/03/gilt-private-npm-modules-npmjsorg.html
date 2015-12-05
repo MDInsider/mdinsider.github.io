@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Private NPM Modules&#58; A Song of Fire and Ice</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#npm-ref">npm</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/npm/2015/08/03/gilt-private-npm-modules-npmjsorg">Private NPM Modules&#58; A Song of Fire and Ice</a></h1>
+  
+  <header>
+    
+    <cite><a href="/authors.html#Andrew Powell-ref">Andrew Powell</a></cite>
+    
+    <time>03 August 2015</time>
+    
+    <span class="categories">
+    
+      
+        
+      <a href="/categories.html#npm-ref">npm</a>
+        
+      
+    </span>
+    
+  </header>
+
+  <div class="content">
+    <p>Grab a coffee or pop and a snack, this is a read.</p>
+
+<p>Several years ago, Gilt Tech decided to adopt a new strategy for developing the overall Gilt platform. It was determined that many small applications should comprise Gilt.com, rather than one (or few) large monolithic applications. We called this strategy &#39;Lots of Small Applications,&#39; or &#39;LOSA.&#39; Key to LOSA were decentralized, distributed front-end assets. Enter <a href="https://www.npmjs.com/about">NPM</a>.</p>
+
+<p>Our requirements for how this was to work was varied, and we authored build tools to facilitate them. Our build tools solved many problems that at the time, didn&#39;t have solutions. We also knew we couldn&#39;t rely on external services to host our modules, because we need to know that the registry these little guys were stored in needed to <em>always</em> be available. NPM was still new, and npmjs.org was still a baby back then. Third-party SaaS providers weren&#39;t a thing for this yet. And so we spun up our own NPM registry in-house. This worked for years, and worked well - until one day it became obvious that we were hopelessly out of date.</p>
+
+<p>June 2014: A framework for developing NodeJS applications at Gilt took shape, and the need to start installing public modules from npmjs.org became real. The architects of the in-house registry had long-since parted ways with Gilt, and we scrambled to try and update an aged system. We attempted to implement a proxy from our private registry to the public. Things worked, but not well, and it was decided that we&#39;d look to a third-party for our registry needs. We eventually settled on a well-known company in the NodeJS space.  We were able to migrate our internal registry to their service, and everything worked very, very well.</p>
+
+<p>In February of this year we were informed that a very large entity, we&#39;ll call them &quot;MovableUncle,&quot; had purchased the registry-hosting company and they would cease their registry business. We knew we&#39;d have to move off of the platform and began carefully and cautiously considering alternatives. We were told that we&#39;d have until December 2015 - and then someone rolled in the dumpster and lit that baby afire. The registry company experienced massive attrition, including all of their support staff, resulting in a near-complete inability to get support. Our data was locked there, and despite exhausting many channels of communication, we were unable to procure a backup archive of our data. Some amount of panic set in when their website was updated to show August 2015 as the cutoff date.</p>
+
+<p>Without knowing for sure just when the service would go down, <a href="https://www.youtube.com/watch?v=NU0PijNCEwo">we knew it was time to act</a>, and quickly. We identified the three most viable options for moving forward: Hosting in-house again, going with another private registry SaaS provider that Gilt was already using for a different service, or going with the newly announced <a href="https://www.npmjs.com/private-modules">Private Modules offering</a> on npmjs.org.</p>
+
+<p>After much discussion and weighing the options against one-another, we decided to bite the bullet and go with npmjs.org. That bullet we had to bite meant a lot of changes internally. Their <a href="https://docs.npmjs.com/getting-started/scoped-packages">scoping mechanism</a> while elegant for installing modules and organization, was an enormous pain point for Gilt - it meant we had to update the names and dependencies for 220 modules. We&#39;d also be losing our history of published modules covering nearly four years. Representatives for npmjs.org explicitly told us there was no way to import a registry, even if we could get a backup out of the dumpster fire. That also meant that we&#39;d have to <em>republish 220 modules</em>.</p>
+
+<p><strong><a href="https://www.youtube.com/watch?v=w6Qhc-8cxMU">&#39;Aint Got Time To Bleed</a></strong>, as August was fast-approaching. This process required either a metric poop-ton of man-hours, or some quasi-clever scripts. We put together two NodeJS scripts;</p>
+
+<ol>
+<li><code>npm-registry-backup</code> would pull down a manual backup of our registry. That would mean iterating over all of our modules in the repo, fetching the <code>npm info</code> for each, and downloading the tarball for each revision.</li>
+<li><code>npm-scope</code> would iterate through a target directory looking for package.json files, update the name by adding our npmjs.org scope, adding the scope to any private modules in the dependencies property, and then finally publishing the module to npmjs.org. This script also allowed us to automagically update our apps that had private module dependencies.</li>
+</ol>
+
+<p>We&#39;ll make those scripts publicly available in the coming week(s) once we&#39;re out of the forest. From start to finish the process took about 9 man-hours (3 hours / 3 fellas) for backup and update of 220 modules, distributed through 14 different git repositories. Getting everything just right across the org was another matter altogether. Switching module paradigms isn&#39;t a trivial thing when the org has relied on one model for a few years.</p>
+
+<p><a href="https://www.youtube.com/watch?v=pele5vptVgc">Knowing Is Half The Battle</a> and to say we learned a lot from this ordeal would be an understatement the size of Texas.</p>
+
+<h2>Build Tools</h2>
+
+<p>One of my favorite Gilt-isms is <em>&quot;It solved the problem at the time.&quot;</em> Our primary build tool (named <code>ui-build</code>) for front-end assets was written a few years ago when we still thought Rake was all the hotness. It&#39;s a brilliant piece of code and study in Ruby polymorphism - unfortunately it&#39;s infested with massively complex regular expressions, hardcoded assumptions about filesystem locations, and chock-full of <em>black magic</em>. <em>&quot;Black magic&quot;</em> is the term we use at Gilt for all of the things in <code>ui-build</code> that were written by people no longer with the company, for which we don&#39;t know it&#39;s doing. Once we updated <code>ui-build</code> to handle scoped modules, we learned that we had to <em>republish</em> around 80 modules, due to black magic. We require publishing of modules to go through the build tool so that things like linting and verification of certain data and standards are performed prior to actually publishing to npm. We learned that in that process, things like automatic compilation of LESS and manipulation of vendor code, are done <em>SILENTLY</em>.</p>
+
+<p>While our next-generation, gulp-based build tool is being polished and rolled-out, we&#39;ve used this lesson to ensure that we don&#39;t have gaps in knowledge and documentation like we experienced with <code>ui-build</code>. We&#39;re also using this opportunity to explore how we can use the standard processes of npm to perform <code>pre-publish</code> or <code>post-install</code> steps and remove the need for black magic.</p>
+
+<h2>Maintenance, Maintenance, Maintenance</h2>
+
+<p>Some of our apps are so out-of-date they might as well be wearing bell-bottoms and driving <a href="https://jimburgan71.files.wordpress.com/2008/04/76gremlin.jpg">Gremlins</a>. So so so many apps had dependencies on module versions that were a year+ old. Remember - we lost that revision history in the registry when we moved to npmjs.org. Things blew up in epic fashion when attempting builds of many of our less-frequently-maintained apps. Some of the dependencies were so stubborn that we had to republish the tarballs for old versions that we had pulled down from <code>npm-registry-backup</code>. </p>
+
+<p>We need to be better at updating our apps. It doesn&#39;t always make cost-benefit sense to management, but it helps eliminate technical debt that we paid for in man-hours during this process. On top of the the original 9 man-hours, we had to spend roughly an additional 32 man-hours (8 hours / 4 fellas) with subsequent clean-up. There is progress on this front, however; Gilt Tech recently embarked on an ownership campaign internally called the &#39;Genome Project&#39; which should help address this concern.</p>
+
+<h2>Conclusion, or Potty Break</h2>
+
+<p>Overall the move was a success. We&#39;re still chasing the occasional edge case and build problem, but the major hurdles have been overcome. The improvement in speed and reliability of NPM over the SaaS registry host has been marked. We&#39;re able to use the latest features of the NPM registry and have regained the ability to unpublish; something we lost with the SaaS host. The technical improvements coupled with the knowledge we&#39;ve gained have made the endeavor worthwhile. And unless &quot;MovableUncle&quot; inexplicably acquires npmsj.org, we&#39;ve set the company up for stability in this area for some time to come.</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#npm-ref">npm <span>3</span></a>
+      
+    <a href="/tags.html#private modules-ref">private modules <span>1</span></a>
+      
+    <a href="/tags.html#tools-ref">tools <span>6</span></a>
+      
+    <a href="/tags.html#rake-ref">rake <span>1</span></a>
+      
+    <a href="/tags.html#gulp-ref">gulp <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

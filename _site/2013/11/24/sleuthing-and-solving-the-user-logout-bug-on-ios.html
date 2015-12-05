@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source / Sleuthing--and Solving--the User Logout Bug on iOS 7</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes//img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes//css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes//css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes//js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+
+<article>
+  <h1><a href="/2013/11/24/sleuthing-and-solving-the-user-logout-bug-on-ios">Sleuthing--and Solving--the User Logout Bug on iOS 7</a></h1>
+  
+  <header>
+    
+    <time>24 November 2013</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="http://media.tumblr.com/0c3af4f712d176875304c821df74ba5f/tumblr_inline_mwoeg7hbWI1s17bu5.png"/></p>
+<p>iOS 7 brought many <a href="http://reviews.cnet.com/apple-ios-7/" target="_blank">new features</a>, and much new work for developers.</p>
+<p>One of the features the Gilt mobile team was most excited about was <strong>background fetch</strong>. With background fetch, apps that are running in the background—or not even running at all—can wake up periodically to issue server requests and download data. The purpose is to make the most up-to-date content visible the instant the user brings up an app. In an ideal world, background fetch would kill off the “Loading…” screen that server-driven apps typically present when launched.</p>
+<p>Background fetch is particularly well-suited for us at Gilt, because we feature a new slate of sales every day. Each day brings updated sale data and new photos to send to the user.</p>
+<p>Before iOS added support for background fetch, a user would launch <a href="http://www.gilt.com/apps/iphone" target="_blank">the Gilt app</a> (or bring it to the foreground after a certain period of time), and we’d start a flurry of communication with the server that would eventually result in the sales list and associated photos being loaded; the user’s cart and other settings would also get synced. On slow network connections, this process could take a while—costing our users precious time while they raced against other customers before the items in the day’s flash sales sold out.</p>
+<p><br/><strong>An Unexpected Complication</strong></p>
+<p>We introduced background fetch in our Gilt for iPhone 4.0 release. Immediately the benefits became apparent: users could access sales much more quickly than before, and they also spent less time in loading-screen limbo. We patted ourselves on the back for a job well done.</p>
+<p>And then we started to receive bug reports. Users who had logged in and left the “Stay Signed In” option turned on began to report trouble. A day or two (or three) after signing in, these users would suddenly be logged out. They’d sign in again, only to be booted out again within the next few days.</p>
+<p>Weird.</p>
+<p>Although we had not seen this issue during our QA testing, we eventually started noticing it on our personal devices. But we could never pin down exactly what we were doing to cause it.</p>
+<p>As any developer will tell you, repeatable <em>steps to reproduce</em>—the actions a user needs to perform to hit a bug—are critical in diagnosing and fixing problems. After all, how can you be sure you’ve fixed a bug if you don’t know how to trigger it in the first place?</p>
+<p>We didn’t have steps to reproduce, so we scoured our codebase and tried a number of speculative fixes. We created new test binaries and distributed them to our QA team and internal users. And then we waited a few days to see if everyone who signed in still was. Soon enough, we got the verdict: the bug remained alive.</p>
+<p>So we’d repeat the cycle again.</p>
+<p><br/><strong>A LaGuardia Eureka</strong></p>
+<p>In the middle of all this, I was about to depart on a long-planned vacation. While waiting to board a plane at LaGuardia, I fired up the Delta app to retrieve my boarding pass. Despite having just logged in a few minutes earlier, I noticed that I was being asked to log in again. I had used the Delta app under iOS 6, so I knew the normal behavior was to keep me logged in.</p>
+<p>I logged in again, and as a test, put the app in the background. A few minutes later, I returned, and again I was logged out. I tried a few other apps, and noticed that Gilt and Delta weren’t the only apps bitten by the user logout bug.</p>
+<p>Going on vacation gave me a reason to use the Delta app, which in turn provided the Eureka moment that pointed me in a different direction. Gilt’s mobile team had been working under the assumption that the user logout issue was specific to our app. But now the problem appeared to be widespread—a hunch confirmed by <a href="http://www.theverge.com/2013/9/23/4761860/ios-7-bug-snapchat-mailbox-loom-logged-out" target="_blank"><em>The Verge</em>’s Ellis Hamburger</a>—and this gave us a starting point for researching the problem.</p>
+<p>When iOS 7 became available, the nuances of background fetch weren’t immediately obvious to developers. There was a temptation to approach this new feature with the attitude: <em>Great! I’ll just take the network requests my app makes at launch, and put them in a background fetch wrapper. How easy is that?</em></p>
+<p>Not that easy, it turns out. Because background fetch changes the environment in which an app’s networking code executes, the same code won’t necessarily behave the same way when running in the background.</p>
+<p><br/><strong>The Source of Our Trouble</strong></p>
+<p>In the case of the user logout bug, the problem was that the iOS Keychain wasn’t consistently available when we’d try to access it.</p>
+<p>The Keychain is the recommended place for storing sensitive information like usernames and passwords. When data is put in the Keychain, iOS ensures that it is stored securely. By default, when running on phones with a lock code, secure Keychain items remain encrypted while the lock screen is on; they only become available after the owner enters the correct code—or successfully scans a fingerprint—to unlock the device. This ensures that someone gaining physical access to your phone can’t perform a basic forensic analysis to extract sensitive data from your Keychain.</p>
+<p>Before background fetch, most apps could assume that their secure Keychain items would be available whenever they were needed, because most apps didn’t expect to be performing routine operations—much less <em>be</em> <em>running</em>—when the lock screen was on. However, with background fetch, it is now possible for an app to wake up while the device is locked, when its Keychain items aren’t available.</p>
+<p>The Gilt app periodically re-authenticates with the server and syncs the items in the user’s cart. This ensures a seamless cross-device experience for our users. However, it was also the source of our user logout bug, because our authentication requests would sometimes get issued in the background when the device was locked.</p>
+<p>In such a case, the Gilt app would dutifully ask the Keychain for the user’s credentials. But because the device was locked, the Keychain would return a null value, causing the app to behave as though there were no user credentials at all. As far as the app is concerned, no credentials == no user, so the next time the user began interacting with the app, they’d no longer be logged in.</p>
+<p>We never caught this problem in our internal QA testing, because we didn’t have lock codes on our test devices.</p>
+<p><br/><strong>Don’t Decrease Default Security</strong></p>
+<p>After discovering that Keychain access was the source of the issue, we sought to find out how other developers approached solving it. <a href="http://stackoverflow.com/questions/10536859/ios-keychain-not-retrieving-values-from-background/10583042#10583042" target="_blank">One popular suggestion</a> is to store items in the Keychain with the <code>kSecAttrAccessible</code> attribute set to <code>kSecAttrAccessibleAlways</code>. Unfortunately, this requires using a less secure mechanism for storing data than the Keychain would otherwise use by default.</p>
+<p>If the only way for your app to function correctly during a background fetch depends on loosening security settings, <strong>you should seriously consider refactoring your code.</strong> The <code>kSecAttrAccessibleAlways</code> setting allows data to remain unencrypted while the device is locked. The stored data will not be secure if someone manages to gain physical access to your device. At Gilt, we need to be extremely careful about how we handle sensitive data. If we’re going to explicitly change a default security setting, we’re going to tighten that setting, not loosen it.</p>
+<p>Instead of reducing the security of what we store in the Keychain, we changed our request model to ensure that authentication never <em>needs</em> to be done in the background. If the Keychain isn’t available, we simply won’t try to authenticate.</p>
+<p>This solution addresses only half the problem, though. In an ideal world, we’d still be able to authenticate and sync the cart sometime <em>before</em>—or at least <em>when</em>—the app becomes active, to ensure that the user always sees the current cart items. If the device is locked, we need to be notified when the Keychain becomes available again, so we’ll know when it is safe to build the necessary server requests.</p>
+<p><br/><strong>Knowing When the Keychain is Ready</strong></p>
+<p>The key is hooking into the <code>UIApplicationDelegate</code>&rsquo;s <code>applicationProtectedDataDidBecomeAvailable:</code> method.</p>
+<p>iOS calls this method after the device has become unlocked, so it serves as a signal that we can now get the user’s authentication credentials from the Keychain. This method can be called before the app is brought to the foreground, letting us get a head start with the cart sync.</p>
+<p>Although rethinking our server requests for a background fetch world required a little more work, we avoided undermining iOS’s default security settings.</p>
+<p>And since we rolled out this change in our recent Gilt for iPhone 4.0.2 release, we’ve received no more user reports about this problem.</p>
+<p>The moral of the story?</p>
+<p>When faced with a seemingly intractable problem, take a vacation. You might find inspiration in unexpected ways.</p>
+
+  </div>
+
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Evan Maloney-ref">Evan Maloney <span>4</span></a>
+      
+    <a href="/tags.html#ios7-ref">ios7 <span>1</span></a>
+      
+    <a href="/tags.html#iOS 7-ref">iOS 7 <span>2</span></a>
+      
+    <a href="/tags.html#iOS Development-ref">iOS Development <span>4</span></a>
+      
+    <a href="/tags.html#user logout bug-ref">user logout bug <span>1</span></a>
+      
+    <a href="/tags.html#background fetch-ref">background fetch <span>1</span></a>
+      
+    <a href="/tags.html#Gilt app-ref">Gilt app <span>1</span></a>
+      
+    <a href="/tags.html#data-ref">data <span>25</span></a>
+      
+    <a href="/tags.html#customer experience-ref">customer experience <span>7</span></a>
+      
+    <a href="/tags.html#user experience-ref">user experience <span>23</span></a>
+      
+    <a href="/tags.html#bugs-ref">bugs <span>1</span></a>
+      
+    <a href="/tags.html#Eureka moments-ref">Eureka moments <span>1</span></a>
+      
+    <a href="/tags.html#Delta app-ref">Delta app <span>1</span></a>
+      
+    <a href="/tags.html#The Verge-ref">The Verge <span>1</span></a>
+      
+    <a href="/tags.html#Ellis Hamburger-ref">Ellis Hamburger <span>1</span></a>
+      
+    <a href="/tags.html#iOS Keychain-ref">iOS Keychain <span>1</span></a>
+      
+    <a href="/tags.html#infosec-ref">infosec <span>2</span></a>
+      
+    <a href="/tags.html#default security-ref">default security <span>1</span></a>
+      
+    <a href="/tags.html#kSecAttrAccessible-ref">kSecAttrAccessible <span>1</span></a>
+      
+    <a href="/tags.html#kSecAttrAccessibleAlways-ref">kSecAttrAccessibleAlways <span>1</span></a>
+      
+    <a href="/tags.html#authentication-ref">authentication <span>1</span></a>
+      
+    <a href="/tags.html#UIApplicationDelegate-ref">UIApplicationDelegate <span>1</span></a>
+      
+    <a href="/tags.html#applicationProtectedDataDidBecomeAvailable:-ref">applicationProtectedDataDidBecomeAvailable: <span>1</span></a>
+      
+    <a href="/tags.html#Gilt for iPhone 4.0.2-ref">Gilt for iPhone 4.0.2 <span>1</span></a>
+      
+    <a href="/tags.html#Evan Coyne Maloney-ref">Evan Coyne Maloney <span>5</span></a>
+      
+    
+
+  </section>
+  
+
+</article>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes//js/main.js"></script>
+  </body>
+</html>
+

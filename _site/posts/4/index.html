@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MDInsider ♥ Open Source</title>
+    
+    <meta name="author" content="MDInsider, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/themes/gilt/img/favicon.ico">
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/themes/gilt/css/github-light.css">
+    <link rel="stylesheet/less" href="/assets/themes/gilt/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <script src="/assets/themes/gilt/js/jekyll-search.js"></script>
+    <script>
+      var searchJsonPath = '/search.json',
+        searchTemplate = '<menuitem><a href="{url}">{title}</a></menuitem>';
+    </script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="subnav">
+          <span>
+            <a class="categories">Categories</a>
+            <p class="social github"><a href="https://github.com/mdinsider" title="Github"></a></p>
+            <p class="social twitter"><a href="https://twitter.com/mdinsidercorp" title="Twitter"></a></p>
+            <p class="social facebook"><a href="https://www.facebook.com/mdinsider" title="Facebook"></a></p>
+            <!-- <p class="social google"><a href="https://plus.google.com/109372432870680352734" title="Google+"></a></p> -->
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+            <menu id="categories-menu">
+            
+            
+            
+              <menuitem>
+                <a href="/categories.html#AWS-ref">AWS</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#Leadership-ref">Leadership</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#agile-ref">agile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#analytics-ref">analytics</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#aws-ref">aws</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#blog-ref">blog</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#conferences-ref">conferences</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#culture-ref">culture</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#deployment-ref">deployment</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#front-end-ref">front-end</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#mobile-ref">mobile</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#scala-ref">scala</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#swift-ref">swift</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tech-ref">tech</a>
+              </menuitem>
+            
+              <menuitem>
+                <a href="/categories.html#tvOS-ref">tvOS</a>
+              </menuitem>
+            
+            </menu>
+            <menu id="search-results">
+            </menu>
+          </span>
+        </section>
+        <a class="logo" href="/" class="logo"></a>
+        <h1>Tech Blog</h1>
+      </header>
+      <section id="main">
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/27/new-gilt-product-feature-fit-predictor">New Gilt Product Feature: “Fit Predictor”</a></h1>
+  
+  <header>
+    
+    <time>27 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span>Based on the feedback we receive from <a href="http://gilt.com/" target="_blank">Gilt</a> customers, we know that fit and sizing varies greatly between brands&ndash;which can make finding the </span><span>right </span><span>size very challenging. We always want our customers to feel great about their purchases and confident that an item will fit. With this in mind, we are excited to announce the launch of Fit Predictor: a new technology from our partners at </span><a href="http://secretsaucepartners.com/" target="_blank">Secret Sauce</a><span>.</span></p>
+<p><span></span>With Fit Predictor, simply tell us which sizes fit you best in some (or all) of your favorite brands. Based on the stats you provide, and the items from your fave brands that you select, we will calculate and recommend the right sizes for you. Here’s how it works:</p>
+<ul><li>
+<p><span>While checking out select items on Gilt, you will notice the Fit Predictor above the size selections:</span><img alt="image" height="95px;" src="https://lh6.googleusercontent.com/3qjgzrxb7Ztc_-GdXkct0U3nVaXWkhmZaEQGk818mujGYZLYyo3x4PhqrMtRFGlBhGlW6VFWGA-J0sqW00AALX5SLpgATHtIilhJmFI_8MHVBKo-k-ybXoiqHHCd67I6zQ" width="297px;"/></p>
+</li>
+</ul><ul><li>
+<p><span>Click “calculate your size” to choose a brand that you know, an item type, and the size that fits you:</span><img alt="image" height="350px;" src="https://lh4.googleusercontent.com/FoaRFrtOXOTxswipLxwjzmLoXkM77V_O6xh9AKLunyjrjYp6fOsgLZzBUhC9Ste-D7D0Krte5s6sTYYjK8JOe4haUMtDzjjt-znqbSQkksZ5f5O2DUoD9c8kgNcKO2BplQ" width="336px;"/></p>
+</li>
+</ul><ul><li>
+<p><span>Based on your input, Fit Predictor will recommend the size that will best fit you for the item you are currently viewing:</span><img alt="image" height="294px;" src="https://lh4.googleusercontent.com/6uzkv2EZ-qBIIDvUd1ka7YAeIwS3eaWZRETEYH8xzvy-cWA_DvA7aHBKhZog6ZGY9bRy3SiFCPI3SY9ezoyJE2i3VojVOBubp-WAion-oOdVEjCPIDwjC8YspjpwREKibw" width="321px;"/></p>
+</li>
+</ul><ul><li>
+<p><span>The more sizing information about your favorite brands that you share with Fit Predictor, the better predictions we can make. Over time, build up your fit profile and receive the most accurate recommendations:</span><img alt="image" height="232px;" src="https://lh3.googleusercontent.com/Gq8BHVD5-Ou0nXZGwKoKVDMMFd5IptXL9y5-IrFHvx5M6k6C32OM1c7RpkcBnRuS48mH9z4voZGT3G0ENdxbPgIs2TMJ5i8U5qz-LIegLyw-Qs6h43Z16tbCDw6Bz4g-qw" width="320px;"/></p>
+</li>
+</ul><ul><li>
+<p><span>With a Fit Profile, every time you navigate to a product that is enabled by Fit Predictor, we will automatically suggest the best size for you:</span><span><br/></span><span><img alt="image" height="110px;" src="https://lh3.googleusercontent.com/vbN_zIytBjlCysc22ukISJ0tL6vHV1lYIxVpE-M6NHsvvaXItUIUx7INgPr4IueryuF3Q1jEip-NckoHYaMobuW6RIVi4MMreSN_GHWyBo9JQ8q5H0rY9eLPLt3bOiFaNw" width="253px;"/></span></p>
+</li>
+</ul><p><span>We will be working hard to roll out Fit Predictor to as many items as possible, so you can always take advantage of its magic!</span></p>
+<p><span></span>We launched Fit Predictor as part of <a href="http://tech.gilt.com/2014/07/21/gilt-product-management-and-user-experience" target="_blank">our mission</a> to provide the best shopping experience for our members. Let us know what you think of this and <a href="http://tech.gilt.com/tagged/Gilt-Product" target="_blank">other new features</a> by emailing us at <strong>productfeedback@gilt.com</strong>!</p>
+<p><span> </span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Product-ref">Gilt Product <span>17</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Fit Predictor-ref">Fit Predictor <span>1</span></a>
+      
+    <a href="/tags.html#product-ref">product <span>5</span></a>
+      
+    <a href="/tags.html#Christopher Gonzalez-ref">Christopher Gonzalez <span>7</span></a>
+      
+    <a href="/tags.html#Secret Sauce-ref">Secret Sauce <span>1</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    <a href="/tags.html#shopping-ref">shopping <span>13</span></a>
+      
+    <a href="/tags.html#Fit Profile-ref">Fit Profile <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/26/announcing-the-next-dublin-scala-users-group">Announcing: The Next Dublin Scala Users Group Meetup</a></h1>
+  
+  <header>
+    
+    <time>26 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/91642f4c76fca7fb0cdbd90d7eec6e1f/tumblr_inline_nit2tqRZVr1s17bu5.jpg" width="800"/></p>
+<p>For our first <a href="http://tech.gilt.com/search/dublin+scala+users+group" target="_blank">Dublin Scala Users Group</a> meetup of 2015, we&rsquo;ll have two great technical talks, hot pizza, cold beverages, and, as always, our comfy-n-colorful beanbags (<a href="http://tech.gilt.com/2014/09/24/slideshows-and-photos-from-last-nights-dublin" target="_blank">go here</a> to view them). Our speakers for the night:</p>
+<ul><li>Gilt Principal Software Engineer Ugo Matrangolo will discuss the implementation of the Dependency Injection pattern in Scala, and will try to offer an honest (although opinionated) view of what works and what doesn’t with Cake. He will also introduce ScalDI: a new framework that is rapidly gaining popularity among people who want a quick and easy DI implementation without using the Cake pattern.</li>
+<li>Julien Sirocchi of Workday will talk about type classes, and will show how Scala programmers don&rsquo;t need to understand them to use them</li>
+</ul><p>The SUG will meet up on Thursday, Feb. 5 at Gilt&rsquo;s office in Dublin 4; <a href="http://www.meetup.com/Dublin-Scala-users-group/events/220097522/" target="_blank"><strong>go here to RSVP</strong></a>.</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Dublin Scala Users Group-ref">Dublin Scala Users Group <span>10</span></a>
+      
+    <a href="/tags.html#Ugo Matrangolo-ref">Ugo Matrangolo <span>1</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    <a href="/tags.html#Ireland-ref">Ireland <span>14</span></a>
+      
+    <a href="/tags.html#ScalDI-ref">ScalDI <span>1</span></a>
+      
+    <a href="/tags.html#type classes-ref">type classes <span>1</span></a>
+      
+    <a href="/tags.html#Julien Sirocchi-ref">Julien Sirocchi <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/23/it-takes-more-than-great-algorithms-to-make">"It Takes More Than Great Algorithms to Make Personalization Work": Gilt on VentureBeat</a></h1>
+  
+  <header>
+    
+    <time>23 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img src="https://31.media.tumblr.com/12e74d1701ec225811fde4c100a37810/tumblr_inline_nimy85HOkI1s17bu5.jpg"/></p>
+
+<p>&ldquo;[R]elying on data and math alone won’t suffice when it comes to providing the best user experience,&rdquo; writes Gilt Senior Software Engineer <a href="http://tech.gilt.com/search/brian+ballantine" target="_blank">Brian Ballantine</a> in his new column for VentureBeat. &ldquo;To get personalization right, you need heuristics: a set of problem-solving techniques that rely on experiment, experience, and sometimes even wild guesses.&rdquo; What are heuristics, and how does Gilt use them to optimize our personalization efforts? <a href="http://venturebeat.com/2015/01/22/it-takes-more-than-great-algorithms-to-make-personalization-work/" target="_blank"><strong>Go here</strong></a> to find out. :)</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Brian Ballantine-ref">Brian Ballantine <span>3</span></a>
+      
+    <a href="/tags.html#personalization-ref">personalization <span>12</span></a>
+      
+    <a href="/tags.html#algorithms-ref">algorithms <span>1</span></a>
+      
+    <a href="/tags.html#VentureBeat-ref">VentureBeat <span>1</span></a>
+      
+    <a href="/tags.html#media-ref">media <span>12</span></a>
+      
+    <a href="/tags.html#tech-ref">tech <span>20</span></a>
+      
+    <a href="/tags.html#heuristics-ref">heuristics <span>1</span></a>
+      
+    <a href="/tags.html#heuristic techniques-ref">heuristic techniques <span>1</span></a>
+      
+    <a href="/tags.html#user experience-ref">user experience <span>23</span></a>
+      
+    <a href="/tags.html#customer experience-ref">customer experience <span>7</span></a>
+      
+    <a href="/tags.html#ecommerce-ref">ecommerce <span>35</span></a>
+      
+    <a href="/tags.html#A/B testing-ref">A/B testing <span>2</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/22/scala-futures-and-lazy-vals">Scala, Futures and "Lazy" Vals</a></h1>
+  
+  <header>
+    
+    <time>22 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/9c704e6868cd90aeb01abe908acd0f28/tumblr_inline_nilkgrUs1B1s17bu5.png" width="800"/></p>
+<p><em>Image via <a href="https://www.flickr.com/photos/hmk/2742398590/in/photolist-5bkvyj-7T1KbP-7YUB5d-85pamg-fhtqqR-cYv8q9-bwrWEN-7K8ERd-8U4E9e-9a6B49-tM5nv-o7zyud-oX9cDf-hC8SBj-jWJf-doAo8n-6CbdfG-o7F7QD-o9yAVK-bxciU-936fG4-9dmEez-34oiRs-fA6mge-o9seiR-o7xYEy-o7zvLN-o7nP7c-o5CK3C-nQbRp3-o7F7wn-7HrJBS-6umch4-eYhuSS-bfhiE2-o7nMjz-eh7p-6DtZLr-o9segX-o7nKQT-a1XCcx-23zDZ-q4eSEm-o7nNc6-o9scNX-o7y1Nw-f84h4g-6VoDK2-2svyz6-9zruQE" target="_blank">H. Michael Karshis</a>. <br/></em></p>
+<p>When <a href="http://stackoverflow.com/questions/17642275/how-are-lazy-val-class-variables-implemented-in-scala-2-10" target="_blank">implementing &ldquo;lazy val&rdquo; class variables</a> in Scala 2.10, keep in mind that lazy vals hide some plain-old synchronized block behind a nice-looking syntax. At Gilt, more and more of our stuff is <a href="http://tech.gilt.com/2015/01/05/some-quick-tips-for-using-scala-futures" target="_blank">Future</a>-based, and increasingly more of it executes in Scala&rsquo;s shared <a href="http://blog.jessitron.com/2014/02/scala-global-executioncontext-makes.html" target="_blank">ForkJoinPool</a> under the assumption that it &ldquo;behaves.&rdquo; Sometimes these worlds collide, however, and &ldquo;lazy val&rdquo;-guarded calls (which are synchronized blocks in disguise) end up being thrown into global FJP. And worse, they may some times be highly-contended.</p>
+<p>There are good reasons to use Futures and async IO, and good reasons to use lazy vals. You just need to be very, very careful if and when you end up mixing the two, because they are a bit tricky to understand at best and may lock up your system at worst.<br/><br/> Of course, the easy position to take is, &ldquo; just don&rsquo;t do it! &rdquo;:) <br/><br/> The rule of thumb: If code that initializes your lazy val is non-blocking and very fast, it&rsquo;s most likely OK and could be good way to defer creation of heavy objects (like thread pools). OTOH, if your lazy val is initialized from a Future, or the result of some remote service call(s), that can easily turn out to be problematic when &lsquo;normal&rsquo; code that tries to de-reference those values ends up (unwittingly) making a blocking call inside a (perhaps shared) FJP. Think twice if that&rsquo;s where you find yourself&ndash;there are often better alternatives. <em><strong>&ndash;Content (and most words) by Andrey Kartashov, Gilt Principal Software Engineer</strong></em></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Andrey Kartashov-ref">Andrey Kartashov <span>2</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#lazy vals-ref">lazy vals <span>1</span></a>
+      
+    <a href="/tags.html#ForkJoinPool-ref">ForkJoinPool <span>1</span></a>
+      
+    <a href="/tags.html#Jessica Kerr-ref">Jessica Kerr <span>1</span></a>
+      
+    <a href="/tags.html#FJP-ref">FJP <span>1</span></a>
+      
+    <a href="/tags.html#Scala 2.10-ref">Scala 2.10 <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/22/practical-performance-monitoring-gilt-presents">"Practical Performance Monitoring": Gilt Presents at NY Front End Coders</a></h1>
+  
+  <header>
+    
+    <time>22 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/bec00b5e9c4f9efd5b2aa6fd6ea9869b/tumblr_inline_nil5xrDQTx1s17bu5.png" width="800"/></p>
+<p>If performance issues are making you feel like King Kong&ndash;i.e., disgruntled and prone to going on a rampage&ndash;then head on over to the Empire State Building next Wednesday and get some relief. Gilt Lead Software Engineer <a href="http://tech.gilt.com/search/gregory+mazurek" target="_blank">Gregory Mazurek</a> will appear at the next New York Front End Coders meetup to explain how Gilt analyzes web performance <a href="http://tech.gilt.com/2014/11/11/a-synthetic-monitoring-case-study" target="_blank">using RUM and synthetic monitoring</a> as well as the W3C Performance Timing API. He&rsquo;ll give a couple examples of recent performance issues at Gilt and how our tech team has integrated performance into our workflow. By the end, you should feel rather enlightened and calm&ndash;more like Curious George than a monster gorilla.</p>
+<p>Also on the bill will be Nathaniel Lee, who will discuss &ldquo;Leveraging Functional Programming in JS.&rdquo; <a href="http://www.meetup.com/nyfrontendcoders/events/219879238/" target="_blank">Go here</a> to RSVP (and do it before Monday, January 26).</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Gregory Mazurek-ref">Gregory Mazurek <span>18</span></a>
+      
+    <a href="/tags.html#New York Front End Coders-ref">New York Front End Coders <span>1</span></a>
+      
+    <a href="/tags.html#front-end-ref">front-end <span>1</span></a>
+      
+    <a href="/tags.html#engineering-ref">engineering <span>12</span></a>
+      
+    <a href="/tags.html#meetups-ref">meetups <span>32</span></a>
+      
+    <a href="/tags.html#talks-ref">talks <span>10</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#Special Operations-ref">Special Operations <span>10</span></a>
+      
+    <a href="/tags.html#performance monitoring-ref">performance monitoring <span>1</span></a>
+      
+    <a href="/tags.html#RUM-ref">RUM <span>2</span></a>
+      
+    <a href="/tags.html#synthetic monitoring-ref">synthetic monitoring <span>2</span></a>
+      
+    <a href="/tags.html#W3C Performance Timing API-ref">W3C Performance Timing API <span>1</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/20/i-cant-get-no-satisfaction-ramblings-on-the">I Can't Get No Satisfaction: Ramblings on the First Agile Principle</a></h1>
+  
+  <header>
+    
+    <time>20 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><a href="http://commons.wikimedia.org/wiki/File%3AMick_Jagger_in_red.jpg" title="By Dina Regine [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons" target="_blank"><img alt="Mick Jagger in red" src="//upload.wikimedia.org/wikipedia/commons/6/68/Mick_Jagger_in_red.jpg" width="512"/></a></p>
+
+<p><span><em>This is part of a series of ramblings on the <a href="http://agilemanifesto.org/principles.html" target="_blank">Principles behind the Agile Manifesto</a>, reposted with permission from<a href="https://incrementalme.wordpress.com/tag/agile/" target="_blank"> Incremental Me</a>.</em></span></p>
+<p><span><em><strong>&ldquo;Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.&rdquo;</strong></em></span></p>
+<p><span>In software development…</span></p>
+<ul><li>In order to satisfy the customer you have to truly understand what the customer <em>needs</em>.
+<ul><li>Sometimes what a customer wants is very different than what a customer needs.</li>
+<li>Keep asking “Why? Why? Why?”</li>
+<li>This requires the customer to be very much engaged in what is happening.  They need to be able to express whether or not they are satisfied in real-time.</li>
+</ul></li>
+<li>Early and continuous delivery of valuable software is pretty difficult to do.
+<ul><li>What is “early”?  Perhaps “incremental” is more appropriate.  I’m assuming this wasn’t intended to be “early” in the traditional, calendar-time based meaning.</li>
+<li>Continuous delivery == constantly changing, hopefully for the better.</li>
+<li>There is no such thing as “scope creep” in Agile!</li>
+<li>It is of value if it satisfies the customer, therefore the customer must determine what “valuable” means.</li>
+<li>But… If delivery is continuous, when are we “done”?  Perhaps never.  Satisfaction is a tricky beast.</li>
+</ul></li>
+</ul><p><span>In life…</span></p>
+<ul><li>In order to be satisfied, you must actually understand what you really <em>need</em> to be happy.
+<ul><li>What you want is not necessarily what you need.</li>
+<li>Perhaps in order to get at the core of what you really need, you have to ask myself “Why do you want X?”</li>
+<li>You can’t “check-out”.  In order for this to work you need to be present and engaged in your life and incrementally improving it.</li>
+</ul></li>
+<li>You also need to start NOW and continuously deliver on those needs in the form of changes for the better.
+<ul><li>&ldquo;Working software&rdquo; in life is a means by which the need is satisfied.  This could be anything from eating well, getting enough rest, to treating yourself with the same kindness and respect you give your friends.</li>
+<li>The key is to first really understand what your needs are — what will it take to be satisfied?</li>
+<li>And finally, admitting that you am a work-in-progress.  There is no &ldquo;done&rdquo;.</li>
+</ul></li>
+</ul>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#agile-ref">agile <span>5</span></a>
+      
+    <a href="/tags.html#agile methodology-ref">agile methodology <span>1</span></a>
+      
+    <a href="/tags.html#agile manifesto-ref">agile manifesto <span>1</span></a>
+      
+    <a href="/tags.html#personal development-ref">personal development <span>1</span></a>
+      
+    <a href="/tags.html#heather fleming-ref">heather fleming <span>2</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#software development-ref">software development <span>7</span></a>
+      
+    <a href="/tags.html#technology-ref">technology <span>70</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/20/video-why-engineers-should-work-with-the-dark">Video: "Why Engineers Should Work with the ‘Dark Side’ of Tech"</a></h1>
+  
+  <header>
+    
+    <time>20 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/7kRBapwdy9w" width="640"></iframe></p>
+<p>On Thursday, Gilt’s Director of Program Management Justin Riservato, Director of Product Andrew Chen, Senior Business Systems Manager Susan Thomas, and Senior Program Manager Myron Miller presented “Get Stuff Done Faster: Why Engineers Should Work with the &lsquo;Dark Side&rsquo; of Tech. They shared the differences between program managers, business analysts and product managers, and demonstrated how they make Gilt engineers’ work lives easier and more fulfilling. Watch the video above to relive the magic! Then check out their slidedeck below:</p>
+
+<p><iframe frameborder="0" height="470px" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/LappleApple/slideshelf" width="615px"></iframe></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilttech-ref">Gilttech <span>18</span></a>
+      
+    <a href="/tags.html#Talks-ref">Talks <span>2</span></a>
+      
+    <a href="/tags.html#Tech Talks-ref">Tech Talks <span>4</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#Events-ref">Events <span>2</span></a>
+      
+    <a href="/tags.html#Meetups-ref">Meetups <span>2</span></a>
+      
+    <a href="/tags.html#Tech-ref">Tech <span>2</span></a>
+      
+    <a href="/tags.html#Software Engineering-ref">Software Engineering <span>2</span></a>
+      
+    <a href="/tags.html#Justin Riservato-ref">Justin Riservato <span>12</span></a>
+      
+    <a href="/tags.html#Susan Thomas-ref">Susan Thomas <span>5</span></a>
+      
+    <a href="/tags.html#Myron Miller-ref">Myron Miller <span>3</span></a>
+      
+    <a href="/tags.html#Andrew Chen-ref">Andrew Chen <span>9</span></a>
+      
+    <a href="/tags.html#Agile-ref">Agile <span>11</span></a>
+      
+    <a href="/tags.html#Agile Development-ref">Agile Development <span>2</span></a>
+      
+    <a href="/tags.html#Program management-ref">Program management <span>2</span></a>
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    <a href="/tags.html#Project Management-ref">Project Management <span>2</span></a>
+      
+    <a href="/tags.html#Product Management-ref">Product Management <span>5</span></a>
+      
+    <a href="/tags.html#Gilt Product-ref">Gilt Product <span>17</span></a>
+      
+    <a href="/tags.html#Slideshow-ref">Slideshow <span>1</span></a>
+      
+    <a href="/tags.html#video-ref">video <span>42</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/09/vote-for-gilt-in-the-developerweek-awards">Vote for Gilt in the DeveloperWeek Awards!</a></h1>
+  
+  <header>
+    
+    <time>09 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/ca1202e7bf25d6c9014d311154e0f878/tumblr_inline_nhxh4pMauY1s17bu5.png" width="800"/></p>
+<p>Dear Supporters of Gilt Open Source,</p>
+<p>We could use a bit of your help! One of our biggest open source projects, apidoc, is in the running for a 2015 DeveloperWeek Award&ndash;and we only found out about it today. We have <strong>until just January 15</strong> to collect votes. Not to boast, but we think apidoc is a great project: If you&rsquo;re a developer, you can use apidoc to create beautiful documentation for your REST services and download native client libraries with no (or almost no) dependencies. It takes a schema-first approach rather than annotation-based solutions, and features an intuitive JSON format. And&ndash;one more time&ndash;it&rsquo;s free and yours to use.</p>
+<p>With your support, we think we can win this thing. Are you on board? If so, <strong><a href="http://verticalize.me/technology/index?search_by=apidoc" target="_blank">go here to cast your vote</a></strong>. And let us know if you&rsquo;ve used apidoc for any of your projects&ndash;we&rsquo;d love to know (get in touch via <a href="https://twitter.com/gilttech" target="_blank">Twitter</a> or <a href="https://www.facebook.com/GiltTech?ref=hl" target="_blank">Facebook</a>).</p>
+<p>Thank you much,<br/>#gilttech</p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#DeveloperWeek-ref">DeveloperWeek <span>1</span></a>
+      
+    <a href="/tags.html#DeveloperWeek Awards-ref">DeveloperWeek Awards <span>1</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#OS-ref">OS <span>4</span></a>
+      
+    <a href="/tags.html#apidoc-ref">apidoc <span>3</span></a>
+      
+    <a href="/tags.html#REST-ref">REST <span>3</span></a>
+      
+    <a href="/tags.html#documentation-ref">documentation <span>3</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/07/an-open-source-aws-leader-election-library-built">An Open Source AWS Leader Election Library Built in Akka</a></h1>
+  
+  <header>
+    
+    <time>07 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><span><img src="https://31.media.tumblr.com/fec7c3780b7a6fcde84b81a52a36aec9/tumblr_inline_nhtl6oNbKj1s17bu5.png" width="800"/></span></p>
+<p><span>Recently I needed a scheduled job inside one of my distributed services: an open-source Play application with at least two instances running on EC2, using an auto-scaling group to spin up new instances as needed. I needed to send reminder emails</span><span> </span><span>to a subset of the team management services’ users</span><span> </span><span>every ‘x’ amount of days. The solution that best suited my needs in this situation was a leader-elected task.</span></p>
+<p><span><span> </span>In the past, I’ve used ZooKeeper to schedule a leader-elected task. Gilt had helper classes, which made this a breeze. But I didn’t want to set up a ZooKeeper cluster in AWS just for a small, non-critical service, so I needed something simple and lightweight. <span>A fairly standard setup for engineers who design distributed services is to have m</span>ultiple instances of a service in an AWS auto-scaling group, so I decided to create my own leader election library and open-source whatever I ended up building. Introducing </span><a href="https://github.com/grahamar/aws-leader-election" target="_blank"><span>aws-leader-election</span></a><span>: a Scala and akka-cluster based PnP leader election library for use in AWS.</span></p>
+<p><span><span></span>aws-leader-election is built on</span><a href="http://akka.io/" target="_blank"><span> </span><span>Akka</span></a><span> and uses akka-cluster’s cluster singleton to perform leader-elected tasks. It also uses AWS&rsquo;s auto-scaling Java client to discover EC2 instances and creates an Akka cluster</span><span> </span><span>from the auto-scaling group members.<span> <br/></span></span></p>
+<h3>Creating aws-leader-election</h3>
+<p><span>The first challenge in creating this project involved instance/node discovery. Using an autoscaling group made this relatively easy. The AWS Java SDK client gave me access to ask the auto-scaling group for its list of currently running instances. At this point I found some </span><a href="http://chrisloy.net/2014/05/11/akka-cluster-ec2-autoscaling.html" target="_blank"><span>terrific work by Chris Loy, who set up an Akka cluster in EC2 using an auto-scaling group</span></a><span>. This gave me a great starting point. I was able to ask my auto-scaling group for its list of currently running instances and use them as seed nodes for an Akka cluster. </span></p>
+<p><span>This is where I ran into my first issue. My Play service is built using the </span><a href="https://github.com/sbt/sbt-native-packager" target="_blank"><span>sbt-native-packager</span></a><span> plugin and Gilt Senior Software Engineer </span><a href="https://github.com/fiadliel/sbt-native-packager" target="_blank"><span>Gary Coady’s Docker addition to native-packager</span></a><span> (which allows you to build a Docker image and release it to the Docker repository). I then use an in-house script called ionblaster to automate a new AWS stack creation and deploy my Docker image in each EC2 instance. My issue was with Docker’s internal network stack vs. the host’s network stack, and the IP address Akka was binding to. To solve this, I had to force Docker to use the host EC2 instance’s network stack by providing the `&ndash;net=host` parameter to Docker. This would be an issue if we wanted to run multiple Docker containers on a single EC2 instance.</span></p>
+<p><span>With this solved, I was free to move onto having my instances arrive at a consensus regarding which one is the leader. For this I took a look at the </span><a href="https://raftconsensus.github.io/" target="_blank"><span>Raft algorithm for consensus</span></a><span>. There were already </span><a href="https://github.com/ktoso/akka-raft" target="_blank"><span>libraries out there</span></a><span> that performed Raft on top of an Akka cluster. I eventually decided that Raft was overkill just to perform the same level of leader election that Akka already provides. The </span><a href="http://doc.akka.io/docs/akka/2.3.7/contrib/cluster-singleton.html" target="_blank"><span>Akka cluster singleton actor</span></a><span> served my purposes more than adequately. By taking this approach, I had to accept that certain problems might arise; the potential drawbacks are documented in the Akka documentation quite explicitly. For my specific case, these potential drawbacks were all acceptable. I included some of the ZooKeeper leader-elected job helper classes to make things even simpler. I also wrote a few </span><a href="http://doc.akka.io/docs/akka/2.3.7/dev/multi-jvm-testing.html" target="_blank"><span>multi-jvm</span></a><span> unit tests, which are serving my purpose perfectly; hopefully they will be useful for you, too.<br/></span></p>
+<h3>A question you might ask</h3>
+<p><span>If there are so few guarantees in this implementation, then wouldn&rsquo;t it be easier to simply create an AutoScalingGroup of exactly one node, with a health check, so that it bounces it if something gets stuck?</span></p>
+<p><span><span></span>That&rsquo;s one way to do it. But this approach wouldn&rsquo;t have allowed me to play with akka-cluster :P. And would have meant a more hands-on approach than, &ldquo;I want three instances of this service, make it happen,&rdquo; which I&rsquo;d much prefer.</span></p>
+<p><span>akka-cluster handles nodes going down/leaving and coming back up/joining. And it&rsquo;s a lot quicker then a bouncing instance, meaning that there&rsquo;s less time in the no-leader zone.</span></p>
+<h3>Next Steps</h3>
+<p><span id="docs-internal-guid-2663ea02-bafb-32a4-035b-3b9b4893aab2"><span>While <a href="https://github.com/grahamar/aws-leader-election" target="_blank"><span>aws-leader-election</span></a> fulfills its primary objective of a simple and lightweight leader election library for scheduling tasks, any contributions are more than welcome. Reach out to me via my GitHub page if you&rsquo;d like to <br/></span></span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#akka-ref">akka <span>2</span></a>
+      
+    <a href="/tags.html#aws-ref">aws <span>3</span></a>
+      
+    <a href="/tags.html#ec2-ref">ec2 <span>1</span></a>
+      
+    <a href="/tags.html#leader election-ref">leader election <span>2</span></a>
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#gilttech-ref">gilttech <span>332</span></a>
+      
+    <a href="/tags.html#Graham Rhodes-ref">Graham Rhodes <span>1</span></a>
+      
+    <a href="/tags.html#software engineering-ref">software engineering <span>66</span></a>
+      
+    <a href="/tags.html#open source-ref">open source <span>60</span></a>
+      
+    <a href="/tags.html#OS-ref">OS <span>4</span></a>
+      
+    <a href="/tags.html#akka-cluster-ref">akka-cluster <span>1</span></a>
+      
+    <a href="/tags.html#AWS-ref">AWS <span>4</span></a>
+      
+    <a href="/tags.html#Amazon Web Services-ref">Amazon Web Services <span>3</span></a>
+      
+    <a href="/tags.html#Apache ZooKeeper-ref">Apache ZooKeeper <span>3</span></a>
+      
+    <a href="/tags.html#leader election library-ref">leader election library <span>1</span></a>
+      
+    <a href="/tags.html#aws-leader-election-ref">aws-leader-election <span>1</span></a>
+      
+    <a href="/tags.html#Chris Loy-ref">Chris Loy <span>1</span></a>
+      
+    <a href="/tags.html#AWS Java SDK-ref">AWS Java SDK <span>1</span></a>
+      
+    <a href="/tags.html#Scala-ref">Scala <span>79</span></a>
+      
+    <a href="/tags.html#Akka-ref">Akka <span>20</span></a>
+      
+    <a href="/tags.html#Dublin-ref">Dublin <span>47</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+<article>
+  <span class="separator">MD Insider Tech</span>
+  <h1><a href="/2015/01/06/rsvp-for-get-stuff-done-faster-why-engineers">RSVP for “Get Stuff Done Faster: Why Engineers Should Work with the ‘Dark Side’ of Tech"</a></h1>
+  
+  <header>
+    
+    <time>06 January 2015</time>
+    
+  </header>
+
+  <div class="content">
+    <p><img alt="image" src="https://31.media.tumblr.com/ee4d243c9a79e559615d519f335ebc06/tumblr_inline_nhrmy9NUGJ1t8vz0f.png"/></p>
+<p><span>Our first tech meetup of 2015 is all about making engineers’ lives better. On Thursday, January 15, Gilt </span><span>Director of Program Management Justin Riservato, Director of Product Andrew Chen, Senior Business Systems Manager Susan Thomas, and Senior Program Manager Myron Miller will present “Get Stuff Done Faster: Why Engineers Should Work with the “Dark Side” of Tech- a talk that focuses on the difference between Program Managers, Business Analysts and Product Managers, and why you engineers need all these managers on your team. These industry professionals will demonstrate how they make Gilt engineers’ work lives easier and more fulfilling. By the end of the night, you’ll be planning to ask for more managers for your team (seriously)!</span></p>
+<p><a href="http://www.meetup.com/Gilt-Tech-Events/events/219625519/" title="Go Here" target="_blank">Go here</a> to RSVP and join us for networking, learning, trading awkward Star Wars references, and post-panel Q&amp;A’ing. Pizza and beverages will be provided. Leave your lightsabers at home, please.</p>
+<p><span> </span></p>
+
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  
+  <section class="tags">
+
+
+    
+
+    
+      
+    <a href="/tags.html#Gilt-ref">Gilt <span>340</span></a>
+      
+    <a href="/tags.html#Gilt Groupe-ref">Gilt Groupe <span>282</span></a>
+      
+    <a href="/tags.html#Gilt Tech-ref">Gilt Tech <span>287</span></a>
+      
+    <a href="/tags.html#Gilttech-ref">Gilttech <span>18</span></a>
+      
+    <a href="/tags.html#Talks-ref">Talks <span>2</span></a>
+      
+    <a href="/tags.html#Tech Talks-ref">Tech Talks <span>4</span></a>
+      
+    <a href="/tags.html#NYC-ref">NYC <span>79</span></a>
+      
+    <a href="/tags.html#Events-ref">Events <span>2</span></a>
+      
+    <a href="/tags.html#Meetups-ref">Meetups <span>2</span></a>
+      
+    <a href="/tags.html#Tech-ref">Tech <span>2</span></a>
+      
+    <a href="/tags.html#Software Engineering-ref">Software Engineering <span>2</span></a>
+      
+    <a href="/tags.html#Justin Riservato-ref">Justin Riservato <span>12</span></a>
+      
+    <a href="/tags.html#Susan Thomas-ref">Susan Thomas <span>5</span></a>
+      
+    <a href="/tags.html#Myron Miller-ref">Myron Miller <span>3</span></a>
+      
+    <a href="/tags.html#Andrew Chen-ref">Andrew Chen <span>9</span></a>
+      
+    <a href="/tags.html#Agile-ref">Agile <span>11</span></a>
+      
+    <a href="/tags.html#agile Development-ref">agile Development <span>1</span></a>
+      
+    <a href="/tags.html#Program Managemenr-ref">Program Managemenr <span>1</span></a>
+      
+    <a href="/tags.html#PMO-ref">PMO <span>27</span></a>
+      
+    <a href="/tags.html#Project Management-ref">Project Management <span>2</span></a>
+      
+    <a href="/tags.html#Product Management-ref">Product Management <span>5</span></a>
+      
+    <a href="/tags.html#Gilt Product-ref">Gilt Product <span>17</span></a>
+      
+    
+
+  </section>
+  
+
+  <span class="separator">Tech</span>
+</article>
+
+
+<div class="pager">
+  
+    <a href="/posts/3/" class="fa fa-chevron-left prev" title="Previous"></a>
+  
+  <span class="count">Page 4 of 64</span>
+  
+    <a href="/posts/5/" class="fa fa-chevron-right next" title="Next"></a>
+  
+</div>
+
+  </div>
+</div>
+
+
+      </section>
+      <footer>
+        <nav>
+  <span>
+    <a href="http://www.mdinsider.com/careers/">Join MD Insider Tech</a>
+    <a href="http://mdinsider.com">MDInsider.com</a>
+  </span>
+</nav>
+
+        <section id="copyright">
+          &copy; 2015 MDInsider, Inc. &bull; <a href="/archive.html">Archives</a>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/themes/gilt/js/main.js"></script>
+  </body>
+</html>
+
