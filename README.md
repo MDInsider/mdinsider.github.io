@@ -20,5 +20,4 @@ Create a pull request to submit your blog post and that's it.
 ### License
 
 Jekyll Bootstrap is licensed under the [MIT License](http://opensource.org/licenses/MIT)
-Code contained in this repository is licensed under the [MIT License](https://raw.githubusercontent.com/gilt/tech-blog/gh-pages/LICENSE)
 Post content are copyright &copy; MD Insider, Inc.
